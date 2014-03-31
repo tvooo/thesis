@@ -1,0 +1,34 @@
+\select@language {english}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {\relax 1.1}{\ignorespaces IBM Content Navigator replaces WEBi and Workplace XT\relax }}{2}{figure.caption.4}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {\relax 2.1}{\ignorespaces Structure of \acrlong {mvc}\relax }}{13}{figure.caption.10}
+\contentsline {figure}{\numberline {\relax 2.2}{\ignorespaces Multiple Views connected to a single Model\relax }}{14}{figure.caption.12}
+\contentsline {figure}{\numberline {\relax 2.3}{\ignorespaces The Tool contains Controller and View(s)\relax }}{15}{figure.caption.14}
+\contentsline {figure}{\numberline {\relax 2.4}{\ignorespaces Sequence diagram of a User Interaction with \acrlong {mvc}\relax }}{15}{figure.caption.17}
+\contentsline {figure}{\numberline {\relax 2.5}{\ignorespaces Structure of \acrlong {mvp}\relax }}{17}{figure.caption.18}
+\contentsline {figure}{\numberline {\relax 2.6}{\ignorespaces Structure of \acrlong {mvvm}\relax }}{18}{figure.caption.19}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {\relax 3.1}{\ignorespaces Sequence diagram of a User--Client--Server interaction\relax }}{25}{figure.caption.20}
+\contentsline {figure}{\numberline {\relax 3.2}{\ignorespaces Sequence diagram of a Thin Client user interaction\relax }}{28}{figure.caption.21}
+\contentsline {figure}{\numberline {\relax 3.3}{\ignorespaces JSP Model 1 Architecture\relax }}{28}{figure.caption.22}
+\contentsline {figure}{\numberline {\relax 3.4}{\ignorespaces JSP Model 2 Architecture\relax }}{28}{figure.caption.23}
+\contentsline {figure}{\numberline {\relax 3.5}{\ignorespaces Sequence diagram of a Rich Client user interaction\relax }}{29}{figure.caption.24}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {\relax 4.1}{\ignorespaces Lazy loading on Twitter, indicated by a loading animation\relax }}{36}{figure.caption.28}
+\contentsline {figure}{\numberline {\relax 4.2}{\ignorespaces Structure of a Server Side MVC Architecture\relax }}{41}{figure.caption.32}
+\contentsline {figure}{\numberline {\relax 4.3}{\ignorespaces Structure of a Distributed Controller MVC Architecture\relax }}{43}{figure.caption.37}
+\contentsline {figure}{\numberline {\relax 4.4}{\ignorespaces Structure of a Synchronized Model MVC Architecture\relax }}{47}{figure.caption.43}
+\contentsline {figure}{\numberline {\relax 4.5}{\ignorespaces Structure of a Rich Client MVC Architecture\relax }}{49}{figure.caption.48}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {\relax 5.1}{\ignorespaces Layers of IBM Content Navigator\relax }}{53}{figure.caption.53}
+\contentsline {figure}{\numberline {\relax 5.2}{\ignorespaces 3-Tier architecture of IBM Content Navigator\relax }}{54}{figure.caption.54}
+\contentsline {figure}{\numberline {\relax 5.3}{\ignorespaces Plug--in components extending ICN\relax }}{55}{figure.caption.55}
+\contentsline {figure}{\numberline {\relax 5.4}{\ignorespaces ICN Applications using different Plug--in Features\relax }}{56}{figure.caption.56}
+\contentsline {figure}{\numberline {\relax 5.5}{\ignorespaces Screenshot of a Dojo Tree\relax }}{60}{figure.caption.61}
+\contentsline {figure}{\numberline {\relax 5.6}{\ignorespaces Screenshot of the log analysis plug--in UI\relax }}{63}{figure.caption.63}
+\contentsline {figure}{\numberline {\relax 5.7}{\ignorespaces Integration of the log analysis plug--in into Content Navigator\relax }}{65}{figure.caption.67}
+\contentsline {figure}{\numberline {\relax 5.8}{\ignorespaces Folder hierarchy of the log analysis plug--in\relax }}{66}{figure.caption.69}
+\contentsline {figure}{\numberline {\relax 5.9}{\ignorespaces Plug--in Models in the according namespaces\relax }}{68}{figure.caption.72}
+\contentsline {figure}{\numberline {\relax 5.10}{\ignorespaces The IDX PropertyGrid, displaying job details\relax }}{70}{figure.caption.74}
+\addvspace {10\p@ }

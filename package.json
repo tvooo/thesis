@@ -1,0 +1,22 @@
+{
+  "name": "tp1",
+  "version": "0.0.1",
+  "description": "Thesis Project I for the Interaction Design Master at Malmö University",
+  "main": "Gruntfile.js",
+  "dependencies": {
+    "grunt": "~0.4.4",
+    "grunt-latex": "~0.2.2"
+  },
+  "devDependencies": {
+    "grunt-latex": "^0.2.2",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt": "^0.4.4",
+    "clean": "^2.1.6",
+    "grunt-contrib-clean": "^0.5.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tim von Oldenburg",
+  "license": "MIT"
+}

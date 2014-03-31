@@ -1,0 +1,48 @@
+This is BibTeX, Version 0.99d (TeX Live 2012)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: ba.aux
+The style file: agsm.bst
+Database file #1: ba.bib
+Warning--empty publisher in redbook
+You've used 24 entries,
+            2909 wiz_defined-function locations,
+            748 strings with 7507 characters,
+and the built_in function-call counts, 77644 in all, are:
+= -- 12467
+> -- 1033
+< -- 0
++ -- 5895
+- -- 315
+* -- 6434
+:= -- 16087
+add.period$ -- 37
+call.type$ -- 24
+change.case$ -- 332
+chr.to.int$ -- 20
+cite$ -- 25
+duplicate$ -- 299
+empty$ -- 646
+format.name$ -- 367
+if$ -- 13802
+int.to.chr$ -- 9
+int.to.str$ -- 0
+missing$ -- 14
+newline$ -- 101
+num.names$ -- 244
+pop$ -- 203
+preamble$ -- 1
+purify$ -- 360
+quote$ -- 0
+skip$ -- 229
+stack$ -- 0
+substring$ -- 17420
+swap$ -- 32
+text.length$ -- 336
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 82
+warning$ -- 1
+while$ -- 504
+width$ -- 0
+write$ -- 325
+(There was 1 warning)

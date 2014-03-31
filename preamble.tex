@@ -1,0 +1,71 @@
+% Colors
+\definecolor{dunkelgrau}{rgb}{0.8,0.8,0.8}
+\definecolor{hellgrau}{rgb}{0.95,0.95,0.95}
+\definecolor{darkgray}{rgb}{0.8,0.8,0.8}
+\definecolor{lightgray}{rgb}{0.95,0.95,0.95}
+\definecolor{green}{rgb}{0.8,1.0,0.8}
+\definecolor{red}{rgb}{1.0,0.8,0.8}
+\definecolor{LinkColor}{rgb}{0,0,0.2}
+
+
+% Placeholders
+\newcommand{\titel}{The Paradigm Change from Thin to Rich Clients in Modern Web Applications
+}
+\newcommand{\autor}{Tim von Oldenburg}
+\newcommand{\arbeit}{An analysis of how the MVC pattern is being shifted to the client side}
+\newcommand{\matrikelnr}{0834311}
+\newcommand{\kurs}{TIT09AIA}
+\newcommand{\datumAbgabe}{September 2012}
+\newcommand{\firma}{IBM Deutschland MBS GmbH}
+\newcommand{\firmenort}{Herrenberg}
+\newcommand{\abgabeort}{Stuttgart}
+\newcommand{\abschluss}{Bachelor of Science}
+\newcommand{\studiengang}{Applied Computer Science}
+\newcommand{\dhbw}{Stuttgart}
+\newcommand{\betreuer}{Daniel Suski} % evtl. mit Titel
+\newcommand{\gutachter}{Paul Hubert Vossen} % evtl. mit Titel
+\newcommand{\zeitraum}{12 Weeks}
+\newcommand{\nexus}{{\acl{cn}}}
+\newcommand{\ibm}{\ac{ibm}}
+
+% Custom commands
+\newcommand{\pathname}[1] {\sloppy{\texttt{\colorbox{lightgray}{#1}}}}
+\newcommand{\code}[1] {\sloppy{\texttt{\colorbox{lightgray}{#1}}}}
+\newcommand{\booktitle}[1] {``{#1}''}
+\newcommand{\placeholder}[1] {{\color{red}#1}}
+\newcommand{\fullref}[1] {\ref{#1}: \emph{\nameref{#1}}}
+
+% Table rows have to be higher, too
+\renewcommand{\arraystretch}{1.5}
+\setlength{\tabcolsep}{10pt} %Abstand zwischen Spalten
+
+% Redefinitions
+\renewcommand{\labelitemi}{$\bullet$}
+\renewcommand{\labelitemii}{$\cdot$}
+
+% Widows and orphans
+\clubpenalty=10000
+\widowpenalty=10000
+\displaywidowpenalty=10000
+
+% Remove the point at the end of a description (glossary)
+\renewcommand*{\glspostdescription}{}
+
+%\renewcommand*{\lstlistlistingname}{List of Listings}
+
+% Acronyms
+\newcommand{\acs}[1] {\acrshort{#1}}
+\newcommand{\acl}[1] {\acrlong{#1}}
+\newcommand{\ac}[1] {\gls{#1}}
+\newcommand{\acp}[1] {\glspl{#1}}
+
+% (Farb-)einstellungen für die Links im PDF
+\hypersetup{%
+	colorlinks=false, % Aktivieren von farbigen Links im Dokument
+	linkcolor=LinkColor, % Farbe festlegen
+	citecolor=LinkColor,
+	filecolor=LinkColor,
+	menucolor=LinkColor,
+	urlcolor=LinkColor,
+	bookmarksnumbered=true % Überschriftsnummerierung im PDF Inhalt anzeigen.
+}

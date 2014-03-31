@@ -1,0 +1,18 @@
+{
+	name: "ibm-css",
+	visibleName: "IBM Content Search Server Errors",
+	repeatHours: 1,
+	repeatMinutes: 0,
+	invocation: "jaqlshell -j /home/biadmin/D2L/userdef.jar -jp {$base}/scripts/util/ < {$base}/scripts/ibm-css/run.jaql",
+	resultFile: "result.json",
+	resultStructure: {
+		sourceFile: {type:string, displayName:"Source File", visible:false}, 
+		origin: {type:string, displayName: "Originating File", visible:false}, 
+		details: {type:text, displayName:"Full Details", visible:false}, 
+		eventDate: {type:timestamp, displayName:"Event Time", visible:true},
+		failedFileName: {type:string, displayName:"Failed File Name", visible:true}, 
+		failedReason: {type:string, displayName:"Reason", visible:true} 
+	 }
+}
+
+
