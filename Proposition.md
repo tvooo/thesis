@@ -4,7 +4,7 @@ Interface, HCI, Visualization, Navigation and Information Systems / Information 
 
 # Research Question
 
-How can the creation, editing and exploration of computer programs be supported by appropriate contextual presentation?
+How can the creation, editing and exploration of computer programs be supported by appropriate contextual representations of code?
 
 # Ideas
 - Spatial arrangement of code

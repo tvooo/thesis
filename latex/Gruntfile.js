@@ -15,8 +15,15 @@ module.exports = function(grunt) {
     // Configuration to be run (and then tested).
     sourceFile: 'thesis.tex',
     latex: {
-      pdf: {
+      thesis: {
         src: [ '<%= sourceFile %>' ],
+        options: {
+          auxDirectory: 'tmp',
+          engine: 'xelatex'
+        }
+      },
+      proposal: {
+        src: 'proposal.tex',
         options: {
           auxDirectory: 'tmp',
           engine: 'xelatex'
@@ -27,6 +34,10 @@ module.exports = function(grunt) {
       latex: {
         files: [ '<%= sourceFile %>' ],
         tasks: [ 'latex' ]
+      },
+      proposal: {
+        files: ['proposal.tex'],
+        tasks: ['latex:proposal']
       }
     },
     clean: {
@@ -39,5 +50,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.registerTask('default', ['watch:latex']);
+  grunt.registerTask('proposal', ['latex:proposal'])
 
 };

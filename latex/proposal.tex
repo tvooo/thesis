@@ -1,0 +1,124 @@
+\documentclass{scrartcl}
+\usepackage[xetex]{graphicx}
+\usepackage{fontspec,xunicode}
+\defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
+\setmainfont[Scale=.95]{Calluna}
+\setmonofont{Source Code Pro}
+
+%\usepackage[left=3cm,right=3cm,top=1cm,nohead,driver=xetex]{geometry}
+
+\usepackage{xltxtra}
+\usepackage{hyperref}
+\renewcommand{\UrlBreaks}{\do\/\do\a\do\b\do\c\do\d\do\e\do\f\do\g\do\h\do\i\do\j\do\k\do\l\do\m\do\n\do\o\do\p\do\q\do\r\do\s\do\t\do\u\do\v\do\w\do\x\do\y\do\z\do\A\do\B\do\C\do\D\do\E\do\F\do\G\do\H\do\I\do\J\do\K\do\L\do\M\do\N\do\O\do\P\do\Q\do\R\do\S\do\T\do\U\do\V\do\W\do\X\do\Y\do\Z}
+
+
+%\fontspec[Path = /Users/tvooo/Library/Fonts/]{SourceCodePro-Regular.otf}
+
+%\setmainfont[
+%  Extension = .otf,
+%  UprightFont = *-regular,
+%  BoldFont = *-bold,
+%  ItalicFont = *-italic,
+%  BoldItalicFont = *-bolditalic,
+%]{SourceCodePro}
+
+\begin{document}
+%\vspace{-3cm}
+\title{Research Proposal}
+\author{Tim von Oldenburg}
+
+
+\maketitle
+
+\section{Knowledge Area and Research Question} Since the first programmable
+computers and instructions on punch cards, computing has come a long way.
+Incredible progress has been made in terms of computing power, technologies and
+usage areas. We have seen new programming languages and paradigms, we have seen
+abstractions and whole toolchains to simplify the process of developing software.
+
+Modern Integrated Development Environments (IDEs)\footnote{IDE: a software
+integrating a code editor along with compiler, debugger, code browser and/or
+other tools.} were pioneered by systems like the\\Smalltalk-80 class browser
+that provided novel, domain-specific ways of navigating information (in this
+case, source code). However, as Bret Victor argues in his iconic talk, not a lot
+has changed since then; the progress may be described as evolutionary at best,
+and includes features such as syntax highlighting, autocompletion and contextual
+documentation (Victor 2013). In terms of code navigation, developers still rely
+on file structures, symbol lists or keyword search.
+
+I see large opportunities for improvement in how software is written by
+improving IDEs, especially in the areas of navigating and evaluating source
+code. Today's navigational patterns rely on syntax and formal data structures,
+but not on semantics. Even relatively new patterns, such as presented by Deline
+et al. (2006) and implemented in editors like Sublime Text\footnote{See
+\url{http://www.sublimetext.com/}}, concentrate on the actual text instead of its
+meaning. I want to explore how the navigation of source code can be made more
+relevant and efficient if it follows \textit{semantics}, for example the
+internal control flow of the executed program. While a file is a linear medium
+(a set of lines, which in themselves are a set of characters), the actual program is
+non-linear.
+
+These thoughts are not completely novel, of course. But while approaches like
+Visual Programming, as propagated by projects like Scratch (Maloney et al.
+2010), serve a certain role, most code is still written as text. Light Table, an
+experimental IDE currently in a beta testing state, explores different features
+such as inline evaluation of code and spatial arrangement of semantic code
+blocks (Granger 2013). I want to contribute to those experimental approaches
+from the field of interaction design using proper research and validated
+designs, pursuing the question of how software development can be made more
+efficient through semantic and context-sensitive code editing environments.
+
+%Integrated Development Environments (IDEs) unite editors, code browsers and
+%process tools like compilers and debuggers under one hood, and are largely,
+%well, integrated. They allow for editing, navigationg, and analyzing code. This
+%area has seen a number of small evolutions, ranging from class browsers over
+%syntax highlighting to autocompletion of code. However, programs are still
+%represented as text and
+
+%(preprocessors, debuggers, build tools, profilers)
+
+%However, the way that software is written has largely remained the same since the invention of high-level programming languages and file systems: programs are represented as text and saved in one or multiple files.
+
+\section{Methods} Before exploring possible design opportunities, I want to
+create an overview of the status quo of relevant software development tools and
+processes. A survey and personal interviews will help identify what is currently
+used and popular, and will maybe even start to uncover possible shortcomings.
+Besides of that, research in academic literature and contemporary development
+projects will show the direction that IDEs are headed towards right now. I
+expect those methods to result in an incomplete library of patterns used in
+code editing environments.
+
+The gaps in this library will be areas of opportunity to focus my further work
+on. I will pick one or more of those areas (depending on the scope of work) and
+design solutions for them. If possible, and feasible in a timely manner, those
+designs will be created as high-level prototypes extending a real IDE (possibly
+either Github’s Atom Editor\footnote{See \url{https://atom.io/}} or the Chrome DevTools\footnote{See \url{https://developers.google.com/chrome-developer-tools/}}).
+
+These prototypes will be handed out to software developers to test. Built-in
+analytics will collect metrics to serve as quantitative measures, whereas user
+interviews will serve as qualitative measures of design validation. It is as
+well possible to test the prototypes in a lab environment.
+
+\section{Expected Results \& Knowledge Contribution} My aim is to provide new
+knowledge of design patterns for Integrated Development Environments that lead
+to more productivity and efficiency for software developers. Although I will
+focus on a certain domain in software development (web development), I strive to
+find insights that are applicable to a greater range of development environments
+and paradigms. In addition, I want to demonstrate the practical use of said
+design patterns by means of solidly implemented, high-level, usable prototypes.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section*{References}
+
+\begin{description}
+  %\item[Oney \& Brandt 2012] S. Oney and J. Brandt ``Codelets: Linking Interactive Documentation and Example Code in the Editor,'' in Proceedings of the SIGCHI Conference on Human Factors in Computing Systems, New York, NY, USA, 2012, pp. 2697–2706.
+  \item[Deline et al. 2006] R. DeLine, M. Czerwinski, B. Meyers, G. Venolia, S. Drucker, and G. Robertson, ``Code Thumbnails: Using Spatial Memory to Navigate Source Code,'' in Proceedings of the Visual Languages and Human-Centric Computing, Washington, DC, USA, 2006, pp. 11–18.
+  \item[Granger 2012] C. Granger ``Light Table --- a new IDE concept'',\url{http://www.chris-granger.com/2012/04/12/light-table---a-new-ide-concept/}
+  \item[Victor 2013] B. Victor ``The Future of Programming'',\url{http://worrydream.com/#!/TheFutureOfProgramming}
+  \item[Maloney 2010] J. Maloney, M. Resnick, N. Rusk, B. Silverman, and E. Eastmond ``The Scratch Programming Language and Environment'', Trans. Comput. Educ. 10, 4, Article 16 (November 2010)
+\end{description}
+
+\end{document}
