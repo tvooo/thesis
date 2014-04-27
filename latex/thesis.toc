@@ -1,0 +1,21 @@
+\select@language {english}
+\contentsline {chapter}{\numberline {1}Introduction}{iii}{chapter.1}
+\contentsline {chapter}{\numberline {2}Research, Framework}{v}{chapter.2}
+\contentsline {section}{\numberline {2.1}Breadth and Depth of IDEs nowadays}{v}{section.2.1}
+\contentsline {section}{\numberline {2.2}Design Patterns in IDEs}{v}{section.2.2}
+\contentsline {section}{\numberline {2.3}Programming concepts that are important}{vi}{section.2.3}
+\contentsline {section}{\numberline {2.4}Survey \& Interviews}{vi}{section.2.4}
+\contentsline {chapter}{\numberline {3}Design \& Process}{vii}{chapter.3}
+\contentsline {section}{\numberline {3.1}Process}{vii}{section.3.1}
+\contentsline {section}{\numberline {3.2}Existing solutions \& inspiration, similar solutions (IDEATION)}{vii}{section.3.2}
+\contentsline {section}{\numberline {3.3}IDEATION}{vii}{section.3.3}
+\contentsline {section}{\numberline {3.4}CONCEPTS}{viii}{section.3.4}
+\contentsline {section}{\numberline {3.5}PROTOTYPING}{ix}{section.3.5}
+\contentsline {section}{\numberline {3.6}USER TESTING, (Probe) (1 week)}{ix}{section.3.6}
+\contentsline {section}{\numberline {3.7}INTERVIEW, evaluation in quantity and quality}{ix}{section.3.7}
+\contentsline {chapter}{\numberline {4}Conclusion, Reflection}{xi}{chapter.4}
+\contentsline {chapter}{Bibliography}{I}{section*.1}
+\contentsline {chapter}{List of Figures}{II}{section*.3}
+\contentsline {chapter}{List of Tables}{IV}{section*.4}
+\contentsline {chapter}{List of Listings}{V}{chapter*.5}
+\contentsline {chapter}{Appendix}{VII}{chapter*.6}

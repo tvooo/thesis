@@ -1,0 +1,64 @@
+\chapter{Introduction}
+The way software engineers create applications has always been dominated by different trends and changing paradigms. The rise of object-oriented programming models as opposed to procedural ones, the use of Design Patterns and the evolvement from a static to an interactive \emph{world wide web} are all examples for that.
+
+The web is still one of the fastest developing areas. Nowadays, web browsers are more capable than ever before: they contain fast and powerful JavaScript engines, they are secure as of sandboxing and encryption and can leverage hardware acceleration for faster rendering. With the new HTML5 standard, they are even capable of handling media, location services (\acs{gps}), offline storage, threading and more.
+
+With the web browser becoming a powerful runtime environment, the possibilities to develop desktop-level applications grow even further. Not only end-user software, like Google Mail and Docs, but also enterprise applications can take advante of the recent developments.
+
+The \ac{mvc} pattern is one of the most widely used architectural design patterns in the discipline of software engineering. It has already been used in web applications, usually on the server side, but due to more powerful browsers and more complex application scenarios nowadays, creating a web architecture using \ac{mvc} has become more challenging.
+
+Managing state, data and presentation in a re-usable fashion, and developing modular, responsive and user-friendly applications demands thorough and sophisticated application design.
+
+% When a new platform is explored, the natural reaction of the human mind is to map known behaviour onto the new area (in psychology, this is called a \emph{mental model}). But not always a mental model can be applied without adjustments.
+
+% As the web was explored as an application platform, software engineers took the MVC pattern and applied it on the client side of their web applications. The approach was simple, separation of concerns was already given by the platform: rendered HTML in the browser are the \emph{Views}, data in the database are the \emph{Models}, and the \emph{Controllers} are scripts --- for example PHP, ASP or Perl --- that
+
+% The development of the world wide web was influenced by programming languages, paradigms, markup languages, and vice-versa.
+
+% For a long time, the web has been underestimated as an application platform, but this general view is changing. Software engineers can no longer develop web applications as they did before, they have to take in mind the special characteristics of the web.
+
+
+% The web browser is a powerful application platform, and shifting the MVC architecture of an application towards the client side takes advantage of this fact.
+
+% Many organizations have recently discovered that the browser is a powerful runtime environment. Not only end-user software like Google Mail and Docs, but also enterprise applications take advantage of the recent developments, and so does \acs{ibm} \acl{ecm}. The new \ac{ibm} \nexus, codename Nexus, is a web-based client for \ac{ecm} repositories like FileNet P8 and Content Manager. % hier weitermachen
+
+
+
+
+\glsunset{ibm}
+\section{Motivation and Scope}
+\ac{ecm} describes methods, technologies and tools to manage documents that are critical to an organization's business processes. Contracts, invoices, orders or insurance policies are all examples for such documents. \ac{ibm} adresses \ac{ecm} with two solutions to manage document repositories: \emph{\gls{p8}} and \emph{\gls{cm}}. Both are complemented by web clients used to access the repositories (e.g. to upload, download, or move documents): \emph{Workplace XT} for FileNet and \emph{WEBi} for ContentManager.
+
+If they employ both systems, customers have to use two different interfaces to interact with them. In the course of \ac{ibm} OneUI, a strategy and guideline to unify the user experience\footnote{The look and feel of a \ac{ui}.} of all \ac{ibm} web applications, these clients are replaced by \emph{\ibm~\nexus}.
+
+\nexus, codename ``Nexus'', is a rich client enterprise web application based on the Dojo Toolkit. It allows access to both FileNet and ContentManager repositories through one single \ac{ui}. Content Navigator is not only a web application, but also a framework to build arbitrary applications on top of.
+
+IBM \ac{sccm} is a \ac{saas} to archive and dispose documents and emails following specific policies. Its web client will be ported to the \nexus\ platform for the next release. Customers who are already familiar with \nexus\ will then be able to use \ac{sccm} more easily, because of the unified look and feel.
+
+\nexus\ makes integration of different applications possible through two features:
+\begin{itemize}
+	\item A plugin system that allows developers to create extensions for every purpose with server-side and client-side features
+	\item A client-oriented \ac{mvc} architecture that backs the rich, browser-based application
+\end{itemize}
+
+This thesis pursues two goals. On the one hand, it shall demonstrate how the \ac{mvc} pattern can best be implemented in modern (enterprise) web applications, depending on their specific requirements. On the other hand, the architecture of \ac{ibm} \nexus\ shall be demonstrated by way of example.  For this purpose, a plugin for \nexus\ is developed which covers a typical use case of cloud applications like \ac{ibm} \acl{sccm}.
+
+%The goal of this thesis is not to find the ultimate architecture for a web application. Instead, this Bachelor Thesis shall demonstrate how the MVC pattern and its variations can be implemented in web applications with different requirements. % "different"? "various"? "diverse"?
+
+
+\section{Structure}
+The second and third Chapters will create a theoretical basis for further research. They will first introduce the \acl{mvc} pattern, its history and origins in \mbox{Smalltalk-80}, its structure and the tasks of the different components, as well as variations of \ac{mvc} that can be used alternatively. Then, the terms \emph{Thin Client} and \emph{Rich Client} will be set in contrast, both from a technology and a user perspective.
+
+In Chapter~\fullref{chap:webmvc}, criteria will be defined to evaluate \ac{mvc} applicability for web applications. After that, various possibilities to implement \ac{mvc} in client--server architectures are discussed based on the beforehand defined criteria.
+
+Chapter~\fullref{chap:nexus} will present \ac{ibm} \nexus and examines its plugin system and architecture. Afterwards, the developed plugin will be further discussed.
+
+To close this thesis, Chapter~\fullref{chap:conclusion} summarizes the findings and gives an outlook.
+
+
+% changing way of using the internet: cloud hier, cloud da, gmail, gdocs, evernote, basecamp
+% "client side" im web heißt "web browser"!
+% browser are more capable: faster js engines, sandboxing, html5 (no more flash), css3 (great visuals), handle lots of data
+% desktop-level applications
+% not only in the www, but also enterprise applications that run locally, intranet, VPN
+% scope?
