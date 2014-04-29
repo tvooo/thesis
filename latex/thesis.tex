@@ -9,8 +9,8 @@
 \documentclass[%pdftex,
 	12pt,
 	a4paper,
-	twoside,
-	%oneside,
+	%twoside,
+	oneside,
 	openright,
 	parskip=half,   % Halbe Zeile Abstand zwischen Absätzen.
 	headsepline,    % Linie nach Kopfzeile.
@@ -20,7 +20,8 @@
 	]{scrbook}
 %\documentclass[10pt,a4paper]{report}
 
-\usepackage[utf8x]{inputenc}
+% not with xetex
+%\usepackage[utf8x]{inputenc}
 \usepackage{ucs}
 \usepackage{amsmath}
 %\usepackage{amsfonts}
@@ -29,7 +30,8 @@
 \usepackage{fontspec,xunicode}
 \defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
 \setmainfont{Calluna}
-%\setsansfont{Helvetica Neue}
+%\setsansfont{Avenir Next}
+\setsansfont[Scale=1.05]{Source Sans Pro}
 \setmonofont{Source Code Pro}
 \usepackage{xltxtra}
 
@@ -47,8 +49,8 @@
 \usepackage{color}
 \usepackage{xcolor}
 \usepackage{caption}
-\usepackage{courier}
-\usepackage[chapter,fontfamily=courier]{minted}
+%\usepackage{courier}
+%\usepackage[chapter,fontfamily=courier]{minted}
 \usepackage[onehalfspacing]{setspace}
 % Index-Erstellung
 %\usepackage{makeidx}
@@ -76,7 +78,23 @@
 % bei two-side, da sonst paragraphen über die ganze seite gestreckt werden
 \raggedbottom
 
-
+% Placeholders
+\newcommand{\titel}{The Paradigm Change from Thin to Rich Clients in Modern Web Applications
+}
+\newcommand{\autor}{Tim von Oldenburg}
+\newcommand{\arbeit}{An analysis of how the MVC pattern is being shifted to the client side}
+\newcommand{\matrikelnr}{0834311}
+\newcommand{\kurs}{TIT09AIA}
+\newcommand{\datumAbgabe}{September 2012}
+\newcommand{\firma}{IBM Deutschland MBS GmbH}
+\newcommand{\firmenort}{Herrenberg}
+\newcommand{\abgabeort}{Stuttgart}
+\newcommand{\abschluss}{Master of Science}
+\newcommand{\studiengang}{Interaction Design}
+\newcommand{\dhbw}{Stuttgart}
+\newcommand{\betreuer}{Lars Holmberg} % evtl. mit Titel
+\newcommand{\gutachter}{Paul Hubert Vossen} % evtl. mit Titel
+\newcommand{\zeitraum}{10 weeks}
 
 \PassOptionsToPackage{hyphens}{url}
 % PDF Einstellungen
@@ -87,17 +105,18 @@
 	pdfcreator={pdflatex, LaTeX with KOMA-Script},
 	pdfpagemode=UseOutlines, % Beim Oeffnen Inhaltsverzeichnis anzeigen
 	pdfdisplaydoctitle=true, % Dokumenttitel statt Dateiname anzeigen.
-	pdflang=eng, % Sprache des Dokuments.
-	pdflatex
+	pdflang=eng,
+	unicode=true % Sprache des Dokuments.
 ]{hyperref}
 \renewcommand{\UrlBreaks}{\do\/\do\a\do\b\do\c\do\d\do\e\do\f\do\g\do\h\do\i\do\j\do\k\do\l\do\m\do\n\do\o\do\p\do\q\do\r\do\s\do\t\do\u\do\v\do\w\do\x\do\y\do\z\do\A\do\B\do\C\do\D\do\E\do\F\do\G\do\H\do\I\do\J\do\K\do\L\do\M\do\N\do\O\do\P\do\Q\do\R\do\S\do\T\do\U\do\V\do\W\do\X\do\Y\do\Z}
+
 \input{preamble.tex}
 
 \makeglossaries
 \input{glossary.tex}
 
 % I have no idea what I'm doing...
-\renewcommand\listoflistingscaption{List of Listings}
+%\renewcommand\listoflistingscaption{List of Listings}
 
 
 
@@ -117,7 +136,12 @@
 %\newpage
 %\clearpage
 
+\chapter*{Abstract}
+\thispagestyle{empty}
+\begin{abstract}
 \input{abstract.tex}
+\end{abstract}
+
 \newpage
 \thispagestyle{empty}
 \mbox{}
@@ -160,44 +184,51 @@
 \setcounter{page}{1}
 \pagenumbering{Roman}
 \addcontentsline{toc}{chapter}{Bibliography}
-\bibliography{ba}
+\bibliography{thesis}
 
+% Uncomment to enable list of figures
 
+%\newpage
+%\setlength{\cftparskip}{-0.8pt}
+%\phantomsection
+%\addcontentsline{toc}{chapter}{List of Figures}
 
-\newpage
-\setlength{\cftparskip}{-0.8pt}
-\phantomsection
-\addcontentsline{toc}{chapter}{List of Figures}
+% don't uncomment the following two lines, for whatever reason
 %\setlength\cftbeforechapskip{4pt}
 %\setlength\cftbeforefigskip{4pt}
-\listoffigures
 
+%\listoffigures
 
-\newpage
-\thispagestyle{empty}
-\mbox{}
-\newpage
+% Uncomment to enable list of tables
+
 %\newpage
-\phantomsection
-\addcontentsline{toc}{chapter}{List of Tables}
-\listoftables
+%\thispagestyle{empty}
+%\mbox{}
+%\newpage
+%\newpage
+%\phantomsection
+%\addcontentsline{toc}{chapter}{List of Tables}
+%\listoftables
 
+% Uncomment to enable list of listings
 
+% \newpage
+% \listoflistings
+% \addcontentsline{toc}{chapter}{List of Listings}
 
-\newpage
-\listoflistings
-\addcontentsline{toc}{chapter}{List of Listings}
+% Uncomment to enable glossary
 
+% \newpage
+% \printglossary{}
 
-\newpage
-\printglossary{}
+% Uncomment to enable appendix
 
-\chapter*{Appendix}
-\renewcommand*{\chaptermarkformat}{}
-\renewcommand*{\sectionmarkformat}{}
-\chaptermark{Appendix}
-\sectionmark{Appendix}
-\addcontentsline{toc}{chapter}{Appendix}
+%\chapter*{Appendix}
+%\renewcommand*{\chaptermarkformat}{}
+%\renewcommand*{\sectionmarkformat}{}
+%\chaptermark{Appendix}
+%\sectionmark{Appendix}
+%\addcontentsline{toc}{chapter}{Appendix}
 %\input{appendix.tex}
 
 \end{document}

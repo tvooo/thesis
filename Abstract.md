@@ -3,3 +3,4 @@
 - IDE giving semantic support in code creation
 - Understanding asynchronous control flow in IDEs // nope!!!
 - Understanding and exploring scope and context
+- Goals: understanding, less errors/mistakes

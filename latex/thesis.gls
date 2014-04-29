@@ -1,0 +1,6 @@
+\glossarysection[\glossarytoctitle]{\glossarytitle}\glossarypreamble
+\begin{theglossary}\glossaryheader
+\glsgroupheading{S}\relax \glsresetentrylist %
+\glossaryentryfield{syntaxhighlighting}{\glsnamefont{Syntax Highlighting}}{describes the highlighting of programming languages elements (such as reserved words, identifies or certain types) using text formatting and colour, for the purpose of better readability and understanding}{\relax }{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{v}}}%
+\end{theglossary}\glossarypostamble
