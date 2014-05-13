@@ -3,44 +3,50 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: thesis.aux
 The style file: agsm.bst
 Database file #1: thesis.bib
-You've used 2 entries,
+I was expecting a `,' or a `}'---line 28 of file thesis.bib
+ :    author 
+ :           = "Tim von Oldenburg",
+I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for "tvo"
+You've used 4 entries,
             2909 wiz_defined-function locations,
-            648 strings with 4892 characters,
-and the built_in function-call counts, 4224 in all, are:
-= -- 649
-> -- 48
+            664 strings with 5294 characters,
+and the built_in function-call counts, 11263 in all, are:
+= -- 1778
+> -- 142
 < -- 0
-+ -- 286
-- -- 14
-* -- 317
-:= -- 941
-add.period$ -- 2
-call.type$ -- 2
-change.case$ -- 26
-chr.to.int$ -- 2
-cite$ -- 2
-duplicate$ -- 32
-empty$ -- 59
-format.name$ -- 18
-if$ -- 740
++ -- 804
+- -- 42
+* -- 901
+:= -- 2365
+add.period$ -- 5
+call.type$ -- 4
+change.case$ -- 54
+chr.to.int$ -- 4
+cite$ -- 4
+duplicate$ -- 70
+empty$ -- 134
+format.name$ -- 51
+if$ -- 2018
 int.to.chr$ -- 5
 int.to.str$ -- 0
-missing$ -- 4
-newline$ -- 9
-num.names$ -- 20
-pop$ -- 17
+missing$ -- 5
+newline$ -- 18
+num.names$ -- 41
+pop$ -- 30
 preamble$ -- 1
-purify$ -- 30
+purify$ -- 60
 quote$ -- 0
-skip$ -- 19
+skip$ -- 55
 stack$ -- 0
-substring$ -- 878
-swap$ -- 2
-text.length$ -- 28
+substring$ -- 2443
+swap$ -- 14
+text.length$ -- 56
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 4
+type$ -- 12
 warning$ -- 0
-while$ -- 42
+while$ -- 87
 width$ -- 0
-write$ -- 27
+write$ -- 60
+(There was 1 error message)

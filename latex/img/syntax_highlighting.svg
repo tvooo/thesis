@@ -1,0 +1,17 @@
+<svg width="315" xmlns="http://www.w3.org/2000/svg" height="250" viewBox="0 0 315 250">
+<g transform="matrix(1.05882 0 0 1.00412 -.19165 -.5144)">
+<path fill="#efeeee" d="m3.258,3.5h17v243h-17z"/>
+</g>
+<g font-family="dejavu sans mono" word-spacing="0" line-height="125%" letter-spacing="0">
+<text x="30.57" y="13.804" xml:space="preserve" font-size="11.50642586px"><tspan x="30.57" y="13.804" fill="#ba892d">&lt;!DOCTYPE html PUBLIC "-//W3C/DTD HTML</tspan><tspan x="30.57" y="28.187" fill="#22205f">&lt;html></tspan><tspan x="30.57" y="42.57" fill="#22205f">    &lt;head></tspan><tspan x="30.57" y="56.953"><tspan fill="#22205f">        &lt;title></tspan>Example<tspan fill="#22205e">&lt;/title></tspan>
+</tspan><tspan x="30.57" y="71.336"><tspan fill="#22205e">        &lt;link </tspan><tspan fill="#642b8f">href</tspan><tspan fill="#22205e">=</tspan><tspan fill="#c92028">"screen.css"</tspan><tspan fill="#642b8f"> rel</tspan><tspan fill="#22205e">=</tspan><tspan fill="#c92028">"sty</tspan>
+</tspan><tspan x="30.57" y="85.719" fill="#22205e">    &lt;/head></tspan><tspan x="30.57" y="100.102" fill="#22205e">    &lt;body></tspan><tspan x="30.57" y="114.485" fill="#22205e">        &lt;h1></tspan><tspan x="30.57" y="128.868"><tspan fill="#22205e">            &lt;a</tspan><tspan fill="#642b8f"> href</tspan><tspan fill="#22205e">=</tspan><tspan fill="#c92028">"/"</tspan><tspan fill="#22205e">></tspan>Header<tspan fill="#22205e">&lt;/a></tspan>
+</tspan><tspan x="30.57" y="143.251" fill="#22205e">        &lt;/h1></tspan><tspan x="30.57" y="157.634"><tspan fill="#22205e">        &lt;ul </tspan><tspan fill="#642b8f">id</tspan><tspan fill="#22205e">=</tspan><tspan fill="#c92028">"nav"</tspan><tspan fill="#22205e">></tspan>
+</tspan><tspan x="30.57" y="172.017" fill="#22205e">            &lt;li></tspan><tspan x="30.57" y="186.4"><tspan fill="#22205e">                &lt;a </tspan><tspan fill="#642b8f">href</tspan><tspan fill="#22205e">=</tspan><tspan fill="#c92028">"one/"</tspan><tspan fill="#22205e">></tspan>One<tspan fill="#22205e">&lt;/a></tspan>
+</tspan><tspan x="30.57" y="200.783" fill="#22205e">            &lt;/li></tspan><tspan x="30.57" y="215.166" fill="#22205e">            &lt;li></tspan><tspan x="30.57" y="229.549"><tspan fill="#22205e">                &lt;a </tspan><tspan fill="#642b8f">href</tspan><tspan fill="#22205e">=</tspan><tspan fill="#c92028">"two/"</tspan><tspan fill="#22205e">></tspan>Two<tspan fill="#22205e">&lt;/a></tspan>
+</tspan><tspan x="30.57" y="243.933" fill="#22205e">            &lt;/li></tspan>
+</text>
+<text x="5.279" y="13.44" xml:space="preserve" font-size="11.57798004px"><tspan x="5.279" y="13.44">1</tspan><tspan x="5.279" y="27.913">2</tspan><tspan x="5.279" y="42.385">3</tspan><tspan x="5.279" y="56.858">4</tspan><tspan x="5.279" y="71.33">5</tspan><tspan x="5.279" y="85.803">6</tspan><tspan x="5.279" y="100.275">7</tspan><tspan x="5.279" y="114.748">8</tspan><tspan x="5.279" y="129.22">9</tspan><tspan x="5.279" y="143.693">10</tspan><tspan x="5.279" y="158.165">11</tspan><tspan x="5.279" y="172.638">12</tspan><tspan x="5.279" y="187.11">13</tspan><tspan x="5.279" y="201.583">14</tspan><tspan x="5.279" y="216.055">15</tspan><tspan x="5.279" y="230.528">16</tspan><tspan x="5.279" y="245">17</tspan>
+</text>
+</g>
+</svg>

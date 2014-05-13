@@ -1,0 +1,17 @@
+{
+  "name": "prototype1",
+  "version": "0.0.0",
+  "homepage": "https://github.com/tvooo/thesis",
+  "authors": [
+    "Tim von Oldenburg <tim@tvooo.de>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

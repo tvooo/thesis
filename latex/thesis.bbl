@@ -1,5 +1,18 @@
 \begin{thebibliography}{xx}
 
+\harvarditem{Crockford}{2013}{crockford}
+Crockford, D.  \harvardyearleft 2013\harvardyearright , `Monads and gonads'.
+\newblock Accessed: 26.04.2014.
+\newline\harvardurl{{https://www.youtube.com/watch?v=b0EF0VTs9Dc}}
+
+\harvarditem[Lieber et~al.]{Lieber, Brandt \harvardand\ Miller}{2014}{lieber}
+Lieber, T., Brandt, J. \harvardand\ Miller, R.~C.  \harvardyearleft
+  2014\harvardyearright , Addressing misconceptions about code with always-on
+  programming visualizations, {\em in} `Proceedings of the SIGCHI Conference on
+  Human Factors in Computing Systems', CHI '14, ACM, New York, NY, USA,
+  pp.~2481--2490.
+\newline\harvardurl{http://doi.acm.org/10.1145/2556288.2557409}
+
 \harvarditem{Moggridge}{2007}{moggridge}
 Moggridge, B.  \harvardyearleft 2007\harvardyearright , {\em Designing
   {I}nteractions}, The MIT Press, Cambridge, MA, USA.

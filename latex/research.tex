@@ -1,4 +1,12 @@
-\chapter{Research, Framework}\label{research-framework}
+\chapter{Theoretical Framework}\label{theoretical-framework}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  Static Analysis tools as cmd line tools
+\item
+  How can they help integrated into the text editor?
+\end{itemize}
 
 This chapter will introduce the research done prior to the design. It
 will explain the motivation behind working on software development
@@ -50,6 +58,19 @@ to be filled with new IDEs. Especially the area of web development
 Atom Editor, Adobe’s Brackets and Eclipse Orion, all based on Node.js
 and other web technologies.
 
+\textbf{TODO: stuff from Stephan’s thesis}
+
+\begin{quote}
+“What the different is between a text editor and an IDE – to me at least
+– is that an IDE understands the language, whereas the text editor
+understands text. ” - mention maestro - give concrete examples: eclipse
+as IDE, sublime as text editor
+\end{quote}
+
+typical features of ide: - extensibility - configurability - language or
+environment specific features -
+http://davidlynch.org/blog/2011/09/why-not-just-use-an-ide-if-you-want-ide-features/
+
 \section{UI and Interaction Patterns in
 IDEs}\label{ui-and-interaction-patterns-in-ides}
 
@@ -76,7 +97,8 @@ The gutter is part of the code editor and describes the narrow space
 next to the actual code (usually to the left). Gutters are mainly used
 to display line numbers (important for navigation and debugging), but
 some provide more advanced features, for example setting
-breakpoints\footnote{A feature of the debugger; when set, the program stops at the specified line to allow step-by-step investigation.},
+breakpoints\footnote{A feature of the debugger; when set, the program
+  stops at the specified line to allow step-by-step investigation.},
 indicating errors in the code through symbols or showing version control
 information.
 \end{description}
@@ -132,87 +154,214 @@ familiarity with the language, as well as the fact that is one of the
 most ubiquituous languages used due to its role in the world wide web
 and its implementation in web browsers, respectively.
 
-\subsection{Run time}\label{run-time}
+\subsection{Program lifecycle and
+debugging}\label{program-lifecycle-and-debugging}
 
-In the lifecycle of a program, run time is the phase in which a program
-is executed
+The lifecycle of a computer program consists of different phases, some
+of which are addressed in this section.
 
-\textbf{moar}
+\begin{description}
+\item[Author-time]
+shall be the phase during which a program is written, read, understood,
+and edited. There is no canonical definition or common name for this
+class of activities around source code, which is we define \emph{author
+time} as the time separate from run time in which a program author (e.g.
+a developer) deals directly with its code.
+\item[Compile-time]
+is the phase in which program code is translated (compiled) into native
+machine code or an intermediate representation (e.g. Java Bytecode in
+the case of the \ac{jvm}). This process generally consists of lexical
+analysis, parsing and code generation.
+\item[Run-time]
+is the phase during which a program is executed. In some interpreted
+languages, \ac{jit} compilation\footnote{Just-in-Time compilation is the
+  compilation of code immediately before its execution, instead of
+  during a preliminary compilation phase.} leads to a convergence of
+compile time and run time, which makes the distinction harder. \emph{Run
+time errors} are errors happening
+\item[Debugging]
+is the process of identifying and eliminating software errors, so-called
+\emph{bugs}. This activity is usually supported by a specialized
+software called a \emph{debugger}. The debugger allows to hook into a
+program during run-time through so-called \emph{breakpoints} and step
+through each statement individually. At all times, the debugger can
+expose the values of variables in the respective context.
+\end{description}
 
-\subsection{Syntax \& Semantics}\label{syntax-semantics}
+This thesis adresses mainly the author-time phase - not debugging
+
+\subsection{Identifiers, Variables and
+Functions}\label{identifiers-variables-and-functions}
+
+Most programming languages allow to manage their \emph{state}. This is
+done using so-called \emph{variables}.
+
+Functions are\ldots{}
+
+Identifiers are the symbolic names given to variables, which are used to
+access (read and modify) their contents. In JavaScript, functions can be
+treated as variables as well.
 
 \subsection{Scope \& Context}\label{scope-context}
 
-\cite{getify}
+In computer programming, data are usually addressed through identifiers,
+for example variables. At some point in the program, a variable is
+\emph{declared}, i.e. its existence is made known to the program.
 
-\begin{quote}
-Just as a block or function is nested inside another block or function,
-scopes are nested inside other scopes. So, if a variable cannot be found
-in the immediate scope, Engine consults the next outer containing scope,
-continuning until found or until the outermost (aka, global) scope has
-been reached.
-\end{quote}
+However, in most programming languages, a variable declaration in some
+part of the program does not necessarily make the variable accessible
+from all other parts of the program. The area in which the variable is
+accessible is called its \emph{scope}.
 
-\begin{itemize}
-\itemsep1pt\parskip0pt\parsep0pt
-\item
-  Function scope
-\item
-  Global scope (most outer scope)
-\item
-  Start from local scope (where the statement is defined), and work your
-  way outside -\textgreater{} nested scope
-\item
-  Functions define a new scope; blocks do not (in JavaScript)
-\item
-  Scope: a set of rules to look up variables and their values.
-\end{itemize}
+\footnote{This definition of scope is called \emph{lexical scope}. The
+  complementing concept, \emph{dynamic scope}, makes variable look-up
+  depending on}
 
-\begin{quote}
-Scope is the set of rules that determines where and how a variable
-(identifier) can be looked-up. This look-up may be for the purposes of
-assigning to the variable, which is an LHS (left-hand-side) reference,
-or it may be for the purposes of retrieving its value, which is an RHS
-(right-hand-side) reference.
-\end{quote}
+In different parts of a program, a variable name can refer to a
+different entity, i.e. different data. According to \citeasnoun{getify},
+\emph{scope} is „the set of rules that determines where and how a
+variable (identifier) can be looked-up“ and therefore be accessed and
+used.
+
+The characteristics of „where“ and „how“ depend on the respective
+programming language. Most modern languages implement \emph{lexical
+scope}, which means that the „where“ depends on the position of the
+variable’s declaration in the actual source code. In other words, where
+in the source text a variable is declared defines also where it is
+usable and accessible.
+
+In contrast, in languages that implement \emph{dynamic scope}
+
+\subsubsection{Nested scope}\label{nested-scope}
+
+Scope is a hierarchical concept: in many programming languages, scope
+can be nested by creating a scope \emph{within} another scope. This fact
+implies the following definitions which are used throughout this
+document:
+
+\begin{description}
+\item[Child scope]
+A scope \texttt{b} created immediately within another scope \texttt{a}
+is a child scope to the \texttt{a}.
+\item[Descendant scope]
+Any scope nested inside of a scope \texttt{a} is descendant to scope
+\texttt{a}.
+\item[Parent scope]
+The scope in which an immediate child scope is created is its parent
+scope.
+\item[Ancestor scope]
+If scope \texttt{b} is a descendant to scope \texttt{a}, \texttt{a} is
+an ancestor of scope \texttt{b}.
+\end{description}
+
+In JavaScript, scope nesting is an important concept for the validity of
+variables. If a variable is used in a scope \texttt{a}, the JavaScript
+engine first looks for its declaration in the immediate scope,
+\texttt{a}. However, if it cannot be found in the immediate scope, the
+next outer scope (the parent scope of \texttt{a}) is consulted,
+continuing the hierarchy of ancestors up until to outermost (global)
+scope has been reached. In other words: A variable is valid in the scope
+it was created, as well as in all nested (descendant) scopes. This
+circumstance leads to the phenomenon of shadowing, which is described in
+section \fullref{common-scoping-problems}.
+
+Nested scope can best be illustrated by the following figure:
 
 \begin{figure}[htbp]
 \centering
 \includegraphics{fig2.png}
-\caption{Scope as bubbles \cite{getify}}
+\caption{Nested scope \cite{getify}}
 \end{figure}
 
-\section{Survey \& Interviews}\label{survey-interviews}
+The function \texttt{foo} is defined \emph{in} the global scope (1) (see
+next section), and is therefore accessible from all parts of this
+program. \texttt{foo} itself defines a new scope (2) which includes the
+identifiers \texttt{a}, \texttt{b} and \texttt{bar}. \texttt{bar}
+defines a new scope (3) within \texttt{foo}, defining only the
+identifier \texttt{c}. As can be seen, the innermost scope (3) has
+access to its own identifiers, as well as to the ones defined in its
+containing scope (2).
 
-To form a general understanding of how IDEs and some of their specific
-features are used, an online survey targeted towards professional
-developers was created. The survey ran in April 2014 over the course of
-two weeks and yielded answers from 45 participants.
+\subsubsection{Levels of scope}\label{levels-of-scope}
 
-Besides general questions, e.g. which programming languages and IDEs the
-participants used, it collected information about the usage of the
-following IDE functionalities:
+As mentioned above, the rules for when a new scope is defined differ
+depending on the programming language. Usually, a language implements
+multiple rules.
 
 \begin{itemize}
 \itemsep1pt\parskip0pt\parsep0pt
 \item
-  Navigation of code
-\item
-  Debugging
-\item
-  Usage of API and language documentation
-\item
-  Autocompletion
-\item
-  Project structure and scaffolding
-\item
-  Asynchronicity
-\item
-  Syntax Highlighting
+  Functions define a new scope; blocks do not (in JavaScript)
 \end{itemize}
 
-For each of the areas it was asked if and how the participants were
-using them and—if appropriate—how their IDE was supporting them. They
-survey instrumented multiple-choice questions with an additional „Other“
-field for custom answers, as well as open-ended questions with a
-free-form text field.
+\begin{description}
+\item[Global scope]
+Variables that are accessible from \emph{any point} in the program make
+up the global scope.
+\item[Block scope]
+Any logical block, often denoted by containing curly braces (\texttt{\{}
+and \texttt{\}}), will create a new scope. This is the case in the C
+programming language, amongst others,
+\item[Function scope]
+Any function definition defines a new scope. Parameters of the function
+are part of this newly defined scope.
+\end{description}
+
+In JavaScript, the run-time environment defines what is in the global
+scope. The JavaScript engines in web browsers usually provide access to
+the \ac{dom} through the \texttt{document} object, whereas Node.js
+provides the \texttt{require} function to include CommonJS-style
+modules.
+
+In contrast, the Java programming language implements block scope, but
+no global scope.
+
+\subsubsection{Common scoping problems}\label{common-scoping-problems}
+
+The following are common phenomena that arise through scoping and may be
+the cause of problems. Though being typical for JavaScript, many of
+those problems can arise in other programming languages, in the same or
+similar form, as well.
+
+These phenomena can generally be helpful or hindering, and thus be
+desired or undesired. The goal of the concept developed in this thesis
+is to make the developer recognize those phenomena during author-time,
+and thus avoid confusion and reduce errors.
+
+\begin{description}
+\item[Hoisting]
+bla
+\item[Closures]
+are a common phenomenon in JavaScript programs, but are more widely used
+than they are understood.
+\item[Shadowing]
+is a consequence of nested scopes. If a variable (1) is defined in a
+containing scope, and a new variable (2) of the same name is defined in
+a contained scope, the contained scope has no access to (1). Variable
+(1) is \emph{shadowed} by variable (2). As with all of the phenomenons
+listed here, this can either be desired or unwanted behaviour. In the
+code example below, shadowing the variable \texttt{i} would have
+prevented an infinite loop. A good solution to avoid shadowing is
+choosing different variable names throughout nested scopes.
+\item[Implicit variable declaration]
+JavaScript allows for the creation of variables and object properties in
+an implicit way (\emph{silently}).
+\end{description}
+
+Gutes Problem, dass durch mein Konzept gelöst werden könnte (führt zu
+infiinite loop)
+
+\begin{verbatim}
+function foo() {
+    function bar(a) {
+        i = 3; // changing the `i` in the enclosing scope's for-loop
+        console.log( a + i );
+    }
+
+    for (var i=0; i<10; i++) {
+        bar( i * 2 ); // oops, inifinite loop ahead!
+    }
+}
+
+foo();
+\end{verbatim}
