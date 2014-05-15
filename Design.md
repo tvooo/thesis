@@ -107,7 +107,15 @@ For the prototype to yield meaningful results, it had to be integrated into a re
 
 As a prototyping platform, the author decided on the Atom text editor. By the time of writing, Atom is a relatively young project with a growing community and ecosystem. The reasons for deciding in favour of Atom are in three characteristics: the technology it is built on, its internal software architecture, and the user group it is targeting.
 
-Atom is built on web technologies, namely WebKit and Node.js. WebKit is the browser engine used by Google Chrome and Apple Safari
+Atom is built on web technologies, namely WebKit and Node.js. WebKit is the browser engine used by Google Chrome and Apple Safari and is therefore responsible for the \acl{ui} of Atom. Node.js is the JavaScript platform responsible for running any non-\ac{ui} logic.
+
+Atom is written in CoffeeScript\footnote{CoffeeScript is a programming language that transcompiles to JavaScript.}
+
+Consequently, Atom packages can be written in CoffeeScript or JavaScript, using HTML and CSS for the \ac{ui}.
+
+As the author is familiar with these technologies
+
+
 
 - text editor by github
 - open source

@@ -1,22 +1,39 @@
-\glossaryentry{IDE?\glossaryentryfield{ide}{\glsnamefont{IDE}}{Integrated Development Environment}{\relax }|setentrycounter[]{page}\glsnumberformat}{v}
-\glossaryentry{UI?\glossaryentryfield{ui}{\glsnamefont{UI}}{User Interface}{\relax }|setentrycounter[]{page}\glsnumberformat}{v}
-\glossaryentry{IDE?\glossaryentryfield{ide}{\glsnamefont{IDE}}{Integrated Development Environment}{\relax }|setentrycounter[]{page}\glsnumberformat}{v}
-\glossaryentry{PARC?\glossaryentryfield{parc}{\glsnamefont{PARC}}{Palo Alto Research Centre}{\relax }|setentrycounter[]{page}\glsnumberformat}{v}
-\glossaryentry{WYSIWYG?\glossaryentryfield{wysiwyg}{\glsnamefont{WYSIWYG}}{What You See Is What You Get}{\relax }|setentrycounter[]{page}\glsnumberformat}{v}
-\glossaryentry{IDE?\glossaryentryfield{ide}{\glsnamefont{IDE}}{Integrated Development Environment}{\relax }|setentrycounter[]{page}\glsnumberformat}{v}
-\glossaryentry{IDE?\glossaryentryfield{ide}{\glsnamefont{IDE}}{Integrated Development Environment}{\relax }|setentrycounter[]{page}\glsnumberformat}{v}
+\glossaryentry{IDE?\glossaryentryfield{ide}{\glsnamefont{IDE}}{Integrated Development Environment}{\relax }|setentrycounter[]{page}\glsnumberformat}{iv}
+\glossaryentry{UCD?\glossaryentryfield{ucd}{\glsnamefont{UCD}}{User-Centered Design}{\relax }|setentrycounter[]{page}\glsnumberformat}{iv}
+\glossaryentry{IDE?\glossaryentryfield{ide}{\glsnamefont{IDE}}{Integrated Development Environment}{\relax }|setentrycounter[]{page}\glsnumberformat}{vi}
 \glossaryentry{UI?\glossaryentryfield{ui}{\glsnamefont{UI}}{User Interface}{\relax }|setentrycounter[]{page}\glsnumberformat}{vi}
-\glossaryentry{UI?\glossaryentryfield{ui}{\glsnamefont{UI}}{User Interface}{\relax }|setentrycounter[]{page}\glsnumberformat}{vi}
+\glossaryentry{IDE?\glossaryentryfield{ide}{\glsnamefont{IDE}}{Integrated Development Environment}{\relax }|setentrycounter[]{page}\glsnumberformat}{vi}
+\glossaryentry{PARC?\glossaryentryfield{parc}{\glsnamefont{PARC}}{Palo Alto Research Centre}{\relax }|setentrycounter[]{page}\glsnumberformat}{vi}
+\glossaryentry{WYSIWYG?\glossaryentryfield{wysiwyg}{\glsnamefont{WYSIWYG}}{What You See Is What You Get}{\relax }|setentrycounter[]{page}\glsnumberformat}{vi}
 \glossaryentry{IDE?\glossaryentryfield{ide}{\glsnamefont{IDE}}{Integrated Development Environment}{\relax }|setentrycounter[]{page}\glsnumberformat}{vi}
 \glossaryentry{IDE?\glossaryentryfield{ide}{\glsnamefont{IDE}}{Integrated Development Environment}{\relax }|setentrycounter[]{page}\glsnumberformat}{vi}
 \glossaryentry{UI?\glossaryentryfield{ui}{\glsnamefont{UI}}{User Interface}{\relax }|setentrycounter[]{page}\glsnumberformat}{vii}
-\glossaryentry{DOM?\glossaryentryfield{dom}{\glsnamefont{DOM}}{Document Object Model}{\relax }|setentrycounter[]{page}\glsnumberformat}{xi}
-\glossaryentry{HTML?\glossaryentryfield{html}{\glsnamefont{HTML}}{Hypertext Markup Language}{\relax }|setentrycounter[]{page}\glsnumberformat}{xviii}
-\glossaryentry{CSS?\glossaryentryfield{css}{\glsnamefont{CSS}}{Cascading Stylesheets}{\relax }|setentrycounter[]{page}\glsnumberformat}{xviii}
+\glossaryentry{IDE?\glossaryentryfield{ide}{\glsnamefont{IDE}}{Integrated Development Environment}{\relax }|setentrycounter[]{page}\glsnumberformat}{vii}
+\glossaryentry{API?\glossaryentryfield{api}{\glsnamefont{API}}{Application Programming Interface}{\relax }|setentrycounter[]{page}\glsnumberformat}{viii}
+\glossaryentry{UI?\glossaryentryfield{ui}{\glsnamefont{UI}}{User Interface}{\relax }|setentrycounter[]{page}\glsnumberformat}{viii}
+\glossaryentry{IDE?\glossaryentryfield{ide}{\glsnamefont{IDE}}{Integrated Development Environment}{\relax }|setentrycounter[]{page}\glsnumberformat}{viii}
+\glossaryentry{IDE?\glossaryentryfield{ide}{\glsnamefont{IDE}}{Integrated Development Environment}{\relax }|setentrycounter[]{page}\glsnumberformat}{viii}
+\glossaryentry{UI?\glossaryentryfield{ui}{\glsnamefont{UI}}{User Interface}{\relax }|setentrycounter[]{page}\glsnumberformat}{ix}
+\glossaryentry{UI?\glossaryentryfield{ui}{\glsnamefont{UI}}{User Interface}{\relax }|setentrycounter[]{page}\glsnumberformat}{x}
+\glossaryentry{UI?\glossaryentryfield{ui}{\glsnamefont{UI}}{User Interface}{\relax }|setentrycounter[]{page}\glsnumberformat}{x}
+\glossaryentry{UI?\glossaryentryfield{ui}{\glsnamefont{UI}}{User Interface}{\relax }|setentrycounter[]{page}\glsnumberformat}{x}
+\glossaryentry{JIT?\glossaryentryfield{jit}{\glsnamefont{JIT}}{Just-In-Time}{\relax }|setentrycounter[]{page}\glsnumberformat}{xi}
+\glossaryentry{DOM?\glossaryentryfield{dom}{\glsnamefont{DOM}}{Document Object Model}{\relax }|setentrycounter[]{page}\glsnumberformat}{xiii}
 \glossaryentry{HTML?\glossaryentryfield{html}{\glsnamefont{HTML}}{Hypertext Markup Language}{\relax }|setentrycounter[]{page}\glsnumberformat}{xxiii}
-\glossaryentry{CSS?\glossaryentryfield{css}{\glsnamefont{CSS}}{Cascading Stylesheets}{\relax }|setentrycounter[]{page}\glsnumberformat}{xxiii}
-\glossaryentry{HTML?\glossaryentryfield{html}{\glsnamefont{HTML}}{Hypertext Markup Language}{\relax }|setentrycounter[]{page}\glsnumberformat}{xxiii}
-\glossaryentry{UI?\glossaryentryfield{ui}{\glsnamefont{UI}}{User Interface}{\relax }|setentrycounter[]{page}\glsnumberformat}{xxiv}
-\glossaryentry{UI?\glossaryentryfield{ui}{\glsnamefont{UI}}{User Interface}{\relax }|setentrycounter[]{page}\glsnumberformat}{xxiv}
-\glossaryentry{IDE?\glossaryentryfield{ide}{\glsnamefont{IDE}}{Integrated Development Environment}{\relax }|setentrycounter[]{page}\glsnumberformat}{xxvi}
+\glossaryentry{CSS?\glossaryentryfield{css}{\glsnamefont{CSS}}{Cascading Stylesheets}{\relax }|setentrycounter[]{page}\glsnumberformat}{xxiv}
+\glossaryentry{HTML?\glossaryentryfield{html}{\glsnamefont{HTML}}{Hypertext Markup Language}{\relax }|setentrycounter[]{page}\glsnumberformat}{xxviii}
+\glossaryentry{CSS?\glossaryentryfield{css}{\glsnamefont{CSS}}{Cascading Stylesheets}{\relax }|setentrycounter[]{page}\glsnumberformat}{xxviii}
+\glossaryentry{HTML?\glossaryentryfield{html}{\glsnamefont{HTML}}{Hypertext Markup Language}{\relax }|setentrycounter[]{page}\glsnumberformat}{xxviii}
 \glossaryentry{UI?\glossaryentryfield{ui}{\glsnamefont{UI}}{User Interface}{\relax }|setentrycounter[]{page}\glsnumberformat}{xxix}
+\glossaryentry{UI?\glossaryentryfield{ui}{\glsnamefont{UI}}{User Interface}{\relax }|setentrycounter[]{page}\glsnumberformat}{xxix}
+\glossaryentry{UCD?\glossaryentryfield{ucd}{\glsnamefont{UCD}}{User-Centered Design}{\relax }|setentrycounter[]{page}\glsnumberformat}{xxxi}
+\glossaryentry{HCI?\glossaryentryfield{hci}{\glsnamefont{HCI}}{Human-Computer-Interaction}{\relax }|setentrycounter[]{page}\glsnumberformat}{xxxi}
+\glossaryentry{IDE?\glossaryentryfield{ide}{\glsnamefont{IDE}}{Integrated Development Environment}{\relax }|setentrycounter[]{page}\glsnumberformat}{xxxi}
+\glossaryentry{UI?\glossaryentryfield{ui}{\glsnamefont{UI}}{User Interface}{\relax }|setentrycounter[]{page}\glsnumberformat}{xxxi}
+\glossaryentry{UI?\glossaryentryfield{ui}{\glsnamefont{UI}}{User Interface}{\relax }|setentrycounter[]{page}\glsnumberformat}{xxxi}
+\glossaryentry{UI?\glossaryentryfield{ui}{\glsnamefont{UI}}{User Interface}{\relax }|setentrycounter[]{page}\glsnumberformat}{xxxi}
+\glossaryentry{AST?\glossaryentryfield{ast}{\glsnamefont{AST}}{Abstract Syntax Tree}{\relax }|setentrycounter[]{page}\glsnumberformat}{xxxii}
+\glossaryentry{UI?\glossaryentryfield{ui}{\glsnamefont{UI}}{User Interface}{\relax }|setentrycounter[]{page}\glsnumberformat}{xxxv}
+\glossaryentry{apm?\glossaryentryfield{apm}{\glsnamefont{apm}}{Atom Package Manager}{\relax }|setentrycounter[]{page}\glsnumberformat}{xxxv}
+\glossaryentry{apm?\glossaryentryfield{apm}{\glsnamefont{apm}}{Atom Package Manager}{\relax }|setentrycounter[]{page}\glsnumberformat}{xxxv}
+\glossaryentry{apm?\glossaryentryfield{apm}{\glsnamefont{apm}}{Atom Package Manager}{\relax }|setentrycounter[]{page}\glsnumberformat}{xxxv}

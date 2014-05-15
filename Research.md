@@ -11,26 +11,39 @@ Software development environments have been predecessed by general text editors,
 
 Later, while working with Alan Kay, Tesler created the first class browser for the Smalltalk programming language. Class Browsers are used to look at source code not as textual files, but as logical entities of a programming language (for example, classes and methods). The Smalltalk class browser was therefore the first software specifically written for creating software, and a predecessor to any modern \gls{ide}.
 
+- mention maestro
+
 \glspl{ide} integrate text editors (due to their specific purpose also referred to as *code editors*) with other software development tools. Typically, those tools may include compiler, build system, syntax highlighting, autocompletion, debugger, and symbol browser.
 
 Nowadays, IDEs make use of many more \gls{ui} patterns and adapt them to a specific purpose. Taking the Eclipse IDE as an example, one can see that the class browser is built using a Tree View (as often seen in file browsers), and the text editor uses bold, italic and coloured text automatically to distinguish different entities of the programming language (so-called *syntax highlighting*).
 
 **TODO: screenshot of eclipse w/ class browser + syntax highlighting**
 
+### IDEs compared to Text Editors
+
+It is important to delimit the term „\acl{ide}“ and contrast it with „text editor“, as both are used for programming. Reynolds formulates a basic definition:
+
+> „What the different is between a text editor and an IDE – to me at least – is that an IDE understands the language, whereas the text editor understands text.“ \citeyear{reynolds}
+
+In his article, Reynolds tries to make a point against the use of text editors for programming by stating that an IDE brings „forward an understanding of the underlying language and the structure of code, and puts it front-and-centre in your working environment.“ \cite{reynolds} While certainly being correct with  this point, he ignores situations where the „understanding of the underlying language and the structure of code“ is either not wanted\footnote{For example, because it may collide with other features that have a higher priority for the respective developer.} or not possible to achieve.
+
+The latter is often the case in web front-end development, according to \citeasnoun*{lynch}. Through working with lots of different file types and programming languages, neither of which dictates a certain structure (as many static languages like Java do), the understanding an IDE can have about the structure of the code is limited. \citename{lynch} also state that IDEs „tend to be built with a workflow in mind“. **moar**?
+
+In other words, IDEs and text editors seem to follow different, contradirectional approaches. While the latter is built around a central paradigm (text editing) and usually comes with a minimal program core that is extendable to personal likes, IDEs tend to offer everything „out of the box“ as a one-stop solution.
+
+To illustrate the differences, the Eclipse IDE will be set in contrast to the Sublime Text 3 editor.
+
+Eclipse comes in multiple distributions, but we will have a look at „Eclipse Standard“.
+
+Sublime Text focuses on the editing experience. It features split-screen editing, multiple cursors and selections, fuzzy search\footnote{The technique of finding strings that match a pattern approximately.} for text, files, and editor commands; project management, a file browser, code snippets...
+It also comes with syntax definitions, which allow syntax highlighting and search for symbols, for several programming languages. It does not support any build systems, version control, or language best practices. However, it’s plug-in \ac{api} makes it easily extendable, and for most of the common tasks of a developer, there are plug-ins available.
+
+**TODO: Eclipse, und ST nochmal…**
+
+
+### Current landscape of development environments
+
 The IDE landscape is today more differentiated than ever, ranging from minimal, purpose-specific environments like Processing to huge, general-purpose, commercial environments like Visual Studio. Those different IDEs serve the needs of different developers and development situations. But still, it seems like there are many niches that are yet to be filled with new IDEs. Especially the area of web development (frontend development) is seeing many newcomers, for example Github’s Atom Editor, Adobe’s Brackets and Eclipse Orion, all based on Node.js and other web technologies.
-
-**TODO: stuff from Stephan’s thesis**
-
-> “What the different is between a text editor and an IDE – to me at least – is that an IDE understands the language, whereas the text editor understands text. ”
-- mention maestro
-- give concrete examples: eclipse as IDE, sublime as text editor
-
-typical features of ide:
-- extensibility
-- configurability
-- language or environment specific features
-- http://davidlynch.org/blog/2011/09/why-not-just-use-an-ide-if-you-want-ide-features/
-
 
 ## UI and Interaction Patterns in IDEs
 
@@ -52,14 +65,26 @@ Panel (sidebar)
 Status bar
   ~ The status bar is known from many programs, for example web browsers and word processors. It is a small bar (about one text line of height) at the bottom of the program window, usually spanning the whole window width. It is mainly used to display status information and quickly switch between different modes.
 
-### Interaction/behavioral patterns:
+### Interactional patterns
 
-- Navigation
+#### Navigation
+
+Usually, code can be both browsed as well as searched for from different perspectives. Most IDEs have a built-in file browser and a search for file names.
+
+IDEs that have the respective understanding of code structure can also offer a more *logical* way of navigating, for examply by symbolic entities like modules, classes and methods. Those are usually listed in a symbol browser or class browser, which ca be used for both browsing and searching.
+
 - Editing
 - Reading/understanding
 - Exploration
 - Mouse and keyboard (shortcuts) as input
-- Modes (vim, larry tesler against modes, diff. configurations in eclipse, on-the-fly hide/show in sublime text/atom etc)
+
+#### Modes
+
+In most IDEs, \ac{ui} elements can be shown or hidden, sometimes even positioned anywhere on the screen.
+
+The Eclipse IDE even allows the creation of completely different  \ac{ui} configurations, so-called *perspectives*. Usually, perspectives are build for a certain task, e.g. developing or debugging.
+
+Text editors like Sublime Text and Atom\footnote{In Atom, this has to be installed through a package: \url{https://atom.io/packages/zen}} support a so-called *distraction-free mode*, in which all \acl{ui} elements are hidden except the editor itself.
 
 
 ## Relevant programming concepts
@@ -121,7 +146,7 @@ In contrast, in languages that implement *dynamic scope*
 
 -->
 
-#### Nested scope
+#### Nested scope & variable lookup
 
 Scope is a hierarchical concept: in many programming languages, scope can be nested by creating a scope *within* another scope. This fact implies the following definitions which are used throughout this document:
 
@@ -137,7 +162,7 @@ Parent scope
 Ancestor scope
   ~ If scope `b` is a descendant to scope `a`, `a` is an ancestor of scope `b`.
 
-In JavaScript, scope nesting is an important concept for the validity of variables. If a variable is used in a scope `a`, the JavaScript engine first looks for its declaration in the immediate scope, `a`. However, if it cannot be found in the immediate scope, the next outer scope (the parent scope of `a`) is consulted, continuing the hierarchy of ancestors up until to outermost (global) scope has been reached. In other words: A variable is valid in the scope it was created, as well as in all nested (descendant) scopes. This circumstance leads to the phenomenon of shadowing, which is described in section \fullref{common-scoping-problems}.
+In JavaScript, scope nesting is an important concept for variable lookup. When the JavaScript engine encounters an identifier, it looks for this identifiers in the scope chain. For example, if a variable is used in a scope `a`, the JavaScript engine first looks for its declaration in the immediate scope, `a`. However, if it cannot be found in the immediate scope, the next outer scope (the parent scope of `a`) is consulted, continuing the hierarchy of ancestors up until to outermost (global) scope has been reached. In other words: A variable is valid in the scope it was created, as well as in all nested (descendant) scopes. This circumstance leads to the phenomenon of shadowing, which is described in section \fullref{common-scoping-problems}. As this way of looking up variables is executed *each time a variable is encountered*, it can have impacts on the performance is well, especially if the encountered variable is defined in a scope way higher in the scope chain.
 
 Nested scope can best be illustrated by the following figure:
 
@@ -145,15 +170,7 @@ Nested scope can best be illustrated by the following figure:
 
 The function `foo` is defined *in* the global scope (1) (see next section), and is therefore accessible from all parts of this program. `foo` itself defines a new scope (2) which includes the identifiers `a`, `b` and `bar`. `bar` defines a new scope (3) within `foo`, defining only the identifier `c`. As can be seen, the innermost scope (3) has access to its own identifiers, as well as to the ones defined in its containing scope (2).
 
-<!--
-
-- „Scope look-up stops once it finds the first match. The same identifier name can be specified at multiple layers of nested scope, which is called "shadowing" (the inner identifer "shadows" the outer identifier).“
-
 > Just as a block or function is nested inside another block or function, scopes are nested inside other scopes. So, 
-
-- Start from local scope (where the statement is defined), and work your way outside -> nested scope
-
--->
 
 #### Levels of scope
 
@@ -181,31 +198,32 @@ The following are common phenomena that arise through scoping and may be the cau
 These phenomena can generally be helpful or hindering, and thus be desired or undesired. The goal of the concept developed in this thesis is to make the developer recognize those phenomena during author-time, and thus avoid confusion and reduce errors.
 
 Hoisting
-  ~ bla
+  ~ is the implicit process, as done by the JavaScript engine, of moving variable and function declarations „from where they appear in the flow of the code to the top of the code“ \cite{getify}. By code, \citename{getify} refers to the scope block. Any variable declaration inside a scope block is hoisted to the top of the scope block.
+    
+				function foo() {
+				  a = 2;
+				  var a;
+				  console.log( a );
+				}
+
+    The above code is actually processed as:
+
+				function foo() {
+				  var a;
+				  a = 2;
+				  console.log( a );
+				}
+
+    The variable declaration of `a` is moved, or „hoisted“, to the top of the scope block of `foo`. Hoisting can impose unexpected behaviour, especially when declaring variables of the same name in nested scopes.
 
 Closures
-  ~ are a common phenomenon in JavaScript programs, but are more widely used than they are understood.
+  ~ are a common phenomenon in JavaScript programs, but are more widely used than they are understood. Citing \citename{getify}, closure is „when a function is able to remember and access its lexical scope even when that function is executing outside its lexical scope.“ \citeyear{getify} As functions are first-class objects in JavaScript, they can be passed around like variables, for example as callbacks. A function can also return another function. But, as JavaScript works with *lexical scope* and, according to the nesting rules presented before, a function must always have access to its ancestor scopes, an instance of the whole scope chain is returned or passed along with the function. In other words, the function „closes“ or „forms a closure“ over its ancestor scopes. This may impact performance, as the closed-over scopes have to stay in memory as long as a reference to the closure exists. It may also lead to unexpected behaviour, for example if a variable defined outside of a closure is used inside of it (see \citeasnoun*[Ch. 5]{getify} for more examples).
 
 Shadowing
   ~ is a consequence of nested scopes. If a variable (1) is defined in a containing scope, and a new variable (2) of the same name is defined in a contained scope, the contained scope has no access to (1). Variable (1) is *shadowed* by variable (2). As with all of the phenomenons listed here, this can either be desired or unwanted behaviour. In the code example below, shadowing the variable `i` would have prevented an infinite loop. A good solution to avoid shadowing is choosing different variable names throughout nested scopes.
 
 Implicit variable declaration
-  ~ JavaScript allows for the creation of variables and object properties in an implicit way (*silently*). 
+  ~ JavaScript allows for the creation of variables and object properties in an implicit way (*silently*).
 
-Gutes Problem, dass durch mein Konzept gelöst werden könnte (führt zu infiinite loop)
-
-```js
-function foo() {
-    function bar(a) {
-        i = 3; // changing the `i` in the enclosing scope's for-loop
-        console.log( a + i );
-    }
-
-    for (var i=0; i<10; i++) {
-        bar( i * 2 ); // oops, inifinite loop ahead!
-    }
-}
-
-foo();
-```
-
+Lookup performance
+  ~ The variable lookup through scope chains, as described above, can have impact on the performance of an application.

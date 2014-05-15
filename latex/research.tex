@@ -33,6 +33,12 @@ a programming language (for example, classes and methods). The Smalltalk
 class browser was therefore the first software specifically written for
 creating software, and a predecessor to any modern \gls{ide}.
 
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  mention maestro
+\end{itemize}
+
 \glspl{ide} integrate text editors (due to their specific purpose also
 referred to as \emph{code editors}) with other software development
 tools. Typically, those tools may include compiler, build system, syntax
@@ -48,6 +54,65 @@ language (so-called \emph{syntax highlighting}).
 \textbf{TODO: screenshot of eclipse w/ class browser + syntax
 highlighting}
 
+\subsection{IDEs compared to Text
+Editors}\label{ides-compared-to-text-editors}
+
+It is important to delimit the term „\acl{ide}“ and contrast it with
+„text editor“, as both are used for programming. Reynolds formulates a
+basic definition:
+
+\begin{quote}
+„What the different is between a text editor and an IDE – to me at least
+– is that an IDE understands the language, whereas the text editor
+understands text.“ \citeyear{reynolds}
+\end{quote}
+
+In his article, Reynolds tries to make a point against the use of text
+editors for programming by stating that an IDE brings „forward an
+understanding of the underlying language and the structure of code, and
+puts it front-and-centre in your working environment.“ \cite{reynolds}
+While certainly being correct with this point, he ignores situations
+where the „understanding of the underlying language and the structure of
+code“ is either not
+wanted\footnote{For example, because it may collide with other features that have a higher priority for the respective developer.}
+or not possible to achieve.
+
+The latter is often the case in web front-end development, according to
+\citeasnoun*{lynch}. Through working with lots of different file types
+and programming languages, neither of which dictates a certain structure
+(as many static languages like Java do), the understanding an IDE can
+have about the structure of the code is limited. \citename{lynch} also
+state that IDEs „tend to be built with a workflow in mind“.
+\textbf{moar}?
+
+In other words, IDEs and text editors seem to follow different,
+contradirectional approaches. While the latter is built around a central
+paradigm (text editing) and usually comes with a minimal program core
+that is extendable to personal likes, IDEs tend to offer everything „out
+of the box“ as a one-stop solution.
+
+To illustrate the differences, the Eclipse IDE will be set in contrast
+to the Sublime Text 3 editor.
+
+Eclipse comes in multiple distributions, but we will have a look at
+„Eclipse Standard“.
+
+Sublime Text focuses on the editing experience. It features split-screen
+editing, multiple cursors and selections, fuzzy
+search\footnote{The technique of finding strings that match a pattern approximately.}
+for text, files, and editor commands; project management, a file
+browser, code snippets... It also comes with syntax definitions, which
+allow syntax highlighting and search for symbols, for several
+programming languages. It does not support any build systems, version
+control, or language best practices. However, it’s plug-in \ac{api}
+makes it easily extendable, and for most of the common tasks of a
+developer, there are plug-ins available.
+
+\textbf{TODO: Eclipse, und ST nochmal\ldots{}}
+
+\subsection{Current landscape of development
+environments}\label{current-landscape-of-development-environments}
+
 The IDE landscape is today more differentiated than ever, ranging from
 minimal, purpose-specific environments like Processing to huge,
 general-purpose, commercial environments like Visual Studio. Those
@@ -57,19 +122,6 @@ to be filled with new IDEs. Especially the area of web development
 (frontend development) is seeing many newcomers, for example Github’s
 Atom Editor, Adobe’s Brackets and Eclipse Orion, all based on Node.js
 and other web technologies.
-
-\textbf{TODO: stuff from Stephan’s thesis}
-
-\begin{quote}
-“What the different is between a text editor and an IDE – to me at least
-– is that an IDE understands the language, whereas the text editor
-understands text. ” - mention maestro - give concrete examples: eclipse
-as IDE, sublime as text editor
-\end{quote}
-
-typical features of ide: - extensibility - configurability - language or
-environment specific features -
-http://davidlynch.org/blog/2011/09/why-not-just-use-an-ide-if-you-want-ide-features/
 
 \section{UI and Interaction Patterns in
 IDEs}\label{ui-and-interaction-patterns-in-ides}
@@ -121,13 +173,22 @@ width. It is mainly used to display status information and quickly
 switch between different modes.
 \end{description}
 
-\subsection{Interaction/behavioral
-patterns:}\label{interactionbehavioral-patterns}
+\subsection{Interactional patterns}\label{interactional-patterns}
+
+\subsubsection{Navigation}\label{navigation}
+
+Usually, code can be both browsed as well as searched for from different
+perspectives. Most IDEs have a built-in file browser and a search for
+file names.
+
+IDEs that have the respective understanding of code structure can also
+offer a more \emph{logical} way of navigating, for examply by symbolic
+entities like modules, classes and methods. Those are usually listed in
+a symbol browser or class browser, which ca be used for both browsing
+and searching.
 
 \begin{itemize}
 \itemsep1pt\parskip0pt\parsep0pt
-\item
-  Navigation
 \item
   Editing
 \item
@@ -136,10 +197,21 @@ patterns:}\label{interactionbehavioral-patterns}
   Exploration
 \item
   Mouse and keyboard (shortcuts) as input
-\item
-  Modes (vim, larry tesler against modes, diff. configurations in
-  eclipse, on-the-fly hide/show in sublime text/atom etc)
 \end{itemize}
+
+\subsubsection{Modes}\label{modes}
+
+In most IDEs, \ac{ui} elements can be shown or hidden, sometimes even
+positioned anywhere on the screen.
+
+The Eclipse IDE even allows the creation of completely different \ac{ui}
+configurations, so-called \emph{perspectives}. Usually, perspectives are
+build for a certain task, e.g. developing or debugging.
+
+Text editors like Sublime Text and
+Atom\footnote{In Atom, this has to be installed through a package: \url{https://atom.io/packages/zen}}
+support a so-called \emph{distraction-free mode}, in which all \acl{ui}
+elements are hidden except the editor itself.
 
 \section{Relevant programming
 concepts}\label{relevant-programming-concepts}
@@ -232,7 +304,8 @@ usable and accessible.
 
 In contrast, in languages that implement \emph{dynamic scope}
 
-\subsubsection{Nested scope}\label{nested-scope}
+\subsubsection{Nested scope \& variable
+lookup}\label{nested-scope-variable-lookup}
 
 Scope is a hierarchical concept: in many programming languages, scope
 can be nested by creating a scope \emph{within} another scope. This fact
@@ -254,16 +327,21 @@ If scope \texttt{b} is a descendant to scope \texttt{a}, \texttt{a} is
 an ancestor of scope \texttt{b}.
 \end{description}
 
-In JavaScript, scope nesting is an important concept for the validity of
-variables. If a variable is used in a scope \texttt{a}, the JavaScript
-engine first looks for its declaration in the immediate scope,
-\texttt{a}. However, if it cannot be found in the immediate scope, the
-next outer scope (the parent scope of \texttt{a}) is consulted,
-continuing the hierarchy of ancestors up until to outermost (global)
-scope has been reached. In other words: A variable is valid in the scope
-it was created, as well as in all nested (descendant) scopes. This
-circumstance leads to the phenomenon of shadowing, which is described in
-section \fullref{common-scoping-problems}.
+In JavaScript, scope nesting is an important concept for variable
+lookup. When the JavaScript engine encounters an identifier, it looks
+for this identifiers in the scope chain. For example, if a variable is
+used in a scope \texttt{a}, the JavaScript engine first looks for its
+declaration in the immediate scope, \texttt{a}. However, if it cannot be
+found in the immediate scope, the next outer scope (the parent scope of
+\texttt{a}) is consulted, continuing the hierarchy of ancestors up until
+to outermost (global) scope has been reached. In other words: A variable
+is valid in the scope it was created, as well as in all nested
+(descendant) scopes. This circumstance leads to the phenomenon of
+shadowing, which is described in section
+\fullref{common-scoping-problems}. As this way of looking up variables
+is executed \emph{each time a variable is encountered}, it can have
+impacts on the performance is well, especially if the encountered
+variable is defined in a scope way higher in the scope chain.
 
 Nested scope can best be illustrated by the following figure:
 
@@ -281,6 +359,11 @@ defines a new scope (3) within \texttt{foo}, defining only the
 identifier \texttt{c}. As can be seen, the innermost scope (3) has
 access to its own identifiers, as well as to the ones defined in its
 containing scope (2).
+
+\begin{quote}
+Just as a block or function is nested inside another block or function,
+scopes are nested inside other scopes. So,
+\end{quote}
 
 \subsubsection{Levels of scope}\label{levels-of-scope}
 
@@ -330,10 +413,51 @@ and thus avoid confusion and reduce errors.
 
 \begin{description}
 \item[Hoisting]
-bla
+is the implicit process, as done by the JavaScript engine, of moving
+variable and function declarations „from where they appear in the flow
+of the code to the top of the code“ \cite{getify}. By code,
+\citename{getify} refers to the scope block. Any variable declaration
+inside a scope block is hoisted to the top of the scope block.
+
+\begin{verbatim}
+        function foo() {
+          a = 2;
+          var a;
+          console.log( a );
+        }
+\end{verbatim}
+
+The above code is actually processed as:
+
+\begin{verbatim}
+        function foo() {
+          var a;
+          a = 2;
+          console.log( a );
+        }
+\end{verbatim}
+
+The variable declaration of \texttt{a} is moved, or „hoisted“, to the
+top of the scope block of \texttt{foo}. Hoisting can impose unexpected
+behaviour, especially when declaring variables of the same name in
+nested scopes.
 \item[Closures]
 are a common phenomenon in JavaScript programs, but are more widely used
-than they are understood.
+than they are understood. Citing \citename{getify}, closure is „when a
+function is able to remember and access its lexical scope even when that
+function is executing outside its lexical scope.“ \citeyear{getify} As
+functions are first-class objects in JavaScript, they can be passed
+around like variables, for example as callbacks. A function can also
+return another function. But, as JavaScript works with \emph{lexical
+scope} and, according to the nesting rules presented before, a function
+must always have access to its ancestor scopes, an instance of the whole
+scope chain is returned or passed along with the function. In other
+words, the function „closes“ or „forms a closure“ over its ancestor
+scopes. This may impact performance, as the closed-over scopes have to
+stay in memory as long as a reference to the closure exists. It may also
+lead to unexpected behaviour, for example if a variable defined outside
+of a closure is used inside of it (see \citeasnoun*[Ch. 5]{getify} for
+more examples).
 \item[Shadowing]
 is a consequence of nested scopes. If a variable (1) is defined in a
 containing scope, and a new variable (2) of the same name is defined in
@@ -346,6 +470,9 @@ choosing different variable names throughout nested scopes.
 \item[Implicit variable declaration]
 JavaScript allows for the creation of variables and object properties in
 an implicit way (\emph{silently}).
+\item[Lookup performance]
+The variable lookup through scope chains, as described above, can have
+impact on the performance of an application.
 \end{description}
 
 Gutes Problem, dass durch mein Konzept gelöst werden könnte (führt zu

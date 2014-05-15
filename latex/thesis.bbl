@@ -1,5 +1,13 @@
 \begin{thebibliography}{xx}
 
+\harvarditem{}{n.d.}{tvo}
+  \harvardyearleft n.d.\harvardyearright .
+
+\harvarditem{Baxter-Reynolds}{2011}{reynolds}
+Baxter-Reynolds, M.  \harvardyearleft 2011\harvardyearright , `Program in a
+  text editor rather than an ide? why would you do that?'.
+\newline\harvardurl{{http://www.theguardian.com/technology/blog/2011/oct/24/programming-ide-editors-choice}}
+
 \harvarditem{Crockford}{2013}{crockford}
 Crockford, D.  \harvardyearleft 2013\harvardyearright , `Monads and gonads'.
 \newblock Accessed: 26.04.2014.
@@ -13,9 +21,18 @@ Lieber, T., Brandt, J. \harvardand\ Miller, R.~C.  \harvardyearleft
   pp.~2481--2490.
 \newline\harvardurl{http://doi.acm.org/10.1145/2556288.2557409}
 
+\harvarditem{Lynch}{2011}{lynch}
+Lynch, D.  \harvardyearleft 2011\harvardyearright , `Why not just use an ide if
+  you want ide features?'.
+\newline\harvardurl{{http://davidlynch.org/blog/2011/09/why-not-just-use-an-ide-if-you-want-ide-features/}}
+
 \harvarditem{Moggridge}{2007}{moggridge}
 Moggridge, B.  \harvardyearleft 2007\harvardyearright , {\em Designing
   {I}nteractions}, The MIT Press, Cambridge, MA, USA.
+
+\harvarditem{Raymond}{2003}{raymond}
+Raymond, E.~S.  \harvardyearleft 2003\harvardyearright , {\em The Art of Unix
+  Programming}, Addison-Wesley.
 
 \harvarditem{Simpson}{2014}{getify}
 Simpson, K.  \harvardyearleft 2014\harvardyearright , {\em You {D}on't {K}now
