@@ -91,8 +91,7 @@
 \newcommand{\abschluss}{Master of Science}
 \newcommand{\studiengang}{Interaction Design}
 \newcommand{\dhbw}{Stuttgart}
-\newcommand{\betreuer}{Lars Holmberg} % evtl. mit Titel
-\newcommand{\gutachter}{Paul Hubert Vossen} % evtl. mit Titel
+\newcommand{\supervisor}{Lars Holmberg} % evtl. mit Titel
 \newcommand{\zeitraum}{10 weeks}
 
 \PassOptionsToPackage{hyphens}{url}
@@ -117,11 +116,13 @@
 % I have no idea what I'm doing...
 %\renewcommand\listoflistingscaption{List of Listings}
 
-
+\title{\titel}
+\author{\autor}
 
 \begin{document}
 
 \input{title}
+%\maketitle
 \newpage
 \thispagestyle{empty}
 \mbox{}
@@ -161,7 +162,10 @@
 
 \tableofcontents
 
-%\newpage
+
+
+\newpage
+\pagenumbering{arabic}
 \input{intro.tex}
 \input{research.tex}
 \input{process.tex}

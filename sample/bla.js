@@ -18,7 +18,7 @@ function compileHtml( text, cb ) {
   fs.readFile( 'template.html', function( err, data ) {
     var a;
     for( var i = 0; ; ) {
-      
+
     }
 
     var c;

@@ -1,17 +1,27 @@
 \begin{thebibliography}{xx}
 
-\harvarditem{}{n.d.}{tvo}
-  \harvardyearleft n.d.\harvardyearright .
-
 \harvarditem{Baxter-Reynolds}{2011}{reynolds}
 Baxter-Reynolds, M.  \harvardyearleft 2011\harvardyearright , `Program in a
   text editor rather than an ide? why would you do that?'.
 \newline\harvardurl{{http://www.theguardian.com/technology/blog/2011/oct/24/programming-ide-editors-choice}}
 
+\harvarditem{Castorina}{2014}{castorina}
+Castorina, D.  \harvardyearleft 2014\harvardyearright , `Javascript prototypes,
+  scopes, and performance: What you need to know'.
+\newblock Accessed: 16.05.2014.
+\newline\harvardurl{{http://www.toptal.com/javascript/javascript-prototypes-scopes-and-performance-what-you-need-to-know}}
+
 \harvarditem{Crockford}{2013}{crockford}
 Crockford, D.  \harvardyearleft 2013\harvardyearright , `Monads and gonads'.
 \newblock Accessed: 26.04.2014.
 \newline\harvardurl{{https://www.youtube.com/watch?v=b0EF0VTs9Dc}}
+
+\harvarditem{{\em {Interaktives Programmieren als
+  System-Schlager}}}{1975}{maestro}
+{\em {Interaktives Programmieren als System-Schlager}}  \harvardyearleft
+  1975\harvardyearright .
+\newblock {German. Accessed: 28.04.2014}.
+\newline\harvardurl{http://www.computerwoche.de/heftarchiv/1975/47/1205421/}
 
 \harvarditem[Lieber et~al.]{Lieber, Brandt \harvardand\ Miller}{2014}{lieber}
 Lieber, T., Brandt, J. \harvardand\ Miller, R.~C.  \harvardyearleft
@@ -37,5 +47,16 @@ Raymond, E.~S.  \harvardyearleft 2003\harvardyearright , {\em The Art of Unix
 \harvarditem{Simpson}{2014}{getify}
 Simpson, K.  \harvardyearleft 2014\harvardyearright , {\em You {D}on't {K}now
   {JS}: {S}cope \& {C}losures}, O'Reilly Media.
+
+\harvarditem{Victor}{2012}{victor}
+Victor, B.  \harvardyearleft 2012\harvardyearright , `Learnable programming'.
+\newblock Accessed: 07.04.2014.
+\newline\harvardurl{http://worrydream.com/#!/LearnableProgramming}
+
+\harvarditem{von Oldenburg}{2014}{tvo}
+von Oldenburg, T.  \harvardyearleft 2014\harvardyearright , `Analyzing
+  javascript scope'.
+\newblock Accessed: 12.05.2014.
+\newline\harvardurl{{http://www.protoandtype.com/analyzing-scope/}}
 
 \end{thebibliography}

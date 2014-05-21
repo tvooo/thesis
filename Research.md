@@ -1,102 +1,89 @@
-# Theoretical Framework
+# Theoretical Grounding {#research}
 
-- Static Analysis tools as cmd line tools
-- How can they help integrated into the text editor?
+This chapter will introduce the research done prior to the design. It will present a short history of \glspl{ide} and list typical \gls{ui} design patterns in \glspl{ide}. Finally, the principle of *scope* in programming languages will be explained.
 
-This chapter will introduce the research done prior to the design. It will explain the motivation behind working on software development environments, give a short history of \glspl{ide} and list typical \gls{ui} design patterns in \glspl{ide}. It will close by presenting a survey and a series of interviews done in order to understand the problem space.
+## History and Purpose of Integrated Development Environments
 
-## History and role of IDEs
+> „A programming environment is a user interface for understanding a program.“ — Bret Victor \citeyear{victor}
 
-Software development environments have been predecessed by general text editors, starting with several projects at the Xerox \gls{parc}. Douglas Engelbart created the text editor for the NLS system (oNLine System) which allowed \gls{wysiwyg} style editing \cite[pp.]{moggridge}. In the *Gypsy* text editor, Larry Tesler first integrated modeless moving of text, which is known as *Copy&Paste* \cite[pp.]{moggridge}. Text editors with those functionalities are now the core of any software development environment.
+Software development environments have been predecessed by general text editors, starting with several projects at the Xerox \gls{parc}. Douglas Engelbart created the text editor for the NLS system (oNLine System) which allowed \gls{wysiwyg} style editing. In the *Gypsy* text editor, Larry Tesler first integrated modeless moving of text, which is known as *Copy & Paste* \cite{moggridge}. Text editors with those functionalities are now the core of any software development environment.
 
-Later, while working with Alan Kay, Tesler created the first class browser for the Smalltalk programming language. Class Browsers are used to look at source code not as textual files, but as logical entities of a programming language (for example, classes and methods). The Smalltalk class browser was therefore the first software specifically written for creating software, and a predecessor to any modern \gls{ide}.
+Later, while working with Alan Kay, Tesler created the first class browser for the Smalltalk programming language. Class browsers are used to look at programs not as of textual source code, but as of logical entities of a programming language (for example classes and methods). The Smalltalk class browser was therefore the first software specifically written for creating software, and a predecessor to any modern development environment.
 
-- mention maestro
-
-\glspl{ide} integrate text editors (due to their specific purpose also referred to as *code editors*) with other software development tools. Typically, those tools may include compiler, build system, syntax highlighting, autocompletion, debugger, and symbol browser.
-
-Nowadays, IDEs make use of many more \gls{ui} patterns and adapt them to a specific purpose. Taking the Eclipse IDE as an example, one can see that the class browser is built using a Tree View (as often seen in file browsers), and the text editor uses bold, italic and coloured text automatically to distinguish different entities of the programming language (so-called *syntax highlighting*).
-
-**TODO: screenshot of eclipse w/ class browser + syntax highlighting**
+*Integrated Development Environments* integrate text editors (due to their specific purpose also referred to here as *code editors*) with other software development tools. Typically, those tools include compilers, build systems, syntax highlighters, autocompletion, debuggers, and symbol browsers. The first \ac{ide} is said to be *Maestro I* by Softlab, a whole terminal dedicated to integrating various development tasks \cite{maestro}.
 
 ### IDEs compared to Text Editors
 
-It is important to delimit the term „\acl{ide}“ and contrast it with „text editor“, as both are used for programming. Reynolds formulates a basic definition:
+It is difficult to delimit the term „\acl{ide}“ and contrast it with text editor that are mainly used for programming. \citename{reynolds} formulates a basic definition:
 
 > „What the different is between a text editor and an IDE – to me at least – is that an IDE understands the language, whereas the text editor understands text.“ \citeyear{reynolds}
 
-In his article, Reynolds tries to make a point against the use of text editors for programming by stating that an IDE brings „forward an understanding of the underlying language and the structure of code, and puts it front-and-centre in your working environment.“ \cite{reynolds} While certainly being correct with  this point, he ignores situations where the „understanding of the underlying language and the structure of code“ is either not wanted\footnote{For example, because it may collide with other features that have a higher priority for the respective developer.} or not possible to achieve.
+In his article, \citename{reynolds} tries to make a point against the use of text editors for programming by stating that an IDE brings „forward an understanding of the underlying language and the structure of code, and puts it front-and-centre in your working environment.“ \citeyear{reynolds} While certainly being correct with this point, he ignores situations where the „understanding of the underlying language and the structure of code“ is either not wanted\footnote{For example, because it may collide with other features that have a higher priority for the respective developer.} or not possible to achieve.
 
-The latter is often the case in web front-end development, according to \citeasnoun*{lynch}. Through working with lots of different file types and programming languages, neither of which dictates a certain structure (as many static languages like Java do), the understanding an IDE can have about the structure of the code is limited. \citename{lynch} also state that IDEs „tend to be built with a workflow in mind“. **moar**?
+The latter is often the case in web front-end development, according to \citeasnoun{lynch}. Through working with lots of different file types and programming languages, neither of which dictates a certain structure (in opposition to many static languages like Java), the understanding an IDE can have about the structure of the code is limited. \citename{lynch} also states that IDEs „tend to be built with a workflow in mind“, therefore being seen as opinionated.
 
 In other words, IDEs and text editors seem to follow different, contradirectional approaches. While the latter is built around a central paradigm (text editing) and usually comes with a minimal program core that is extendable to personal likes, IDEs tend to offer everything „out of the box“ as a one-stop solution.
 
-To illustrate the differences, the Eclipse IDE will be set in contrast to the Sublime Text 3 editor.
+For this thesis, the distinction only plays a subordinate role, as most of the concepts and ideas discussed here can be applied to both kinds of software. However, it is important to clarify that both are adressed when using, interchangably, any of the following terms: *Integrated Development Environment (IDE)*, *development environment*, *software development environment*, *programming environment*.
 
-Eclipse comes in multiple distributions, but we will have a look at „Eclipse Standard“.
+<!--
 
-Sublime Text focuses on the editing experience. It features split-screen editing, multiple cursors and selections, fuzzy search\footnote{The technique of finding strings that match a pattern approximately.} for text, files, and editor commands; project management, a file browser, code snippets...
-It also comes with syntax definitions, which allow syntax highlighting and search for symbols, for several programming languages. It does not support any build systems, version control, or language best practices. However, it’s plug-in \ac{api} makes it easily extendable, and for most of the common tasks of a developer, there are plug-ins available.
+### The Current Landscape of Development Environments
 
-**TODO: Eclipse, und ST nochmal…**
+The IDE landscape is today more differentiated than ever, ranging from minimal, purpose-specific environments to huge, general-purpose, commercial environments.
 
+On the commercial side, Microsoft Visual Studio is the development environment for the .Net platform.
 
-### Current landscape of development environments
+ Those different IDEs serve the needs of different developers and development situations. But still, it seems like there are many niches that are yet to be filled with new IDEs. Especially the area of web development (frontend development) is seeing many newcomers, for example Github’s Atom, Adobe’s Brackets and Eclipse Orion, all based on Node.js and other web technologies.
 
-The IDE landscape is today more differentiated than ever, ranging from minimal, purpose-specific environments like Processing to huge, general-purpose, commercial environments like Visual Studio. Those different IDEs serve the needs of different developers and development situations. But still, it seems like there are many niches that are yet to be filled with new IDEs. Especially the area of web development (frontend development) is seeing many newcomers, for example Github’s Atom Editor, Adobe’s Brackets and Eclipse Orion, all based on Node.js and other web technologies.
+-->
 
 ## UI and Interaction Patterns in IDEs
 
-As previously mentioned, most \gls{ui} patterns found in \glspl{ide} are general, well-known patterns adapted to a specific purpose. This section will give an overview on relevant interaction patterns in IDEs and their graphical implementation.
+Many \acl{ui} patterns found in \glspl{ide} are general, well-known \ac{ui} patterns adapted to a specific purpose. This section gives an overview on interaction patterns in IDEs that are relevant to this thesis.
 
-### UI Patterns
+### User Interface Patterns
 
 Code Editor
-  ~ Central to every \gls{ide}, a code editor is a specialized text editor, used for reading and writing program code. It usually features a *gutter* (see below) and \gls{syntaxhighlighting}. In opposition to the text editor of a word processor, code editors usually display a monospaced font, which allows to see the code editor as a grid of rows and columns. With evenly-spaced columns, due to the monospaced font, code formatting is made consistent; line indentation is an important concept in many programming languages, either as a core syntactical concept or for the sake of readability.
+  ~ Central to every \gls{ide}, a code editor is a specialized text editor, used for reading and writing program code. It typically features a *gutter* (see below) and \gls{syntaxhighlighting}. In opposition to the text editor of a word processor, code editors are not rich text editors. They also display a monospaced font, which allows to see the editor content as a grid of rows and columns. With evenly-spaced columns, due to the monospaced font, code formatting and line indentation\footnote{In many programming languages, line indentation is an important concept, either as a core syntactical concept or for the sake of readability.} is made consistent.
 
 Gutter
-  ~ The gutter is part of the code editor and describes the narrow space next to the actual code (usually to the left). Gutters are mainly used to display line numbers (important for navigation and debugging), but some provide more advanced features, for example setting breakpoints^[A feature of the debugger; when set, the program stops at the specified line to allow step-by-step investigation.], indicating errors in the code through symbols or showing version control information.
-
-- (Inline) popup
+  ~ The gutter is part of the code editor and describes the narrow space next to the actual code (usually to the left). Gutters are mainly used to display line numbers (important for navigation and debugging), but some provide more advanced features, for example setting breakpoints\footnote{A feature of the debugger; when set, the program stops at the specified line to allow step-by-step investigation.}, indicating errors in the code through symbols, showing version control information, or allowing to fold code away in order to either focus or get an overview.
 
 Panel (sidebar)
-  ~ A panel is rectangular \ac{ui} element used to group interface element of similar functionality together. Often, panels **TODO: moar**
+  ~ A panel is rectangular \ac{ui} area used to group together interface element of similar functionality or other commonalities together. Often, panels are used on the edges of application windows; if they are on the left or right side, they may be called *sidebar*. Panels that host a great number of program functionalities are often called *toolbar*. Some applications implement *dockable* panels, which can be moved around and snapped to different areas on the screen. Another common characteristic is that panels can be resized and *toggled*, i.e. shown and hidden, on demand.
 
 Status bar
-  ~ The status bar is known from many programs, for example web browsers and word processors. It is a small bar (about one text line of height) at the bottom of the program window, usually spanning the whole window width. It is mainly used to display status information and quickly switch between different modes.
+  ~ The status bar is known from many programs, for example web browsers and word processors. It is a small bar (about one text line of height) at the bottom of the program window, usually spanning the whole window width. It is mainly used to display status information and quickly switch between different application modes (for example „insert“ and „overwrite“ in word processors).
 
 ### Interactional patterns
 
-#### Navigation
+Navigation
+  ~ Usually, code can be both browsed and searched for from different perspectives.
 
-Usually, code can be both browsed as well as searched for from different perspectives. Most IDEs have a built-in file browser and a search for file names.
+    For browsing, most IDEs have a built-in file browser. IDEs that have the respective understanding of code structure can also offer a more *logical* way of navigating, for examply by symbolic entities like modules, classes and methods. Those are usually listed in a symbol browser or class browser. In the Eclipse IDE, the file browser and symbol browser are combined into one component, called the *project explorer*.
 
-IDEs that have the respective understanding of code structure can also offer a more *logical* way of navigating, for examply by symbolic entities like modules, classes and methods. Those are usually listed in a symbol browser or class browser, which ca be used for both browsing and searching.
+    IDE facilities for searching work analoguously. Files within a project can be searched for by their name or their content. If the IDE knows about the symbols of a programming language, those can usually be searched for as well. Additionally, some IDEs like Eclipse allow the user to right click on a method call and jump to its definition source file, if available.
 
-- Editing
-- Reading/understanding
-- Exploration
-- Mouse and keyboard (shortcuts) as input
+Modes
+  ~ In most IDEs, \ac{ui} elements can be shown or hidden, sometimes even positioned anywhere on the screen. The Eclipse IDE even allows the creation of completely different  \ac{ui} configurations, so-called *perspectives*. Usually, perspectives are build for a certain task, e.g. developing or debugging. Text editors like Sublime Text and Atom\footnote{In Atom, this has to be installed through a package: \url{https://atom.io/packages/zen}} support a so-called *distraction-free mode*, in which all \acl{ui} elements are hidden except the editor itself.
 
-#### Modes
+Input
+  ~ todo
 
-In most IDEs, \ac{ui} elements can be shown or hidden, sometimes even positioned anywhere on the screen.
+Execution and Debugging
+  ~ todo
 
-The Eclipse IDE even allows the creation of completely different  \ac{ui} configurations, so-called *perspectives*. Usually, perspectives are build for a certain task, e.g. developing or debugging.
+## Relevant Programming Concepts
 
-Text editors like Sublime Text and Atom\footnote{In Atom, this has to be installed through a package: \url{https://atom.io/packages/zen}} support a so-called *distraction-free mode*, in which all \acl{ui} elements are hidden except the editor itself.
+The following section presents concepts of programming and programming languages that are important to the topic of this thesis. Whereas most of the concepts apply to a wide range of programming languages, *JavaScript* was chosen as an exemplary language both to explain the concepts as well as the target language of prototyping as described in chapter \fullref{design}. The reasons for this choice are my familiarity with the language, as well as the fact that JavaScript is one of the most ubiquituous languages used due to its role in the world wide web and its implementation in web browsers, respectively.
 
+### Program Lifecycle
 
-## Relevant programming concepts
-
-The following section presents concepts of programming and programming languages that are important to the topic of this thesis. Whereas most of the concepts apply to a wide range of programming languages, *JavaScript* was chosen as an exemplary language both to explain the concepts as well as the target language of prototyping as described in the next chapter. The reasons for this choice are the author’s familiarity with the language, as well as the fact that is one of the most ubiquituous languages used due to its role in the world wide web and its implementation in web browsers, respectively.
-
-### Program lifecycle and debugging
-
-The lifecycle of a computer program consists of different phases, some of which are addressed in this section. 
+The lifecycle of a computer program consists of different phases, the most relevant of which are described briefly in this section. 
 
 Author-time
-  ~ shall be the phase during which a program is written, read, understood, and edited. There is no canonical definition or common name for this class of activities around source code, which is we define *author time* as the time separate from run time in which a program author (e.g. a developer) deals directly with its code.
+  ~ shall be the phase during which a program is written, read, understood, and edited. There is no canonical definition or common name for this class of activities around source code, which is we define *author time* as the time separate from run time in which a program author (e.g. a developer) deals directly with its code. An alternative name for author-time may be *creation-time*.
 
 Compile-time
   ~ is the phase in which program code is translated (compiled) into native machine code or an intermediate representation (e.g. Java Bytecode in the case of the \ac{jvm}). This process generally consists of lexical analysis, parsing and code generation.
@@ -107,8 +94,7 @@ Run-time
 Debugging
   ~ is the process of identifying and eliminating software errors, so-called *bugs*. This activity is usually supported by a specialized software called a *debugger*. The debugger allows to hook into a program during run-time through so-called *breakpoints* and step through each statement individually. At all times, the debugger can expose the values of variables in the respective context.
 
-This thesis adresses mainly the author-time phase
-- not debugging
+This thesis and the according prototype mainly adress the author-time phase, during which so-called static analysis can be performed.
 
 ### Identifiers, Variables and Functions
 
@@ -220,10 +206,14 @@ Closures
   ~ are a common phenomenon in JavaScript programs, but are more widely used than they are understood. Citing \citename{getify}, closure is „when a function is able to remember and access its lexical scope even when that function is executing outside its lexical scope.“ \citeyear{getify} As functions are first-class objects in JavaScript, they can be passed around like variables, for example as callbacks. A function can also return another function. But, as JavaScript works with *lexical scope* and, according to the nesting rules presented before, a function must always have access to its ancestor scopes, an instance of the whole scope chain is returned or passed along with the function. In other words, the function „closes“ or „forms a closure“ over its ancestor scopes. This may impact performance, as the closed-over scopes have to stay in memory as long as a reference to the closure exists. It may also lead to unexpected behaviour, for example if a variable defined outside of a closure is used inside of it (see \citeasnoun*[Ch. 5]{getify} for more examples).
 
 Shadowing
-  ~ is a consequence of nested scopes. If a variable (1) is defined in a containing scope, and a new variable (2) of the same name is defined in a contained scope, the contained scope has no access to (1). Variable (1) is *shadowed* by variable (2). As with all of the phenomenons listed here, this can either be desired or unwanted behaviour. In the code example below, shadowing the variable `i` would have prevented an infinite loop. A good solution to avoid shadowing is choosing different variable names throughout nested scopes.
+  ~ is a consequence of nested scopes. If a variable (1) is defined in a containing scope, and a new variable (2) of the same name is defined in a contained scope, the contained scope has no access to (1). In other words, variable (1) is *shadowed* by variable (2). As with all of the phenomenons listed here, this can either be desired or unwanted behaviour. In the code example below, shadowing the variable `i` would have prevented an infinite loop. A good solution to avoid shadowing is choosing different variable names throughout nested scopes.
 
 Implicit variable declaration
-  ~ JavaScript allows for the creation of variables and object properties in an implicit way (*silently*).
+  ~ JavaScript allows for the creation of variables and object properties in an implicit way (*silently*). Instead of declaring it a variable using a `var` statement, they can as well just be used without prior declaration, for example:
+
+        i = 3;
+
+    Those variables are implicitly declared in the *global scope*. As this is usually unwanted behaviour, it is considered good practice to always declare variables explicilty. However, this problem is taken care off already by linters (see \fullref{solutions-to-similar-problems}).
 
 Lookup performance
-  ~ The variable lookup through scope chains, as described above, can have impact on the performance of an application.
+  ~ The variable lookup through scope chains, as described above in \fullref{nested-scope-variable-lookup}, can have an impact on the performance of an application. Each time a variable is encountered, the JavaScript engine performs the lookup process, navigating from the bottom of tjhe scope chain upwards until it is found. If a variable, which is defined in an ancestor scope (the global scope, for example), is accessed within a deeply nested scope, the lookup process slows down the execution of the program, as shown by \citeasnoun{castorina}. He furthermore suggests to cache the variable in a closer scope, if possible.

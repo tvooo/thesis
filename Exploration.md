@@ -1,4 +1,6 @@
-# Exploration
+# Exploration {#exploration}
+
+This chapter presents the exploration phase of the design process. Through an initial survey and a sequence of interviews, a whole range of problems was explored before a single problem, scope, was put into focus. By looking at solutions to conceptually similar problems and an ideation phase, a series of concepts was sketched out.
 
 ## Survey & Interviews
 
@@ -44,6 +46,8 @@ Four important characteristics for programming environments can be extracted fro
 
 Through the conducted interviews and the survey, one can argue that *scope* is a promising and valid problem area to explore. Although it was not referred to in the survey in any way, *scope* was mentioned independently by several of the survey participants and interviewees in suggestions for the improvement of existing patterns and tools. One of the interviewees introduced the author the Crockford’s \citeyear{crockford} approach of *context colouring* (see below). A similar approach was suggested in the survey in the context of editing. Though not necessarily related to scope, the participant suggested to highlight the current code block the cursor is placed in; this is already done by some editors and IDEs, and is adapted in this thesis’ concept as well. Another interviewee suggested to indicate changes of the *this* context in JavaScript, which is closely related to scope, although being run-time-specific.
 
+The strongest alternative problem to possibly focus on was *asynchronicity* and the writing and debugging of asynchronous code. After some research on the topic, I found the work of \citeasnoun{lieber} to be quite substantial and possibly parallel to mine. \citename{lieber} implements *Theseus*, an asynchronous JavaScript debugger, and will discuss it from an Interaction Design perspective in his forthcoming master’s thesis. This is why I did not choose the topic of asynchronicity, but instead focused on the problem of scope.
+
 ## Solutions to analogous problems
 
 The most ubiquitous visualization of program structure is probably **syntax highlighting** or *syntax colouring*. This concept aims to makes the developer distinguish entities of the programming language by showing them in different font types, weights, styles, or colours. According to the survey results (see section~\ref{survey-interviews}), syntax highlighting can help with a number of different problems: recognizing errors and typos, distinguishing language constructs from variables and values, and orientation through specific visual patterns. In Figure \ref{fig:syntaxhighlighting} that is showing syntax highlighting in an HTML document, HTML elements are printed in blue, whereas attributes are printed in purple, values in red, comments in yellow and content in black.
@@ -55,7 +59,7 @@ The most ubiquitous visualization of program structure is probably **syntax high
 \label{fig:syntaxhighlighting}
 \end{figure}
 
-In his talk „Monads and Gonads“, Douglas Crockford presents an alternative to syntax highlighting which he calls **„context colouring“** \citeyear{crockford}. Instead of using font styles and colours in order to highlight different elements of the *syntax*, he instead highlights different *contexts*. Figure \ref{fig:contexthighlighting} illustrates this concept: The global scope is presented in white, whereas nested contexts are marked green, yellow and blue, respectively. In this concrete example, identifiers are always coloured in the colour of the context of *where they were defined*. For example, the appearance of `value` in the innermost context is yellow, the colour of the scope in which `value` was declared (as a function parameter to the function `unit`).
+In his talk „Monads and Gonads“, \citename{crockford} presents an alternative to syntax highlighting which he calls „context colouring“ \citeyear{crockford}. Instead of using font styles and colours in order to highlight different elements of the *syntax*, he instead highlights different *contexts*. Figure \ref{fig:contexthighlighting} illustrates this concept: The global scope is presented in white, whereas nested contexts are marked green, yellow and blue, respectively. In this concrete example, identifiers are always coloured in the colour of the context of *where they were defined*. For example, the appearance of `value` in the innermost context is yellow, the colour of the scope in which `value` was declared (as a function parameter to the function `unit`).
 
 \begin{figure}[htbp]
 \centering
@@ -64,7 +68,7 @@ In his talk „Monads and Gonads“, Douglas Crockford presents an alternative t
 \label{fig:contexthighlighting}
 \end{figure}
 
-**Theseus** is a JavaScript debugger built as a plug-in for the Brackets IDE. It makes use of the code editor itself and shows information inline, in the gutter and in a panel on the bottom of the Brackets window (see Figure \ref{fig:theseus}). Theseus is mostly used for asynchronous debugging, so the way those UI elements are used corresponds do this purpose. For every function definition, Theseus shows the number the function has been called in the gutter. Functions that have never been called are marked with a grey background in the source code. Additionally, the panel on the bottom shows information about the function the cursor is positioned in^[It shows asynchronous call stacks, which are not of relevance to this thesis.].
+**Theseus** is a JavaScript debugger built as a plug-in for the Brackets IDE. It makes use of the code editor itself and shows information inline, in the gutter and in a panel on the bottom of the Brackets window (see Figure \ref{fig:theseus}). Theseus is mostly used for asynchronous debugging, so the way those UI elements are used corresponds to this purpose. For every function definition, Theseus shows the number the function has been called in the gutter. Functions that have never been called are marked with a grey background in the source code. Additionally, the panel on the bottom shows information about the function the cursor is positioned in\footnote{It shows asynchronous call stacks, which are not of relevance to this thesis.}.
 
 \begin{figure}[htbp]
 \centering
@@ -74,7 +78,7 @@ In his talk „Monads and Gonads“, Douglas Crockford presents an alternative t
 \end{figure}
 
 
-**JSHint** is a so-called *linting* tool for JavaScript: it detects bad coding practices by checking JavaScript code against a set of rules, and therefore tries to prevent common problems. Originally built as a command-line tool and for online code checking, JSHint is implemented in many IDEs through the respective plug-in systems. The *Sublime Linter* plug-in^[See <http://www.sublimelinter.com/>] for Sublime Text 3 implements JSHint (and other linting tools) *inline*: hints of bad code or inconsistent style are shown in the text editor itself and are indicated in the gutter. If the cursor is on top of problematic code, the respective hint is printed in the status bar. *Sublime Linter* behaves according to the characteristics identified in section \ref{interview-results}: it is modular, as linters for different programming languages can be plugged-in; it is lightweight and does not slow the editor down; it focuses on code by displaying results inline without gluttering the editor window; and it is smart to some extend, as it allows the configuration of certain coding styles.
+**JSHint** is a so-called *linting* tool for JavaScript: it detects bad programming practices (so-called *code smells*) by checking JavaScript code against a set of rules, and therefore tries to prevent common problems. Originally built as a command-line tool and for online code checking, JSHint is implemented in many IDEs through the respective plug-in systems. The *Sublime Linter* plug-in^[See <http://www.sublimelinter.com/>] for Sublime Text 3 implements JSHint (and other linting tools) *inline*: hints of bad code or inconsistent style are shown in the text editor itself and are indicated in the gutter. If the cursor is on top of problematic code, the respective hint is printed in the status bar. *Sublime Linter* behaves according to the characteristics identified in section \ref{interview-results}: it is modular, as linters for different programming languages can be plugged-in; it is lightweight and does not slow the editor down; it focuses on code by displaying results inline without gluttering the editor window; and it is smart to some extend, as it allows the configuration of certain coding styles. The prototype presented later in this thesis borrows many characteristics and design decisions from linting tools such as this one. This is due to the fact that both the problem of code smells and the problem of scope can mostly be solved with static analysis\footnote{Static analysis is the analysis of computer software that is performed without actually executing the program.} and presented in a similar manner.
 
 (Sublime Linter screenshot)
 
@@ -89,38 +93,32 @@ In terms of navigating and displaying the scope and context information in relat
 
 At the bottom of the window, a status bar shows the nesting of the selected element: on top is the `html` element, inside it the `body`, then a `div` and finally the selected `a` element. This status bar can be used to navigate around the nested elements by clicking on them. Clicking on the `body` element highlights it in the source code as well, and shows different style information on the right-hand side.
 
-Place to the right of the source code is a sidebar. Although it contains a tabbed interface to browse different facets of the selected element, the one that is relevant is the one in focus on the screenshot, *Style*. The way style (through \ac{css}) is applied to HTML elements is similar to the way nested scope works: style that is defined on the containing elements may influence the style of the selected elements, which is why the relevant styles are listed in order of precedence. The style rules that apply with the highest precedence are listed on top, while the rules with the least precedence are listed on the bottom. Style rules that are overriden by rules of higher precedence are marked by a line through the rule. This way of visualizing and organizing information about nested structures is further used in the following concept and design phases (see section [concepts] and chapter [design]).
+Placed to the right of the source code is a sidebar. Although it contains a tabbed interface to browse different facets of the selected element, the one that is relevant is the one in focus on the screenshot, *Style*. The way style (through \ac{css}) is applied to HTML elements is similar to the way nested scope works: style that is defined on the containing elements may influence the style of the selected elements, which is why the relevant styles are listed in order of precedence. The style rules that apply with the highest precedence are listed on top, while the rules with the least precedence are listed on the bottom. Style rules that are overriden by rules of higher precedence are marked by a line through the rule. This way of visualizing and organizing information about nested structures is further used in the following concept and design phases (see section [concepts] and chapter [design]).
+
+<!-- In **Learnable Programming**, \citename{victor} argues that programming environments should make meaning transparent \citeyear{victor}. -->
 
 ## Ideation
 
-To support the ideation phase, the author created a collection of existing UI components within IDEs. Those components were written down on post-it notes.
+To support the ideation phase, the author created a collection of existing \ac{ui} components used within IDEs, as presented in \fullref{research}. Those components were written down on post-it notes and used as seeds for *seeded brainstorming*: for each of the components, a set of solutions should be developed that are similar, related to or based on the respective component. Most of the ideas that came out of the brainstorming session made use of multiple components, for example the *scope chain* which is described further down: it made use of a status bar as well as the code editor.
 
-The components were used a seeds for *seeded brainstorming*: for each of the components, the author tried to imagine solutions that are similar, related to or based on the respective component.
-
-Most of the ideas that came out of the brainstorming session made use of multiple components, for example the *context path* which is described further down: it made use of a status bar as well as the code editor.
-
-Most of the ideas of the brainstorming phase made it into first sketches. The sketching happened with two different approaches, depending on if the code editor was involved or not.
-
-For ideas that involved the code editor, it was important that the author could work with real, functioning code. Therefore, two sample JavaScript applications were created to work with:
+Some ideas of the brainstorming phase made it into first sketches. The sketching happened with two different approaches, depending on if the code editor was involved or not. For ideas that involved the code editor, it was important to work with real, functioning code. Therefore, two JavaScript applications were created to serve as examples:
 
 * A small web server application, that would parse a markdown-formatted text file and render it into an HTML template. The application would run on Node.js and represents a typical control flow for e.g. a blogging engine (content + template = site).
 * A client-side script (runs in a browser) that fetches JSON data and presents them on a website, by the click of a button. This script represents typical client-side UI code, connecting a button event to a function and presenting the result in the UI.
 
-Both applications were written in different styles: the server-side application decouples the different tasks by putting them into different functions (as far as it makes sense), whereas the client-side application nests all function definitions inside each other, resulting in nearly one function definition in each line, and deeper indentation (ergo: higher code complexity).
+Both applications were written in different styles: the server-side application decouples the different tasks by putting them into different functions (as far as it makes sense), whereas the client-side application nests all function definitions inside each other, resulting in nearly one function definition on each line, and far deeper indentation (in other words, higher code complexity and deeply nested scope). A good solution for this design problem should address both cases.
 
-A good solution for this design problem should address both cases.
+Printouts of the two JavaScript files served as a basis for ideation *within source code*. However, for concept ideas that would mainly work with other UI components, such as a sidebar, or such concept ideas that would introduce new UI components, a blank notebook was used for sketching.
 
-Printouts of the two JavaScript files served as a basis for ideation *within source code*.
+**TODO: source code examples will be in the appendix and be referenced here**
 
-For concepts that would mainly work with other UI components, such as a sidebar, or such concepts that would introduce new UI components, blank paper was used for sketching.
+- *Scope Chain* - a breadcrumb view of the current scope chain, similar to that of a selector chain in an HTML editor (screenshot!). The scope at the position of the cursor would be shown in a status bar. By hovering over a scope level, the corresponding source code would be highlighted in the source editor.
+- *Scope Graph* - similar to a class browser, the scope graph would represent a tree view of the application’s scopes. This could be implemented as a sidebar or panel.
+- *Scope Colouring* - similarly suggested by Crockford \citeyear{crockford}, the source code can be coloured in depending on its scope level. Crockfords variation is meant to replace syntax highlighting; one could, as well, complement syntax highlighting by colouring in the background (as e.g. Theseus does), e.g. in shades of grey.
+- *Inspect Scope* - comparable to DevTools’ *Inspect Element* function, the user can right-click into the source code and choose *Inspect Scope*, which opens a panel that shows global variables, current local variables as well as the value of `this`.
+- *Gutter Scope* - any change of scope is indicated in the code editor’s gutter (similar to JSHint).
+- *Quick Inspect* - similar to Brackets’ *Quick Edit* feature, the value of `this` could be inspected inline. Debugger stuff, as *this* is run-time.
 
-## Concepts
+**TODO: more detail, and scans of relevant sketches (not! all of them)**
 
-- *Context Path* - a path view of the context tree, similar to that of a selector path in an HTML editor (screenshot!). The context at the position of the cursor would be shown in a status bar. By hovering over a context level, the corresponding source code would be highlighted in the source editor.
-- *Context Graph* - similar to a class browser, the context graph would represent a tree view of the application’s context(s). This could be implemented as a sidebar or panel.
-- *Context Colouring* - similarly suggested by Crockford \citeyear{crockford}, the source code can be coloured in depending on its context (level). Crockfords variation is meant to replace syntax highlighting; one could, as well, complement syntax highlighting by colouring in the background (as e.g. Theseus does). 50 Shades of Grey.
-- *Inspect Context* - comparable to DevTools’ *Inspect Element* function, the user can right-click into the source code and choose *Inspect Context*, which opens a panel that shows global variables, current local variables as well as the value of `this`.
-- *Gutter Context* - any change of context or scope is indicated in the code editor’s gutter (similar to JSHint).
-- *Quick Inspect* - similar to Brackets’ *Quick Edit* feature, the value of `this` could be inspected inline.
-
-http://ariya.ofilabs.com/2012/11/language-tools-for-reducing-mistakes.html
+**TODO: Chosen solution is combination of scope chain, scope colouring and inspect scope**

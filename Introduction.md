@@ -2,6 +2,8 @@
 
 Creating computer programs is a difficult and complex task. Nowadays, software developers can rely on a number of tools to help them do their tasks. Often, these tools are integrated by a so-called \ac{ide}.
 
+Ansatz: identify characteristics of well-integrated development tools, apply to the problem of scope, implement, validate. Passt das?
+
 So-called static analysis tools are especially helpful in maintaining code quality.
 - devs rely on tools
 - ides integrate tools
@@ -16,6 +18,11 @@ So-called static analysis tools are especially helpful in maintaining code quali
 
 
 What will be my knowledge contribution?
+
+-anticipated:knowledge contribution: how do i evaluate designs like this, e.g. ide tools, dev tools, for a user groups like this?
+
+-not anticipated: not anticipated knowledge contribution: using the ixd approach for an open source project yielded new results, a more open field, than os approaches usually do (they copy more and adapt and stuff)
+
 
 - Which characteristics are good for integrating language tools into the dev workflow?
 - Best way to integrate code evaluation, a new way of looking at software, into the creation process

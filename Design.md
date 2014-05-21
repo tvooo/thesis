@@ -1,4 +1,4 @@
-# Design
+# Design {#design}
 
 The following chapter will expose the design process and reasoning behind certain design decisions made for the prototypes. It will lead through the different prototyping stages and user testing to an evaluation of the design, including an outlook.
 
@@ -34,7 +34,7 @@ This sketch highlights the active scope block by applying a background colour to
 
 #### Active scope, exclusive
 
-Same as above, but descendant scope blocks are excluded from highlighting. This way of highlighting was implemented in the static prototype (see \ref{}).
+Same as above, but descendant scope blocks are excluded from highlighting. This way of highlighting was implemented in the scripted prototype (see \ref{}).
 
 #### Active scope and ancestor scopes
 
@@ -51,16 +51,16 @@ Additionally to emphasizing code blocks, individual identifiers can be highlight
 This works as well for the *scope colouring* described above, as each scope has a fixed colour. Identifiers that are used in other scopes than they are defined in can therefore always be recognized if they appear in the colour of their origin scope.
 
 
-## Static prototype
+## Scripted prototype
 
-It very quickly became clear that the sketches were of little value. Although most of them gave a general impression on where the selected scope started and where it ended, it did not allow the user to see the big picture. It seemed probably that a more interactive prototype would be more helpful in this regard.
+It very quickly became clear that the sketches were of little value. Although most of them gave a general impression on where the selected scope started and where it ended, it did not allow the user to see the big picture. It seemed probably that a more interactive prototype would be more helpful in this regard. As its capabilities of working with code are limited and the code had to be specifically prepared, this is called a *scripted prototype*.
 
-As the author is most familiar with web technologies, the static prototypes would be built using \ac{html}, \ac{css} and JavaScript and run in a web browser. Other prototyping tools, such as Balsamiq or Indigo Studio, would not allow for enough detail in terms of highlighting certain code passages, and would have represented a learning overhead.
+As the author is most familiar with web technologies, the scripted prototypes would be built using \ac{html}, \ac{css} and JavaScript and run in a web browser. Other prototyping tools, such as Balsamiq or Indigo Studio, would not allow for enough detail in terms of highlighting certain code passages, and would have represented a learning overhead.
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[keepaspectratio,width=0.75\textwidth,height=0.75\textheight]{img/prototype-1.png}
-\caption{Screenshot of the static prototype run in a browser}
+\caption{Screenshot of the scripted prototype run in a browser}
 \label{fig:syntaxhighlighting}
 \end{figure}
 
@@ -68,9 +68,9 @@ A code syntax highlighter\footnote{Prism, see \url{http://prismjs.com/}} was use
 
 Furthermore, markers in the form of HTML tags were added to the subject source code, which made it possible to apply different styles\footenote{For example text colours, background colours, of font styles.} to regions of the code. This was later used to realize highlighting of the \glspl{scope-block}.
 
-Two distinct \ac{ui} elements were added: a sidebar and a bottom bar. The content of both depends on the *current scope*, i.e. the scope the cursor is placed in.
+Two distinct \ac{ui} elements were added: a sidebar and a bottom bar. The content of both depends on the *active scope*, i.e. the scope the cursor is placed in.
 
-For each of the nested \ac{scope-block} that the cursor is positioned in (beginning from the local scope, going outwards up to the global scope), the sidebar shows a pane. Each pane contains the scope’s name along with a list of identifiers defined within that scope. The panes are ordered ascending by logical distance, i.e. the local scope would be on top, the next surrounding scope beneath it, and so forth; up to the global scope on the bottom.
+For each of the nested \ac{scope-block} that the cursor is positioned in (beginning from the local scope, going outwards up to the global scope), the sidebar shows a pane. Each pane contains the scope’s name along with a list of identifiers defined within that scope. In opposition to the working prototype, the scripted prototype does not show phenomena like hoisting and shadowing. The panes are ordered ascending by logical distance, i.e. the local scope would be on top, the next surrounding scope beneath it, and so forth; up to the global scope on the bottom.
 
 The different panes are hardcoded: all panes exist in the markup of the prototype at all times and are pre-filled with the relevant data, but are shown and hidden on demand.
 
@@ -78,83 +78,67 @@ The bottom bar shows a horizontal list of scope names. It makes use of the *brea
 
 ### Constraints
 
-The static prototype has some drawbacks, some of which might influence its quality. The most obvious one is the fact that it only works with a static, predefined source code, which is manually adapted to serve the prototype’s purpose. This implies that
+The scripted prototype has some drawbacks, some of which might influence its quality. The most obvious one is the fact that it only works with a static, predefined source code, which is manually adapted to serve the prototype’s purpose. This implies that
 
 1. changes can not be made to the code, which makes the experience of the prototype very different from a real code editor, and
 2. it is hard to tell if the prototype works similarily well with code that is more complex, less complex, or of an overall different style.
 
 The fact that there are no text editing facilities comes with another drawback, namely the absence of a cursor. If a cursor cannot be placed anywhere in the editor, the „activation“ of a scope block must be achieved differently. In the case of this prototype, it is solved by clicking on a piece of code. However, clicking anywhere in the line besides the actual text will not change the active scope.
 
-### Evaluation of the static prototype
+### Evaluation of the scripted prototype
 
-The prototype was tested with two developers in individual in-person walkthrough sessions. The users were introduced to the concept, if they were not familiar with it already, and explained the basic constraints of the prototype (as mentioned above). They were then able to explore and test the prototype to their likings. One of the two sessions were recorded using a screencast.
+The prototype was tested with two JavaScript developers in individual in-person walkthrough sessions. The users were introduced to the concept, if they were not familiar with it already, and explained the basic constraints of the prototype (as mentioned above). They were thereafter able to explore and test the prototype to their likings. One of the two sessions have been recorded as a screencast.
 
-(screencast von kamil durchhören und ergebnisse hier rein)
-- besser als papier, weil dynamisch, „play around“
+The users liked both the „preview“ feature (hovering over a breadcrumb) and the sidebar. The preview gave them an opportunity to quickly get a visual overview of your position in the code and the active scope chain. The sidebar showed them which variables and functions are available in a given context. Overall, they liked the dynamicity of the prototype, as they could „play around“ with it and understand the design concept just by trying. They quickly made a connection between they position of the cursor and the active scope along with its content.
 
+One of the users suggested possible improvements or alternative designs for existing features. He recommended a wider use of colour coding to create a link between the scope in the editor window and the sidebar, for example by colouring all the ancestor scopes in different shades of grey. He also suggested an alternative visual structure for the sidebar instead of the list, for example nested clusters or a graph. For hoisting, the user came up with an idea to integrate indicators into the text editor: a „phantom“ variable declaration, which would be grey and not editable, could be inserted on top of a scope, to show that a certain variable declaration would be hoisted up there. This indicator should be collapsible so that it does not interfere with the editing process. Because of technical constraints, this idea was not implemented in the next prototype iteration; however, it seems a sensible solution to the hoisting indication problem, as it communicates this implicit phenomenon very clearly.
 
-## Final prototype
+In conclusion, the prototype was well-received and served its purpose well. It became clear that a consistent and clear visual language for the next iteration of the prototype was necessary, and that a direct connection between the code and the scope visualization has to be communicated.
 
-The second prototype, which emerged into a final prototype, was built as a working prototype rather then a proof-of-concept. It was integrated into the Atom\footnote{See \url{https://atom.io/}} text editor as a so-called *package*, published as \gls{oss} and was made publicly available for using and testing.
+## Working prototype
+
+The second prototype, which emerged into the final one, was built as a working prototype capable of handling any JavaScript scope, rather than as a proof-of-concept. It was integrated into the Atom\footnote{See \url{https://atom.io/}} text editor as a so-called *package*, released as \gls{oss} and was made publicly available for using and testing. The package is called „Scope Inspector“ and will be referred to using this name throughout this section.
 
 ### The prototyping platform
 
-- why is integration into a real ide/editor important?
+For the prototype to yield meaningful results, I decided to integrate it into a real \ac{ide}. This decision was informed by several circumstances. The first and most obvious is that I could address a broader community of users this way. If the prototype was, like the scripted prototype, implemented in isolation as a standalone application, it would raise the barrier for people to test and for me to distribute it. But by building it as a plug-in to an existing \ac{ide}, I could leverage the distribution channels that were already in place. A second reason is that users are already familiar with the software and do not have to orientate themselves anew. This also implies that all the features that the user *expects* from an \ac{ide} are in place, and the prototype can more seamlessly be integrated into the user’s workflow. Finally, the third reason for building a prototype on top of an existing \ac{ide} is that it can make use of the design language in place, which eliminates the need to take decisions that are rather irrelevant for this prototype, such as the choice of a typeface and colour palette.
 
-There are different approaches to user testing in the \ac{ucd} process. Common with the \ac{hci} community is the *lab* approach: prototypes are tested in isolated environments. However, this is criticized by … and … 
+As a prototyping platform, the author decided on the Atom text editor. Atom is open source and created by the software company Github. By the time of writing, Atom is a relatively young project with a growing community and plug-in ecosystem. The reasons for deciding in favour of Atom are threefold: the technologies it is built upon, its internal software architecture, and the user group it is targeting.
 
-For the prototype to yield meaningful results, it had to be integrated into a real \ac{ide} or text editor. This allowed it to be used in a real-life situation, in the daily development workflows of its users.
+Atom is built on web technologies, namely WebKit\footnote{See \url{http://www.webkit.org/}} and Node.js\footnote{See \url{http://nodejs.org/}}. WebKit is the browser engine used by the web browsers Google Chrome and Apple Safari, amongst others, and is therefore responsible for the \acl{ui} layer of Atom. Node.js is the JavaScript platform responsible for running any non-\ac{ui} logic. Atom is mostly written in CoffeeScript\footnote{CoffeeScript is a programming language that transcompiles to JavaScript.}. Consequently, Atom packages can be written in CoffeeScript or JavaScript, using HTML and CSS for the \ac{ui}. As I am familiar with these technologies, Atom provided an ideal prototyping platform with a low entry barrier.
 
-As a prototyping platform, the author decided on the Atom text editor. By the time of writing, Atom is a relatively young project with a growing community and ecosystem. The reasons for deciding in favour of Atom are in three characteristics: the technology it is built on, its internal software architecture, and the user group it is targeting.
+For extending Atom, it offers an \ac{api} which can be used by plug-ins. Atom’s internal architecture is built in a modular way, so that plug-ins can hook into nearly everything that happens and react on it. The prototype makes use of this fact in many ways, for example by showing and hiding its \ac{ui} elements depending on the type of file that is being edited. In general
 
-Atom is built on web technologies, namely WebKit and Node.js. WebKit is the browser engine used by Google Chrome and Apple Safari and is therefore responsible for the \acl{ui} of Atom. Node.js is the JavaScript platform responsible for running any non-\ac{ui} logic.
-
-Atom is written in CoffeeScript\footnote{CoffeeScript is a programming language that transcompiles to JavaScript.}
-
-Consequently, Atom packages can be written in CoffeeScript or JavaScript, using HTML and CSS for the \ac{ui}.
-
-As the author is familiar with these technologies
-
-
-
-- text editor by github
-- open source
-- built in web technology
-- both its background, its technologyy and the package ecosystem suggest that it is targeted towards web developers, ergo javascript as well
-- hackable
-
-
-- Github & Atom
-- CoffeeScript
+Atom is marketed by Github as a „hackable text editor for the 21st Century“\footnote{See \url{https://atom.io/}, accessed 18.05.2014}. It is also intended to be a „deeply extensible system that blurs the distinction between ‚user‘ and ‚developer’.“ Those claims lead to the conclusion that Atom is a text editor built for developers, especially—but not exclusively—web developers. While not every web developer is a proficient JavaScript developer, the target groups of Atom and this prototype seem to overlap to a large extent.
 
 ### Parsing and gathering relevant information
 
-For the prototype to be as *complete* and *correct* as possible, it was built on top of an existing JavaScript parser called Esprima\footnote{See http://esprima.org/}. The process of extracting the relevant scope structure and annotations from the \ac{ast} will not be discussed here in greater detail, but is instead described in a blog post by the author \cite{tvo}.
+For the prototype to be as *complete* and *correct* as possible, it was built on top of an existing JavaScript parser called Esprima\footnote{See http://esprima.org/}. The process of extracting the relevant scope structure and annotations from the \ac{ast}\footnote{The \ac{ast} is the data structure that is returned by the parser, which contains all the lexical statements and expressions.} will not be discussed here in greater detail, but is instead described in a blog post \cite{tvo}.
 
-However, it is important to mention what data structures are extracted from the source code. Analoguous to the nature of JavaScript scope as described in chapter \ref{}, the data structure is a hierarchy of objects. Each object represents a scope and may have metadata as well as a list of identifiers attached to it. An identifier is either a child scope (as created by a function) or a  variable. For scope objects, the metadata are its name and its location in the source code (row and column of the start and end points), whereas for variables the metadata are its name, location, if it is hoisted, by which identifiers it is shadowed, and which identifier it is shadowing.
+However, it is important to mention what data structures are extracted from the source code. Analoguous to the nature of JavaScript scope as described in chapter \fullref{research}, the data structure is a hierarchy of objects. Each object represents a scope and may have metadata as well as a list of identifiers attached to it. An identifier is either a child scope (as created by a function) or a  variable. For scope objects, the metadata are its name and its location in the source code (row and column of the start and end points), whereas for variables the metadata are its name, location, if it is hoisted, by which child scope identifiers it is shadowed, and which identifier it is shadowing.
 
-A diagram of an exemplary data structure is shown in the figure \ref{parser}.
+A diagram of an exemplary data structure is shown in figure 
+ \ref{parser}.
 
-Using this data structure, the prototype can show meaningful data to the user.
+**TODO: insert diagram of data structure here**
 
-- Turn AST into something meaningful
-- detect hoisting and shadowing
+Using this data structure, the prototype can show meaningful data to the user, which would not have been possible with the \ac{ast} alone. The modular composition of the prototype, which decouples the task of parsing from the task of displaying information, makes it possible to re-use each of the components. The component described in this section, which is responsible for turning the \ac{ast} into a „scope tree“, could be used in plug-ins for any \ac{ide} to achieve similar functionality as the one of this prototype.
 
 ### Interface and Interactions
 
 The design respects that the subject of a developer’s work is the code itself, not the tools that surround it. This is why the solution integrates into the most important part of the IDE, the text editor, directly. The features built into the editor itself will be called *inline* features.
 
-Atom’s interface is, by default, threefold: the text editor takes the most space; on its left is a sidebar containing a file browser, and on the bottom is a status bar. As many web browsers, text editors, and IDEs, multiple open files are accessed through *tabs* on the top of the screen. The tabs are important, because the \si will only be active as long as an editor with a JavaScript file is in the foreground. Whenever the  user switches to another tab, the \si is activated or deactivated, depending on if the tab contains a JS file or not.
+Atom’s interface is, by default, threefold: the text editor takes the most space; on its left is a sidebar containing a file browser, and on the bottom is a status bar. As many web browsers, text editors, and IDEs, multiple open files are accessed through *tabs* on the top of the screen. The tabs are important, because the Scope Inspector will only be active as long as an editor with a JavaScript file is in the foreground. Whenever the user switches to another tab, the Scope Inspector is activated or deactivated, depending on if the tab contains an editor with a JavaScript file or not.
 
-Whenever the \si is active, two things are obvious: on the bottom of the editor, a panel is shown which we call *bottom bar*, and the current scope is highlighted inline.
+Throughout the Scope Inspector package, a visual style consistent with Atom’s is used. Any icons in use are taken from the Octicons\footnote{See \url{https://github.com/styleguide/css/7.0}} icon set, which is incorporated into every Github product. Atom supports themes (colour schemes) for both the application window and the editor. Scope Inspector makes use of the colours defined in those themes. This way, the package \ac{ui} feels more natural to the user. However, there may be difficulties if the theme is not well-defined and the colours are badly balanced. One user reported very low contrast between the editor’s background and the scope highlighting. In addition to pre-defined theme colours, Atom also provides a set of pre-styled \ac{ui} components, for example buttons and panes, which have been used in the prototype.
 
-- scope inspector inly active when in a javascript file
+Whenever the Scope Inspector is active, two things are obvious: on the bottom of the editor, a panel is shown which we call *bottom bar*, and the active scope is highlighted inline. Additionally, a sidebar can be toggled using the Atom command „Scope Inspector: Toggle Sidebar“. This command is accessible using the menu, the command palette, a keyboard shortcut (`Ctrl+Alt+i` by default), and a toggle button on the bottom bar. The several components and their functionality are explained in more detail in the following sections.
 
 #### Inline scope highlighting
 
-As explained above, the *current scope* is the immediate scope the cursor is placed in. It is emphasized by highlighting it through a lighter or darker background colour (depending on Atom’s colour scheme). If the cursor is placed in a different scope, the formerly active scope is un-highlighted, and the now active scope is highlighted instead.
+As explained above, the *active scope* is the immediate scope the cursor is placed in. It is emphasized by highlighting it through a lighter or darker background colour (depending on Atom’s colour scheme). If the cursor is placed in a different scope, the formerly active scope is un-highlighted, and the now active scope is highlighted instead.
 
-While the static prototype implements *exclusive highlighting*, this prototype now implements *inclusive highlighting*, which means that the inner scope are highlighted as well. This is due to technical reasons; building exclusive highlighting into the prototype would have taked a lot more time. In further iterations of the prototype, an option to enable and disable exclusive highlighting could be provided.
+While the scripted prototype implements *exclusive highlighting*, this prototype now implements *inclusive highlighting*, which means that the inner scope are highlighted as well. This is due to technical reasons; building exclusive highlighting into the prototype would have taked a lot more time. In further iterations of the prototype, an option to enable and disable exclusive highlighting could be provided.
 
 The bottom bar contains a toggle button\footnote{A switch in the form of a button, which can be either *on* or *off*.} to enable or disable highlighting of the global scope. Highlighting the global scope with *inclusive highlighting* is not useful, as the whole file would be highlighted (and there would be nothing left to contrast the highlight to).
 
@@ -164,13 +148,13 @@ The bottom bar serves two purposes: it provides a quick glance of where in the s
 
 On the right side of the bottom bar, to toggle buttons allow for enabling and disabling of two features. The right button, showing a list icon, shows or hides the sidebar. The left button with the label „Highlight Global“ toggles the highlighting of the global scope (as described above).
 
-The left side of the bottom bar shows the breadcrumbs known from the static prototype. The breadcrumbs, implemented as simple buttons, are labeled with the corresponding scope name. The global scope is always on the left, whereas the currently local, active scope is on the right. By hovering over any of the breadcrumb buttons, the user can preview the respective scope highlighting in the editor. The preview is applied in addition to the currently active highlight in a different colour.
+The left side of the bottom bar shows the breadcrumbs known from the scripted prototype. The breadcrumbs, implemented as simple buttons, are labeled with the corresponding scope name. The global scope is always on the left, whereas the currently local, active scope is on the right. By hovering over any of the breadcrumb buttons, the user can preview the respective scope highlighting in the editor. The preview is applied in addition to the currently active highlight in a different colour.
 
 By hovering over the breadcrumbs from left to right or from right to left, the user can make the relationship between the logical structure of the JavaScript program (in the form of hierarchic scopes) and the textual structure (in the form of code) visible.
 
 #### Sidebar
 
-The sidebar shows content depending on the currently active scope. Similarily to the static prototype, the sidebar lists one pane for each scope in the hierarchy of the active scope. The active scope is listed on top, while its ancestors are listed below, up to the global scope on the very bottom.
+The sidebar shows content depending on the currently active scope. Similarily to the scripted prototype, the sidebar lists one pane for each scope in the hierarchy of the active scope. The active scope is listed on top, while its ancestors are listed below, up to the global scope on the very bottom.
 
 Each pane is entitled by the name of the scope. In case of function scope, the name of the function becomes the scope name („(anonymous function)“ in the case of an unnamed function expression). In case of the global scope, the name is „GLOBAL“.
 
@@ -209,15 +193,17 @@ If enabled, the following events are tracked:
 - The user hovers over a scope breadcrumb in the bottom bar and thus previews a scope highlighting
 - The user clicks on a scope breadcrumb in the bottom bar and thus jumps to the beginning of scope, making it the active scope and highlighting it
 
-Through collecting these events, a claim can be made--to a certain extent--for how helpful certain features are.
+Through collecting these events, a claim can be made—to a certain extent—for how helpful certain features are.
 
 ### Evaluation / Interviews
 
 #### Analytics results / metrics
 
-#### Interview with full-time devs
+#### Interviews with developers
 
+<!--
 - alexander slansky: using the sidebar for navigation purposes would be doll; zeilennummern wären auch klasse
+-->
 
 #### Interview with part-time dev
 
