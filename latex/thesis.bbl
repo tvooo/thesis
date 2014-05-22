@@ -36,6 +36,11 @@ Lynch, D.  \harvardyearleft 2011\harvardyearright , `Why not just use an ide if
   you want ide features?'.
 \newline\harvardurl{{http://davidlynch.org/blog/2011/09/why-not-just-use-an-ide-if-you-want-ide-features/}}
 
+\harvarditem{{McConnell, Steve}}{2004}{mcconnell}
+{McConnell, Steve}  \harvardyearleft 2004\harvardyearright , {\em {Code
+  Complete: A Practical Handbook of Software Construction}}, 2nd edn, Microsoft
+  Press.
+
 \harvarditem{Moggridge}{2007}{moggridge}
 Moggridge, B.  \harvardyearleft 2007\harvardyearright , {\em Designing
   {I}nteractions}, The MIT Press, Cambridge, MA, USA.
@@ -51,7 +56,7 @@ Simpson, K.  \harvardyearleft 2014\harvardyearright , {\em You {D}on't {K}now
 \harvarditem{Victor}{2012}{victor}
 Victor, B.  \harvardyearleft 2012\harvardyearright , `Learnable programming'.
 \newblock Accessed: 07.04.2014.
-\newline\harvardurl{http://worrydream.com/#!/LearnableProgramming}
+\newline\harvardurl{{http://worrydream.com/\#!/LearnableProgramming}}
 
 \harvarditem{von Oldenburg}{2014}{tvo}
 von Oldenburg, T.  \harvardyearleft 2014\harvardyearright , `Analyzing

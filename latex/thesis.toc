@@ -7,12 +7,11 @@
 \contentsline {section}{\numberline {2.2}UI and Interaction Patterns in IDEs}{5}{section.2.2}
 \contentsline {subsection}{\numberline {2.2.1}User Interface Patterns}{5}{subsection.2.2.1}
 \contentsline {subsection}{\numberline {2.2.2}Interactional patterns}{6}{subsection.2.2.2}
-\contentsline {section}{\numberline {2.3}Relevant programming concepts}{6}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}Program lifecycle and debugging}{7}{subsection.2.3.1}
-\contentsline {subsection}{\numberline {2.3.2}Identifiers, Variables and Functions}{7}{subsection.2.3.2}
-\contentsline {subsection}{\numberline {2.3.3}Scope \& Context}{8}{subsection.2.3.3}
+\contentsline {section}{\numberline {2.3}Relevant Programming Concepts}{6}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Program Lifecycle}{7}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}Scope \& Context}{7}{subsection.2.3.2}
 \contentsline {subsubsection}{Nested scope \& variable lookup}{8}{section*.4}
-\contentsline {subsubsection}{Levels of scope}{9}{section*.6}
+\contentsline {subsubsection}{Scoping Models}{9}{section*.6}
 \contentsline {subsubsection}{Common scoping problems}{10}{section*.7}
 \contentsline {chapter}{\numberline {3}Methodology \& Process}{13}{chapter.3}
 \contentsline {section}{\numberline {3.1}Process}{13}{section.3.1}
@@ -22,7 +21,7 @@
 \contentsline {subsection}{\numberline {4.1.2}Interview Results}{15}{subsection.4.1.2}
 \contentsline {subsection}{\numberline {4.1.3}Scope as a valid problem}{17}{subsection.4.1.3}
 \contentsline {section}{\numberline {4.2}Solutions to analogous problems}{18}{section.4.2}
-\contentsline {section}{\numberline {4.3}Ideation}{22}{section.4.3}
+\contentsline {section}{\numberline {4.3}Ideation}{21}{section.4.3}
 \contentsline {chapter}{\numberline {5}Design}{24}{chapter.5}
 \contentsline {section}{\numberline {5.1}Definitions}{24}{section.5.1}
 \contentsline {section}{\numberline {5.2}Sketching}{25}{section.5.2}

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.1415926-2.4-0.9998 (TeX Live 2012) (format=xelatex 2013.6.13)  21 MAY 2014 23:15
+This is XeTeX, Version 3.1415926-2.4-0.9998 (TeX Live 2012) (format=xelatex 2013.6.13)  22 MAY 2014 10:52
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -2083,10 +2083,8 @@ Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 . 
 . This font family consists of the following shapes:
 .................................................
-LaTeX Font Info:    Font shape `EU1/Calluna(0)/m/it' will be
-(Font)              scaled to size 9.09164pt on input line 244.
 LaTeX Font Info:    Font shape `EU1/SourceCodePro(0)/m/n' will be
-(Font)              scaled to size 10.64337pt on input line 271.
+(Font)              scaled to size 10.64337pt on input line 262.
 
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
@@ -2097,7 +2095,7 @@ File: fig2.png Graphic file (type QTm)
 ! Argument of \caption@ydblarg has an extra }.
 <inserted text> 
                 \par 
-l.305 \caption{Nested scope \cite{getify}}
+l.296 \caption{Nested scope \cite{getify}}
                                           
 I've run across a `}' that doesn't seem to match anything.
 For example, `\def\a#1{...}' and `\a}' would produce
@@ -2112,12 +2110,38 @@ C.
 ! Paragraph ended before \caption@ydblarg was complete.
 <to be read again> 
                    \par 
-l.305 \caption{Nested scope \cite{getify}}
+l.296 \caption{Nested scope \cite{getify}}
                                           
 I suspect you've forgotten a `}', causing me to apply this
 control sequence to too much text. How can we recover?
 My plan is to forget the whole thing and hope for the best.
 
+.................................................
+. fontspec info: "set-scale"
+. 
+. Calluna scale = 0.9501926768773734.
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'Calluna(1)' created for font 'Calluna' with options
+. [Mapping=tex-text,Scale=MatchLowercase,,VerticalPosition=Superior].
+. 
+. This font family consists of the following shapes:
+.................................................
+.................................................
+. fontspec info: "set-scale"
+. 
+. Calluna scale = 0.9494646709725984.
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'Calluna(2)' created for font 'Calluna' with options
+. [Mapping=tex-text,Scale=MatchLowercase,,VerticalPosition=Superior].
+. 
+. This font family consists of the following shapes:
+.................................................
 
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
@@ -2127,19 +2151,39 @@ Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
 
 [10]
-Overfull \hbox (1.8457pt too wide) in paragraph at lines 425--429
+Overfull \hbox (1.8457pt too wide) in paragraph at lines 418--422
 []\EU1/Calluna(0)/m/n/12 JavaScript allows for the creation of variables and ob
 ject prop-
  []
 
-
-LaTeX Warning: Reference `solutions-to-similar-problems' on page 11 undefined o
-n input line 437.
-
-
-LaTeX Warning: Reference `solutions-to-similar-problems' on page 11 undefined o
-n input line 437.
-
+.................................................
+. fontspec info: "set-scale"
+. 
+. Calluna scale = 0.9501926768773734.
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'Calluna(1)' created for font 'Calluna' with options
+. [Mapping=tex-text,Scale=MatchLowercase,,VerticalPosition=Superior].
+. 
+. This font family consists of the following shapes:
+.................................................
+.................................................
+. fontspec info: "set-scale"
+. 
+. Calluna scale = 0.9494646709725984.
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'Calluna(2)' created for font 'Calluna' with options
+. [Mapping=tex-text,Scale=MatchLowercase,,VerticalPosition=Superior].
+. 
+. This font family consists of the following shapes:
+.................................................
+LaTeX Font Info:    Font shape `EU1/Calluna(0)/m/it' will be
+(Font)              scaled to size 9.09164pt on input line 429.
 
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
@@ -2155,12 +2199,6 @@ Chapter 3.
 
 ]
 Chapter 4.
-
-Overfull \hbox (13.78578pt too wide) in paragraph at lines 38--43
-[]\EU1/Calluna(0)/m/n/12 For each of the areas it was asked if and how the part
-icipants were using them and—if appropriate—
- []
-
 [14
 
 
@@ -2169,12 +2207,40 @@ Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
 
 [15]
-Overfull \hbox (3.53111pt too wide) in paragraph at lines 113--131
-\EU1/Calluna(0)/m/n/12 performant or unopinionated. \EU1/Calluna(0)/m/it/12 Sma
-rtness \EU1/Calluna(0)/m/n/12 for lightweight environments, however, can be ach
-ieved
- []
 
+LaTeX Warning: Reference `solutions-to-analogous-problems' on page 16 undefined
+ on input line 133.
+
+
+LaTeX Warning: Reference `solutions-to-analogous-problems' on page 16 undefined
+ on input line 133.
+
+.................................................
+. fontspec info: "set-scale"
+. 
+. Calluna scale = 0.9501926768773734.
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'Calluna(1)' created for font 'Calluna' with options
+. [Mapping=tex-text,Scale=MatchLowercase,,VerticalPosition=Superior].
+. 
+. This font family consists of the following shapes:
+.................................................
+.................................................
+. fontspec info: "set-scale"
+. 
+. Calluna scale = 0.9494646709725984.
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'Calluna(2)' created for font 'Calluna' with options
+. [Mapping=tex-text,Scale=MatchLowercase,,VerticalPosition=Superior].
+. 
+. This font family consists of the following shapes:
+.................................................
 
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
@@ -2186,7 +2252,7 @@ Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 [17]
 File: img/syntax_highlighting.png Graphic file (type QTm)
  <use  "img/syntax_highlighting.png" >
-Overfull \hbox (0.86902pt too wide) in paragraph at lines 204--216
+Overfull \hbox (0.86902pt too wide) in paragraph at lines 206--218
 []\EU1/Calluna(0)/m/n/12 In his talk „Monads and Gonads“, Crockford present
 s an alternative to syntax highlighting which
  []
@@ -2196,7 +2262,7 @@ File: img/context.png Graphic file (type QTm)
 ! Argument of \caption@ydblarg has an extra }.
 <inserted text> 
                 \par 
-l.220 ...{Screenshot taken from \cite{crockford}}}
+l.222 ...{Screenshot taken from \cite{crockford}}}
                                                   
 I've run across a `}' that doesn't seem to match anything.
 For example, `\def\a#1{...}' and `\a}' would produce
@@ -2211,7 +2277,7 @@ C.
 ! Paragraph ended before \caption@ydblarg was complete.
 <to be read again> 
                    \par 
-l.220 ...{Screenshot taken from \cite{crockford}}}
+l.222 ...{Screenshot taken from \cite{crockford}}}
                                                   
 I suspect you've forgotten a `}', causing me to apply this
 control sequence to too much text. How can we recover?
@@ -2292,7 +2358,7 @@ File: img/theseus.jpg Graphic file (type QTm)
 ! Argument of \caption@ydblarg has an extra }.
 <inserted text> 
                 \par 
-l.239 ...onous JavaScript debugging \cite{lieber}}
+l.241 ...onous JavaScript debugging \cite{lieber}}
                                                   
 I've run across a `}' that doesn't seem to match anything.
 For example, `\def\a#1{...}' and `\a}' would produce
@@ -2307,7 +2373,7 @@ C.
 ! Paragraph ended before \caption@ydblarg was complete.
 <to be read again> 
                    \par 
-l.239 ...onous JavaScript debugging \cite{lieber}}
+l.241 ...onous JavaScript debugging \cite{lieber}}
                                                   
 I suspect you've forgotten a `}', causing me to apply this
 control sequence to too much text. How can we recover?
@@ -2370,26 +2436,26 @@ Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
 
 [19]
-Overfull \vbox (1.76944pt too high) has occurred while \output is active []
-
-
-[20]
 File: img/devtools.png Graphic file (type QTm)
  <use  "img/devtools.png" >
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
 
-[21]
+[20]
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
 
-[22]
-Overfull \hbox (0.8887pt too wide) in paragraph at lines 382--385
+[21]
+Overfull \hbox (0.8887pt too wide) in paragraph at lines 387--390
 []\EU1/Calluna(0)/m/it/12 Gutter Scope \EU1/Calluna(0)/m/n/12 - any change of s
 cope is indicated in the code editor’s gutter (similar to JSHint). 
  []
 
-) (./design.tex
+
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[22]) (./design.tex
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
 
@@ -2833,27 +2899,7 @@ Chapter 6.
 ) [36
 
 
-] [37] (./thesis.bbl
-! Illegal parameter number in definition of \reserved@a.
-<to be read again> 
-                   !
-l.55 
-     
-You meant to type ## instead of #, right?
-Or maybe a } was forgotten somewhere earlier, and things
-are all screwed up? I'm going to assume that you meant ##.
-
-! You can't use `macro parameter character #' in horizontal mode.
-<argument> http://worrydream.com/##
-                                   !/LearnableProgramming
-l.55 
-     
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-[1
+] [37] (./thesis.bbl [1
 
 
 ])
@@ -2876,10 +2922,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 32384 strings out of 493994
- 589966 string characters out of 3150335
- 687016 words of memory out of 3000000
- 35146 multiletter control sequences out of 15000+200000
+ 32389 strings out of 493994
+ 589981 string characters out of 3150335
+ 686638 words of memory out of 3000000
+ 35151 multiletter control sequences out of 15000+200000
  10744 words of font info for 91 fonts, out of 3000000 for 9000
  1144 hyphenation exceptions out of 8191
  57i,9n,100p,1462b,651s stack positions out of 5000i,500n,10000p,200000b,50000s
