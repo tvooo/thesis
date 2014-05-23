@@ -54,7 +54,7 @@ The most ubiquitous visualization of program structure is probably *syntax highl
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[keepaspectratio,width=0.75\textwidth,height=0.75\textheight]{img/syntax_highlighting.png}
+\includegraphics[keepaspectratio,width=0.75\textwidth]{img/syntax_highlighting.png}
 \caption{Syntax highlighting in an HTML document}
 \label{fig:syntaxhighlighting}
 \end{figure}
@@ -64,7 +64,7 @@ In his talk „Monads and Gonads“, \citename{crockford} presents an alternativ
 \begin{figure}[htbp]
 \centering
 \includegraphics[keepaspectratio,width=0.75\textwidth]{img/context.png}
-\caption{Context colouring in JavaScript, as proposed by Crockford\footnote{Screenshot taken from \cite{crockford}}}
+\caption{Context colouring in JavaScript, as proposed by Crockford (2013)}
 \label{fig:contexthighlighting}
 \end{figure}
 
@@ -73,7 +73,7 @@ In his talk „Monads and Gonads“, \citename{crockford} presents an alternativ
 \begin{figure}[htbp]
 \centering
 \includegraphics[keepaspectratio,width=0.5\textwidth]{img/theseus.jpg}
-\caption{Theseus’ asynchronous JavaScript debugging \cite{lieber}}
+\caption{Theseus’ asynchronous JavaScript debugging (Lieber et al. 2014)}
 \label{fig:theseus}
 \end{figure}
 

@@ -1,6 +1,3 @@
-**Research Question**: *How can an IDE support the understanding and exploration of scope & context in a programming language to deepen understanding and help prevent errors?*
+Programming language tools help software developers to understand a program and to recognize possible pitfalls. Used with the right knowledge, they can be instrumented to achieve better software quality. However, creating language tools that integrate well into the development environment and workflow is challenging.
 
-- IDE giving semantic support in code creation
-- Understanding asynchronous control flow in IDEs // nope!!!
-- Understanding and exploring scope and context
-- Goals: understanding, less errors/mistakes
+This thesis utilizes a user-centered design process to identify the needs of professional developers through in-depth interviews, address them through a concept, implement and evaluate the concept through contextual inquiry. Taking *scope* as an exemplary source of misconceptions in programming, a „Scope Inspector“ plug-in for the Atom IDE is implemented, targeted towards experienced JavaScript developers in the open source community.
