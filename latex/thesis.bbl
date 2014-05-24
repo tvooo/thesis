@@ -16,12 +16,26 @@ Crockford, D.  \harvardyearleft 2013\harvardyearright , `Monads and gonads'.
 \newblock Accessed: 26.04.2014.
 \newline\harvardurl{{https://www.youtube.com/watch?v=b0EF0VTs9Dc}}
 
+\harvarditem{Hidayat}{2012}{hidayat}
+Hidayat, A.  \harvardyearleft 2012\harvardyearright , `{Language Tools for
+  Reducing Mistakes}'.
+\newline\harvardurl{http://ariya.ofilabs.com/2012/11/language-tools-for-reducing-mistakes.html}
+
 \harvarditem{{\em {Interaktives Programmieren als
   System-Schlager}}}{1975}{maestro}
 {\em {Interaktives Programmieren als System-Schlager}}  \harvardyearleft
   1975\harvardyearright .
 \newblock {German. Accessed: 28.04.2014}.
 \newline\harvardurl{http://www.computerwoche.de/heftarchiv/1975/47/1205421/}
+
+\harvarditem[Johnson et~al.]{Johnson, Song, Murphy-Hill \harvardand\
+  Bowdidge}{2013}{johnson2013}
+Johnson, B., Song, Y., Murphy-Hill, E. \harvardand\ Bowdidge, R.
+  \harvardyearleft 2013\harvardyearright , Why don\&\#039;t software developers
+  use static analysis tools to find bugs?, {\em in} `Proceedings of the 2013
+  International Conference on Software Engineering', ICSE '13, IEEE Press,
+  Piscataway, NJ, USA, pp.~672--681.
+\newline\harvardurl{http://dl.acm.org/citation.cfm?id=2486788.2486877}
 
 \harvarditem[Lieber et~al.]{Lieber, Brandt \harvardand\ Miller}{2014}{lieber}
 Lieber, T., Brandt, J. \harvardand\ Miller, R.~C.  \harvardyearleft

@@ -237,17 +237,21 @@ on the respective programming language. Most modern languages implement
 on the position of its declaration in the actual source code. In other
 words, where in the source text a variable is declared defines also
 where it is usable and
-accessible.\footnote{The complementing concept, *dynamic scope*, is not relevant to this thesis.}
+accessible.\footnote{The complementing concept, \emph{dynamic scope}, is not relevant to this thesis.}
 Lexical scope also means that scope is defined during author-time
 already, and can thus be analyzed early on. In contrast, the \emph{this}
 keyword in JavaScript is a run-time phenomenon; its value cannot be
 known during author-time.
 
-\begin{itemize}
-\itemsep1pt\parskip0pt\parsep0pt
-\item
-  scope vs context
-\end{itemize}
+As scope is a concept that is central to a program, it can be used as a
+perspective to look at a program, too. The most obvious perspective is
+\emph{source code}. Code is organized in different files, and files are
+lines that run from top to bottom. Another way to look at a program is
+by its symbols, for example modules, classes, methods. Java programs are
+organized in packages; each package has several classes, of which each
+has attributes and methods. Finally, programs can be looked at by means
+of scope, which has its own characteristics. Those are described in the
+following sections.
 
 \subsubsection{Nested scope \& variable
 lookup}\label{nested-scope-variable-lookup}
@@ -292,8 +296,9 @@ Nested scope can best be illustrated by the following figure:
 
 \begin{figure}[htbp]
 \centering
-\includegraphics{fig2.png}
-\caption{Nested scope \cite{getify}}
+\includegraphics[keepaspectratio]{img/fig2.png}
+\caption{Nested scope (Simpson 2014)}
+\label{fig:getify}
 \end{figure}
 
 The function \texttt{foo} is defined \emph{in} the global scope (1) (see
@@ -332,16 +337,11 @@ functional languages, for example Python and ECMAScript 6.
 
 JavaScript, as of ECMAScript 5, implements only global and function
 scope\footnote{There are exceptions through the keywords `with` and `except` and the function `eval`.}.
-
-In JavaScript, the run-time environment defines what is in the global
-scope. The JavaScript engines in web browsers usually provide access to
-the \ac{dom} through the \texttt{document} object, whereas Node.js
-provides the \texttt{require} function to include CommonJS-style
-modules.
-
-In contrast, the Java programming language implements block scope, but
-no global scope. - Functions define a new scope; blocks do not (in
-JavaScript)
+The run-time environment usually prepopulates the global scope with
+several objects and methods it exposes. The JavaScript engines in web
+browsers, for example, provide access to the \ac{dom} through the
+\texttt{document} object, whereas Node.js provides the \texttt{require}
+function to include CommonJS-style modules.
 
 \subsubsection{Common scoping problems}\label{common-scoping-problems}
 

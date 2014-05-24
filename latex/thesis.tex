@@ -1,9 +1,3 @@
-% GLOBAL TODO LIST
-
-% TODO: Fragezeichen suchen
-% TODO: Proofread Kapitel 4 (Architekturen)
-% TODO: schön machen
-
 %\documentclass[pdftex,10pt,a4paper,twoside,openright]{scrreprt}
 %\documentclass[pdftex,10pt,a4paper,twoside,openright]{scrbook} %12pt is offiziell
 \documentclass[%pdftex,
@@ -34,6 +28,17 @@
 \setsansfont[Scale=1.05]{Source Sans Pro}
 \setmonofont{Source Code Pro}
 \usepackage{xltxtra}
+\usepackage{eso-pic}
+\newcommand\BackgroundPic{
+\put(0,0){
+\parbox[b][0.5\paperheight]{\paperwidth}{%
+\vfill
+\centering
+\hspace{-1cm}
+\includegraphics[width=1.2\paperwidth,
+keepaspectratio]{img/pattern.eps}%
+\vfill
+}}}
 
 % Glossar
 \usepackage[
@@ -79,7 +84,7 @@
 \raggedbottom
 
 % Placeholders
-\newcommand{\titel}{Making scope explorable in Software Development Environments to support understanding and reduce errors}
+\newcommand{\titel}{Making scope explorable in Software Development Environments to support understanding and reduce defects\\\small{Design of a static analysis tool for scope exploration}}
 \newcommand{\autor}{Tim von Oldenburg}
 \newcommand{\arbeit}{An analysis of how the MVC pattern is being shifted to the client side}
 \newcommand{\matrikelnr}{0834311}
@@ -168,7 +173,7 @@
 \pagenumbering{arabic}
 \input{intro.tex}
 \input{research.tex}
-\input{process.tex}
+%\input{process.tex}
 \input{exploration.tex}
 \input{design.tex}
 \input{conclusion.tex}
@@ -193,16 +198,16 @@
 
 % Uncomment to enable list of figures
 
-%\newpage
-%\setlength{\cftparskip}{-0.8pt}
-%\phantomsection
-%\addcontentsline{toc}{chapter}{List of Figures}
+\newpage
+\setlength{\cftparskip}{-0.8pt}
+\phantomsection
+\addcontentsline{toc}{chapter}{List of Figures}
 
 % don't uncomment the following two lines, for whatever reason
 %\setlength\cftbeforechapskip{4pt}
 %\setlength\cftbeforefigskip{4pt}
 
-%\listoffigures
+\listoffigures
 
 % Uncomment to enable list of tables
 
@@ -228,12 +233,12 @@
 
 % Uncomment to enable appendix
 
-%\chapter*{Appendix}
-%\renewcommand*{\chaptermarkformat}{}
-%\renewcommand*{\sectionmarkformat}{}
-%\chaptermark{Appendix}
-%\sectionmark{Appendix}
-%\addcontentsline{toc}{chapter}{Appendix}
+\chapter*{Appendix}
+\renewcommand*{\chaptermarkformat}{}
+\renewcommand*{\sectionmarkformat}{}
+\chaptermark{Appendix}
+\sectionmark{Appendix}
+\addcontentsline{toc}{chapter}{Appendix}
 %\input{appendix.tex}
 
 \end{document}

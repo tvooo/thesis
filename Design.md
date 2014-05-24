@@ -180,11 +180,15 @@ Atom includes a package management system with an online repository, called \ac{
 
 The author was collaborating with two full-time developers and one part-time developer. They agreed to install the package and use it over the course of one week (full-time developers) or one day (part-time developer), respectively, integrating it into their usual workflows.
 
+- 2 inquiries
+- hintergrund der thesis erklären
+- klar machen dass dev weiß wie scope funzt
+
 In addition to this directed user test, publishing the prototype via \ac{apm} made it available to the general public. It was announced on several social networks, especially targeting existing Atom users, with the goal of getting users to download and use it. A week after publishing the prototype, the number of downloads counted ???. This way of testing „in the wild“ makes it harder to gather feedback, compared to the method of addressing potential users directly. However, the analytics mechanism built into the prototype yielded quantitative data for evaluation.
 
 ### Usage metrics
 
-The prototype was built with the option to collect usage metrics using the Google Analytics service. By default, this option was set to *off*, as the author opposes the unknown tracking of any data. However, users were asked to enable tracking in Atom’s *settings* panel for the Scope Inspector package.
+The prototype was built with the option to collect usage metrics using the Google Analytics service. By default, this option was set to *off*, as I oppose the unknown tracking of any data for ethical reasons. However, users were asked in the `README` file, which is displayed both on the package’s page\footnote{See \url{https://atom.io/packages/scope-inspector}} and on Github\footnote{See \url{https://github.com/tvooo/scope-inspector}}, to enable tracking in Atom’s *settings* panel for the Scope Inspector package.
 
 If enabled, the following events are tracked:
 
@@ -195,18 +199,78 @@ If enabled, the following events are tracked:
 
 Through collecting these events, a claim can be made—to a certain extent—for how helpful certain features are.
 
-### Evaluation / Interviews
+### Testing Results
 
-#### Analytics results / metrics
+#### Analytics
+
+Analytical metrics have been tracked over the course of 13 days. In total, five different users (including myself) had tracking enabled, with a peak of fours simultaneous users. On average, two to three users contributed data each day.
+
+In those nearly two weeks, the sidebar was enabled 76 times, whereas interactions with elements on the bottom bar happened 144 times. However, only 22 of those interactions were clicks which have to happen intentionally—the hover events can occur by chance (for example by moving the mouse from the editor window to the status bar and vice-versa). Given those circumstances, it can be concluded that the sidebar was more in use than the bottom bar. But event metrics can not measure if users used the bottom bar for orientation, for example just by looking at it and figuring out where in the scope hierarchy they are. Thus, the analytics result are of limited use for the evaluation of the prototype.
 
 #### Interviews with developers
 
-<!--
-- alexander slansky: using the sidebar for navigation purposes would be doll; zeilennummern wären auch klasse
--->
+This section summarizes the finding of the user testing, as collected through interviews. None of the interviewees had used the prototype before, and both are only casual Atom users.
 
-#### Interview with part-time dev
+(Inline) Hoisting Indicator
+  ~ None of the developers discovered the inline hoisting indicator. One of them did not know the concept of hoisting, while another one misinterpreted the indicators (upwards arrows) in the sidebar. He assumed that they are pointing upwards because clicking on them would cause the editor to scroll upwards, navigating to the identifier’s declaration.
+
+- hoisting war unbekannt
+
+- inline hoisting-anzeige hat niemand gesehen, musste gezeigt werden
+
+Sidebar
+  ~ One functionality that each user found to be missing was a means of navigation through the sidebar. Two users expected to be able to jump to a variable declaration if he sees a problem there, just by clicking on the variable’s name. Another user thought the ability to scroll to a certain variable was denoted by the upwards pointing arrow next to it. It was also suggested to be able to jump to the beginning of a scope by clicking on its respective headline, similar to what happens when the user clicks a breadcrumb in the bottom bar. Adding line numbers for each identifiers was also suggested, in order to be able to distinguish anonymous functions better from each other.
+
+    The order of the panels, each representing one scope in the scope chain, was confusing to some users. Although they understood the concept of a scope chain, they expected it to be in the order that scopes appear in code. However, code is linear, while scope is hierarchical, and they do not map directly. It is reasonable to assume that the order which is used in the prototype is learnable for the users, as it works analogously to \ac{css} in the Chrome DevTools. This could for example be achieved by connecting the scope in the sidebar visually with its counterpart in the editor. One user suggested that, when a scope is hovered in the sidebar, its counterpart in the editor could be highlighted (analogous to the effect of hovering a breadcrumb in the bottom bar).
+
+    Another suggestions concerning the sidebar was to highlight even single variables in the editor when they are highlighted in the sidebar. Regarding shadowing, one user was able to detect a bad practice in his code during testing: he had created a shadowing situation in which the two variables of the same name server completely different purposes.
+
+Bottom bar
+  ~ None of the users discovered on their own the possibility to navigate the scope chain by clicking on the breadcrumbs. However, after pointing the feature out, they stated it was useful. One user noted that, once you navigate into a higher scope, you can not go „back“ to the last position (or the previously selected scope, which is nested inside the now active scope).
+
+    Two users stated that the bottom bar would take up too much space, as most developers would like as much space as possible for their code. They suggested to style the breadcrumbs more like hyperlinks on the web, and also to indicate that they are breadcrumbs by deparating them through rightwards pointed arrows. One user even suggested to get rid of the bottom bar completely, in case that the sidebar would take its tasks of navigating and previewing the scope chain.
+
+Modularity
+  ~ One of the users asked if he could disable the inline highlighting altogether, as he could imagine it to be annoying in the long run; this is not possible in the final prototype, as during the design phase the highlighting was considered a central element of the design. He suggested that all three parts of the prototype—inline highlighting, sidebar, and bottom bar—should be optional.
+
+Miscellaneous
+  ~ bla
+
+- Was ist mit einem überblick: zeige mir mal schnell alle shadowings und hoistings in einer datei. wird beides vom linter nicht erkannt, ist aber code smell.
+
+- bug entdeckt: function innerhalb von array wird nicht erkannt, was z.B. bei der asnyc library vorkommt
+- gleichzeitiges highlighten: wenn ich in bottom bar hover, wird gleichzeitig im code UND in der sidebar gehighlightet, und vice versa
+- er selber hat fast nie probleme mit dem scope, hat sich angewöhnt variablen klar zu deklarieren etc
+- ich sollte mich mehr auf die performance-geschichte konzentrieren
+- intelligente warnungen, „best practices“ einbauen. man sieht zwar was angezeigt wird, aber was bedeutet das?
+- bisschen direkter, ne warning oder so
+- ne whitelist oder so
+- performance-argument ist interessant, sollte man mehr einbauen. was haben sachen für nen impact auf performance?
+- man muss wissen, wie man es deuten kann
+
+- „ist schon fast zu viel für das was es tut“
+-> closures anzeigen hat auch nen lerneffekt, für anfänger etc, aber sogar advanced devs wissen nicht immer was da geht
 
 
+i used it for a day
+but it never realy gave me any benefits, the code was to well writen, i think
 
+- i dont think i did understand everything
+- but also, the code i was working on wasnt that complicated
+- but it was not inthe way
 
+zusammenfassend…
+
+- sidebar am nützlichsten, eine gewisse übersicht, eine sicht auf den code, wenn man damit noch navigieren könnte wäre doll
+
+#### Social Media Feedback
+
+In the open source software community, social media channels are frequently used to state an opinion on new products, to share news, and to give feedback. The prototype, in the form of the Scope Inspector package for Atom, received some positive feedback on different channels.
+
+On Twitter, which was used as a marketing instrument as well, the feedback was exclusively positive. One user called it „another reason to consider switching from [Sublime Text to Atom]“\footnote{See \url{https://twitter.com/adardesign/status/466589449561055232}}, while others seemed to be interested as well\footnote{See \url{https://twitter.com/raganwald/status/466930480517246976}}. Five tweets mentioning the package have been both retweeted and favourited about 20 times\footnote{Based on tweets that could be found by the Twitter search for the keyword ```scope inspector’’’.}.
+
+On the news platforms EchoJS and Reddit (JavaScript section) the package got little attention: four and eight upvotes, respectively, although the only comment on Reddit claims that it „looks promising“\footnote{See \url{http://www.reddit.com/r/javascript/comments/25k30l/javascript_scope_inspector_an_atom_package_to/chi27cm}}.
+
+On Github, users filed two issues (bugs). One user requested the possibility to investigate identifiers in the sidebar more deeply (which is impossible to do correctly if the program is not executed). The other one asked for on-the-fly re-evaluation of the scope, as was already asked for in the interviews. At the stage of the prototype, scope is only re-evaluated when the file is saved; however, looking at linting tools, re-evaluating a short time (100-200ms) after the user stopped typing seems to be a promising strategy\footnote{See \url{https://github.com/tvooo/scope-inspector/issues/7}}. This method would have been tested in terms of performance.
+
+Several reactions\footnote{See \url{http://www.echojs.com/comment/9867/1} and \url{https://twitter.com/vilmosioo/status/466934333681717248}} on the blog post about the technical side of the Scope Inspector \cite{tvo} suggest that there are difficulties for JavaScript developers to deal with CoffeeScript code. In other words, the target users of the package (JavaScript developers) are not directly able to improve on or modify the package itself. This complicates code contribution for this open source project.

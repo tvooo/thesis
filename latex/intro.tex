@@ -1,60 +1,104 @@
 \chapter{Introduction}\label{introduction}
 
-Creating computer programs is a difficult and complex task. Nowadays,
-software developers can rely on a number of tools to help them do their
-tasks. Often, these tools are integrated by a so-called \ac{ide}.
+Creating computer programs is a difficult and complex process.
+Integrated Development Environments integrate a number of tools to help
+software developers do their work, for example through workflow
+automation. One class of those tools are \emph{language tools}, which
+help with the actual programming language itself and reduce defects and
+misconceptions \cite{hidayat}. However, research by
+\citeasnoun*{johnson2013} on static analysis tools suggests that they
+are not as widely used, although they proof to be helpful. This thesis
+attempts to approach the design of language tools by means of
+interaction design methodology, through a user-centered design process
+and by the example of \emph{scope}.
 
-Ansatz: identify characteristics of well-integrated development tools,
-apply to the problem of scope, implement, validate. Passt das?
+In programming, scope is an abstract concept to define the validity of
+variables. By looking at the structure of scope, a program can be
+explored from a different perspective than just its source code and
+symbols, and certain pitfalls that lead to program defects can be
+uncovered. In languages that implement lexical scoping, such as
+JavaScript, scope analysis can be done using static analysis, and can
+therefore be usable during author-time already. The research that was
+done in the course of this thesis shows that scope is not yet
+appropriately addressed by language tools. It is therefore used as an
+example for designing, implementing and evaluating a language tool
+targeted towards professional developers.
 
-So-called static analysis tools are especially helpful in maintaining
-code quality. - devs rely on tools - ides integrate tools - static
-analysis tools can help at author-time, like linters - problem in many
-languages: scope - can ides help? - alternative way of looking at a
-program - Target group: professional (js) developers
+\section{Process}\label{process}
 
-\emph{Scope} is a phenomenon of computer programs related to the
-validity of variables. By looking at the structure of scope, a program
-can be explored from a different perspective, and certain pitfalls that
-lead to programming errors can be uncovered. Scope structure can be
-explored using static analysis tools, and therefore be usable during
-author-time already.
+This thesis project follows a \acl{ucd} process, which is as well
+reflected in the structure of this document. Preliminary theoretical
+groundings are presented in chapter two, which introduces software
+development environments and their history and role in the development
+workflow. It also presents relevant concepts of programming languages,
+scope and its implications in particular. Chapter three describes the
+exploration phase by means of a survey and interviews with professional
+software developers to identify characteristics of well-integrated
+development tools. Furthermore, related work is identified and listed
+and the ideation process is exposed. The design itself is conducted in
+three iterations: sketches, a scripted prototype and a working
+prototype. Chapter four presents these iterations, explains the design
+decisions that have been made. Integrating a solidly implemented,
+high-level prototype with the Atom text editor demonstrates the
+feasibility of the concept, which is further verified through user
+testing. Findings from this phase are finally discussed in the fifth
+chapter.
 
-What will be my knowledge contribution?
+The project described in this thesis targets the needs of professional
+developers with advanced experience. The final design is built for the
+JavaScript programming language, but the concept of scope presents
+difficulties in nearly every language in use. The knowledge gained
+during the process is thus expected to be applicable to other
+programming languages as well.
 
--anticipated:knowledge contribution: how do i evaluate designs like
-this, e.g. ide tools, dev tools, for a user groups like this?
+It will be validated by means of both quantitative and qualitative data
+using analytics, general feedback on the web, and interviews.
 
--not anticipated: not anticipated knowledge contribution: using the ixd
-approach for an open source project yielded new results, a more open
-field, than os approaches usually do (they copy more and adapt and
-stuff)
+\section{Knowledge Contribution and
+Limitations}\label{knowledge-contribution-and-limitations}
+
+This thesis explores how language tools for professional developers can
+be designed and evaluated. It creates knowledge in the field of
+interaction design by contributing the following:
 
 \begin{itemize}
 \itemsep1pt\parskip0pt\parsep0pt
 \item
-  Which characteristics are good for integrating language tools into the
-  dev workflow?
+  Characteristics of well-integrated language tools that are important
+  for professional developers to support their work.
 \item
-  Best way to integrate code evaluation, a new way of looking at
-  software, into the creation process
+  A way of evaluating designs with a specific, professional target group
+\item
+  The implications of testing prototypes with a very limited user group
+  in the open source community
+\item
+  Using an interaction design approach to create open source software
+  opens up the field. It yields results that are most probably different
+  from what typical innovation processes in open source would have
+  resulted in.
 \end{itemize}
 
-Following a \ac{ucd} process, the project described in this thesis
-targets the needs of professional developers with advanced experience.
-The final design is built for the JavaScript programming language, but
-the concept of scope presents difficulties in nearly every language in
-use. The knowledge gained during the process is thus expected to be
-applicable to other programming languages as well.
+In addition to the interaction design knowledge, this thesis makes the
+following contributions to the open source community:
 
-Integrating a solidly implemented, high-level prototype in the Atom text
-editor will demonstrate the value of the concept. It will be validated
-by means of both quantitative and qualitative data using analytics,
-general feedback on the web, and interviews.
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  A working, extendable prototype in the form of a plug-in for the Atom
+  IDE. The plug-in is released as open source.
+\item
+  A static analysis library to extract relevant JavaScript scope
+  information. The library is written in CoffeeScript, released with the
+  Atom
+  plug-in\footnote{It is planned to extract the library from the plug-in in the future.}
+  and can theoretically be re-used in any software to analyze scope in
+  JavaScript.
+\end{itemize}
 
-The goal of this thesis is twofold. On the one hand, the author wants to
-identify characteristics of well-integrated software development tools.
-
-Mein roter Pfaden, eins von - Loose Integration von language tools in
-text editoren, statt full-fledged IDEs - Static analysis tools inline,
-statt auf der command line - IDE vs code/text editor
+The short time period in which this project was pursued (8.5 weeks)
+creates some limitations. On the one hand, the final prototype—though
+being a high-fidelity working prototype—has a limited set of features as
+well as some bugs that influence the evaluation outcome. On the other
+hand, the focus of this thesis has to be very narrow, which is why some
+of the findings are difficult to apply to other programming
+environments, programming languages, and less experienced developers.

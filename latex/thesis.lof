@@ -1,5 +1,13 @@
 \select@language {english}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {\relax 2.1}{\ignorespaces Nested scope (Simpson 2014)\relax }}{10}{figure.caption.5}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {\relax 3.1}{\ignorespaces Syntax highlighting in an HTML document\relax }}{18}{figure.caption.8}
+\contentsline {figure}{\numberline {\relax 3.2}{\ignorespaces Context colouring in JavaScript, as proposed by Crockford (2013)\relax }}{19}{figure.caption.9}
+\contentsline {figure}{\numberline {\relax 3.3}{\ignorespaces Theseus’ asynchronous JavaScript debugging (Lieber et al. 2014)\relax }}{19}{figure.caption.10}
+\contentsline {figure}{\numberline {\relax 3.4}{\ignorespaces Chrome DevTools with Element Inspector\relax }}{21}{figure.caption.11}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {\relax 4.1}{\ignorespaces Screenshot of the scripted prototype run in a browser\relax }}{27}{figure.caption.17}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
