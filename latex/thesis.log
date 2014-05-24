@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.1415926-2.4-0.9998 (TeX Live 2012) (format=xelatex 2013.6.13)  24 MAY 2014 16:40
+This is XeTeX, Version 3.1415926-2.4-0.9998 (TeX Live 2012) (format=xelatex 2013.6.13)  24 MAY 2014 18:07
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -2896,16 +2896,6 @@ Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
 
 [37]
-Overfull \hbox (0.33246pt too wide) in paragraph at lines 657--660
-[]\EU1/Calluna(0)/m/n/12 er selber hat fast nie probleme mit dem scope, hat sic
-h angewöhnt variablen klar zu deklar-
- []
-
-
-Overfull \vbox (1.76944pt too high) has occurred while \output is active []
-
-
-[38]
 .................................................
 . fontspec info: "set-scale"
 . 
@@ -3011,11 +3001,11 @@ Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 . This font family consists of the following shapes:
 .................................................
 LaTeX Font Info:    Font shape `EU1/SourceCodePro(0)/m/n' will be
-(Font)              scaled to size 6.20863pt on input line 721.
+(Font)              scaled to size 6.20863pt on input line 674.
 LaTeX Font Info:    Font shape `EU1/SourceCodePro(0)/m/n' will be
-(Font)              scaled to size 4.43474pt on input line 721.
+(Font)              scaled to size 4.43474pt on input line 674.
 
-Underfull \hbox (badness 10000) in paragraph at lines 721--721
+Underfull \hbox (badness 10000) in paragraph at lines 674--674
 [][][][]\EU1/Calluna(0)/m/n/10 See [][]$[] [] [][] [] [] [] [] [] []\OML/cmm/m/
 it/10 : [] [] [] [] [] []: [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [
 ] [] [] [] [] [] [] [] [][][] [] [][] [] [] [] [] [] [] [] [] [] [] [] [][] [] 
@@ -3048,6 +3038,11 @@ it/10 : [] [] [] [] [] []: [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [
 . 
 . This font family consists of the following shapes:
 .................................................
+
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[38]
 .................................................
 . fontspec info: "set-scale"
 . 
@@ -3075,7 +3070,7 @@ it/10 : [] [] [] [] [] []: [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [
 . This font family consists of the following shapes:
 .................................................
 
-Underfull \hbox (badness 5147) in paragraph at lines 735--735
+Underfull \hbox (badness 5147) in paragraph at lines 688--688
 [][][][]\EU1/Calluna(0)/m/n/10 See [][]$[] [] [][] [] [] [] [] [] []\OML/cmm/m/
 it/10 : [] [] [] [] [] []: [] [] [] [] [] [] [] [] [] [] [] [][][][][] [] []$[]
 [] \EU1/Calluna(0)/m/n/10 and [][]$[] [] [] [] [] [] [] [] [] [] [] [] [] [] []
@@ -3084,7 +3079,7 @@ it/10 : [] [] [] [] [] []: [] [] [] [] [] [] [] [] [] [] [] [][][][][] [] []$[]
  []
 
 ) (./conclusion.tex
-Overfull \hbox (5.71414pt too wide) in paragraph at lines 734--1
+Overfull \hbox (5.5203pt too wide) in paragraph at lines 687--1
 []\EU1/Calluna(0)/m/n/12 Several reactions[][][][][][] on the blog post about t
 he technical side of the Scope Inspector ([]von Oldenburg[]
  []
@@ -3289,10 +3284,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 32523 strings out of 493994
- 592379 string characters out of 3150335
- 690487 words of memory out of 3000000
- 35272 multiletter control sequences out of 15000+200000
+ 32524 strings out of 493994
+ 592392 string characters out of 3150335
+ 690491 words of memory out of 3000000
+ 35273 multiletter control sequences out of 15000+200000
  10768 words of font info for 94 fonts, out of 3000000 for 9000
  1144 hyphenation exceptions out of 8191
  57i,10n,100p,1462b,651s stack positions out of 5000i,500n,10000p,200000b,50000s

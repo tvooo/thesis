@@ -568,24 +568,14 @@ through interviews. None of the interviewees had used the prototype
 before, and both are only casual Atom users.
 
 \begin{description}
-\itemsep1pt\parskip0pt\parsep0pt
-\item[(Inline) Hoisting Indicator]
-None of the developers discovered the inline hoisting indicator. One of
-them did not know the concept of hoisting, while another one
-misinterpreted the indicators (upwards arrows) in the sidebar. He
-assumed that they are pointing upwards because clicking on them would
-cause the editor to scroll upwards, navigating to the identifier’s
-declaration.
-\end{description}
-
-\begin{itemize}
-\item
-  hoisting war unbekannt
-\item
-  inline hoisting-anzeige hat niemand gesehen, musste gezeigt werden
-\end{itemize}
-
-\begin{description}
+\item[Inline]
+The inline highlighting was perceived as useful, as users claimed it
+helped them to focus on the current code and also showed them the scope
+limits (in code). None of the developers discovered the inline hoisting
+indicator, it had to be pointed out to them. Even after pointing it out,
+the users did not use the inline indicator, but instead just looked at
+the sidebar to see which identifiers were being hoisted. One of the
+developers was not familiar with the concept of hoisting.
 \item[Sidebar]
 One functionality that each user found to be missing was a means of
 navigation through the sidebar. Two users expected to be able to jump to
@@ -616,6 +606,10 @@ variables in the editor when they are highlighted in the sidebar.
 Regarding shadowing, one user was able to detect a bad practice in his
 code during testing: he had created a shadowing situation in which the
 two variables of the same name server completely different purposes.
+Another user misinterpreted the hoisting indicators (upwards arrows) in
+the sidebar. He assumed that they are pointing upwards because clicking
+on them would cause the editor to scroll upwards, navigating to the
+identifier’s declaration.
 \item[Bottom bar]
 None of the users discovered on their own the possibility to navigate
 the scope chain by clicking on the breadcrumbs. However, after pointing
@@ -639,64 +633,23 @@ highlighting was considered a central element of the design. He
 suggested that all three parts of the prototype—inline highlighting,
 sidebar, and bottom bar—should be optional.
 \item[Miscellaneous]
-bla
+Various comments concerned none of the areas above. A suggested feature
+was for the prototype to give an overview of all the identifiers that
+are affected by shadowing or hoisting, in order to quickly uncover
+possible code smells. In general, so thought one user, would it be a
+good idea to communicate the \emph{meaning} of a detected code smell and
+show them how to interpret it: Why is it a possible defect, and what can
+the developer do to fix it? This would be especially useful for more
+comples findings, such as closures (which are not implemented in this
+prototype). Those suggestions drive the design more into an educative
+direction. Additionally, one bug was found during testing, which is
+related to the parser and therefore not relevant to the interface.
 \end{description}
 
-\begin{itemize}
-\item
-  Was ist mit einem überblick: zeige mir mal schnell alle shadowings und
-  hoistings in einer datei. wird beides vom linter nicht erkannt, ist
-  aber code smell.
-\item
-  bug entdeckt: function innerhalb von array wird nicht erkannt, was
-  z.B. bei der asnyc library vorkommt
-\item
-  gleichzeitiges highlighten: wenn ich in bottom bar hover, wird
-  gleichzeitig im code UND in der sidebar gehighlightet, und vice versa
-\item
-  er selber hat fast nie probleme mit dem scope, hat sich angewöhnt
-  variablen klar zu deklarieren etc
-\item
-  ich sollte mich mehr auf die performance-geschichte konzentrieren
-\item
-  intelligente warnungen, „best practices“ einbauen. man sieht zwar was
-  angezeigt wird, aber was bedeutet das?
-\item
-  bisschen direkter, ne warning oder so
-\item
-  ne whitelist oder so
-\item
-  performance-argument ist interessant, sollte man mehr einbauen. was
-  haben sachen für nen impact auf performance?
-\item
-  man muss wissen, wie man es deuten kann
-\item
-  „ist schon fast zu viel für das was es tut“ -\textgreater{} closures
-  anzeigen hat auch nen lerneffekt, für anfänger etc, aber sogar
-  advanced devs wissen nicht immer was da geht
-\end{itemize}
-
-i used it for a day but it never realy gave me any benefits, the code
-was to well writen, i think
-
-\begin{itemize}
-\itemsep1pt\parskip0pt\parsep0pt
-\item
-  i dont think i did understand everything
-\item
-  but also, the code i was working on wasnt that complicated
-\item
-  but it was not inthe way
-\end{itemize}
-
-zusammenfassend\ldots{}
-
-\begin{itemize}
-\itemsep1pt\parskip0pt\parsep0pt
-\item
-  sidebar am nützlichsten, eine gewisse übersicht, eine sicht auf den
-  code, wenn man damit noch navigieren könnte wäre doll
-\end{itemize}
+In total, the prototype did well in user testing. Users stated that it
+was unobtrusive and helpful, especially the highlighting and sidebar.
+However, the bottom bar was not as useful to the developers, which
+mirrors the quantitative results.
 
 \subsubsection{Social Media Feedback}\label{social-media-feedback}
 

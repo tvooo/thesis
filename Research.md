@@ -1,4 +1,4 @@
-# Theoretical Grounding {#research}
+# Research Framework {#research}
 
 This chapter will introduce the research done prior to the design. It will present a short history of \glspl{ide} and list typical \gls{ui} design patterns in \glspl{ide}. Finally, the principle of *scope* in programming languages will be explained.
 

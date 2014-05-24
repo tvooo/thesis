@@ -46,7 +46,7 @@
 \contentsline {subsection}{\numberline {4.5.3}Testing Results}{36}{subsection.4.5.3}
 \contentsline {subsubsection}{Analytics}{36}{section*.21}
 \contentsline {subsubsection}{Interviews with developers}{36}{section*.22}
-\contentsline {subsubsection}{Social Media Feedback}{39}{section*.23}
+\contentsline {subsubsection}{Social Media Feedback}{38}{section*.23}
 \contentsline {chapter}{\numberline {5}Discussion \& Reflection}{40}{chapter.5}
 \contentsline {section}{\numberline {5.1}Quantitative reflection}{40}{section.5.1}
 \contentsline {section}{\numberline {5.2}Qualitative reflection}{42}{section.5.2}
