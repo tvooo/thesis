@@ -18,6 +18,7 @@
 %\usepackage[utf8x]{inputenc}
 \usepackage{ucs}
 \usepackage{amsmath}
+\usepackage{sidecap}
 %\usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage[xetex]{graphicx}
@@ -31,13 +32,13 @@
 \usepackage{eso-pic}
 \newcommand\BackgroundPic{
 \put(0,0){
-\parbox[b][0.5\paperheight]{\paperwidth}{%
+\parbox[b][0.38\paperheight]{1.1\paperwidth}{%
 \vfill
-\centering
-\hspace{-1cm}
-\includegraphics[width=1.2\paperwidth,
-keepaspectratio]{img/pattern.eps}%
-\vfill
+%\centering
+\hspace{-0.5cm}
+\includegraphics[width=1.1\paperwidth,
+keepaspectratio]{img/pattern.png}%
+%\vfill
 }}}
 
 % Glossar
@@ -55,7 +56,7 @@ keepaspectratio]{img/pattern.eps}%
 \usepackage{xcolor}
 \usepackage{caption}
 %\usepackage{courier}
-%\usepackage[chapter,fontfamily=courier]{minted}
+\usepackage[chapter]{minted}
 \usepackage[onehalfspacing]{setspace}
 % Index-Erstellung
 %\usepackage{makeidx}
@@ -64,7 +65,7 @@ keepaspectratio]{img/pattern.eps}%
 \usepackage[babel,german=quotes]{csquotes}
 % Spezielle Tabellenform fuer Deckblatt
 \usepackage{longtable}
-\usepackage{harvard}
+\usepackage{harvardold}
 % Fussnoten
 \usepackage[perpage, hang, multiple, stable]{footmisc}
 % Verschiedene Schriftarten
@@ -143,9 +144,9 @@ keepaspectratio]{img/pattern.eps}%
 
 \chapter*{Abstract}
 \thispagestyle{empty}
-\begin{abstract}
+%\begin{abstract}
 \input{abstract.tex}
-\end{abstract}
+%\end{abstract}
 
 \newpage
 \thispagestyle{empty}
@@ -173,8 +174,9 @@ keepaspectratio]{img/pattern.eps}%
 \pagenumbering{arabic}
 \input{intro.tex}
 \input{research.tex}
-%\input{process.tex}
 \input{exploration.tex}
+\input{concepts.tex}
+\input{ideation.tex}
 \input{design.tex}
 \input{conclusion.tex}
 
@@ -239,6 +241,6 @@ keepaspectratio]{img/pattern.eps}%
 \chaptermark{Appendix}
 \sectionmark{Appendix}
 \addcontentsline{toc}{chapter}{Appendix}
-%\input{appendix.tex}
+\input{appendix.tex}
 
 \end{document}

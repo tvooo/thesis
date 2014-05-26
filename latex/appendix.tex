@@ -1,0 +1,73 @@
+\subsubsection*{Sample source code}
+\label{app:diagram}
+The following source code has been used for sketching during ideation and during prototyping.
+
+\begin{listing}[H]
+\begin{minted}[linenos=true,frame=none]{javascript}
+;(function( window, document, $, undefined ) {
+  console.log( this );
+  $( document ).ready( function() {
+    console.log( this );
+    $('#btn').on('click', function( event ) {
+      console.log( this );
+      event.preventDefault();
+      $.getJSON('document.json', function( data ) {
+        console.log( this );
+        data.forEach( function ( entry ) {
+          console.log( this );
+          $('#list').append('<li>' + entry.title + '</li>');
+        });
+      });
+    });
+  });
+}( window, document, jQuery ));
+\end{minted}
+\caption{Declaring a Dojo class}
+\label{lst:classes}
+\end{listing}
+
+\begin{listing}[H]
+\begin{minted}[linenos=true,frame=none]{javascript}
+var fs = require('fs'),
+    http = require('http'),
+    marked = require('meta-marked'),
+    handlebars = require('handlebars');
+
+function parseMarkdown( cb ) {
+  fs.readFile( 'article.md', function( err, data ) {
+    if ( err ) {
+      return cb( err );
+    }
+
+    var text = marked( data.toString() );
+    cb( null, text );
+  });
+}
+
+function compileHtml( text, cb ) {
+  fs.readFile( 'template.html', function( err, data ) {
+    if ( err ) {
+      return cb( err );
+    }
+
+    var template = handlebars.compile( data.toString() );
+    cb( null, template({
+      meta: text.meta,
+      content: text.html
+    }) );
+  });
+}
+
+var server = http.createServer( function( req, res ) {
+  parseMarkdown( function( err, data ) {
+    compileHtml( data, function( err, data ) {
+      res.end( data );
+    });
+  } );
+});
+
+server.listen( 12345 );
+\end{minted}
+\caption{Declaring a Dojo class}
+\label{lst:classes}
+\end{listing}

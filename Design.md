@@ -1,12 +1,21 @@
-# Design {#design}
+# Design Iterations {#design}
 
-The following chapter will expose the design process and reasoning behind certain design decisions made for the prototypes. It will lead through the different prototyping stages and user testing to an evaluation of the design, including an outlook.
+The following chapter exposes the design process and reasoning behind the design decisions made for the prototypes. It leads through the different prototyping stages and user testing, closing with an evaluation of the design.
 
-The prototyping was happening in three subsequent stages. The first stage comprised a set of pencil sketches on paper; the second prototype was created with web technology, but fixed around a certain source code and faked interactivity; the third prototype was implemented as a plug-in for the Atom editor, and is able to work with any source code it is provided.
+The prototyping happened in three subsequent stages. The first stage comprised a set of pencil sketches on paper; the second prototype was created with web technology, but fixed around a certain source code and faked interactivity; the third prototype was implemented as a plug-in for the Atom editor, called *Scope Inspector*, and is able to work with any source code it is provided.
+
+In chapter \ref{exploration}, we developed four **characteristics** of well-integrated language tools: performance, modularity, smartness, and a focus on code. Additionally, we listed five common scoping **problems** in chapter \ref{concepts}: hoisting, closure, shadowing, implicit variable declaration, and lookup performance. The design needs to address both the characteristics (non-functional requirements) and the problems (functional requirements). For every prototype, the addressed requirements are referred to in the respective section. However, some requirements are not addressed at all. The *smartness* characteristic is not explicitly focused on by the design, as in the case of scope there is no ambiguity.  Neither is *Closure* addressed by any of the prototypes, for the reason that it is—from a technology perspective—hard to *correctly* detect. It is certainly possible , but given the short amount of time it was not a priority. Finally, linting tools already point out *implicit variable declaration*, which is why it is not in the scope of the design.
+
+<!--
+
+The first prototype only addresses nesting. While nesting is not generally seen as a problem, deeply nested scope is more complex than „flat“ scope, and may even have performance impacts, as stated in chapter \ref{concepts}. Thus, making the nesting visible may result in users being more conscious of their coding style and its impacts. The prototype therefore addresses the *lookup performance* problem. The second, scripted prototype addresses nesting as well as *shadowing* by indicating shadowing and shadowed identifiers in the sidebar.
+
+The third prototype additionally indicates *hoisting*. Hoisted indicators are shown both inline and in the sidebar. As the working prototype, it also addresses the non-functional characteristics
+-->
 
 ## Definitions
 
-To be able to talk about the qualitites of the concept and prototypes, we must first define a number of terms.
+To be able to discuss the qualitites of the concept and prototypes, we must first define a number of terms.
 
 Scope block
   ~ In a JavaScript text file, a scope block is the textual block representing a logical scope. For a function, which in JavaScript creates a new scope, the scope block starts at the `function` keyword and ends at the closing curly brace `}` of the function body. If, in a text editor, the cursor is placed anywhere inside this scope block (but outside of child scopes), the scope block is called *active scope*.
@@ -22,11 +31,9 @@ Local scope
 
 ## Sketching
 
-One could argue that sketching is part of the earlier exploration phase, rather than of the prototyping phase. However, next to sketching different ideas, the author also sketched different possible implementation for one feature that seemed valuable to the design solution: *highlighting*.
+One could argue that sketching is part of the earlier exploration phase, rather than of the prototyping phase. However, next to sketching different ideas, the author also sketched different possible implementations for one feature that seemed valuable to the design solution: *highlighting*. Highlighting of scopes through different colours—text or background colours—makes deeply nested scope more visible and thus directly addresses the problem of *lookup performance*.
 
 The basis for the sketches were printouts of the same source code, each leading to a different way of highlighting.
-
-(scans here)
 
 #### Active scope, inclusive
 
@@ -34,7 +41,7 @@ This sketch highlights the active scope block by applying a background colour to
 
 #### Active scope, exclusive
 
-Same as above, but descendant scope blocks are excluded from highlighting. This way of highlighting was implemented in the scripted prototype (see \ref{}).
+Same as above, but descendant scope blocks are excluded from highlighting. This way of highlighting was implemented in the scripted prototype (see section \ref{working-prototype}).
 
 #### Active scope and ancestor scopes
 
@@ -50,10 +57,16 @@ Additionally to emphasizing code blocks, individual identifiers can be highlight
 
 This works as well for the *scope colouring* described above, as each scope has a fixed colour. Identifiers that are used in other scopes than they are defined in can therefore always be recognized if they appear in the colour of their origin scope.
 
+\begin{figure}[htbp]
+\centering
+\includegraphics[keepaspectratio,width=\textwidth]{img/sketch_highlighting.jpeg}
+\caption{Some of the sketches to explore ways of highlighting}
+\label{fig:sketches2}
+\end{figure}
 
 ## Scripted prototype
 
-It very quickly became clear that the sketches were of little value. Although most of them gave a general impression on where the selected scope started and where it ended, it did not allow the user to see the big picture. It seemed probably that a more interactive prototype would be more helpful in this regard. As its capabilities of working with code are limited and the code had to be specifically prepared, this is called a *scripted prototype*.
+It very quickly became clear that the sketches were of little value. Although most of them gave a general impression on where the selected scope started and where it ended, it did not allow the user to see the big picture. It seemed probable that a more interactive prototype would be more helpful in this regard. As its capabilities of working with code are limited and the code had to be specifically prepared, this is called a *scripted prototype*.
 
 As the author is most familiar with web technologies, the scripted prototypes would be built using \ac{html}, \ac{css} and JavaScript and run in a web browser. Other prototyping tools, such as Balsamiq or Indigo Studio, would not allow for enough detail in terms of highlighting certain code passages, and would have represented a learning overhead.
 
@@ -61,18 +74,18 @@ As the author is most familiar with web technologies, the scripted prototypes wo
 \centering
 \includegraphics[keepaspectratio,width=0.75\textwidth,height=0.75\textheight]{img/prototype-1.png}
 \caption{Screenshot of the scripted prototype run in a browser}
-\label{fig:syntaxhighlighting}
+\label{fig:scriptedprototype}
 \end{figure}
 
 A code syntax highlighter\footnote{Prism, see \url{http://prismjs.com/}} was used to turn the subject source code into styled \ac{html} tags, to make it appear as if it was inside of a real code editor. Applying syntax highlighting was also necessary to see if the different highlighting techniques, as sketched out in the previous phase, would interfere with syntax highlighting.
 
-Furthermore, markers in the form of HTML tags were added to the subject source code, which made it possible to apply different styles\footenote{For example text colours, background colours, of font styles.} to regions of the code. This was later used to realize highlighting of the \glspl{scope-block}.
+Furthermore, markers in the form of HTML tags were added to the subject source code, which made it possible to apply different styles\footnote{For example text colours, background colours, of font styles.} to regions of the code. This was later used to realize highlighting of the \glspl{scope-block}.
 
 Two distinct \ac{ui} elements were added: a sidebar and a bottom bar. The content of both depends on the *active scope*, i.e. the scope the cursor is placed in.
 
 For each of the nested \ac{scope-block} that the cursor is positioned in (beginning from the local scope, going outwards up to the global scope), the sidebar shows a pane. Each pane contains the scope’s name along with a list of identifiers defined within that scope. In opposition to the working prototype, the scripted prototype does not show phenomena like hoisting and shadowing. The panes are ordered ascending by logical distance, i.e. the local scope would be on top, the next surrounding scope beneath it, and so forth; up to the global scope on the bottom.
 
-The different panes are hardcoded: all panes exist in the markup of the prototype at all times and are pre-filled with the relevant data, but are shown and hidden on demand.
+The different panes are hard-coded: all panes exist in the markup of the prototype at all times and are pre-filled with the relevant data, but are shown and hidden on demand.
 
 The bottom bar shows a horizontal list of scope names. It makes use of the *breadcrumbs* \ac{ui} pattern\footnote{In the Yahoo pattern library: \url{https://developer.yahoo.com/ypatterns/navigation/breadcrumbs.html}}. Each listed scope, beginning from the global scope on the very left, up to the local scope on the right, can be highlighted and navigated to by clicking on its label. By hovering\footnote{Hovering: Placing the mouse cursor over an element.} over the label, the user can get a preview of the target scope, as it is highlighted in the editor alongside the currently active scope.
 
@@ -93,11 +106,11 @@ The users liked both the „preview“ feature (hovering over a breadcrumb) and 
 
 One of the users suggested possible improvements or alternative designs for existing features. He recommended a wider use of colour coding to create a link between the scope in the editor window and the sidebar, for example by colouring all the ancestor scopes in different shades of grey. He also suggested an alternative visual structure for the sidebar instead of the list, for example nested clusters or a graph. For hoisting, the user came up with an idea to integrate indicators into the text editor: a „phantom“ variable declaration, which would be grey and not editable, could be inserted on top of a scope, to show that a certain variable declaration would be hoisted up there. This indicator should be collapsible so that it does not interfere with the editing process. Because of technical constraints, this idea was not implemented in the next prototype iteration; however, it seems a sensible solution to the hoisting indication problem, as it communicates this implicit phenomenon very clearly.
 
-In conclusion, the prototype was well-received and served its purpose well. It became clear that a consistent and clear visual language for the next iteration of the prototype was necessary, and that a direct connection between the code and the scope visualization has to be communicated.
+In conclusion, the prototype was well-received and served its purpose well. It became clear that a consistent and clear visual language for the next iteration of the prototype was necessary, and that a direct connection between the code and the scope visualization has to be communicated. Like the sketches, it addressed the *lookup performance*  problem by visualizing nested scope, even more so through the sidebar and bottom bar. It also put a stronger *focus on code* by making it navigatable using the bottom bar, and by dynamically showing changes directly in the editor.
 
 ## Working prototype
 
-The second prototype, which emerged into the final one, was built as a working prototype capable of handling any JavaScript scope, rather than as a proof-of-concept. It was integrated into the Atom\footnote{See \url{https://atom.io/}} text editor as a so-called *package*, released as \gls{oss} and was made publicly available for using and testing. The package is called „Scope Inspector“ and will be referred to using this name throughout this section.
+The third and final prototype was built as a working prototype capable of handling any JavaScript scope, rather than as a proof-of-concept. It was integrated into the Atom\footnote{See \url{https://atom.io/}} text editor as a so-called *package* or *plug-in*, released as \gls{oss} and was made publicly available for using and testing. The package is called „Scope Inspector“ and will be referred to using this name throughout this section.
 
 ### The prototyping platform
 
@@ -132,33 +145,63 @@ Atom’s interface is, by default, threefold: the text editor takes the most spa
 
 Throughout the Scope Inspector package, a visual style consistent with Atom’s is used. Any icons in use are taken from the Octicons\footnote{See \url{https://github.com/styleguide/css/7.0}} icon set, which is incorporated into every Github product. Atom supports themes (colour schemes) for both the application window and the editor. Scope Inspector makes use of the colours defined in those themes. This way, the package \ac{ui} feels more natural to the user. However, there may be difficulties if the theme is not well-defined and the colours are badly balanced. One user reported very low contrast between the editor’s background and the scope highlighting. In addition to pre-defined theme colours, Atom also provides a set of pre-styled \ac{ui} components, for example buttons and panes, which have been used in the prototype.
 
-Whenever the Scope Inspector is active, two things are obvious: on the bottom of the editor, a panel is shown which we call *bottom bar*, and the active scope is highlighted inline. Additionally, a sidebar can be toggled using the Atom command „Scope Inspector: Toggle Sidebar“. This command is accessible using the menu, the command palette, a keyboard shortcut (`Ctrl+Alt+i` by default), and a toggle button on the bottom bar. The several components and their functionality are explained in more detail in the following sections.
+Whenever the Scope Inspector is active, two things are obvious: on the bottom of the editor, a panel is shown which we call *bottom bar*, and the active scope is highlighted inline. Additionally, a sidebar can be toggled using the Atom command „Scope Inspector: Toggle Sidebar“. This command is accessible using the menu, the command palette, a keyboard shortcut (`Ctrl+Alt+i` by default), and a toggle button on the bottom bar. The user can choose wether or not to use the package with the sidebar enabled, which addresses the *modularity* characteristic. For *performance* reasons, the JavaScript program is not re-evaluated (i.e. its scope structure is built up) on every character that is typed by the user, but only when its file is saved. The several components and their functionality are explained in more detail in the following sections.
 
 #### Inline scope highlighting
 
-As explained above, the *active scope* is the immediate scope the cursor is placed in. It is emphasized by highlighting it through a lighter or darker background colour (depending on Atom’s colour scheme). If the cursor is placed in a different scope, the formerly active scope is un-highlighted, and the now active scope is highlighted instead.
+As explained above, the *active scope* is the immediate scope the cursor is placed in. It is emphasized by highlighting it through a lighter or darker background colour (depending on Atom’s colour scheme). If the cursor is placed in a different scope, the formerly active scope is de-highlighted, and the now active scope is highlighted instead.
 
-While the scripted prototype implements *exclusive highlighting*, this prototype now implements *inclusive highlighting*, which means that the inner scope are highlighted as well. This is due to technical reasons; building exclusive highlighting into the prototype would have taked a lot more time. In further iterations of the prototype, an option to enable and disable exclusive highlighting could be provided.
+\begin{figure}[htbp]
+\centering
+\includegraphics[keepaspectratio,width=0.75\textwidth]{img/scope-highlight.png}
+\caption{Subtle highlighting of an anonymous function}
+\label{fig:protohighlighting}
+\end{figure}
 
-The bottom bar contains a toggle button\footnote{A switch in the form of a button, which can be either *on* or *off*.} to enable or disable highlighting of the global scope. Highlighting the global scope with *inclusive highlighting* is not useful, as the whole file would be highlighted (and there would be nothing left to contrast the highlight to).
+While the scripted prototype implements *exclusive highlighting*, the working prototype implements *inclusive highlighting*, which means that the inner scopes are highlighted as well. This is due to technical reasons; building exclusive highlighting into the prototype would have taked a lot more time. In further iterations of the prototype, an option to enable and disable exclusive highlighting could be provided.
+
+The bottom bar contains a toggle button\footnote{A switch in the form of a button, which can be either \emph{on} or \emph{off}.} to enable or disable highlighting of the global scope. Highlighting the global scope with *inclusive highlighting* is not useful, as the whole file would be highlighted (and there would be nothing left to contrast the highlight to).
+
+#### Inline hosting indication
+
+If there are identifiers being hoisted in the active scope, an indicator—which consists of a dotted line with an arrow head—is shown inline. The indicator appears at the place in the source code where the identifiers are hoisted to. This is *before* the first statement in the given scope which is not a variable declaration. In figure \ref{protohoisting}, this is before the very first line of the scope block. By hovering over the indicator line, the user reveals a tooltip listing all the identifiers that are being hoisted to this place. This feature obviously addresses the *hoisting* problem, and does so while maintaining a *focus on code*.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[keepaspectratio,width=0.75\textwidth]{img/hoisting.png}
+\caption{Inline hoisting indicator with tooltip}
+\label{fig:protohoisting}
+\end{figure}
 
 #### Bottom bar
 
 The bottom bar serves two purposes: it provides a quick glance of where in the scope hierarchy the cursor is and provides quick access to two settings.
 
-On the right side of the bottom bar, to toggle buttons allow for enabling and disabling of two features. The right button, showing a list icon, shows or hides the sidebar. The left button with the label „Highlight Global“ toggles the highlighting of the global scope (as described above).
+\begin{figure}[htbp]
+\centering
+\includegraphics[keepaspectratio,width=0.75\textwidth]{img/bottombar.png}
+\caption{The bottom bar, showing the scope chain and toggle buttons}
+\label{fig:bottombar}
+\end{figure}
+
+On the right side of the bottom bar, two toggle buttons allow for enabling and disabling of two features. The right button, showing a list icon, shows or hides the sidebar. The left button with the label „Highlight Global“ toggles the highlighting of the global scope (as described above).
 
 The left side of the bottom bar shows the breadcrumbs known from the scripted prototype. The breadcrumbs, implemented as simple buttons, are labeled with the corresponding scope name. The global scope is always on the left, whereas the currently local, active scope is on the right. By hovering over any of the breadcrumb buttons, the user can preview the respective scope highlighting in the editor. The preview is applied in addition to the currently active highlight in a different colour.
 
-By hovering over the breadcrumbs from left to right or from right to left, the user can make the relationship between the logical structure of the JavaScript program (in the form of hierarchic scopes) and the textual structure (in the form of code) visible.
+By hovering over the breadcrumbs from left to right or from right to left, the user can make the relationship between the logical structure of the JavaScript program (in the form of hierarchic scopes) and the textual structure (in the form of code) visible. As in the previous prototype, the bottom bar emphasizes the scope nesting and thus addresses the *lookup performance* problem.
 
 #### Sidebar
 
 The sidebar shows content depending on the currently active scope. Similarily to the scripted prototype, the sidebar lists one pane for each scope in the hierarchy of the active scope. The active scope is listed on top, while its ancestors are listed below, up to the global scope on the very bottom.
 
-Each pane is entitled by the name of the scope. In case of function scope, the name of the function becomes the scope name („(anonymous function)“ in the case of an unnamed function expression). In case of the global scope, the name is „GLOBAL“.
+\begin{figure}[H]
+\centering
+\includegraphics[keepaspectratio,width=0.4\textwidth]{img/sidebar.png}
+\caption{Sidebar (clipped), with shadowing, shadowed, and hoisted identifiers}
+\label{fig:protosidebar}
+\end{figure}
 
-Underneath the title, the names of all identifiers defined within the scope are listed, along with certain attribute annotations.
+Each pane is entitled by the name of the scope. In case of function scope, the name of the function becomes the scope name („(anonymous function)“ in the case of an unnamed function expression). In case of the global scope, the name is „GLOBAL“. Underneath the title, the names of all identifiers defined within the scope are listed, along with certain attribute annotations.
 
 * Function parameters are listed first. They appear with the annotation „param“, set in smaller text size to the right.
 * General variables follow the parameters. If they are not shadowed, they have no annotations.
@@ -169,6 +212,8 @@ The listed identifiers show also if they are hoisted, shadowed, or if they shado
 * Hoisted identifiers have a small, upwards-pointed arrow on the left side of their label. This indicates that their declaration is implicility moved upwards in code.
 * Shadowed identifiers are printed in a more subtle text colour. Besides that, their label is striked-through to indicate that they are not accessible within the given descendant scope.
 * Identifiers that shadow other identifiers in ancestor scopes are printed in a highlight colour. In case of Atom’s standard \ac{ui} theme, this is a bright blue colour.
+
+Consequently, the sidebar addresses both the *shadowing* and *hoisting* problems.
 
 ## User Testing & Evaluation
 
@@ -220,7 +265,6 @@ Sidebar
     The order of the panels, each representing one scope in the scope chain, was confusing to some users. Although they understood the concept of a scope chain, they expected it to be in the order that scopes appear in code. However, code is linear, while scope is hierarchical, and they do not map directly. It is reasonable to assume that the order which is used in the prototype is learnable for the users, as it works analogously to \ac{css} in the Chrome DevTools. This could for example be achieved by connecting the scope in the sidebar visually with its counterpart in the editor. One user suggested that, when a scope is hovered in the sidebar, its counterpart in the editor could be highlighted (analogous to the effect of hovering a breadcrumb in the bottom bar).
 
     Another suggestions concerning the sidebar was to highlight even single variables in the editor when they are highlighted in the sidebar. Regarding shadowing, one user was able to detect a bad practice in his code during testing: he had created a shadowing situation in which the two variables of the same name server completely different purposes. Another user misinterpreted the hoisting indicators (upwards arrows) in the sidebar. He assumed that they are pointing upwards because clicking on them would cause the editor to scroll upwards, navigating to the identifier’s declaration.
-
 
 Bottom bar
   ~ None of the users discovered on their own the possibility to navigate the scope chain by clicking on the breadcrumbs. However, after pointing the feature out, they stated it was useful. One user noted that, once you navigate into a higher scope, you can not go „back“ to the last position (or the previously selected scope, which is nested inside the now active scope).

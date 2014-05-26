@@ -1,0 +1,144 @@
+html, body, div, html pre, code, ul, ol, h1, h2, h3, h4 {
+    margin: 0;
+    padding: 0;
+
+}
+html, body {
+    height: 100%;
+    font-family: Helvetica, Arial, Verdana, sans-serif;
+    font-family: Consolas, Monaco, 'Andale Mono', monospace;
+}
+ul {
+    list-style: none;
+}
+body {
+    overflow: hidden;
+    position: relative;
+}
+.shadowed li {
+    text-decoration: line-through;
+    color: #999;
+}
+.horizontal {
+    position: absolute;
+    top: 0;
+    left:0;
+    right:0;
+    bottom:50px;
+    overflow: auto;
+}
+/*.horizontal::after {
+    content: '.';
+    visibility: hidden;
+    overflow: auto;
+    clear: both;
+}*/
+pre {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 300px;
+    bottom: 0;
+    /*width: 80%;
+    height: 100%;*/
+    overflow: scroll;
+}
+code:focus {
+    outline: 0;
+}
+.sidebar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px;
+    bottom: 0;
+
+    background: #e5ded8;
+}
+.sidebar li span {
+    color: #666;
+    float: right;
+    font-size: .8em;
+}
+.sh {
+    display: none;
+}
+.shadowed .sh {
+    display: block;
+}
+.shadowed .arg {
+    display: none;
+}
+.sidebar h4 {
+    text-align: center;
+    background: #ae9686;
+    padding: 10px;
+}
+.sidebar .vars-global h4 {
+    background: #201a15;
+    color: white;
+}
+pre[class*="language-"] {
+    margin: 0;
+}
+.sidebar ul {
+    padding: 10px;
+}
+.statusbar {
+    position: absolute;
+
+    right: 0;
+    left: 0;
+    height: 50px;
+    bottom: 0;
+    background: #382c25;
+    color: white;
+    padding: 10px;
+    box-sizing: border-box;
+    line-height: 30px;
+}
+.statusbar span {
+    cursor: pointer;
+}
+.statusbar span:after {
+    content: '>';
+    font-weight: 700;
+    display: inline-block;
+    padding: 0 5px;
+    cursor: default;
+}
+.statusbar span:last-of-type {
+    font-weight: 700;
+    background: #675244;
+}
+.statusbar span:last-of-type:after {
+    color: green;
+    content: '';
+    display: none;
+}
+.kw-global-user {
+    /*background: red;*/
+}
+.scope-global.highlight {
+    background: #ccc;
+}
+.inline {
+    display: inline;
+}
+.scope-parsemarkdown.highlight,
+.scope-compilehtml.highlight,
+.scope-anon.highlight {
+    background: #ccc;
+}
+.scope-parsemarkdown-anon.highlight,
+.scope-compilehtml-anon.highlight,
+.scope-anon-anon.highlight {
+    background: #ccc;
+}
+.scope-anon-anon-anon.highlight {
+    background: #ccc;
+}
+
+.highlight-temp {
+    background: #bbb !important;
+}

@@ -187,23 +187,98 @@ channel.
 
 \chapter{Conclusion \& Outlook}\label{conclusion-outlook}
 
-Welche knowledge contribution hab ich wirklich machen können?
+While the disciplines of Interaction Design and Software Development are
+deeply intertangled, the world of IDEs and programming language tools is
+still mainly driven by technology. This thesis made an approach to apply
+interaction design methodology to this area by designing a language tool
+for a very specific, narrow target group.
 
-\begin{itemize}
-\itemsep1pt\parskip0pt\parsep0pt
-\item
-  Characteristics of well-integrated language tools that are important
-  for professional developers to support their work. \textbf{ja}
-\item
-  A way of evaluating designs with a specific, professional target group
-  \textbf{ja?}
-\item
-  The implications of testing prototypes with a very limited user group
-  in the open source community \textbf{oh jes\ldots{}}
-\item
-  Using an interaction design approach to create open source software
-  opens up the field. It yields results that are most probably different
-  from what typical innovation processes in open source would have
-  resulted in. \textbf{ja! nicht anticipated, open innovation kram und
-  so}
-\end{itemize}
+\section{Knowledge Contribution}\label{knowledge-contribution}
+
+Through the design process, this thesis contributes knowledge to the
+interaction design community. Four characteristics of well-integrated
+programming language tools—performance, modularity, smartness, and focus
+on code—have been identified. Those characteristics can be used as a
+loose grounding to evaluate language tools for professional software
+developers. Other target groups may prioritize different
+characteristics.
+
+They way that the user testing was planned and prepared seemed, at that
+time, reasonable. Due to my background in web development, I recruited
+professional developers I knew for user testing. However, the fact they
+could not make use of the prototype due to work reasons was
+unforeseeable for me. The subsequent attempt to recruit users through
+the survey failed as well—most users knew JavaScript to some extent, but
+for none was it the primary professional language. Given the fact that
+users would need to work with Atom, which only runs on the OS X platform
+by the time of writing, problems with user testing could have been
+expected. Apparently, testing prototypes with a very limited user group
+in the open source community implies that great efforts have to be taken
+to recruit users, and longer time periods are necessary than have been
+given in this case. However, given enough time and access to more test
+users, this approach of evaluating designs in the field—with analytics,
+long-term tests, and social media—is promising.
+
+The way that the prototype was put into the world, marketed and
+evaluated seemed to be reasonable for an open source project and this
+target group. The lesson learned was that the short amount of time
+available for this project makes long-term testing extremely difficult,
+especially if the target group is so narrow. Given a longer time span
+and access to more test users, this seems to be an efficient way of
+evaluating designs like this.
+
+Picking \emph{scope} as a topic of focus, I was quite surprised that
+there could no integrated language tool be found that addressed scope in
+the way my design does—especially as the survey and interviews
+identified it easily as an ongoing issue in programming. This leads to
+the assumption that user-centered design methods, as were applied in
+this project, do not usually lead innovation in open source projects
+like there. A quick look into several open source
+projects\footnote{User-driven innovation processes in open source software are subject to a whole other line of research, and are thus not discussed in detail here.}
+of different size shows that user participation exists in such projects,
+but is realized in a much looser way, for example through whole
+ecosystems of institutions and communities, as in the case of Linux
+\cite{raymond2}; through suggestion platforms, as in the case of
+Mozilla\footnote{See for example: \url{https://hacks.mozilla.org/2014/05/developer-tools-feedback-channels-one-week-in/
+}}; or through open contribution, as in the case of the masses of
+smaller open source projects and made possible through platforms like
+Github and Launchpad\footnote{See \url{https://launchpad.net/}}.
+\citeasnoun{raymond2} states that every good work of software starts by
+scratching a developer's personal itch. However, the user-centered
+design process forces the designer to look for \emph{other developers’
+itches}. Thus I think that the result of this thesis differ from what a
+classical open source approach may have resulted in. Applying
+interaction design methodologies prooved to be highly beneficial, and
+will probably be so for other open source projects. While this knowledge
+contribution was not anticipated, it is very welcome.
+
+\section{Applicability}\label{applicability}
+
+Scope is a concept that appears in most programming languages. While
+JavaScript was taken as an example throughout the design process, the
+design is transferable to other languages as well. Closest to JavaScript
+are, of course, other languages that implement functional paradigms and
+similar scoping rules, for example Clojure, Dart, or Python. However,
+even originally non-functional languages are starting to implement
+features like closures, most recently Java and PHP. But even without
+functional features, scope remains a problem for developers of many
+programming languages, beginners and professionals alike. The concept
+created in the course of this thesis can be beneficial to them, as well.
+
+Additionally, the concept is quite independent from the development
+environment. Though it was using the visual language and interaction
+models of Atom, those can be as easily adapted to IDEs like Eclipse,
+Visual Studio, or IntelliJ as they can be to Sublime Text, Vim, or
+Emacs.
+
+\section{Outlook}\label{outlook}
+
+The feedback gathered through user testing is most helpful in driving
+the Scope Inspector forward. It will be interesting to see how it will
+be adapted by the community of JavaScript developers as it starts to
+implement more relevant features, such as closure detection and sidebar
+navigation. More time will allow the long-term testing that this thesis
+project could not provide, and the prototype’s value will be proven or
+disproven in the long run. In the meantime, it will be interesting to
+see if and how interaction design methodology drives innovation in the
+open source community.

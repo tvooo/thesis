@@ -1,46 +1,62 @@
 \begin{titlepage}
+
+\newgeometry{top=3cm, bottom=4cm, left=2.625cm, right=2.625cm}
+
 \begin{center}
 
 \AddToShipoutPicture*{\BackgroundPic}
 
-% Upper part of the page. The '~' is needed because \\
-% only works if a paragraph has started.
 \includegraphics[width=0.15\textwidth]{./img/mah2.eps}~\\[1cm]
-%\includegraphics[width=\pagewidth]{./img/pattern.eps}~\\[1cm]
-
-%\textsc{\LARGE Malmö Högskola}\\[1.5cm]
-\begin{minipage}{0.8\textwidth}
-\begin{flushleft} \large
-\textsc{\Large Thesis Project I}\\[0.5cm]
-% Title
-\HRule \\[0.4cm]
-{ \huge \bfseries \titel \\[0.4cm] }
-\end{flushleft}
-\end{minipage}
-
-
-
 
 \HRule \\[1.5cm]
 
 % Author and supervisor
-\begin{minipage}{0.4\textwidth}
+\begin{minipage}{0.43\textwidth}
 \begin{flushleft} \large
 \emph{Author:}\\
 \autor
 \end{flushleft}
 \end{minipage}
-\begin{minipage}{0.4\textwidth}
+\begin{minipage}{0.43\textwidth}
 \begin{flushright} \large
 \emph{Supervisor:} \\
 \supervisor
 \end{flushright}
 \end{minipage}
 
-\vfill
+\vspace*{0.4cm}
 
-% Bottom of the page
+\begin{minipage}{0.86\textwidth}
+\begin{flushright} \large
+\emph{Examiner:} \\
+Jonas Löwgren
+\end{flushright}
+\end{minipage}
+
+\vspace*{3.5cm}
+
 {\large \today}
 
+\vfill
+%\vspace{6cm}
+\begin{minipage}{0.86\textwidth}
+\begin{flushleft} \large
+
+% Title
+\HRule \\[0.4cm]
+\begin{spacing}{1.0}
+{ \huge \bfseries Making scope explorable in\\Software Development Environments\\[0.4cm]\large{to reduce defects and support program understanding}}
+\end{spacing}
+\\[0.5cm]
+\textsc{\Large Thesis Project I}
+\end{flushleft}
+\end{minipage}
+
+%\vfill
+
+% Bottom of the page
+
+
 \end{center}
+%\restoregeometry
 \end{titlepage}

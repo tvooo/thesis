@@ -1,24 +1,48 @@
 \begin{thebibliography}{xx}
 
 \harvarditem{Baxter-Reynolds}{2011}{reynolds}
-Baxter-Reynolds, M.  \harvardyearleft 2011\harvardyearright , `Program in a
-  text editor rather than an ide? why would you do that?'.
+Baxter-Reynolds, M.  \harvardyearleft 2011\harvardyearright , `{Program in a
+  text editor rather than an IDE? Why would you do that?}'.
+\newblock Accessed: 22.04.2014.
 \newline\harvardurl{{http://www.theguardian.com/technology/blog/2011/oct/24/programming-ide-editors-choice}}
 
+\harvarditem[Bragdon et~al.]{Bragdon, Zeleznik, Reiss, Karumuri, Cheung,
+  Kaplan, Coleman, Adeputra \harvardand\ LaViola~Jr.}{2010}{bragdon}
+Bragdon, A., Zeleznik, R., Reiss, S.~P., Karumuri, S., Cheung, W., Kaplan, J.,
+  Coleman, C., Adeputra, F. \harvardand\ LaViola~Jr., J.~J.  \harvardyearleft
+  2010\harvardyearright , {Code Bubbles: A Working Set-b ased Interface for
+  Code Understanding and Maintenance}, {\em in} `Proceedings of the SIGCHI
+  Conference on Human Factors in Computing Systems', CHI '10, ACM, New York,
+  NY, USA, pp.~2503--2512.
+
 \harvarditem{Castorina}{2014}{castorina}
-Castorina, D.  \harvardyearleft 2014\harvardyearright , `Javascript prototypes,
-  scopes, and performance: What you need to know'.
+Castorina, D.  \harvardyearleft 2014\harvardyearright , `{JavaScript
+  Prototypes, Scopes, and Performance: What You Need to Know}'.
 \newblock Accessed: 16.05.2014.
 \newline\harvardurl{{http://www.toptal.com/javascript/javascript-prototypes-scopes-and-performance-what-you-need-to-know}}
 
 \harvarditem{Crockford}{2013}{crockford}
-Crockford, D.  \harvardyearleft 2013\harvardyearright , `Monads and gonads'.
+Crockford, D.  \harvardyearleft 2013\harvardyearright , `Monads and {G}onads'.
 \newblock Accessed: 26.04.2014.
 \newline\harvardurl{{https://www.youtube.com/watch?v=b0EF0VTs9Dc}}
+
+\harvarditem[DeLine et~al.]{DeLine, Czerwinski, Meyers, Venolia, Drucker
+  \harvardand\ Robertson}{2006}{deline}
+DeLine, R., Czerwinski, M., Meyers, B., Venolia, G., Drucker, S. \harvardand\
+  Robertson, G.  \harvardyearleft 2006\harvardyearright , {Code Thumbnails:
+  Using Spatial Memory to Navigate Source Code}, {\em in} `Proceedings of the
+  Visual Languages and Human-Centric Computing', VLHCC '06, pp.~11--18.
+
+\harvarditem{Granger}{2012}{granger}
+Granger, C.  \harvardyearleft 2012\harvardyearright , `{Light Table --- a new
+  IDE concept}'.
+\newblock Accessed: 07.04.2014.
+\newline\harvardurl{http://www.chris-granger.com/2012/04/12/light-table---a-new-ide-concept/}
 
 \harvarditem{Hidayat}{2012}{hidayat}
 Hidayat, A.  \harvardyearleft 2012\harvardyearright , `{Language Tools for
   Reducing Mistakes}'.
+\newblock Accessed: 03.05.2014.
 \newline\harvardurl{http://ariya.ofilabs.com/2012/11/language-tools-for-reducing-mistakes.html}
 
 \harvarditem{{\em {Interaktives Programmieren als
@@ -31,50 +55,53 @@ Hidayat, A.  \harvardyearleft 2012\harvardyearright , `{Language Tools for
 \harvarditem[Johnson et~al.]{Johnson, Song, Murphy-Hill \harvardand\
   Bowdidge}{2013}{johnson2013}
 Johnson, B., Song, Y., Murphy-Hill, E. \harvardand\ Bowdidge, R.
-  \harvardyearleft 2013\harvardyearright , Why don\&\#039;t software developers
-  use static analysis tools to find bugs?, {\em in} `Proceedings of the 2013
+  \harvardyearleft 2013\harvardyearright , {Why Don't Software Developers Use
+  Static Analysis Tools to Find Bugs?}, {\em in} `Proceedings of the 2013
   International Conference on Software Engineering', ICSE '13, IEEE Press,
   Piscataway, NJ, USA, pp.~672--681.
-\newline\harvardurl{http://dl.acm.org/citation.cfm?id=2486788.2486877}
 
 \harvarditem[Lieber et~al.]{Lieber, Brandt \harvardand\ Miller}{2014}{lieber}
 Lieber, T., Brandt, J. \harvardand\ Miller, R.~C.  \harvardyearleft
-  2014\harvardyearright , Addressing misconceptions about code with always-on
-  programming visualizations, {\em in} `Proceedings of the SIGCHI Conference on
-  Human Factors in Computing Systems', CHI '14, ACM, New York, NY, USA,
+  2014\harvardyearright , {Addressing Misconceptions About Code with Always-on
+  Programming Visualizations}, {\em in} `Proceedings of the SIGCHI Conference
+  on Human Factors in Computing Systems', CHI '14, ACM, New York, NY, USA,
   pp.~2481--2490.
-\newline\harvardurl{http://doi.acm.org/10.1145/2556288.2557409}
 
 \harvarditem{Lynch}{2011}{lynch}
-Lynch, D.  \harvardyearleft 2011\harvardyearright , `Why not just use an ide if
-  you want ide features?'.
+Lynch, D.  \harvardyearleft 2011\harvardyearright , `{Why not just use an IDE
+  if you want IDE features?}'.
+\newblock Accessed: 22.04.2014.
 \newline\harvardurl{{http://davidlynch.org/blog/2011/09/why-not-just-use-an-ide-if-you-want-ide-features/}}
 
 \harvarditem{{McConnell, Steve}}{2004}{mcconnell}
 {McConnell, Steve}  \harvardyearleft 2004\harvardyearright , {\em {Code
   Complete: A Practical Handbook of Software Construction}}, 2nd edn, Microsoft
-  Press.
+  {P}ress, Redmond, WA, USA.
 
 \harvarditem{Moggridge}{2007}{moggridge}
 Moggridge, B.  \harvardyearleft 2007\harvardyearright , {\em Designing
   {I}nteractions}, The MIT Press, Cambridge, MA, USA.
 
+\harvarditem{Raymond}{1999}{raymond2}
+Raymond, E.~S.  \harvardyearleft 1999\harvardyearright , {\em {The Cathedral
+  and the Bazaar}}, O'Reilly Media, Sebastopol, CA, USA.
+
 \harvarditem{Raymond}{2003}{raymond}
-Raymond, E.~S.  \harvardyearleft 2003\harvardyearright , {\em The Art of Unix
-  Programming}, Addison-Wesley.
+Raymond, E.~S.  \harvardyearleft 2003\harvardyearright , {\em {The Art of Unix
+  Programming}}, Addison-Wesley, Boston, MA, USA.
 
 \harvarditem{Simpson}{2014}{getify}
 Simpson, K.  \harvardyearleft 2014\harvardyearright , {\em You {D}on't {K}now
-  {JS}: {S}cope \& {C}losures}, O'Reilly Media.
+  {JS}: {S}cope \& {C}losures}, O'Reilly Media, Sebastopol, CA, USA.
 
 \harvarditem{Victor}{2012}{victor}
-Victor, B.  \harvardyearleft 2012\harvardyearright , `Learnable programming'.
+Victor, B.  \harvardyearleft 2012\harvardyearright , `Learnable {P}rogramming'.
 \newblock Accessed: 07.04.2014.
 \newline\harvardurl{{http://worrydream.com/\#!/LearnableProgramming}}
 
 \harvarditem{von Oldenburg}{2014}{tvo}
-von Oldenburg, T.  \harvardyearleft 2014\harvardyearright , `Analyzing
-  javascript scope'.
+von Oldenburg, T.  \harvardyearleft 2014\harvardyearright , `{Analyzing
+  JavaScript Scope}'.
 \newblock Accessed: 12.05.2014.
 \newline\harvardurl{{http://www.protoandtype.com/analyzing-scope/}}
 
