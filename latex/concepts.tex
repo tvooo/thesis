@@ -66,13 +66,13 @@ from \emph{all other} parts of the program. The area in which the
 variable is accessible is called its \emph{scope}.
 
 According to \citeasnoun{getify}, scope is „the set of rules that
-determines where and how a variable (identifier) can be looked-up“ and
-therefore be accessed and used. The specifics of „where and how“ depend
-on the respective programming language. Most modern languages implement
-\emph{lexical scope}, which means that the scope of a variable depends
-on the position of its declaration in the actual source code. In other
-words, where in the source text a variable is declared defines also
-where it is usable and
+determines where and how a \gls{variable} (\gls{identifier}) can be
+looked-up“ and therefore be accessed and used. The specifics of „where
+and how“ depend on the respective programming language. Most modern
+languages implement \emph{lexical scope}, which means that the scope of
+a variable depends on the position of its declaration in the actual
+source code. In other words, where in the source text a variable is
+declared defines also where it is usable and
 accessible.\footnote{The complementing concept, \emph{dynamic scope}, is not relevant to this thesis.}
 Lexical scope also means that scope is defined during author-time
 already, and can thus be analyzed early on. In contrast, the \emph{this}
@@ -139,10 +139,10 @@ higher in the scope chain.
 \end{figure}
 
 The manifestation of nested scope in source code is illustrated by
-figure \ref{fig:getify}. The function \texttt{foo} is defined \emph{in}
-the global scope (1) (see next section), and is therefore accessible
-from all parts of this program. \texttt{foo} itself defines a new scope
-(2) which includes the identifiers \texttt{a}, \texttt{b} and
+figure \ref{fig:getify}. The \gls{function} \texttt{foo} is defined
+\emph{in} the global scope (1) (see next section), and is therefore
+accessible from all parts of this program. \texttt{foo} itself defines a
+new scope (2) which includes the identifiers \texttt{a}, \texttt{b} and
 \texttt{bar}. \texttt{bar} defines a new scope (3) within \texttt{foo},
 defining only the identifier \texttt{c}. As can be seen, the innermost
 scope (3) has access to its own identifiers, as well as to the ones
@@ -176,7 +176,7 @@ in the global scope. The original BASIC programming language only
 implemented global scope.
 \item[Block scope]
 Any logical block, often denoted by containing curly braces (\texttt{\{}
-and \texttt{\}}), will create a new scope. This is the case in the C
+and \texttt{\}}), creates a new scope. This is the case in the C
 programming language, amongst others.
 \item[Function scope]
 Any function definition defines a new scope. Parameters of the function
@@ -185,7 +185,7 @@ defined within that function. JavaScript implements function scope.
 \item[Expression scope]
 A variable’s scope is limited to a single expression. This useful for
 very short-living, temporary variables. It is implemented by many
-functional languages, for example Python and ECMAScript 6.
+functional languages, for example Python and \gls{ecmascript} 6.
 \end{description}
 
 JavaScript, as of ECMAScript 5, implements only global and function

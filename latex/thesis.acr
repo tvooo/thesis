@@ -40,6 +40,9 @@
 \glsgroupheading{P}\relax \glsresetentrylist %
 \glossaryentryfield{parc}{\glsnamefont{PARC}}{Palo Alto Research Centre}{\relax }{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{3}}}\glsgroupskip
+\glsgroupheading{Q}\relax \glsresetentrylist %
+\glossaryentryfield{qa}{\glsnamefont{QA}}{Quality Assurance}{\relax }{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{7}}}\glsgroupskip
 \glsgroupheading{U}\relax \glsresetentrylist %
 \glossaryentryfield{ucd}{\glsnamefont{UCD}}{User-Centered Design}{\relax }{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{1}}}%

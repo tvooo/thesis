@@ -18,9 +18,9 @@ Run-time
   ~ is the phase during which a program is executed. In some interpreted languages, \ac{jit} compilation^[Just-in-Time compilation is the compilation of code immediately before its execution, instead of during a preliminary compilation phase.] leads to a convergence of compile-time and run-time, which makes the distinction harder. *Run time errors* are errors happening during run-time that could not be detected during compilation (for example if they depend on user input).
 
 Debugging
-  ~ is the process of identifying and eliminating software errors, so-called *bugs*. This activity is usually supported by a specialized software called a *debugger*. The debugger allows to hook into a program during run-time through so-called *breakpoints* and step through each statement individually. At all times, the debugger can expose the values of variables in the respective context.
+  ~ is the process of identifying and eliminating software errors (*bugs*). This activity is usually supported by a specialized software called a *debugger*. The debugger allows to hook into a program during run-time through so-called *breakpoints* and step through each statement individually. At all times, the debugger can expose the values of variables in the respective context.
 
-This thesis and the according prototype mainly address the author-time phase, during which so-called static analysis can be performed.
+This thesis and the according prototype mainly address the author-time phase, during which static analysis can be performed.
 
 <!--
 ## Identifiers, Variables and Functions
@@ -36,7 +36,7 @@ Identifiers are the symbolic names given to variables, which are used to access 
 
 *Scope* is the part of a program in which a given variable is accessible. In computer programming, variables  are used to address (write and read) data. At some point in the program, a variable is *declared*, i.e. its existence is made known to the program. However, in most programming languages, a variable declaration in some part of the program does not necessarily make the variable accessible from *all other* parts of the program. The area in which the variable is accessible is called its *scope*.
 
-According to \citeasnoun{getify}, scope is „the set of rules that determines where and how a variable (identifier) can be looked-up“ and therefore be accessed and used. The specifics of „where and how“ depend on the respective programming language. Most modern languages implement *lexical scope*, which means that the scope of a variable depends on the position of its declaration in the actual source code. In other words, where in the source text a variable is declared defines also where it is usable and accessible.\footnote{The complementing concept, \emph{dynamic scope}, is not relevant to this thesis.} Lexical scope also means that scope is defined during author-time already, and can thus be analyzed early on. In contrast, the *this* keyword in JavaScript is a run-time phenomenon; its value cannot be known during author-time.
+According to \citeasnoun{getify}, scope is „the set of rules that determines where and how a \gls{variable} (\gls{identifier}) can be looked-up“ and therefore be accessed and used. The specifics of „where and how“ depend on the respective programming language. Most modern languages implement *lexical scope*, which means that the scope of a variable depends on the position of its declaration in the actual source code. In other words, where in the source text a variable is declared defines also where it is usable and accessible.\footnote{The complementing concept, \emph{dynamic scope}, is not relevant to this thesis.} Lexical scope also means that scope is defined during author-time already, and can thus be analyzed early on. In contrast, the *this* keyword in JavaScript is a run-time phenomenon; its value cannot be known during author-time.
 
 As scope is a concept that is central to a program, it can be used as a perspective to look at a program, too. The most obvious perspective is *source code*. Code is organized in different files, and files are lines that run from top to bottom. Another way to look at a program is by its symbols, for example modules, classes, methods. Java programs are organized in packages; each package has several classes, of which each has attributes and methods. Finally, programs can be looked at by means of scope, which has its own characteristics. Those are described in the following sections.
 
@@ -68,7 +68,7 @@ In JavaScript, scope nesting is an important concept for variable lookup. When t
 \label{fig:getify}
 \end{figure}
 
-The manifestation of nested scope in source code is illustrated by figure \ref{fig:getify}. The function `foo` is defined *in* the global scope (1) (see next section), and is therefore accessible from all parts of this program. `foo` itself defines a new scope (2) which includes the identifiers `a`, `b` and `bar`. `bar` defines a new scope (3) within `foo`, defining only the identifier `c`. As can be seen, the innermost scope (3) has access to its own identifiers, as well as to the ones defined in its containing scope (2).
+The manifestation of nested scope in source code is illustrated by figure \ref{fig:getify}. The \gls{function} `foo` is defined *in* the global scope (1) (see next section), and is therefore accessible from all parts of this program. `foo` itself defines a new scope (2) which includes the identifiers `a`, `b` and `bar`. `bar` defines a new scope (3) within `foo`, defining only the identifier `c`. As can be seen, the innermost scope (3) has access to its own identifiers, as well as to the ones defined in its containing scope (2).
 
 Figure \ref{fig:scopechain} shows the scope hierarchy for the source code of listing \ref{lst:server} (see appendix). Assuming that, in a given context, the anonymous function nested inside `parseMarkdown()` is the active scope (marked in orange colour), the figure shows its scope chain, consisting of the three scopes `GLOBAL`, `parseMarkdown()`,  and `(anonymous function)`.
 
@@ -87,13 +87,13 @@ Global scope
   ~ Variables that are accessible from *any point* in the program are in the global scope. The original BASIC programming language only implemented global scope.
 
 Block scope
-  ~ Any logical block, often denoted by containing curly braces (`{` and `}`), will create a new scope. This is the case in the C programming language, amongst others.
+  ~ Any logical block, often denoted by containing curly braces (`{` and `}`), creates a new scope. This is the case in the C programming language, amongst others.
 
 Function scope
   ~ Any function definition defines a new scope. Parameters of the function are part of this newly defined scope, as well as variables and function defined within that function. JavaScript implements function scope.
 
 Expression scope
-  ~ A variable’s scope is limited to a single expression. This useful for very short-living, temporary variables. It is implemented by many functional languages, for example Python and ECMAScript 6.
+  ~ A variable’s scope is limited to a single expression. This useful for very short-living, temporary variables. It is implemented by many functional languages, for example Python and \gls{ecmascript} 6.
 
 JavaScript, as of ECMAScript 5, implements only global and function scope\footnote{There are exceptions through the keywords `with` and `except` and the function `eval`.}. The run-time environment usually prepopulates the global scope with several objects and methods it exposes. The JavaScript engines in web browsers, for example, provide access to the \ac{dom} through the `document` object, whereas Node.js provides the `require` function to include CommonJS-style modules.
 

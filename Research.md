@@ -71,3 +71,9 @@ Input
 
 Execution, Evaluation and Debugging
   ~ Most IDEs allow the user not only to edit a program, but to compile, run, and debug it from inside the IDE. This has the advantage that any information related to compilation-time and run-time can be used and presented in the IDE itself. In its simplest form, compilation errors or the console output of a program is shown in an extra output area on the screen. More advanced implementations show debugging or compilation informatin *inline*. To give an example: if the Java compiler in Eclipse encounters an error, it lists the error in an extra panel, but also underlines the affected code with a red line. For more information concerning the different lifecycle phases of a program, please refer to chapter \fullref{concepts}.
+
+## Target group
+
+This thesis project targets professional JavaScript developers. Programming language tools, if or if not integrated in IDEs, target very different user groups. Some language tools are created for \ac{qa} engineers or software testers. Others address inexperienced developers and have a strong educative component. In this thesis, however, I wanted to focus on professional developers.
+
+At this point, in order to properly define the user group, I would like to anticipate a decision made later in the process. Due to my own knowledge and my existing network of acquainted developers, and in order to narrow down the design space, JavaScript is chosen to be the prototype’s target language. On the one hand, this choice dictates the direction of further research, as shown in chapter \ref{concepts}. On the other hand, it substantiates the group of target users, which are professional JavaScript developers with significant experience in server- or client-side programming and in-depth knowledge about the dynamics of this programming language.

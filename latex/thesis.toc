@@ -11,6 +11,7 @@
 \contentsline {section}{\numberline {2.4}Interface and Interaction Patterns in IDEs}{5}{section.2.4}
 \contentsline {subsection}{\numberline {2.4.1}User Interface Patterns}{5}{subsection.2.4.1}
 \contentsline {subsection}{\numberline {2.4.2}Interactional patterns}{6}{subsection.2.4.2}
+\contentsline {section}{\numberline {2.5}Target group}{7}{section.2.5}
 \contentsline {chapter}{\numberline {3}Exploration}{8}{chapter.3}
 \contentsline {section}{\numberline {3.1}Survey Results}{8}{section.3.1}
 \contentsline {section}{\numberline {3.2}Interview Results}{9}{section.3.2}
@@ -59,4 +60,5 @@
 \contentsline {section}{\numberline {8.3}Outlook}{47}{section.8.3}
 \contentsline {chapter}{Bibliography}{I}{section*.32}
 \contentsline {chapter}{List of Figures}{III}{section*.34}
-\contentsline {chapter}{Appendix}{IV}{chapter*.35}
+\contentsline {chapter}{Glossary}{IV}{section*.35}
+\contentsline {chapter}{Appendix}{V}{chapter*.37}
