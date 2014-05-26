@@ -1,8 +1,6 @@
 # Exploration {#exploration}
 
-Following the research framework, this chapter presents the exploration phase of the design process. Through an initial survey and a sequence of interviews, a whole range of problems is explored before a single problem, scope, is put into focus.
-
-## Survey & Interviews
+Following the research framework, this chapter presents the exploration phase of the design process. Through an initial survey and a sequence of interviews, a whole range of problems is explored. Finally, the problem of scope is put into focus for this thesis.
 
 To form a general understanding of how IDEs and some of their specific features are used, an online survey targeted towards professional developers was created. The survey ran in April 2014 over the course of two weeks and yielded answers from 45 participants.
 
@@ -10,7 +8,7 @@ Besides general questions, e.g. which programming languages and IDEs the partici
 
 * Navigation of code
 * Debugging
-* API and language documentation
+* \ac{api} and language documentation
 * Autocompletion
 * Project structure and scaffolding
 * Asynchronicity
@@ -18,31 +16,31 @@ Besides general questions, e.g. which programming languages and IDEs the partici
 
 For each of the areas the survey asked if and how the participants were using them and—if appropriate—how their IDE was supporting them. The survey instrumented multiple-choice questions with an additional „Other“ field for custom answers, as well as open-ended questions with a free-form text field.
 
-### Survey Results
+## Survey Results
 
 The survey participants listed 21 different programming languages they are using on a regular basis, as well as experience in 19 different development environments. The participants’ background is diverse, although the major part seems to be working with web technologies (both front-end and back-end).
 
-About 76% of the participants look up documentation mainly on the web, only a small percentage uses the integration of documentation into IDEs. However, nearly every participant (87%) makes use of the IDE-provided autocompletion feature, although most of them came up with ways to improve it. Many comments are directed towards „smarter“, more context-aware autocomplete suggestions, up to levels of artificial intelligence. Some comments also mention a lack of performance and subtlety.
+About 76% of the participants look up \ac{api} and language documentation mainly on the web, only a small percentage uses the integration of documentation into IDEs. However, nearly every participant (87%) makes use of the IDE-provided autocompletion feature, although most of them came up with ways to improve it. Many comments are directed towards „smarter“, more context-aware autocomplete suggestions, up to levels of artificial intelligence. Some comments also mention a lack of performance and subtlety.
 
 Navigation within large code bases is done in many different ways, such as presented before: file browsers, symbol browsers, file search or content search. However, there does not seem to be a clear general preference. For structuring code, most participants rely on platform-given modularity, for example through packages and classes in Java. In programming languages where project structures are not given, developers use frameworks and design patterns to achieve a similar structural consistency.
 
 All participants value syntax highlighting, although for different reasons. However, some offered suggestions on how highlighting of certain code tokens could be used otherwise to reduce errors. Two suggestions were targeted towards highlighting of *similar* identifiers in order to recognize typos. Others, however, intended to focus on semantics instead of syntax; for example, indicating value changes of the *this* keyword in JavaScript, highlighting the currently focused block of code, or colour-coding the relationship of interdependent variables.
 
-### Interview Results
+## Interview Results
 
 In succession to the survey, ten participants agreed to be interviewed, seven of which the author conducted interviews with. The interviewees are either currently working as full-time or part-time professional developers or have been doing so in the past and are now in related positions such as *IT consultant*. Aside from that, their backgrounds are diverse, ranging from part-time front-end developers with a focus on design, over web application developers to low-level audio specialists. They have experience with 12 different IDEs, using 15 programming languages on three different operating systems. Below is a summary of interview results that are related to the thesis project.
 
-Nearly all the interviewees stressed the importance of *performance* in any software development tool, especially in IDEs and code editors. If a feature is too slow, reacts too slowly or slows the overall IDE down, it is considered obtrusive and disturbing to the development workflow. Especially the web developers praised lightweight code editors, favouring them over the more heavyweight IDEs, but still recognizing their drawbacks: lightweight editors are not as *smart* (see below).
+Nearly all the interviewees stressed the importance of *performance* in any software development tool, especially in IDEs and code editors. If a feature is too slow, reacts too slowly or slows the overall IDE down, it is considered disturbing to the development workflow. Especially the web developers praised lightweight code editors, favouring them over the more heavyweight IDEs, but still recognizing their drawbacks: lightweight editors are not as *smart* (see below).
 
 Most of the interviewees also referred to their development tools of choice in regards to the *Unix philosophy*, which—according to Ken Thompson—states that programs should „do one thing and do it well.“ \cite{raymond} This thought ultimately leads to modularily designed systems, which was stressed in the interviews in different forms. Most obvious is the ability to enable and disable features, as well as some kind of plug-in management in general. Two interviewees also mentioned *modes*, although in different contexts. On the one hand, features could run in different modes to provide help or stay out of they developer’s way (*beginner and expert modes*), on the other hand modes could be used to get a different perspective on a program (e.g. highlighting of different aspects in the code).
 
-The interviewees expect their development environment to behave in a *smart* way; it should ideally know beforehand what the developers need in terms of support in a given situation, and what code they are about to write. On first look, and given the current landscape of IDEs and text editors, this contradicts the  desire for a lightweight, fast, unopinionated development environment. To be smart, a development environment must have knowledge about the programming language, the libraries used, and about best practices. Some IDEs are tightly integrated with their target programming platforms, for example Microsoft Visual Studio with the .Net platform and Eclipse with the Java platform. But these programs are generally not considered lightweight, performant or  unopinionated. *Smartness* for lightweight environments, however, can be achieved by combining it with the modular approach of the Unix philosophy. If specialized programming language tools can be loosely plugged into lightweight development environments, smartness can be achieved in those environments as well. A good example for this is given by the numerous *Linter* plug-ins for editors like Sublime Text (see section \fullref{solutions-to-analogous-problems}) and projects like CTags\footnote{See \url{http://ctags.sourceforge.net/}}.
+The interviewees expect their development environment to behave in a *smart* way; it should ideally know beforehand what the developers need in terms of support in a given situation, and what code they are about to write. On first look, and given the current landscape of IDEs and text editors, this contradicts the  desire for a lightweight, fast, unopinionated development environment. To be smart, a development environment must have knowledge about the programming language, the libraries used, and about best practices. Some IDEs are tightly integrated with their target programming platforms, for example Microsoft Visual Studio with the .Net platform and Eclipse with the Java platform. But these programs are generally not considered lightweight, performant or  unopinionated. *Smartness* for lightweight environments, however, can be achieved by combining it with the modular approach of the Unix philosophy. If specialized programming language tools can be loosely plugged into lightweight development environments, smartness can be achieved in those environments as well. A good example for this is given by the numerous *Linter* plug-ins for editors like Sublime Text (see section \fullref{similar}) and projects like CTags\footnote{See \url{http://ctags.sourceforge.net/}}.
 
 The last relevant result of the interviews to be mentioned in this section is a *focus on code*. No matter the target platform and the developer’s background, code is still in focus of the development process nowadays, which makes the code editor the most important part of any development environment. The term *inline* describes activities that happen within the text editor itself, for example syntax highlighting. If development tools work inline, the developer does not have to switch focus back and forth from the authoring process. However, by putting additional information inline, there is a risk that the text editor becomes too cluttered or visually busy, confusing and distracting the developer. This is exemplified by pop-up windows that block a lot of editor space or additional coloured text that makes colour-coding ambiguous. Thus, programming tools that display information inline must be carefully designed to be unobtrusive.
 
 Four important characteristics for programming environments can be extracted from the interviews: *performance*, *modularity*, *smartness* and a *focus on code*. Integrating these characteristics is important for the usability and usefulness of  development environments, and thus for any tools that enhance them.
 
-### Scope as a valid problem
+## Scope as a valid problem
 
 Through the conducted interviews and the survey, one can argue that *scope* is a promising and valid problem area to explore. Although it was not referred to in the survey in any way, *scope* was mentioned independently by several of the survey participants and interviewees in suggestions for the improvement of existing patterns and tools. One of the interviewees introduced Crockford’s \citeyear{crockford} approach of *context colouring* (see below). A similar approach was suggested in the survey in the context of editing. Though not necessarily related to scope, the participant suggested to highlight the current code block the cursor is placed in; this is already done by some editors and IDEs, and is adapted in the concept presented in this thesis as well. Another interviewee suggested to indicate changes of the *this* context in JavaScript, which is closely related to scope, although being run-time specific.
 

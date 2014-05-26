@@ -15,11 +15,11 @@ program.“ — Bret Victor \citeyear{victor}
 Software development environments have been predecessed by general text
 editors, starting with several projects at the Xerox \gls{parc}. Douglas
 Engelbart created the text editor for the NLS system (oNLine System)
-which allowed \gls{wysiwyg} style editing. In the \emph{Gypsy} text
-editor, Larry Tesler first integrated modeless moving of text, which is
-known as \emph{Copy \& Paste} \cite{moggridge}. Text editors with those
-functionalities are now the core of any software development
-environment.
+which allowed editing with direct manipulation and \gls{wysiwyg}. In the
+\emph{Gypsy} text editor, Larry Tesler first integrated modeless moving
+of text, which is known as \emph{Copy \& Paste} \cite{moggridge}. Text
+editors with those functionalities are now the core of any software
+development environment.
 
 Later, while working with Alan Kay, Tesler created the first class
 browser for the Smalltalk programming language. Class browsers are used
@@ -29,13 +29,13 @@ The Smalltalk class browser was therefore the first software
 specifically written for creating software, and a predecessor to any
 modern development environment.
 
-\emph{Integrated Development Environments} integrate text editors (due
-to their specific purpose also referred to here as \emph{code editors})
-with other software development tools. Typically, those tools include
-compilers, build systems, syntax highlighters, autocompletion,
-debuggers, and symbol browsers. The first \ac{ide} is said to be
-\emph{Maestro I} by Softlab, a whole terminal dedicated to integrating
-various development tasks \cite{maestro}.
+\emph{\glspl{ide}} integrate text editors (due to their specific purpose
+also referred to here as \emph{code editors}) with other software
+development tools. Typically, those tools include compilers, build
+systems, syntax highlighters, autocompletion, debuggers, and symbol
+browsers. The first \ac{ide} is said to be \emph{Maestro I} by Softlab,
+a whole terminal dedicated to integrating various development tasks
+\cite{maestro}.
 
 \section{IDEs compared to Text
 Editors}\label{ides-compared-to-text-editors}
@@ -60,19 +60,19 @@ and the structure of code“ is either not
 wanted\footnote{For example, because it may collide with other features that have a higher priority for the respective developer.}
 or not possible to achieve.
 
-The latter is often the case in web front-end development, according to
-\citeasnoun{lynch}. Through working with lots of different file types
+According to \citeasnoun{lynch} the latter is often the case in web
+front-end development. Through working with lots of different file types
 and programming languages, neither of which dictates a certain structure
-(in opposition to many static languages like Java), the understanding an
-IDE can have about the structure of the code is limited.
+(in opposition to many static languages like Java), an IDE can only have
+a limited understanding about the structure of the code.
 \citename{lynch} also states that IDEs „tend to be built with a workflow
 in mind“, therefore being seen as opinionated.
 
 In other words, IDEs and text editors seem to follow different,
 contradirectional approaches. While the latter is built around a central
 paradigm (text editing) and usually comes with a minimal program core
-that is extendable to personal likes, IDEs tend to offer everything „out
-of the box“ as a one-stop solution.
+that is extendable to personal likes, IDEs tend to offer everything ‚out
+of the box‘ as a one-stop solution.
 
 For this thesis, the distinction only plays a subordinate role, as most
 of the concepts and ideas discussed here can be applied to both kinds of
@@ -146,7 +146,7 @@ indicating errors in the code through symbols, showing version control
 information, or allowing to fold code away in order to either focus or
 get an overview.
 \item[Panel (sidebar)]
-A panel is rectangular \ac{ui} area used to group together interface
+A panel is a rectangular \ac{ui} area used to group together interface
 element of similar functionality or other commonalities together. Often,
 panels are used on the edges of application windows; if they are on the
 left or right side, they may be called \emph{sidebar}. Panels that host

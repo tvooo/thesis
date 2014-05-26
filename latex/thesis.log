@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.1415926-2.4-0.9998 (TeX Live 2012) (format=xelatex 2013.6.13)  26 MAY 2014 13:41
+This is XeTeX, Version 3.1415926-2.4-0.9998 (TeX Live 2012) (format=xelatex 2013.6.13)  26 MAY 2014 20:47
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -48,22 +48,22 @@ Package tocbasic Info: omitting babel extension for `lof'
 Package tocbasic Info: omitting babel extension for `lot'
 (tocbasic)             because of feature `nobabel' available
 (tocbasic)             for `lot' on input line 119.
-Package scrbook Info: You've used obsolete option `12pt'.
-(scrbook)             \KOMAExecuteOptions{fontsize=12pt} will be
+Package scrbook Info: You've used obsolete option `11pt'.
+(scrbook)             \KOMAExecuteOptions{fontsize=11pt} will be
 (scrbook)             used instead.
-(scrbook)             You may simply replace `12pt'
-(scrbook)             by `fontsize=12pt'.
+(scrbook)             You may simply replace `11pt'
+(scrbook)             by `fontsize=11pt'.
 Class scrbook Info: You've used standard option `oneside'.
 (scrbook)           This is correct!
 (scrbook)           Internally I'm using `twoside=false'.
 (scrbook)           If you'd like to set the option with \KOMAoptions,
 (scrbook)           you'd have to use `twoside=false' there
 (scrbook)           instead of `oneside', too.
-Class scrbook Info: File `scrsize12pt.clo' used to setup font sizes on input li
+Class scrbook Info: File `scrsize11pt.clo' used to setup font sizes on input li
 ne 1368.
 
-(/usr/local/texlive/2012/texmf-dist/tex/latex/koma-script/scrsize12pt.clo
-File: scrsize12pt.clo 2012/07/29 v3.11b KOMA-Script font size class option (12p
+(/usr/local/texlive/2012/texmf-dist/tex/latex/koma-script/scrsize11pt.clo
+File: scrsize11pt.clo 2012/07/29 v3.11b KOMA-Script font size class option (11p
 t)
 )
 (/usr/local/texlive/2012/texmf-dist/tex/latex/koma-script/typearea.sty
@@ -91,21 +91,21 @@ Package typearea Info: You've used standard option `oneside'.
 \ta@vblk=\skip43
 \ta@temp=\skip44
 Package typearea Info: These are the values describing the layout:
-(typearea)             DIV  = 12
+(typearea)             DIV  = 10
 (typearea)             BCOR = 0.0pt
 (typearea)             \paperwidth      = 597.50793pt
-(typearea)              \textwidth      = 448.13095pt
+(typearea)              \textwidth      = 418.25555pt
 (typearea)              DIV departure   = -6%
-(typearea)              \evensidemargin = 2.4185pt
-(typearea)              \oddsidemargin  = 2.4185pt
+(typearea)              \evensidemargin = 17.3562pt
+(typearea)              \oddsidemargin  = 17.3562pt
 (typearea)             \paperheight     = 845.04694pt
-(typearea)              \textheight     = 548.5pt
-(typearea)              \topmargin      = -1.84941pt
-(typearea)              \headheight     = 18.125pt
-(typearea)              \headsep        = 21.75pt
-(typearea)              \topskip        = 12.0pt
-(typearea)              \footskip       = 50.75pt
-(typearea)              \baselineskip   = 14.5pt
+(typearea)              \textheight     = 514.20023pt
+(typearea)              \topmargin      = 12.2347pt
+(typearea)              \headheight     = 17.0pt
+(typearea)              \headsep        = 20.40001pt
+(typearea)              \topskip        = 11.0pt
+(typearea)              \footskip       = 47.60002pt
+(typearea)              \baselineskip   = 13.6pt
 (typearea)              on input line 1213.
 )
 \c@part=\count81
@@ -1167,7 +1167,7 @@ runsystem(rm thesis.aex)...executed.
 Package: setspace 2011/12/19 v6.7a set line spacing
 )
 LaTeX Font Info:    Font shape `EU1/Calluna(0)/m/n' will be
-(Font)              scaled to size 11.39044pt on input line 63.
+(Font)              scaled to size 10.39377pt on input line 63.
 
 (/usr/local/texlive/2012/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2010/09/12 v5.6 Page Geometry
@@ -1450,11 +1450,7 @@ Package csquotes Info: ... found 'babel' package.
 LaTeX Warning: Unused global option(s):
     [abstracton].
 
-(./thesis.aux
-
-LaTeX Warning: Label `lst:classes' multiply defined.
-
-)
+(./thesis.aux)
 \openout1 = `thesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 128.
@@ -1607,15 +1603,15 @@ runsystem(pygmentize -S default -f latex > thesis.pyg)...executed.
 * \textheight=633.78513pt
 * \oddsidemargin=2.41849pt
 * \evensidemargin=2.41849pt
-* \topmargin=-27.64032pt
-* \headheight=18.125pt
-* \headsep=21.75pt
-* \topskip=12.0pt
-* \footskip=50.75pt
-* \marginparwidth=49.79233pt
+* \topmargin=-25.16533pt
+* \headheight=17.0pt
+* \headsep=20.40001pt
+* \topskip=11.0pt
+* \footskip=47.60002pt
+* \marginparwidth=59.7508pt
 * \marginparsep=12.8401pt
 * \columnsep=10.0pt
-* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
 * \hoffset=0.0pt
 * \voffset=0.0pt
 * \mag=1000
@@ -1657,15 +1653,15 @@ LaTeX Info: Redefining \nameref on input line 128.
 * \textheight=645.87756pt
 * \oddsidemargin=2.41849pt
 * \evensidemargin=2.41849pt
-* \topmargin=-26.78673pt
-* \headheight=18.125pt
-* \headsep=21.75pt
-* \topskip=12.0pt
-* \footskip=50.75pt
-* \marginparwidth=49.79233pt
+* \topmargin=-24.31174pt
+* \headheight=17.0pt
+* \headsep=20.40001pt
+* \topskip=11.0pt
+* \footskip=47.60002pt
+* \marginparwidth=59.7508pt
 * \marginparsep=12.8401pt
 * \columnsep=10.0pt
-* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
 * \hoffset=0.0pt
 * \voffset=0.0pt
 * \mag=1000
@@ -1707,9 +1703,9 @@ Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 LaTeX Font Info:    Font shape `EU1/Calluna(0)/m/n' will be
-(Font)              scaled to size 13.66852pt on input line 15.
+(Font)              scaled to size 11.39044pt on input line 15.
 LaTeX Font Info:    Font shape `EU1/Calluna(0)/m/it' will be
-(Font)              scaled to size 13.09195pt on input line 16.
+(Font)              scaled to size 10.90997pt on input line 16.
 LaTeX Font Info:    Font shape `EU1/Calluna(0)/m/n' will be
 (Font)              scaled to size 7.59363pt on input line 19.
 LaTeX Font Info:    Font shape `EU1/Calluna(0)/m/n' will be
@@ -1746,11 +1742,11 @@ Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 LaTeX Font Info:    Font shape `EU1/Calluna(0)/m/n' will be
-(Font)              scaled to size 23.61618pt on input line 48.
+(Font)              scaled to size 19.68648pt on input line 48.
 LaTeX Font Info:    Font shape `EU1/Calluna(0)/bx/n' will be
-(Font)              scaled to size 23.35916pt on input line 48.
+(Font)              scaled to size 19.47223pt on input line 48.
 LaTeX Font Info:    Font shape `EU1/Calluna(0)/bx/n' will be
-(Font)              scaled to size 13.51976pt on input line 48.
+(Font)              scaled to size 11.26648pt on input line 48.
 
 ! LaTeX Error: There's no line here to end.
 
@@ -1765,9 +1761,9 @@ Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 LaTeX Font Info:    Font shape `EU1/Calluna(0)/m/sc' will be
-(Font)              scaled to size 13.66852pt on input line 51.
+(Font)              scaled to size 11.39044pt on input line 51.
 LaTeX Font Info:    Font shape `EU1/Calluna(0)/m/sc' will be
-(Font)              scaled to size 16.40222pt on input line 51.
+(Font)              scaled to size 13.66852pt on input line 51.
 File: img/pattern.png Graphic file (type QTm)
 <use  "img/pattern.png" > [1
 
@@ -1778,41 +1774,46 @@ File: img/pattern.png Graphic file (type QTm)
 
 ]) [2]
 LaTeX Font Info:    Font shape `EU1/SourceSansPro(0)/m/n' will be
-(Font)              scaled to size 12.60004pt on input line 145.
+(Font)              scaled to size 11.49753pt on input line 145.
 LaTeX Font Info:    Font shape `EU1/SourceSansPro(0)/bx/n' will be
-(Font)              scaled to size 12.60004pt on input line 145.
+(Font)              scaled to size 11.49753pt on input line 145.
 LaTeX Font Info:    Font shape `EU1/SourceSansPro(0)/bx/n' will be
-(Font)              scaled to size 26.12407pt on input line 145.
+(Font)              scaled to size 21.77705pt on input line 145.
  (./abstract.tex
 LaTeX Font Info:    Font shape `EU1/Calluna(0)/m/it' will be
-(Font)              scaled to size 10.90997pt on input line 10.
-) [3
+(Font)              scaled to size 9.95534pt on input line 10.
+)
+Overfull \hbox (0.78638pt too wide) in paragraph at lines 7--150
+[]\EU1/Calluna(0)/m/n/10.95 This thesis utilizes a user-centered design process
+ to identify the needs of professional developers through
+ []
+
+[3
 
 
-] [4] (./thesis.acr)
-[1
+] [4] (./thesis.acr) [1
 
 
 
 
 ]
 LaTeX Font Info:    Font shape `EU1/SourceSansPro(0)/m/n' will be
-(Font)              scaled to size 26.12407pt on input line 169.
+(Font)              scaled to size 21.77705pt on input line 169.
  (./thesis.toc
 LaTeX Font Info:    Font shape `EU1/Calluna(0)/bx/n' will be
-(Font)              scaled to size 11.26648pt on input line 2.
+(Font)              scaled to size 10.28065pt on input line 2.
  [2])
 \tf@toc=\write9
 \openout9 = `thesis.toc'.
 
-LaTeX Font Info:    Font shape `EU1/Calluna(0)/m/sl' in size <12> not available
-
+LaTeX Font Info:    Font shape `EU1/Calluna(0)/m/sl' in size <10.95> not availa
+ble
 (Font)              Font shape `EU1/Calluna(0)/m/it' tried instead on input lin
 e 173.
 LaTeX Font Info:    Font shape `EU1/Calluna(0)/m/it' will be
-(Font)              scaled to size 10.90997pt on input line 173.
+(Font)              scaled to size 9.95534pt on input line 173.
 
-Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+Overfull \vbox (1.39674pt too high) has occurred while \output is active []
 
 
 [3] (./intro.tex
@@ -1825,13 +1826,7 @@ Class scrbook Warning: \float@addtolists detected!
 (scrbook)              `scrbook' soon .
 
 LaTeX Font Info:    Font shape `EU1/SourceSansPro(0)/bx/n' will be
-(Font)              scaled to size 18.14404pt on input line 27.
-
-Overfull \hbox (3.4091pt too wide) in paragraph at lines 29--46
-\EU1/Calluna(0)/m/n/12 integrated development tools. Furthermore, related work 
-is identified and listed and the ideation
- []
-
+(Font)              scaled to size 15.12003pt on input line 27.
 [1
 
 
@@ -1839,47 +1834,47 @@ is identified and listed and the ideation
 .................................................
 . fontspec info: "set-scale"
 . 
-. Calluna scale = 0.9501926768773734.
+. Calluna scale = 0.9496511952661995.
 .................................................
 .................................................
 . fontspec info: "set-scale"
 . 
-. Calluna scale = 0.9501926768773734.
+. Calluna scale = 0.9496511952661995.
 .................................................
 .................................................
 . fontspec info: "set-scale"
 . 
-. Calluna scale = 0.9501926768773734.
+. Calluna scale = 0.9496511952661995.
 .................................................
 .................................................
 . fontspec info: "set-scale"
 . 
-. Calluna/B scale = 0.9398411620396681.
+. Calluna/B scale = 0.9393047089394565.
 .................................................
 .................................................
 . fontspec info: "set-scale"
 . 
-. Calluna/B scale = 0.9398411620396681.
+. Calluna/B scale = 0.9393047089394565.
 .................................................
 .................................................
 . fontspec info: "set-scale"
 . 
-. Calluna/I scale = 0.9100994808527545.
+. Calluna/I scale = 0.9095804880343112.
 .................................................
 .................................................
 . fontspec info: "set-scale"
 . 
-. Calluna/I scale = 0.9100994808527545.
+. Calluna/I scale = 0.9095804880343112.
 .................................................
 .................................................
 . fontspec info: "set-scale"
 . 
-. Calluna/BI scale = 0.9006011214913551.
+. Calluna/BI scale = 0.9000869770107253.
 .................................................
 .................................................
 . fontspec info: "set-scale"
 . 
-. Calluna/BI scale = 0.9006011214913551.
+. Calluna/BI scale = 0.9000869770107253.
 .................................................
 .................................................
 . fontspec info: "defining-font"
@@ -1891,90 +1886,92 @@ is identified and listed and the ideation
 . 
 . * 'normal' with NFSS spec.:
 . 
-. <->s*[0.9501926768773734]"Calluna/ICU:script=latn;language=DFLT;mapping=tex-t
+. <->s*[0.9496511952661995]"Calluna/ICU:script=latn;language=DFLT;mapping=tex-t
 ext;+sups;"
 . 
 . * 'small caps' with NFSS spec.:
 . 
-. <->s*[0.9501926768773734]"Calluna/ICU:script=latn;language=DFLT;mapping=tex-t
+. <->s*[0.9496511952661995]"Calluna/ICU:script=latn;language=DFLT;mapping=tex-t
 ext;+sups;+smcp;"
 . 
 . * 'bold' with NFSS spec.:
 . 
-. <->s*[0.9398411620396681]"Calluna/B/ICU:script=latn;language=DFLT;mapping=tex
+. <->s*[0.9393047089394565]"Calluna/B/ICU:script=latn;language=DFLT;mapping=tex
 -text;+sups;"
 . 
 . * 'bold small caps' with NFSS spec.:
 . 
-. <->s*[0.9398411620396681]"Calluna/B/ICU:script=latn;language=DFLT;mapping=tex
+. <->s*[0.9393047089394565]"Calluna/B/ICU:script=latn;language=DFLT;mapping=tex
 -text;+sups;+smcp;"
 . 
 . * 'italic' with NFSS spec.:
 . 
-. <->s*[0.9100994808527545]"Calluna/I/ICU:script=latn;language=DFLT;mapping=tex
+. <->s*[0.9095804880343112]"Calluna/I/ICU:script=latn;language=DFLT;mapping=tex
 -text;+sups;"
 . 
 . * 'italic small caps' with NFSS spec.:
 . 
-. <->s*[0.9100994808527545]"Calluna/I/ICU:script=latn;language=DFLT;mapping=tex
+. <->s*[0.9095804880343112]"Calluna/I/ICU:script=latn;language=DFLT;mapping=tex
 -text;+sups;+smcp;"
 . 
 . * 'bold italic' with NFSS spec.:
 . 
-. <->s*[0.9006011214913551]"Calluna/BI/ICU:script=latn;language=DFLT;mapping=te
+. <->s*[0.9000869770107253]"Calluna/BI/ICU:script=latn;language=DFLT;mapping=te
 x-text;+sups;"
 . 
 . * 'bold italic small caps' with NFSS spec.:
 . 
-. <->s*[0.9006011214913551]"Calluna/BI/ICU:script=latn;language=DFLT;mapping=te
+. <->s*[0.9000869770107253]"Calluna/BI/ICU:script=latn;language=DFLT;mapping=te
 x-text;+sups;+smcp;"
 .................................................
 LaTeX Font Info:    Font shape `EU1/Calluna(1)/m/n' will be
-(Font)              scaled to size 11.40234pt on input line 93.
+(Font)              scaled to size 10.39862pt on input line 92.
+LaTeX Font Info:    Font shape `EU1/Calluna(0)/m/n' will be
+(Font)              scaled to size 8.54283pt on input line 92.
 .................................................
 . fontspec info: "set-scale"
 . 
-. Calluna scale = 0.9494646709725984.
-.................................................
-.................................................
-. fontspec info: "set-scale"
-. 
-. Calluna scale = 0.9494646709725984.
+. Calluna scale = 0.9489798584080045.
 .................................................
 .................................................
 . fontspec info: "set-scale"
 . 
-. Calluna scale = 0.9494646709725984.
+. Calluna scale = 0.9489798584080045.
 .................................................
 .................................................
 . fontspec info: "set-scale"
 . 
-. Calluna/B scale = 0.9391226886398914.
+. Calluna scale = 0.9489798584080045.
 .................................................
 .................................................
 . fontspec info: "set-scale"
 . 
-. Calluna/B scale = 0.9391226886398914.
+. Calluna/B scale = 0.9386424711336857.
 .................................................
 .................................................
 . fontspec info: "set-scale"
 . 
-. Calluna/I scale = 0.9094028318253653.
+. Calluna/B scale = 0.9386424711336857.
 .................................................
 .................................................
 . fontspec info: "set-scale"
 . 
-. Calluna/I scale = 0.9094028318253653.
+. Calluna/I scale = 0.9089388290552159.
 .................................................
 .................................................
 . fontspec info: "set-scale"
 . 
-. Calluna/BI scale = 0.8999108166645433.
+. Calluna/I scale = 0.9089388290552159.
 .................................................
 .................................................
 . fontspec info: "set-scale"
 . 
-. Calluna/BI scale = 0.8999108166645433.
+. Calluna/BI scale = 0.899451023671067.
+.................................................
+.................................................
+. fontspec info: "set-scale"
+. 
+. Calluna/BI scale = 0.899451023671067.
 .................................................
 .................................................
 . fontspec info: "defining-font"
@@ -1986,64 +1983,60 @@ LaTeX Font Info:    Font shape `EU1/Calluna(1)/m/n' will be
 . 
 . * 'normal' with NFSS spec.:
 . 
-. <->s*[0.9494646709725984]"Calluna/ICU:script=latn;language=DFLT;mapping=tex-t
+. <->s*[0.9489798584080045]"Calluna/ICU:script=latn;language=DFLT;mapping=tex-t
 ext;+sups;"
 . 
 . * 'small caps' with NFSS spec.:
 . 
-. <->s*[0.9494646709725984]"Calluna/ICU:script=latn;language=DFLT;mapping=tex-t
+. <->s*[0.9489798584080045]"Calluna/ICU:script=latn;language=DFLT;mapping=tex-t
 ext;+sups;+smcp;"
 . 
 . * 'bold' with NFSS spec.:
 . 
-. <->s*[0.9391226886398914]"Calluna/B/ICU:script=latn;language=DFLT;mapping=tex
+. <->s*[0.9386424711336857]"Calluna/B/ICU:script=latn;language=DFLT;mapping=tex
 -text;+sups;"
 . 
 . * 'bold small caps' with NFSS spec.:
 . 
-. <->s*[0.9391226886398914]"Calluna/B/ICU:script=latn;language=DFLT;mapping=tex
+. <->s*[0.9386424711336857]"Calluna/B/ICU:script=latn;language=DFLT;mapping=tex
 -text;+sups;+smcp;"
 . 
 . * 'italic' with NFSS spec.:
 . 
-. <->s*[0.9094028318253653]"Calluna/I/ICU:script=latn;language=DFLT;mapping=tex
+. <->s*[0.9089388290552159]"Calluna/I/ICU:script=latn;language=DFLT;mapping=tex
 -text;+sups;"
 . 
 . * 'italic small caps' with NFSS spec.:
 . 
-. <->s*[0.9094028318253653]"Calluna/I/ICU:script=latn;language=DFLT;mapping=tex
+. <->s*[0.9089388290552159]"Calluna/I/ICU:script=latn;language=DFLT;mapping=tex
 -text;+sups;+smcp;"
 . 
 . * 'bold italic' with NFSS spec.:
 . 
-. <->s*[0.8999108166645433]"Calluna/BI/ICU:script=latn;language=DFLT;mapping=te
-x-text;+sups;"
+. <->s*[0.899451023671067]"Calluna/BI/ICU:script=latn;language=DFLT;mapping=tex
+-text;+sups;"
 . 
 . * 'bold italic small caps' with NFSS spec.:
 . 
-. <->s*[0.8999108166645433]"Calluna/BI/ICU:script=latn;language=DFLT;mapping=te
-x-text;+sups;+smcp;"
+. <->s*[0.899451023671067]"Calluna/BI/ICU:script=latn;language=DFLT;mapping=tex
+-text;+sups;+smcp;"
 .................................................
 LaTeX Font Info:    Font shape `EU1/Calluna(2)/m/n' will be
-(Font)              scaled to size 9.49463pt on input line 93.
+(Font)              scaled to size 8.54077pt on input line 92.
 ) (./research.tex
-Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+Overfull \vbox (1.39674pt too high) has occurred while \output is active []
 
 
 [2]
-Overfull \vbox (1.76944pt too high) has occurred while \output is active []
-
-
-[3]
 Chapter 2.
-[4
+[3
 
 
 ]
 .................................................
 . fontspec info: "set-scale"
 . 
-. Calluna scale = 0.9501926768773734.
+. Calluna scale = 0.9496511952661995.
 .................................................
 .................................................
 . fontspec info: "defining-font"
@@ -2056,7 +2049,7 @@ Chapter 2.
 .................................................
 . fontspec info: "set-scale"
 . 
-. Calluna scale = 0.9494646709725984.
+. Calluna scale = 0.9489798584080045.
 .................................................
 .................................................
 . fontspec info: "defining-font"
@@ -2067,16 +2060,73 @@ Chapter 2.
 . This font family consists of the following shapes:
 .................................................
 
-Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+Overfull \vbox (1.39674pt too high) has occurred while \output is active []
+
+
+[4]
+LaTeX Font Info:    Font shape `EU1/SourceSansPro(0)/bx/n' will be
+(Font)              scaled to size 12.60004pt on input line 126.
+.................................................
+. fontspec info: "set-scale"
+. 
+. Calluna scale = 0.9496511952661995.
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'Calluna(1)' created for font 'Calluna' with options
+. [Mapping=tex-text,Scale=MatchLowercase,,VerticalPosition=Superior].
+. 
+. This font family consists of the following shapes:
+.................................................
+.................................................
+. fontspec info: "set-scale"
+. 
+. Calluna scale = 0.9489798584080045.
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'Calluna(2)' created for font 'Calluna' with options
+. [Mapping=tex-text,Scale=MatchLowercase,,VerticalPosition=Superior].
+. 
+. This font family consists of the following shapes:
+.................................................
+.................................................
+. fontspec info: "set-scale"
+. 
+. Calluna scale = 0.9496511952661995.
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'Calluna(1)' created for font 'Calluna' with options
+. [Mapping=tex-text,Scale=MatchLowercase,,VerticalPosition=Superior].
+. 
+. This font family consists of the following shapes:
+.................................................
+.................................................
+. fontspec info: "set-scale"
+. 
+. Calluna scale = 0.9489798584080045.
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'Calluna(2)' created for font 'Calluna' with options
+. [Mapping=tex-text,Scale=MatchLowercase,,VerticalPosition=Superior].
+. 
+. This font family consists of the following shapes:
+.................................................
+
+Overfull \vbox (1.39674pt too high) has occurred while \output is active []
 
 
 [5]
-LaTeX Font Info:    Font shape `EU1/SourceSansPro(0)/bx/n' will be
-(Font)              scaled to size 15.12003pt on input line 126.
 .................................................
 . fontspec info: "set-scale"
 . 
-. Calluna scale = 0.9501926768773734.
+. Calluna scale = 0.9496511952661995.
 .................................................
 .................................................
 . fontspec info: "defining-font"
@@ -2089,69 +2139,7 @@ LaTeX Font Info:    Font shape `EU1/SourceSansPro(0)/bx/n' will be
 .................................................
 . fontspec info: "set-scale"
 . 
-. Calluna scale = 0.9494646709725984.
-.................................................
-.................................................
-. fontspec info: "defining-font"
-. 
-. Font family 'Calluna(2)' created for font 'Calluna' with options
-. [Mapping=tex-text,Scale=MatchLowercase,,VerticalPosition=Superior].
-. 
-. This font family consists of the following shapes:
-.................................................
-
-Overfull \vbox (1.76944pt too high) has occurred while \output is active []
-
-
-[6]
-.................................................
-. fontspec info: "set-scale"
-. 
-. Calluna scale = 0.9501926768773734.
-.................................................
-.................................................
-. fontspec info: "defining-font"
-. 
-. Font family 'Calluna(1)' created for font 'Calluna' with options
-. [Mapping=tex-text,Scale=MatchLowercase,,VerticalPosition=Superior].
-. 
-. This font family consists of the following shapes:
-.................................................
-.................................................
-. fontspec info: "set-scale"
-. 
-. Calluna scale = 0.9494646709725984.
-.................................................
-.................................................
-. fontspec info: "defining-font"
-. 
-. Font family 'Calluna(2)' created for font 'Calluna' with options
-. [Mapping=tex-text,Scale=MatchLowercase,,VerticalPosition=Superior].
-. 
-. This font family consists of the following shapes:
-.................................................
-
-Overfull \vbox (1.76944pt too high) has occurred while \output is active []
-
-
-[7]
-.................................................
-. fontspec info: "set-scale"
-. 
-. Calluna scale = 0.9501926768773734.
-.................................................
-.................................................
-. fontspec info: "defining-font"
-. 
-. Font family 'Calluna(1)' created for font 'Calluna' with options
-. [Mapping=tex-text,Scale=MatchLowercase,,VerticalPosition=Superior].
-. 
-. This font family consists of the following shapes:
-.................................................
-.................................................
-. fontspec info: "set-scale"
-. 
-. Calluna scale = 0.9494646709725984.
+. Calluna scale = 0.9489798584080045.
 .................................................
 .................................................
 . fontspec info: "defining-font"
@@ -2162,37 +2150,31 @@ Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 . This font family consists of the following shapes:
 .................................................
 LaTeX Font Info:    Font shape `EU1/SourceCodePro(0)/m/n' will be
-(Font)              scaled to size 8.86948pt on input line 194.
-LaTeX Font Info:    Font shape `EU1/Calluna(0)/m/n' will be
-(Font)              scaled to size 6.64442pt on input line 194.
+(Font)              scaled to size 7.98253pt on input line 194.
 LaTeX Font Info:    Font shape `EU1/Calluna(0)/m/n' will be
 (Font)              scaled to size 4.74602pt on input line 194.
-) (./exploration.tex
-Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+Overfull \vbox (1.39674pt too high) has occurred while \output is active []
 
 
-[8]
+[6]) (./exploration.tex
+Overfull \vbox (1.39674pt too high) has occurred while \output is active []
+
+
+[7]
 Chapter 3.
-[9
+[8
 
 
 ]
-Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+Overfull \vbox (1.39674pt too high) has occurred while \output is active []
 
 
-[10]
-
-LaTeX Warning: Reference `solutions-to-analogous-problems' on page 11 undefined
- on input line 132.
-
-
-LaTeX Warning: Reference `solutions-to-analogous-problems' on page 11 undefined
- on input line 132.
-
+[9]
 .................................................
 . fontspec info: "set-scale"
 . 
-. Calluna scale = 0.9501926768773734.
+. Calluna scale = 0.9496511952661995.
 .................................................
 .................................................
 . fontspec info: "defining-font"
@@ -2205,7 +2187,7 @@ LaTeX Warning: Reference `solutions-to-analogous-problems' on page 11 undefined
 .................................................
 . fontspec info: "set-scale"
 . 
-. Calluna scale = 0.9494646709725984.
+. Calluna scale = 0.9489798584080045.
 .................................................
 .................................................
 . fontspec info: "defining-font"
@@ -2216,19 +2198,26 @@ LaTeX Warning: Reference `solutions-to-analogous-problems' on page 11 undefined
 . This font family consists of the following shapes:
 .................................................
 
-Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+Overfull \vbox (1.39674pt too high) has occurred while \output is active []
 
 
-[11]) (./concepts.tex
-Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+[10]) (./concepts.tex
+Overfull \vbox (1.39674pt too high) has occurred while \output is active []
 
 
-[12]
+[11]
 Chapter 4.
+
+Overfull \hbox (2.95142pt too wide) in paragraph at lines 9--17
+[]\EU1/Calluna(0)/m/n/10.95 Whereas most of the concepts presented below apply 
+to a wide range of programming languages, \EU1/Calluna(0)/m/it/10.95 JavaScript
+
+ []
+
 .................................................
 . fontspec info: "set-scale"
 . 
-. Calluna scale = 0.9501926768773734.
+. Calluna scale = 0.9496511952661995.
 .................................................
 .................................................
 . fontspec info: "defining-font"
@@ -2241,7 +2230,7 @@ Chapter 4.
 .................................................
 . fontspec info: "set-scale"
 . 
-. Calluna scale = 0.9494646709725984.
+. Calluna scale = 0.9489798584080045.
 .................................................
 .................................................
 . fontspec info: "defining-font"
@@ -2251,14 +2240,14 @@ Chapter 4.
 . 
 . This font family consists of the following shapes:
 .................................................
-[13
+[12
 
 
 ]
 .................................................
 . fontspec info: "set-scale"
 . 
-. Calluna scale = 0.9501926768773734.
+. Calluna scale = 0.9496511952661995.
 .................................................
 .................................................
 . fontspec info: "defining-font"
@@ -2271,7 +2260,7 @@ Chapter 4.
 .................................................
 . fontspec info: "set-scale"
 . 
-. Calluna scale = 0.9494646709725984.
+. Calluna scale = 0.9489798584080045.
 .................................................
 .................................................
 . fontspec info: "defining-font"
@@ -2282,24 +2271,26 @@ Chapter 4.
 . This font family consists of the following shapes:
 .................................................
 LaTeX Font Info:    Font shape `EU1/Calluna(0)/m/it' will be
-(Font)              scaled to size 9.09164pt on input line 75.
+(Font)              scaled to size 8.18248pt on input line 76.
+LaTeX Font Info:    Font shape `EU1/SourceCodePro(0)/m/n' will be
+(Font)              scaled to size 9.71207pt on input line 102.
 
-Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+Overfull \vbox (1.39674pt too high) has occurred while \output is active []
+
+
+[13]
+File: img/fig2.png Graphic file (type QTm)
+ <use  "img/fig2.png" >
+File: img/scopechain.pdf Graphic file (type QTm)
+ <use  "img/scopechain.pdf" >
+Overfull \vbox (1.39674pt too high) has occurred while \output is active []
 
 
 [14]
-LaTeX Font Info:    Font shape `EU1/SourceCodePro(0)/m/n' will be
-(Font)              scaled to size 10.64337pt on input line 101.
-File: img/fig2.png Graphic file (type QTm)
- <use  "img/fig2.png" >
-Overfull \vbox (1.76944pt too high) has occurred while \output is active []
-
-
-[15]
 .................................................
 . fontspec info: "set-scale"
 . 
-. Calluna scale = 0.9501926768773734.
+. Calluna scale = 0.9496511952661995.
 .................................................
 .................................................
 . fontspec info: "defining-font"
@@ -2312,7 +2303,7 @@ Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 .................................................
 . fontspec info: "set-scale"
 . 
-. Calluna scale = 0.9494646709725984.
+. Calluna scale = 0.9489798584080045.
 .................................................
 .................................................
 . fontspec info: "defining-font"
@@ -2323,23 +2314,18 @@ Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 . This font family consists of the following shapes:
 .................................................
 
-Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+Overfull \vbox (1.39674pt too high) has occurred while \output is active []
+
+
+[15]
+Overfull \vbox (1.39674pt too high) has occurred while \output is active []
 
 
 [16]
-Overfull \vbox (1.76944pt too high) has occurred while \output is active []
-
-
-[17]
-Overfull \hbox (1.8457pt too wide) in paragraph at lines 253--257
-[]\EU1/Calluna(0)/m/n/12 JavaScript allows for the creation of variables and ob
-ject prop-
- []
-
 .................................................
 . fontspec info: "set-scale"
 . 
-. Calluna scale = 0.9501926768773734.
+. Calluna scale = 0.9496511952661995.
 .................................................
 .................................................
 . fontspec info: "defining-font"
@@ -2352,7 +2338,7 @@ ject prop-
 .................................................
 . fontspec info: "set-scale"
 . 
-. Calluna scale = 0.9494646709725984.
+. Calluna scale = 0.9489798584080045.
 .................................................
 .................................................
 . fontspec info: "defining-font"
@@ -2363,24 +2349,27 @@ ject prop-
 . This font family consists of the following shapes:
 .................................................
 ) (./ideation.tex
-Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+Overfull \vbox (1.39674pt too high) has occurred while \output is active []
 
 
-[18]
+[17]
 Chapter 5.
+
+LaTeX Warning: Reference `survey-interviews' on page 18 undefined on input line
+ 16.
+
+
+LaTeX Warning: Reference `survey-interviews' on page 18 undefined on input line
+ 16.
+
 File: img/syntax_highlighting.png Graphic file (type QTm)
 <use  "img/syntax_highlighting.png" >
-Overfull \hbox (0.86902pt too wide) in paragraph at lines 31--43
-[]\EU1/Calluna(0)/m/n/12 In his talk „Monads and Gonads“, Crockford present
-s an alternative to syntax highlighting which
- []
-
 File: img/context.png Graphic file (type QTm)
-<use  "img/context.png" >
+ <use  "img/context.png" >
 .................................................
 . fontspec info: "set-scale"
 . 
-. Calluna scale = 0.9501926768773734.
+. Calluna scale = 0.9496511952661995.
 .................................................
 .................................................
 . fontspec info: "defining-font"
@@ -2393,7 +2382,7 @@ File: img/context.png Graphic file (type QTm)
 .................................................
 . fontspec info: "set-scale"
 . 
-. Calluna scale = 0.9494646709725984.
+. Calluna scale = 0.9489798584080045.
 .................................................
 .................................................
 . fontspec info: "defining-font"
@@ -2403,88 +2392,85 @@ File: img/context.png Graphic file (type QTm)
 . 
 . This font family consists of the following shapes:
 .................................................
- [19
+File: img/theseus.jpg Graphic file (type QTm)
+
+<use  "img/theseus.jpg" >
+.................................................
+. fontspec info: "set-scale"
+. 
+. Calluna scale = 0.9496511952661995.
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'Calluna(1)' created for font 'Calluna' with options
+. [Mapping=tex-text,Scale=MatchLowercase,,VerticalPosition=Superior].
+. 
+. This font family consists of the following shapes:
+.................................................
+.................................................
+. fontspec info: "set-scale"
+. 
+. Calluna scale = 0.9489798584080045.
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'Calluna(2)' created for font 'Calluna' with options
+. [Mapping=tex-text,Scale=MatchLowercase,,VerticalPosition=Superior].
+. 
+. This font family consists of the following shapes:
+.................................................
+.................................................
+. fontspec info: "set-scale"
+. 
+. Calluna scale = 0.9496511952661995.
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'Calluna(1)' created for font 'Calluna' with options
+. [Mapping=tex-text,Scale=MatchLowercase,,VerticalPosition=Superior].
+. 
+. This font family consists of the following shapes:
+.................................................
+.................................................
+. fontspec info: "set-scale"
+. 
+. Calluna scale = 0.9489798584080045.
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'Calluna(2)' created for font 'Calluna' with options
+. [Mapping=tex-text,Scale=MatchLowercase,,VerticalPosition=Superior].
+. 
+. This font family consists of the following shapes:
+.................................................
+ [18
 
 
 ]
-Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+Overfull \vbox (1.39674pt too high) has occurred while \output is active []
+
+
+[19]
+File: img/jshint.png Graphic file (type QTm)
+ <use  "img/jshint.png" >
+Overfull \vbox (1.39674pt too high) has occurred while \output is active []
 
 
 [20]
-File: img/theseus.jpg Graphic file (type QTm)
- <use  "img/theseus.jpg" >
-.................................................
-. fontspec info: "set-scale"
-. 
-. Calluna scale = 0.9501926768773734.
-.................................................
-.................................................
-. fontspec info: "defining-font"
-. 
-. Font family 'Calluna(1)' created for font 'Calluna' with options
-. [Mapping=tex-text,Scale=MatchLowercase,,VerticalPosition=Superior].
-. 
-. This font family consists of the following shapes:
-.................................................
-.................................................
-. fontspec info: "set-scale"
-. 
-. Calluna scale = 0.9494646709725984.
-.................................................
-.................................................
-. fontspec info: "defining-font"
-. 
-. Font family 'Calluna(2)' created for font 'Calluna' with options
-. [Mapping=tex-text,Scale=MatchLowercase,,VerticalPosition=Superior].
-. 
-. This font family consists of the following shapes:
-.................................................
-.................................................
-. fontspec info: "set-scale"
-. 
-. Calluna scale = 0.9501926768773734.
-.................................................
-.................................................
-. fontspec info: "defining-font"
-. 
-. Font family 'Calluna(1)' created for font 'Calluna' with options
-. [Mapping=tex-text,Scale=MatchLowercase,,VerticalPosition=Superior].
-. 
-. This font family consists of the following shapes:
-.................................................
-.................................................
-. fontspec info: "set-scale"
-. 
-. Calluna scale = 0.9494646709725984.
-.................................................
-.................................................
-. fontspec info: "defining-font"
-. 
-. Font family 'Calluna(2)' created for font 'Calluna' with options
-. [Mapping=tex-text,Scale=MatchLowercase,,VerticalPosition=Superior].
-. 
-. This font family consists of the following shapes:
-.................................................
-File: img/jshint.png Graphic file (type QTm)
- <use  "img/jshint.png" >
-Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+File: img/devtools.png Graphic file (type QTm)
+ <use  "img/devtools.png" >
+Overfull \vbox (1.39674pt too high) has occurred while \output is active []
 
 
 [21]
-File: img/devtools.png Graphic file (type QTm)
- <use  "img/devtools.png" >
-Overfull \vbox (1.76944pt too high) has occurred while \output is active []
-
-
-[22]
-Overfull \vbox (1.76944pt too high) has occurred while \output is active []
-
-
-[23]
 .................................................
 . fontspec info: "set-scale"
 . 
-. Calluna scale = 0.9501926768773734.
+. Calluna scale = 0.9496511952661995.
 .................................................
 .................................................
 . fontspec info: "defining-font"
@@ -2497,7 +2483,7 @@ Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 .................................................
 . fontspec info: "set-scale"
 . 
-. Calluna scale = 0.9494646709725984.
+. Calluna scale = 0.9489798584080045.
 .................................................
 .................................................
 . fontspec info: "defining-font"
@@ -2508,37 +2494,41 @@ Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 . This font family consists of the following shapes:
 .................................................
 
-Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+Overfull \vbox (1.39674pt too high) has occurred while \output is active []
+
+
+[22]
+File: img/sketches.png Graphic file (type QTm)
+ <use  "img/sketches.png" >) (./design.tex
+Overfull \vbox (1.39674pt too high) has occurred while \output is active []
+
+
+[23]
+Overfull \vbox (1.39674pt too high) has occurred while \output is active []
 
 
 [24]
-File: img/sketches.png Graphic file (type QTm)
- <use  "img/sketches.png" >) (./design.tex
-Overfull \vbox (1.76944pt too high) has occurred while \output is active []
-
-
-[25]
 Chapter 6.
-[26
+[25
 
 
 ]
-Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+Overfull \vbox (1.39674pt too high) has occurred while \output is active []
+
+
+[26]
+File: img/sketch_highlighting.jpeg Graphic file (type QTm)
+ <use  "img/sketch_highlighting.jpeg" >
+Overfull \vbox (1.39674pt too high) has occurred while \output is active []
 
 
 [27]
-File: img/sketch_highlighting.jpeg Graphic file (type QTm)
- <use  "img/sketch_highlighting.jpeg" >
-Overfull \vbox (1.76944pt too high) has occurred while \output is active []
-
-
-[28]
 File: img/prototype-1.png Graphic file (type QTm)
  <use  "img/prototype-1.png" >
 .................................................
 . fontspec info: "set-scale"
 . 
-. Calluna scale = 0.9501926768773734.
+. Calluna scale = 0.9496511952661995.
 .................................................
 .................................................
 . fontspec info: "defining-font"
@@ -2551,7 +2541,7 @@ File: img/prototype-1.png Graphic file (type QTm)
 .................................................
 . fontspec info: "set-scale"
 . 
-. Calluna scale = 0.9494646709725984.
+. Calluna scale = 0.9489798584080045.
 .................................................
 .................................................
 . fontspec info: "defining-font"
@@ -2564,7 +2554,7 @@ File: img/prototype-1.png Graphic file (type QTm)
 .................................................
 . fontspec info: "set-scale"
 . 
-. Calluna scale = 0.9501926768773734.
+. Calluna scale = 0.9496511952661995.
 .................................................
 .................................................
 . fontspec info: "defining-font"
@@ -2577,7 +2567,7 @@ File: img/prototype-1.png Graphic file (type QTm)
 .................................................
 . fontspec info: "set-scale"
 . 
-. Calluna scale = 0.9494646709725984.
+. Calluna scale = 0.9489798584080045.
 .................................................
 .................................................
 . fontspec info: "defining-font"
@@ -2588,37 +2578,71 @@ File: img/prototype-1.png Graphic file (type QTm)
 . This font family consists of the following shapes:
 .................................................
 
-
-! Package glossaries Error: Glossary entry `scope-block' has not been defined.
-
-See the glossaries package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.162 the \glspl{scope-block}.
-                              
-You need to define a glossary entry before you can use it.
+Overfull \vbox (1.39674pt too high) has occurred while \output is active []
 
 
-! Package glossaries Error: Glossary entry `scope-block' has not been defined.
+[28]
+.................................................
+. fontspec info: "set-scale"
+. 
+. Calluna scale = 0.9496511952661995.
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'Calluna(1)' created for font 'Calluna' with options
+. [Mapping=tex-text,Scale=MatchLowercase,,VerticalPosition=Superior].
+. 
+. This font family consists of the following shapes:
+.................................................
+.................................................
+. fontspec info: "set-scale"
+. 
+. Calluna scale = 0.9489798584080045.
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'Calluna(2)' created for font 'Calluna' with options
+. [Mapping=tex-text,Scale=MatchLowercase,,VerticalPosition=Superior].
+. 
+. This font family consists of the following shapes:
+.................................................
+.................................................
+. fontspec info: "set-scale"
+. 
+. Calluna scale = 0.9496511952661995.
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'Calluna(1)' created for font 'Calluna' with options
+. [Mapping=tex-text,Scale=MatchLowercase,,VerticalPosition=Superior].
+. 
+. This font family consists of the following shapes:
+.................................................
+.................................................
+. fontspec info: "set-scale"
+. 
+. Calluna scale = 0.9489798584080045.
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'Calluna(2)' created for font 'Calluna' with options
+. [Mapping=tex-text,Scale=MatchLowercase,,VerticalPosition=Superior].
+. 
+. This font family consists of the following shapes:
+.................................................
 
-See the glossaries package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.168 For each of the nested \ac{scope-block} 
-                                              that the cursor is positioned in
-You need to define a glossary entry before you can use it.
-
-
-Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+Overfull \vbox (1.39674pt too high) has occurred while \output is active []
 
 
 [29]
 .................................................
 . fontspec info: "set-scale"
 . 
-. Calluna scale = 0.9501926768773734.
+. Calluna scale = 0.9496511952661995.
 .................................................
 .................................................
 . fontspec info: "defining-font"
@@ -2631,33 +2655,7 @@ Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 .................................................
 . fontspec info: "set-scale"
 . 
-. Calluna scale = 0.9494646709725984.
-.................................................
-.................................................
-. fontspec info: "defining-font"
-. 
-. Font family 'Calluna(2)' created for font 'Calluna' with options
-. [Mapping=tex-text,Scale=MatchLowercase,,VerticalPosition=Superior].
-. 
-. This font family consists of the following shapes:
-.................................................
-.................................................
-. fontspec info: "set-scale"
-. 
-. Calluna scale = 0.9501926768773734.
-.................................................
-.................................................
-. fontspec info: "defining-font"
-. 
-. Font family 'Calluna(1)' created for font 'Calluna' with options
-. [Mapping=tex-text,Scale=MatchLowercase,,VerticalPosition=Superior].
-. 
-. This font family consists of the following shapes:
-.................................................
-.................................................
-. fontspec info: "set-scale"
-. 
-. Calluna scale = 0.9494646709725984.
+. Calluna scale = 0.9489798584080045.
 .................................................
 .................................................
 . fontspec info: "defining-font"
@@ -2668,18 +2666,14 @@ Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 . This font family consists of the following shapes:
 .................................................
 
-Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+Overfull \vbox (1.39674pt too high) has occurred while \output is active []
 
 
 [30]
-Overfull \vbox (1.76944pt too high) has occurred while \output is active []
-
-
-[31]
 .................................................
 . fontspec info: "set-scale"
 . 
-. Calluna scale = 0.9501926768773734.
+. Calluna scale = 0.9496511952661995.
 .................................................
 .................................................
 . fontspec info: "defining-font"
@@ -2692,7 +2686,137 @@ Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 .................................................
 . fontspec info: "set-scale"
 . 
-. Calluna scale = 0.9494646709725984.
+. Calluna scale = 0.9489798584080045.
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'Calluna(2)' created for font 'Calluna' with options
+. [Mapping=tex-text,Scale=MatchLowercase,,VerticalPosition=Superior].
+. 
+. This font family consists of the following shapes:
+.................................................
+.................................................
+. fontspec info: "set-scale"
+. 
+. Calluna scale = 0.9496511952661995.
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'Calluna(1)' created for font 'Calluna' with options
+. [Mapping=tex-text,Scale=MatchLowercase,,VerticalPosition=Superior].
+. 
+. This font family consists of the following shapes:
+.................................................
+.................................................
+. fontspec info: "set-scale"
+. 
+. Calluna scale = 0.9489798584080045.
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'Calluna(2)' created for font 'Calluna' with options
+. [Mapping=tex-text,Scale=MatchLowercase,,VerticalPosition=Superior].
+. 
+. This font family consists of the following shapes:
+.................................................
+.................................................
+. fontspec info: "set-scale"
+. 
+. Calluna scale = 0.9496511952661995.
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'Calluna(1)' created for font 'Calluna' with options
+. [Mapping=tex-text,Scale=MatchLowercase,,VerticalPosition=Superior].
+. 
+. This font family consists of the following shapes:
+.................................................
+.................................................
+. fontspec info: "set-scale"
+. 
+. Calluna scale = 0.9489798584080045.
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'Calluna(2)' created for font 'Calluna' with options
+. [Mapping=tex-text,Scale=MatchLowercase,,VerticalPosition=Superior].
+. 
+. This font family consists of the following shapes:
+.................................................
+.................................................
+. fontspec info: "set-scale"
+. 
+. Calluna scale = 0.9496511952661995.
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'Calluna(1)' created for font 'Calluna' with options
+. [Mapping=tex-text,Scale=MatchLowercase,,VerticalPosition=Superior].
+. 
+. This font family consists of the following shapes:
+.................................................
+.................................................
+. fontspec info: "set-scale"
+. 
+. Calluna scale = 0.9489798584080045.
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'Calluna(2)' created for font 'Calluna' with options
+. [Mapping=tex-text,Scale=MatchLowercase,,VerticalPosition=Superior].
+. 
+. This font family consists of the following shapes:
+.................................................
+.................................................
+. fontspec info: "set-scale"
+. 
+. Calluna scale = 0.9496511952661995.
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'Calluna(1)' created for font 'Calluna' with options
+. [Mapping=tex-text,Scale=MatchLowercase,,VerticalPosition=Superior].
+. 
+. This font family consists of the following shapes:
+.................................................
+.................................................
+. fontspec info: "set-scale"
+. 
+. Calluna scale = 0.9489798584080045.
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'Calluna(2)' created for font 'Calluna' with options
+. [Mapping=tex-text,Scale=MatchLowercase,,VerticalPosition=Superior].
+. 
+. This font family consists of the following shapes:
+.................................................
+.................................................
+. fontspec info: "set-scale"
+. 
+. Calluna scale = 0.9496511952661995.
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'Calluna(1)' created for font 'Calluna' with options
+. [Mapping=tex-text,Scale=MatchLowercase,,VerticalPosition=Superior].
+. 
+. This font family consists of the following shapes:
+.................................................
+.................................................
+. fontspec info: "set-scale"
+. 
+. Calluna scale = 0.9489798584080045.
 .................................................
 .................................................
 . fontspec info: "defining-font"
@@ -2703,20 +2827,20 @@ Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 . This font family consists of the following shapes:
 .................................................
 
-Overfull \hbox (0.28813pt too wide) in paragraph at lines 263--270
-\EU1/Calluna(0)/m/n/12 The third and final prototype was built as a working pro
-totype capable of handling any JavaScript
- []
+Overfull \vbox (1.39674pt too high) has occurred while \output is active []
 
 
-Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+[31]
+File: img/scope.pdf Graphic file (type QTm)
+ <use  "img/scope.pdf" >
+Overfull \vbox (1.39674pt too high) has occurred while \output is active []
 
 
 [32]
 .................................................
 . fontspec info: "set-scale"
 . 
-. Calluna scale = 0.9501926768773734.
+. Calluna scale = 0.9496511952661995.
 .................................................
 .................................................
 . fontspec info: "defining-font"
@@ -2729,176 +2853,7 @@ Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 .................................................
 . fontspec info: "set-scale"
 . 
-. Calluna scale = 0.9494646709725984.
-.................................................
-.................................................
-. fontspec info: "defining-font"
-. 
-. Font family 'Calluna(2)' created for font 'Calluna' with options
-. [Mapping=tex-text,Scale=MatchLowercase,,VerticalPosition=Superior].
-. 
-. This font family consists of the following shapes:
-.................................................
-.................................................
-. fontspec info: "set-scale"
-. 
-. Calluna scale = 0.9501926768773734.
-.................................................
-.................................................
-. fontspec info: "defining-font"
-. 
-. Font family 'Calluna(1)' created for font 'Calluna' with options
-. [Mapping=tex-text,Scale=MatchLowercase,,VerticalPosition=Superior].
-. 
-. This font family consists of the following shapes:
-.................................................
-.................................................
-. fontspec info: "set-scale"
-. 
-. Calluna scale = 0.9494646709725984.
-.................................................
-.................................................
-. fontspec info: "defining-font"
-. 
-. Font family 'Calluna(2)' created for font 'Calluna' with options
-. [Mapping=tex-text,Scale=MatchLowercase,,VerticalPosition=Superior].
-. 
-. This font family consists of the following shapes:
-.................................................
-.................................................
-. fontspec info: "set-scale"
-. 
-. Calluna scale = 0.9501926768773734.
-.................................................
-.................................................
-. fontspec info: "defining-font"
-. 
-. Font family 'Calluna(1)' created for font 'Calluna' with options
-. [Mapping=tex-text,Scale=MatchLowercase,,VerticalPosition=Superior].
-. 
-. This font family consists of the following shapes:
-.................................................
-.................................................
-. fontspec info: "set-scale"
-. 
-. Calluna scale = 0.9494646709725984.
-.................................................
-.................................................
-. fontspec info: "defining-font"
-. 
-. Font family 'Calluna(2)' created for font 'Calluna' with options
-. [Mapping=tex-text,Scale=MatchLowercase,,VerticalPosition=Superior].
-. 
-. This font family consists of the following shapes:
-.................................................
-.................................................
-. fontspec info: "set-scale"
-. 
-. Calluna scale = 0.9501926768773734.
-.................................................
-.................................................
-. fontspec info: "defining-font"
-. 
-. Font family 'Calluna(1)' created for font 'Calluna' with options
-. [Mapping=tex-text,Scale=MatchLowercase,,VerticalPosition=Superior].
-. 
-. This font family consists of the following shapes:
-.................................................
-.................................................
-. fontspec info: "set-scale"
-. 
-. Calluna scale = 0.9494646709725984.
-.................................................
-.................................................
-. fontspec info: "defining-font"
-. 
-. Font family 'Calluna(2)' created for font 'Calluna' with options
-. [Mapping=tex-text,Scale=MatchLowercase,,VerticalPosition=Superior].
-. 
-. This font family consists of the following shapes:
-.................................................
-.................................................
-. fontspec info: "set-scale"
-. 
-. Calluna scale = 0.9501926768773734.
-.................................................
-.................................................
-. fontspec info: "defining-font"
-. 
-. Font family 'Calluna(1)' created for font 'Calluna' with options
-. [Mapping=tex-text,Scale=MatchLowercase,,VerticalPosition=Superior].
-. 
-. This font family consists of the following shapes:
-.................................................
-.................................................
-. fontspec info: "set-scale"
-. 
-. Calluna scale = 0.9494646709725984.
-.................................................
-.................................................
-. fontspec info: "defining-font"
-. 
-. Font family 'Calluna(2)' created for font 'Calluna' with options
-. [Mapping=tex-text,Scale=MatchLowercase,,VerticalPosition=Superior].
-. 
-. This font family consists of the following shapes:
-.................................................
-.................................................
-. fontspec info: "set-scale"
-. 
-. Calluna scale = 0.9501926768773734.
-.................................................
-.................................................
-. fontspec info: "defining-font"
-. 
-. Font family 'Calluna(1)' created for font 'Calluna' with options
-. [Mapping=tex-text,Scale=MatchLowercase,,VerticalPosition=Superior].
-. 
-. This font family consists of the following shapes:
-.................................................
-.................................................
-. fontspec info: "set-scale"
-. 
-. Calluna scale = 0.9494646709725984.
-.................................................
-.................................................
-. fontspec info: "defining-font"
-. 
-. Font family 'Calluna(2)' created for font 'Calluna' with options
-. [Mapping=tex-text,Scale=MatchLowercase,,VerticalPosition=Superior].
-. 
-. This font family consists of the following shapes:
-.................................................
-
-Overfull \vbox (1.76944pt too high) has occurred while \output is active []
-
-
-[33]
-
-LaTeX Warning: Reference `parser' on page 34 undefined on input line 350.
-
-
-Overfull \vbox (1.76944pt too high) has occurred while \output is active []
-
-
-[34]
-.................................................
-. fontspec info: "set-scale"
-. 
-. Calluna scale = 0.9501926768773734.
-.................................................
-.................................................
-. fontspec info: "defining-font"
-. 
-. Font family 'Calluna(1)' created for font 'Calluna' with options
-. [Mapping=tex-text,Scale=MatchLowercase,,VerticalPosition=Superior].
-. 
-. This font family consists of the following shapes:
-.................................................
-.................................................
-. fontspec info: "set-scale"
-. 
-. Calluna scale = 0.9494646709725984.
+. Calluna scale = 0.9489798584080045.
 .................................................
 .................................................
 . fontspec info: "defining-font"
@@ -2910,14 +2865,14 @@ Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 .................................................
 File: img/scope-highlight.png Graphic file (type QTm)
  <use  "img/scope-highlight.png" >
-Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+Overfull \vbox (1.39674pt too high) has occurred while \output is active []
 
 
-[35]
+[33]
 .................................................
 . fontspec info: "set-scale"
 . 
-. Calluna scale = 0.9501926768773734.
+. Calluna scale = 0.9496511952661995.
 .................................................
 .................................................
 . fontspec info: "defining-font"
@@ -2930,7 +2885,7 @@ Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 .................................................
 . fontspec info: "set-scale"
 . 
-. Calluna scale = 0.9494646709725984.
+. Calluna scale = 0.9489798584080045.
 .................................................
 .................................................
 . fontspec info: "defining-font"
@@ -2942,316 +2897,310 @@ Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 .................................................
 
 
-LaTeX Warning: Reference `protohoisting' on page 36 undefined on input line 448
+LaTeX Warning: Reference `protohoisting' on page 34 undefined on input line 452
 .
 
 File: img/hoisting.png Graphic file (type QTm)
 <use  "img/hoisting.png" >
 File: img/bottombar.png Graphic file (type QTm)
  <use  "img/bottombar.png" >
-Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+Overfull \vbox (1.39674pt too high) has occurred while \output is active []
+
+
+[34]
+File: img/sidebar.png Graphic file (type QTm)
+ <use  "img/sidebar.png" >
+Overfull \vbox (1.39674pt too high) has occurred while \output is active []
+
+
+[35]
+.................................................
+. fontspec info: "set-scale"
+. 
+. Calluna scale = 0.9496511952661995.
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'Calluna(1)' created for font 'Calluna' with options
+. [Mapping=tex-text,Scale=MatchLowercase,,VerticalPosition=Superior].
+. 
+. This font family consists of the following shapes:
+.................................................
+.................................................
+. fontspec info: "set-scale"
+. 
+. Calluna scale = 0.9489798584080045.
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'Calluna(2)' created for font 'Calluna' with options
+. [Mapping=tex-text,Scale=MatchLowercase,,VerticalPosition=Superior].
+. 
+. This font family consists of the following shapes:
+.................................................
+
+Overfull \vbox (1.39674pt too high) has occurred while \output is active []
 
 
 [36]
-File: img/sidebar.png Graphic file (type QTm)
- <use  "img/sidebar.png" >
-Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+.................................................
+. fontspec info: "set-scale"
+. 
+. Calluna scale = 0.9496511952661995.
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'Calluna(1)' created for font 'Calluna' with options
+. [Mapping=tex-text,Scale=MatchLowercase,,VerticalPosition=Superior].
+. 
+. This font family consists of the following shapes:
+.................................................
+.................................................
+. fontspec info: "set-scale"
+. 
+. Calluna scale = 0.9489798584080045.
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'Calluna(2)' created for font 'Calluna' with options
+. [Mapping=tex-text,Scale=MatchLowercase,,VerticalPosition=Superior].
+. 
+. This font family consists of the following shapes:
+.................................................
+.................................................
+. fontspec info: "set-scale"
+. 
+. Calluna scale = 0.9496511952661995.
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'Calluna(1)' created for font 'Calluna' with options
+. [Mapping=tex-text,Scale=MatchLowercase,,VerticalPosition=Superior].
+. 
+. This font family consists of the following shapes:
+.................................................
+.................................................
+. fontspec info: "set-scale"
+. 
+. Calluna scale = 0.9489798584080045.
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'Calluna(2)' created for font 'Calluna' with options
+. [Mapping=tex-text,Scale=MatchLowercase,,VerticalPosition=Superior].
+. 
+. This font family consists of the following shapes:
+.................................................
+
+Overfull \vbox (1.39674pt too high) has occurred while \output is active []
 
 
 [37]
-.................................................
-. fontspec info: "set-scale"
-. 
-. Calluna scale = 0.9501926768773734.
-.................................................
-.................................................
-. fontspec info: "defining-font"
-. 
-. Font family 'Calluna(1)' created for font 'Calluna' with options
-. [Mapping=tex-text,Scale=MatchLowercase,,VerticalPosition=Superior].
-. 
-. This font family consists of the following shapes:
-.................................................
-.................................................
-. fontspec info: "set-scale"
-. 
-. Calluna scale = 0.9494646709725984.
-.................................................
-.................................................
-. fontspec info: "defining-font"
-. 
-. Font family 'Calluna(2)' created for font 'Calluna' with options
-. [Mapping=tex-text,Scale=MatchLowercase,,VerticalPosition=Superior].
-. 
-. This font family consists of the following shapes:
-.................................................
-
-Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+Overfull \vbox (1.39674pt too high) has occurred while \output is active []
 
 
 [38]
-.................................................
-. fontspec info: "set-scale"
-. 
-. Calluna scale = 0.9501926768773734.
-.................................................
-.................................................
-. fontspec info: "defining-font"
-. 
-. Font family 'Calluna(1)' created for font 'Calluna' with options
-. [Mapping=tex-text,Scale=MatchLowercase,,VerticalPosition=Superior].
-. 
-. This font family consists of the following shapes:
-.................................................
-.................................................
-. fontspec info: "set-scale"
-. 
-. Calluna scale = 0.9494646709725984.
-.................................................
-.................................................
-. fontspec info: "defining-font"
-. 
-. Font family 'Calluna(2)' created for font 'Calluna' with options
-. [Mapping=tex-text,Scale=MatchLowercase,,VerticalPosition=Superior].
-. 
-. This font family consists of the following shapes:
-.................................................
-.................................................
-. fontspec info: "set-scale"
-. 
-. Calluna scale = 0.9501926768773734.
-.................................................
-.................................................
-. fontspec info: "defining-font"
-. 
-. Font family 'Calluna(1)' created for font 'Calluna' with options
-. [Mapping=tex-text,Scale=MatchLowercase,,VerticalPosition=Superior].
-. 
-. This font family consists of the following shapes:
-.................................................
-.................................................
-. fontspec info: "set-scale"
-. 
-. Calluna scale = 0.9494646709725984.
-.................................................
-.................................................
-. fontspec info: "defining-font"
-. 
-. Font family 'Calluna(2)' created for font 'Calluna' with options
-. [Mapping=tex-text,Scale=MatchLowercase,,VerticalPosition=Superior].
-. 
-. This font family consists of the following shapes:
-.................................................
-
-Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+Overfull \vbox (1.39674pt too high) has occurred while \output is active []
 
 
 [39]
-Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+.................................................
+. fontspec info: "set-scale"
+. 
+. Calluna scale = 0.9496511952661995.
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'Calluna(1)' created for font 'Calluna' with options
+. [Mapping=tex-text,Scale=MatchLowercase,,VerticalPosition=Superior].
+. 
+. This font family consists of the following shapes:
+.................................................
+.................................................
+. fontspec info: "set-scale"
+. 
+. Calluna scale = 0.9489798584080045.
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'Calluna(2)' created for font 'Calluna' with options
+. [Mapping=tex-text,Scale=MatchLowercase,,VerticalPosition=Superior].
+. 
+. This font family consists of the following shapes:
+.................................................
+
+Underfull \hbox (badness 10000) in paragraph at lines 756--756
+[][][][]\EU1/Calluna(0)/m/n/9 See [][]$[] [] [][] [] [] [] [] [] []\OML/cmm/m/i
+t/9 : [] [] [] [] [] []: [] [] [] [] [] [] [] [] [] [] [] [][][][][] [] []$[][]
+ \EU1/Calluna(0)/m/n/9 and [][]$[] [] [] [] [] [] [] [] [] [] [] [] [] [] []\OM
+L/cmm/m/it/9 : [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] []
+ []
+
+.................................................
+. fontspec info: "set-scale"
+. 
+. Calluna scale = 0.9496511952661995.
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'Calluna(1)' created for font 'Calluna' with options
+. [Mapping=tex-text,Scale=MatchLowercase,,VerticalPosition=Superior].
+. 
+. This font family consists of the following shapes:
+.................................................
+.................................................
+. fontspec info: "set-scale"
+. 
+. Calluna scale = 0.9489798584080045.
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'Calluna(2)' created for font 'Calluna' with options
+. [Mapping=tex-text,Scale=MatchLowercase,,VerticalPosition=Superior].
+. 
+. This font family consists of the following shapes:
+.................................................
+.................................................
+. fontspec info: "set-scale"
+. 
+. Calluna scale = 0.9496511952661995.
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'Calluna(1)' created for font 'Calluna' with options
+. [Mapping=tex-text,Scale=MatchLowercase,,VerticalPosition=Superior].
+. 
+. This font family consists of the following shapes:
+.................................................
+.................................................
+. fontspec info: "set-scale"
+. 
+. Calluna scale = 0.9489798584080045.
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'Calluna(2)' created for font 'Calluna' with options
+. [Mapping=tex-text,Scale=MatchLowercase,,VerticalPosition=Superior].
+. 
+. This font family consists of the following shapes:
+.................................................
+LaTeX Font Info:    Font shape `EU1/SourceCodePro(0)/m/n' will be
+(Font)              scaled to size 5.32169pt on input line 778.
+LaTeX Font Info:    Font shape `EU1/SourceCodePro(0)/m/n' will be
+(Font)              scaled to size 4.43474pt on input line 778.
+
+Underfull \hbox (badness 3250) in paragraph at lines 778--778
+[][][][]\EU1/Calluna(0)/m/n/9 See [][]$[] [] [][] [] [] [] [] [] []\OML/cmm/m/i
+t/9 : [] [] [] [] [] []: [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] 
+[] [] [] [] [] [] [] [][][] [] [][] [] [] [] [] [] [] [] [] [] [] [] [][] [] []
+ [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [][] [] [] [] [][] []
+ []
+
+
+Overfull \vbox (1.39674pt too high) has occurred while \output is active []
 
 
 [40]
-Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+.................................................
+. fontspec info: "set-scale"
+. 
+. Calluna scale = 0.9496511952661995.
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'Calluna(1)' created for font 'Calluna' with options
+. [Mapping=tex-text,Scale=MatchLowercase,,VerticalPosition=Superior].
+. 
+. This font family consists of the following shapes:
+.................................................
+.................................................
+. fontspec info: "set-scale"
+. 
+. Calluna scale = 0.9489798584080045.
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'Calluna(2)' created for font 'Calluna' with options
+. [Mapping=tex-text,Scale=MatchLowercase,,VerticalPosition=Superior].
+. 
+. This font family consists of the following shapes:
+.................................................
+.................................................
+. fontspec info: "set-scale"
+. 
+. Calluna scale = 0.9496511952661995.
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'Calluna(1)' created for font 'Calluna' with options
+. [Mapping=tex-text,Scale=MatchLowercase,,VerticalPosition=Superior].
+. 
+. This font family consists of the following shapes:
+.................................................
+.................................................
+. fontspec info: "set-scale"
+. 
+. Calluna scale = 0.9489798584080045.
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'Calluna(2)' created for font 'Calluna' with options
+. [Mapping=tex-text,Scale=MatchLowercase,,VerticalPosition=Superior].
+. 
+. This font family consists of the following shapes:
+.................................................
+.................................................
+. fontspec info: "set-scale"
+. 
+. Calluna scale = 0.9496511952661995.
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'Calluna(1)' created for font 'Calluna' with options
+. [Mapping=tex-text,Scale=MatchLowercase,,VerticalPosition=Superior].
+. 
+. This font family consists of the following shapes:
+.................................................
+.................................................
+. fontspec info: "set-scale"
+. 
+. Calluna scale = 0.9489798584080045.
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'Calluna(2)' created for font 'Calluna' with options
+. [Mapping=tex-text,Scale=MatchLowercase,,VerticalPosition=Superior].
+. 
+. This font family consists of the following shapes:
+.................................................
+) (./conclusion.tex
+Overfull \vbox (1.39674pt too high) has occurred while \output is active []
 
 
 [41]
-Overfull \vbox (1.76944pt too high) has occurred while \output is active []
-
-
-[42]
-.................................................
-. fontspec info: "set-scale"
-. 
-. Calluna scale = 0.9501926768773734.
-.................................................
-.................................................
-. fontspec info: "defining-font"
-. 
-. Font family 'Calluna(1)' created for font 'Calluna' with options
-. [Mapping=tex-text,Scale=MatchLowercase,,VerticalPosition=Superior].
-. 
-. This font family consists of the following shapes:
-.................................................
-.................................................
-. fontspec info: "set-scale"
-. 
-. Calluna scale = 0.9494646709725984.
-.................................................
-.................................................
-. fontspec info: "defining-font"
-. 
-. Font family 'Calluna(2)' created for font 'Calluna' with options
-. [Mapping=tex-text,Scale=MatchLowercase,,VerticalPosition=Superior].
-. 
-. This font family consists of the following shapes:
-.................................................
-.................................................
-. fontspec info: "set-scale"
-. 
-. Calluna scale = 0.9501926768773734.
-.................................................
-.................................................
-. fontspec info: "defining-font"
-. 
-. Font family 'Calluna(1)' created for font 'Calluna' with options
-. [Mapping=tex-text,Scale=MatchLowercase,,VerticalPosition=Superior].
-. 
-. This font family consists of the following shapes:
-.................................................
-.................................................
-. fontspec info: "set-scale"
-. 
-. Calluna scale = 0.9494646709725984.
-.................................................
-.................................................
-. fontspec info: "defining-font"
-. 
-. Font family 'Calluna(2)' created for font 'Calluna' with options
-. [Mapping=tex-text,Scale=MatchLowercase,,VerticalPosition=Superior].
-. 
-. This font family consists of the following shapes:
-.................................................
-.................................................
-. fontspec info: "set-scale"
-. 
-. Calluna scale = 0.9501926768773734.
-.................................................
-.................................................
-. fontspec info: "defining-font"
-. 
-. Font family 'Calluna(1)' created for font 'Calluna' with options
-. [Mapping=tex-text,Scale=MatchLowercase,,VerticalPosition=Superior].
-. 
-. This font family consists of the following shapes:
-.................................................
-.................................................
-. fontspec info: "set-scale"
-. 
-. Calluna scale = 0.9494646709725984.
-.................................................
-.................................................
-. fontspec info: "defining-font"
-. 
-. Font family 'Calluna(2)' created for font 'Calluna' with options
-. [Mapping=tex-text,Scale=MatchLowercase,,VerticalPosition=Superior].
-. 
-. This font family consists of the following shapes:
-.................................................
-.................................................
-. fontspec info: "set-scale"
-. 
-. Calluna scale = 0.9501926768773734.
-.................................................
-.................................................
-. fontspec info: "defining-font"
-. 
-. Font family 'Calluna(1)' created for font 'Calluna' with options
-. [Mapping=tex-text,Scale=MatchLowercase,,VerticalPosition=Superior].
-. 
-. This font family consists of the following shapes:
-.................................................
-.................................................
-. fontspec info: "set-scale"
-. 
-. Calluna scale = 0.9494646709725984.
-.................................................
-.................................................
-. fontspec info: "defining-font"
-. 
-. Font family 'Calluna(2)' created for font 'Calluna' with options
-. [Mapping=tex-text,Scale=MatchLowercase,,VerticalPosition=Superior].
-. 
-. This font family consists of the following shapes:
-.................................................
-LaTeX Font Info:    Font shape `EU1/SourceCodePro(0)/m/n' will be
-(Font)              scaled to size 6.20863pt on input line 756.
-LaTeX Font Info:    Font shape `EU1/SourceCodePro(0)/m/n' will be
-(Font)              scaled to size 4.43474pt on input line 756.
-
-Underfull \hbox (badness 10000) in paragraph at lines 756--756
-[][][][]\EU1/Calluna(0)/m/n/10 See [][]$[] [] [][] [] [] [] [] [] []\OML/cmm/m/
-it/10 : [] [] [] [] [] []: [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [
-] [] [] [] [] [] [] [] [][][] [] [][] [] [] [] [] [] [] [] [] [] [] [] [][] [] 
-[] [] [] [] [] [] [] [] [] [] [] [] [] []
- []
-
-.................................................
-. fontspec info: "set-scale"
-. 
-. Calluna scale = 0.9501926768773734.
-.................................................
-.................................................
-. fontspec info: "defining-font"
-. 
-. Font family 'Calluna(1)' created for font 'Calluna' with options
-. [Mapping=tex-text,Scale=MatchLowercase,,VerticalPosition=Superior].
-. 
-. This font family consists of the following shapes:
-.................................................
-.................................................
-. fontspec info: "set-scale"
-. 
-. Calluna scale = 0.9494646709725984.
-.................................................
-.................................................
-. fontspec info: "defining-font"
-. 
-. Font family 'Calluna(2)' created for font 'Calluna' with options
-. [Mapping=tex-text,Scale=MatchLowercase,,VerticalPosition=Superior].
-. 
-. This font family consists of the following shapes:
-.................................................
-.................................................
-. fontspec info: "set-scale"
-. 
-. Calluna scale = 0.9501926768773734.
-.................................................
-.................................................
-. fontspec info: "defining-font"
-. 
-. Font family 'Calluna(1)' created for font 'Calluna' with options
-. [Mapping=tex-text,Scale=MatchLowercase,,VerticalPosition=Superior].
-. 
-. This font family consists of the following shapes:
-.................................................
-.................................................
-. fontspec info: "set-scale"
-. 
-. Calluna scale = 0.9494646709725984.
-.................................................
-.................................................
-. fontspec info: "defining-font"
-. 
-. Font family 'Calluna(2)' created for font 'Calluna' with options
-. [Mapping=tex-text,Scale=MatchLowercase,,VerticalPosition=Superior].
-. 
-. This font family consists of the following shapes:
-.................................................
-
-Underfull \hbox (badness 5147) in paragraph at lines 770--770
-[][][][]\EU1/Calluna(0)/m/n/10 See [][]$[] [] [][] [] [] [] [] [] []\OML/cmm/m/
-it/10 : [] [] [] [] [] []: [] [] [] [] [] [] [] [] [] [] [] [][][][][] [] []$[]
-[] \EU1/Calluna(0)/m/n/10 and [][]$[] [] [] [] [] [] [] [] [] [] [] [] [] [] []
-\OML/cmm/m/it/10 : [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] 
-[]
- []
-
-) (./conclusion.tex
-Overfull \hbox (5.71414pt too wide) in paragraph at lines 769--1
-[]\EU1/Calluna(0)/m/n/12 Several reactions[][][][][][] on the blog post about t
-he technical side of the Scope Inspector ([]von Oldenburg[]
- []
-
-
-Overfull \vbox (1.76944pt too high) has occurred while \output is active []
-
-
-[43]
 Chapter 7.
 .................................................
 . fontspec info: "set-scale"
 . 
-. Calluna scale = 0.9501926768773734.
+. Calluna scale = 0.9496511952661995.
 .................................................
 .................................................
 . fontspec info: "defining-font"
@@ -3264,7 +3213,7 @@ Chapter 7.
 .................................................
 . fontspec info: "set-scale"
 . 
-. Calluna scale = 0.9494646709725984.
+. Calluna scale = 0.9489798584080045.
 .................................................
 .................................................
 . fontspec info: "defining-font"
@@ -3277,7 +3226,7 @@ Chapter 7.
 .................................................
 . fontspec info: "set-scale"
 . 
-. Calluna scale = 0.9501926768773734.
+. Calluna scale = 0.9496511952661995.
 .................................................
 .................................................
 . fontspec info: "defining-font"
@@ -3290,7 +3239,7 @@ Chapter 7.
 .................................................
 . fontspec info: "set-scale"
 . 
-. Calluna scale = 0.9494646709725984.
+. Calluna scale = 0.9489798584080045.
 .................................................
 .................................................
 . fontspec info: "defining-font"
@@ -3303,7 +3252,7 @@ Chapter 7.
 .................................................
 . fontspec info: "set-scale"
 . 
-. Calluna scale = 0.9501926768773734.
+. Calluna scale = 0.9496511952661995.
 .................................................
 .................................................
 . fontspec info: "defining-font"
@@ -3316,7 +3265,7 @@ Chapter 7.
 .................................................
 . fontspec info: "set-scale"
 . 
-. Calluna scale = 0.9494646709725984.
+. Calluna scale = 0.9489798584080045.
 .................................................
 .................................................
 . fontspec info: "defining-font"
@@ -3329,7 +3278,7 @@ Chapter 7.
 .................................................
 . fontspec info: "set-scale"
 . 
-. Calluna scale = 0.9501926768773734.
+. Calluna scale = 0.9496511952661995.
 .................................................
 .................................................
 . fontspec info: "defining-font"
@@ -3342,7 +3291,7 @@ Chapter 7.
 .................................................
 . fontspec info: "set-scale"
 . 
-. Calluna scale = 0.9494646709725984.
+. Calluna scale = 0.9489798584080045.
 .................................................
 .................................................
 . fontspec info: "defining-font"
@@ -3352,21 +3301,40 @@ Chapter 7.
 . 
 . This font family consists of the following shapes:
 .................................................
-
-Overfull \hbox (8.1998pt too wide) in paragraph at lines 42--46
-[]\EU1/Calluna(0)/m/n/12 The \EU1/Calluna(0)/m/it/12 Find and Replace \EU1/Call
-una(0)/m/n/12 package provides a core functionality of every text editor, where
-as
- []
-
-[44
+.................................................
+. fontspec info: "set-scale"
+. 
+. Calluna scale = 0.9496511952661995.
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'Calluna(1)' created for font 'Calluna' with options
+. [Mapping=tex-text,Scale=MatchLowercase,,VerticalPosition=Superior].
+. 
+. This font family consists of the following shapes:
+.................................................
+.................................................
+. fontspec info: "set-scale"
+. 
+. Calluna scale = 0.9489798584080045.
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'Calluna(2)' created for font 'Calluna' with options
+. [Mapping=tex-text,Scale=MatchLowercase,,VerticalPosition=Superior].
+. 
+. This font family consists of the following shapes:
+.................................................
+[42
 
 
 ]
 .................................................
 . fontspec info: "set-scale"
 . 
-. Calluna scale = 0.9501926768773734.
+. Calluna scale = 0.9496511952661995.
 .................................................
 .................................................
 . fontspec info: "defining-font"
@@ -3379,7 +3347,7 @@ as
 .................................................
 . fontspec info: "set-scale"
 . 
-. Calluna scale = 0.9494646709725984.
+. Calluna scale = 0.9489798584080045.
 .................................................
 .................................................
 . fontspec info: "defining-font"
@@ -3390,33 +3358,23 @@ as
 . This font family consists of the following shapes:
 .................................................
 
-Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+Overfull \vbox (1.39674pt too high) has occurred while \output is active []
+
+
+[43]
+Overfull \vbox (1.39674pt too high) has occurred while \output is active []
+
+
+[44]
+Overfull \vbox (1.39674pt too high) has occurred while \output is active []
 
 
 [45]
-Overfull \hbox (2.40591pt too wide) in paragraph at lines 127--128
-[]\EU1/Calluna(0)/m/n/12 The testing scenario was not optimal due to the follow
-ing circumstances: 
- []
-
-
-Overfull \vbox (1.76944pt too high) has occurred while \output is active []
-
-
-[46]
-Overfull \vbox (1.76944pt too high) has occurred while \output is active []
-
-
-[47]
 Chapter 8.
-[48
-
-
-]
 .................................................
 . fontspec info: "set-scale"
 . 
-. Calluna scale = 0.9501926768773734.
+. Calluna scale = 0.9496511952661995.
 .................................................
 .................................................
 . fontspec info: "defining-font"
@@ -3429,7 +3387,7 @@ Chapter 8.
 .................................................
 . fontspec info: "set-scale"
 . 
-. Calluna scale = 0.9494646709725984.
+. Calluna scale = 0.9489798584080045.
 .................................................
 .................................................
 . fontspec info: "defining-font"
@@ -3442,7 +3400,7 @@ Chapter 8.
 .................................................
 . fontspec info: "set-scale"
 . 
-. Calluna scale = 0.9501926768773734.
+. Calluna scale = 0.9496511952661995.
 .................................................
 .................................................
 . fontspec info: "defining-font"
@@ -3455,7 +3413,7 @@ Chapter 8.
 .................................................
 . fontspec info: "set-scale"
 . 
-. Calluna scale = 0.9494646709725984.
+. Calluna scale = 0.9489798584080045.
 .................................................
 .................................................
 . fontspec info: "defining-font"
@@ -3468,7 +3426,7 @@ Chapter 8.
 .................................................
 . fontspec info: "set-scale"
 . 
-. Calluna scale = 0.9501926768773734.
+. Calluna scale = 0.9496511952661995.
 .................................................
 .................................................
 . fontspec info: "defining-font"
@@ -3481,7 +3439,7 @@ Chapter 8.
 .................................................
 . fontspec info: "set-scale"
 . 
-. Calluna scale = 0.9494646709725984.
+. Calluna scale = 0.9489798584080045.
 .................................................
 .................................................
 . fontspec info: "defining-font"
@@ -3491,19 +3449,28 @@ Chapter 8.
 . 
 . This font family consists of the following shapes:
 .................................................
-
-Overfull \vbox (1.76944pt too high) has occurred while \output is active []
-
-
-[49])
-Overfull \vbox (1.76944pt too high) has occurred while \output is active []
-
-
-[50] [51] (./thesis.bbl [1
+[46
 
 
 ])
-Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+Overfull \vbox (1.39674pt too high) has occurred while \output is active []
+
+
+[47]
+Overfull \vbox (1.39674pt too high) has occurred while \output is active []
+
+
+[48] [49] (./thesis.bbl
+Underfull \hbox (badness 10000) in paragraph at lines 18--23
+\EU1/Calluna(0)/bx/n/10.95 URL: \EU1/Calluna(0)/m/it/10.95 http://www.toptal.co
+m/javascript/javascript-prototypes-scopes-and-performance-what-you-need-to-
+ []
+
+[1
+
+
+])
+Overfull \vbox (1.39674pt too high) has occurred while \output is active []
 
 
 [2] (./thesis.lof)
@@ -3518,7 +3485,7 @@ runsystem(pygmentize -l javascript -f latex -F tokenmerge            -P linenos
 
  (./thesis.out.pyg
 LaTeX Font Info:    Font shape `EU1/SourceCodePro(0)/bx/n' will be
-(Font)              scaled to size 10.42877pt on input line 2.
+(Font)              scaled to size 9.51625pt on input line 2.
 )
 runsystem(rm thesis.out.pyg)...executed.
 
@@ -3543,7 +3510,7 @@ runsystem(rm thesis.pyg)...executed.
 ]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 246.
 
-Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+Overfull \vbox (1.39674pt too high) has occurred while \output is active []
 
 
 [5]
@@ -3555,17 +3522,14 @@ Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 246.
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: There were multiply-defined labels.
-
  ) 
 Here is how much of TeX's memory you used:
- 33539 strings out of 493994
- 608721 string characters out of 3150335
- 711028 words of memory out of 3000000
- 36223 multiletter control sequences out of 15000+200000
- 10776 words of font info for 95 fonts, out of 3000000 for 9000
+ 33555 strings out of 493994
+ 608946 string characters out of 3150335
+ 713062 words of memory out of 3000000
+ 36230 multiletter control sequences out of 15000+200000
+ 11310 words of font info for 101 fonts, out of 3000000 for 9000
  1144 hyphenation exceptions out of 8191
- 57i,13n,100p,1462b,653s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 57i,13n,100p,1462b,651s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on thesis.pdf (63 pages).
+Output written on thesis.pdf (61 pages).

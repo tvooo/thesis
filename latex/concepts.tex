@@ -24,11 +24,11 @@ most relevant of which are described briefly in this section.
 \item[Author-time]
 shall be the phase during which a program is written, read, understood,
 and edited. There is no canonical definition or common name for this
-class of activities around source code, which is we define \emph{author
-time} as the time separate from run time in which a program author (e.g.
-a developer) deals directly with its code. An alternative name for
-author-time may be \emph{edit-time}, \emph{creation-time} \cite{getify}
-or \emph{construction} \cite{mcconnell}.
+class of activities around source code, which is why I define
+\emph{author-time} as the time separate from run-time in which a program
+author (e.g. a developer) deals directly with its code. An alternative
+name for author-time may be \emph{edit-time}, \emph{creation-time}
+\cite{getify} or \emph{construction} \cite{mcconnell}.
 \item[Compile-time]
 is the phase in which program code is translated (compiled) into native
 machine code or an intermediate representation (e.g. Java Bytecode in
@@ -56,15 +56,16 @@ phase, during which so-called static analysis can be performed.
 
 \section{Scope}\label{scope}
 
-In computer programming, data is usually addressed through variables. At
-some point in the program, a variable is \emph{declared}, i.e. its
-existence is made known to the program. However, in most programming
-languages, a variable declaration in some part of the program does not
-necessarily make the variable accessible from \emph{all other} parts of
-the program. The area in which the variable is accessible is called its
-\emph{scope}.
+\emph{Scope} is the part of a program in which a given variable is
+accessible. In computer programming, variables are used to address
+(write and read) data. At some point in the program, a variable is
+\emph{declared}, i.e. its existence is made known to the program.
+However, in most programming languages, a variable declaration in some
+part of the program does not necessarily make the variable accessible
+from \emph{all other} parts of the program. The area in which the
+variable is accessible is called its \emph{scope}.
 
-According to \citeasnoun{getify}, \emph{scope} is „the set of rules that
+According to \citeasnoun{getify}, scope is „the set of rules that
 determines where and how a variable (identifier) can be looked-up“ and
 therefore be accessed and used. The specifics of „where and how“ depend
 on the respective programming language. Most modern languages implement
@@ -109,6 +110,9 @@ scope.
 \item[Ancestor scope]
 If scope \texttt{b} is a descendant to scope \texttt{a}, \texttt{a} is
 an ancestor of scope \texttt{b}.
+\item[Scope chain]
+Given a scope \texttt{a}, the scope chain of \texttt{a} is the set of
+nested scopes from \texttt{a} up to the global scope.
 \end{description}
 
 In JavaScript, scope nesting is an important concept for variable
@@ -127,23 +131,37 @@ is encountered}, it can have impacts on the performance as well,
 especially if the encountered variable is defined in a scope many levels
 higher in the scope chain.
 
-Nested scope can best be illustrated by the following figure:
-
 \begin{figure}[htbp]
 \centering
 \includegraphics[keepaspectratio]{img/fig2.png}
-\caption{Nested scope (Simpson 2014)}
+\caption{Nested scope in source code (Simpson 2014)}
 \label{fig:getify}
 \end{figure}
 
-The function \texttt{foo} is defined \emph{in} the global scope (1) (see
-next section), and is therefore accessible from all parts of this
-program. \texttt{foo} itself defines a new scope (2) which includes the
-identifiers \texttt{a}, \texttt{b} and \texttt{bar}. \texttt{bar}
-defines a new scope (3) within \texttt{foo}, defining only the
-identifier \texttt{c}. As can be seen, the innermost scope (3) has
-access to its own identifiers, as well as to the ones defined in its
-containing scope (2).
+The manifestation of nested scope in source code is illustrated by
+figure \ref{fig:getify}. The function \texttt{foo} is defined \emph{in}
+the global scope (1) (see next section), and is therefore accessible
+from all parts of this program. \texttt{foo} itself defines a new scope
+(2) which includes the identifiers \texttt{a}, \texttt{b} and
+\texttt{bar}. \texttt{bar} defines a new scope (3) within \texttt{foo},
+defining only the identifier \texttt{c}. As can be seen, the innermost
+scope (3) has access to its own identifiers, as well as to the ones
+defined in its containing scope (2).
+
+Figure \ref{fig:scopechain} shows the scope hierarchy for the source
+code of listing \ref{lst:server} (see appendix). Assuming that, in a
+given context, the anonymous function nested inside
+\texttt{parseMarkdown()} is the active scope (marked in orange colour),
+the figure shows its scope chain, consisting of the three scopes
+\texttt{GLOBAL}, \texttt{parseMarkdown()}, and
+\texttt{(anonymous function)}.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[keepaspectratio,width=0.7\textwidth]{img/scopechain.pdf}
+\caption{Scope hierarchy as hierarchical data structure; highlighted scope chain}
+\label{fig:scopechain}
+\end{figure}
 
 \subsection{Scoping Models}\label{scoping-models}
 
@@ -276,3 +294,10 @@ process slows down the execution of the program, as shown by
 \citeasnoun{castorina}. He furthermore suggests to cache the variable in
 a „closer“ scope, if possible.
 \end{description}
+
+Four of these five identified problems—\emph{hoisting}, \emph{closure},
+\emph{shadowing}, and \emph{lookup performance}—need to be addressed by
+the design concepts created in chapter \fullref{ideation} and prototyped
+in chapter \fullref{design}. \emph{Implicit variable declaration},
+however, is already addressed by linting tools and is therefore not in
+focus of this design process.

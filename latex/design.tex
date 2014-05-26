@@ -159,20 +159,19 @@ Furthermore, markers in the form of HTML tags were added to the subject
 source code, which made it possible to apply different
 styles\footnote{For example text colours, background colours, of font styles.}
 to regions of the code. This was later used to realize highlighting of
-the \glspl{scope-block}.
+the scope block.
 
 Two distinct \ac{ui} elements were added: a sidebar and a bottom bar.
 The content of both depends on the \emph{active scope}, i.e. the scope
-the cursor is placed in.
-
-For each of the nested \ac{scope-block} that the cursor is positioned in
-(beginning from the local scope, going outwards up to the global scope),
-the sidebar shows a pane. Each pane contains the scope’s name along with
-a list of identifiers defined within that scope. In opposition to the
-working prototype, the scripted prototype does not show phenomena like
-hoisting and shadowing. The panes are ordered ascending by logical
-distance, i.e. the local scope would be on top, the next surrounding
-scope beneath it, and so forth; up to the global scope on the bottom.
+the cursor is placed in. For each of the nested scope blocks that the
+cursor is positioned in (beginning from the local scope, going outwards
+up to the global scope), the sidebar shows a pane. Each pane contains
+the scope’s name along with a list of identifiers defined within that
+scope. In opposition to the working prototype, the scripted prototype
+does not show phenomena like hoisting and shadowing. The panes are
+ordered ascending by logical distance, i.e. the local scope would be on
+top, the next surrounding scope beneath it, and so forth; up to the
+global scope on the bottom.
 
 The different panes are hard-coded: all panes exist in the markup of the
 prototype at all times and are pre-filled with the relevant data, but
@@ -208,7 +207,7 @@ prototype’s purpose. This implies that
 
 The fact that there are no text editing facilities comes with another
 drawback, namely the absence of a cursor. If a cursor cannot be placed
-anywhere in the editor, the „activation“ of a scope block must be
+anywhere in the editor, the ‚activation‘ of a scope block must be
 achieved differently. In the case of this prototype, it is solved by
 clicking on a piece of code. However, clicking anywhere in the line
 besides the actual text will not change the active scope.
@@ -225,12 +224,12 @@ of the two sessions have been recorded as a screencast.
 
 The users liked both the „preview“ feature (hovering over a breadcrumb)
 and the sidebar. The preview gave them an opportunity to quickly get a
-visual overview of your position in the code and the active scope chain.
-The sidebar showed them which variables and functions are available in a
-given context. Overall, they liked the dynamicity of the prototype, as
-they could „play around“ with it and understand the design concept just
-by trying. They quickly made a connection between they position of the
-cursor and the active scope along with its content.
+visual overview of their position in the code and the active scope
+chain. The sidebar showed them which variables and functions are
+available in a given context. Overall, they liked the dynamicity of the
+prototype, as they could ‚play around‘ with it and understand the design
+concept just by trying. They quickly made a connection between the
+cursor position and the active scope along with its content.
 
 One of the users suggested possible improvements or alternative designs
 for existing features. He recommended a wider use of colour coding to
@@ -239,14 +238,14 @@ for example by colouring all the ancestor scopes in different shades of
 grey. He also suggested an alternative visual structure for the sidebar
 instead of the list, for example nested clusters or a graph. For
 hoisting, the user came up with an idea to integrate indicators into the
-text editor: a „phantom“ variable declaration, which would be grey and
-not editable, could be inserted on top of a scope, to show that a
-certain variable declaration would be hoisted up there. This indicator
-should be collapsible so that it does not interfere with the editing
-process. Because of technical constraints, this idea was not implemented
-in the next prototype iteration; however, it seems a sensible solution
-to the hoisting indication problem, as it communicates this implicit
-phenomenon very clearly.
+text editor: a „phantom“ variable declaration—which would be grey and
+not editable—could be inserted on top of a scope to show that a certain
+variable declaration would be hoisted up there. This indicator should be
+collapsible so that it does not interfere with the editing process.
+Because of technical constraints, this idea was not implemented in the
+next prototype iteration; however, it seems a sensible solution to the
+hoisting indication problem, as it communicates this implicit phenomenon
+very clearly.
 
 In conclusion, the prototype was well-received and served its purpose
 well. It became clear that a consistent and clear visual language for
@@ -310,10 +309,10 @@ low entry barrier.
 
 For extending Atom, it offers an \ac{api} which can be used by plug-ins.
 Atom’s internal architecture is built in a modular way, so that plug-ins
-can hook into nearly everything that happens and react on it. The
+can hook into nearly everything that happens and react to it. The
 prototype makes use of this fact in many ways, for example by showing
 and hiding its \ac{ui} elements depending on the type of file that is
-being edited. In general
+being edited.
 
 Atom is marketed by Github as a „hackable text editor for the 21st
 Century“\footnote{See \url{https://atom.io/}, accessed 18.05.2014}. It
@@ -345,11 +344,16 @@ scope objects, the metadata are its name and its location in the source
 code (row and column of the start and end points), whereas for variables
 the metadata are its name, location, if it is hoisted, by which child
 scope identifiers it is shadowed, and which identifier it is shadowing.
+Figure \ref{fig:scope} shows the data structure by example of the source
+code in listing \ref{lst:server} (see appendix). The metadata are left
+out for the sake of readability.
 
-A diagram of an exemplary data structure is shown in figure
-\ref{parser}.
-
-\textbf{TODO: insert diagram of data structure here}
+\begin{figure}[htbp]
+\centering
+\includegraphics[keepaspectratio,width=0.7\textwidth]{img/scope.pdf}
+\caption{The data structure as utilized by the prototype}
+\label{fig:scope}
+\end{figure}
 
 Using this data structure, the prototype can show meaningful data to the
 user, which would not have been possible with the \ac{ast} alone. The
@@ -379,8 +383,8 @@ foreground. Whenever the user switches to another tab, the Scope
 Inspector is activated or deactivated, depending on if the tab contains
 an editor with a JavaScript file or not.
 
-Throughout the Scope Inspector package, a visual style consistent with
-Atom’s is used. Any icons in use are taken from the
+The Scope Inspector package uses a visual style that is consistent with
+Atom’s. Any icons in use are taken from the
 Octicons\footnote{See \url{https://github.com/styleguide/css/7.0}} icon
 set, which is incorporated into every Github product. Atom supports
 themes (colour schemes) for both the application window and the editor.
@@ -560,34 +564,42 @@ Google Analytics\footnote{A website and app analytics platform.}.
 \subsection{Test installment}\label{test-installment}
 
 Atom includes a package management system with an online repository,
-called \ac{apm}. This system allows any developer to publish Atom
-packages and thus make them available for any Atom user to download and
-use. Consequently, this prototype was distributed via \ac{apm}.
+called \ac{apm}. This system allows developers to publish Atom packages
+and thus make them available for any Atom user to download and use.
+Consequently, this prototype was distributed via \ac{apm}.
 
-The author was collaborating with two full-time developers and one
-part-time developer. They agreed to install the package and use it over
-the course of one week (full-time developers) or one day (part-time
-developer), respectively, integrating it into their usual workflows.
+I originally recruited two full-time developers and one part-time
+developer for remote user testing. They agreed to install the package
+and use it over the course of one week (full-time developers) or one day
+(part-time developer), respectively, integrating it into their usual
+workflows. I would subsequently conduct interviews with them, as
+contextual inquiries were not possible, due to the fact that the
+developers are located in Germany and I am located in Sweden. However,
+neither of them was available for the actual testing phase. The
+full-time developers were—during the relevant time span—working on tasks
+of their job that do not involve JavaScript development, whereas the
+part-time developer did not have any relevant work at all.
 
-\begin{itemize}
-\itemsep1pt\parskip0pt\parsep0pt
-\item
-  2 inquiries
-\item
-  hintergrund der thesis erklären
-\item
-  klar machen dass dev weiß wie scope funzt
-\end{itemize}
+Instead, I relied on local and remote contextual interviews. Four
+potential users agreed to test the prototype in short sessions (30-60
+minutes). The sessions were not directed, except from a short
+introduction to make sure the user knows about the research background
+and the \emph{scope} concept. The users were asked to speak out loud
+during the session, and I was helping them if they got stuck or did not
+discover a feature. Two of the four sessions were recorded using
+screencasts; the others were not recorded due to technical reasons. Two
+of the four test users had previously been interviewed during the
+research phase.
 
-In addition to this directed user test, publishing the prototype via
+In addition to this planned user test, publishing the prototype via
 \ac{apm} made it available to the general public. It was announced on
 several social networks, especially targeting existing Atom users, with
-the goal of getting users to download and use it. A week after
-publishing the prototype, the number of downloads counted ???. This way
-of testing „in the wild“ makes it harder to gather feedback, compared to
-the method of addressing potential users directly. However, the
-analytics mechanism built into the prototype yielded quantitative data
-for evaluation.
+the goal of getting users to download and use it. Two weeks after
+publishing the prototype, the number of downloads counted
+\textasciitilde{}150. This way of testing „in the wild“ makes it harder
+to gather feedback, compared to the method of addressing potential users
+directly. However, it also yielded unstructured, but valuable, feedback
+on several social media channels.
 
 \subsection{Usage metrics}\label{usage-metrics}
 
@@ -722,7 +734,7 @@ possible code smells. In general, so thought one user, would it be a
 good idea to communicate the \emph{meaning} of a detected code smell and
 show them how to interpret it: Why is it a possible defect, and what can
 the developer do to fix it? This would be especially useful for more
-comples findings, such as closures (which are not implemented in this
+complex findings, such as closures (which are not implemented in this
 prototype). Those suggestions drive the design more into an educative
 direction. Additionally, one bug was found during testing, which is
 related to the parser and therefore not relevant to the interface.
@@ -738,7 +750,32 @@ mirrors the quantitative results.
 In the open source software community, social media channels are
 frequently used to state an opinion on new products, to share news, and
 to give feedback. The prototype, in the form of the Scope Inspector
-package for Atom, received some positive feedback on different channels.
+package for Atom, received positive feedback on different channels.
+
+Several
+reactions\footnote{See \url{http://www.echojs.com/comment/9867/1} and \url{https://twitter.com/vilmosioo/status/466934333681717248}}
+on the blog post about the technical side of the Scope Inspector
+\cite{tvo} suggest that there are difficulties for JavaScript developers
+to deal with CoffeeScript code. In other words, the target users of the
+package (JavaScript developers) are not directly able to improve on or
+modify the package itself. This complicates code contribution for this
+open source project.
+
+On Github, users filed two issues (bugs). One user requested the
+possibility to investigate identifiers in the sidebar more deeply (which
+is impossible to do correctly if the program is not executed). The other
+one asked for on-the-fly re-evaluation of the scope, as was already
+asked for in the interviews. At the stage of the prototype, scope is
+only re-evaluated when the file is saved; looking at linting tools,
+re-evaluating a short time (100-200ms) after the user stopped typing is
+a proven
+strategy\footnote{See \url{https://github.com/tvooo/scope-inspector/issues/7}}.
+However, this method needs to be tested in terms of performance.
+
+On the news platforms EchoJS and Reddit (JavaScript section) the package
+got little attention: four and eight upvotes, respectively, although the
+only comment on Reddit claims that it „looks
+promising“\footnote{See \url{http://www.reddit.com/r/javascript/comments/25k30l/javascript_scope_inspector_an_atom_package_to/chi27cm}}.
 
 On Twitter, which was used as a marketing instrument as well, the
 feedback was exclusively positive. One user called it „another reason to
@@ -749,28 +786,3 @@ well\footnote{See \url{https://twitter.com/raganwald/status/466930480517246976}}
 Five tweets mentioning the package have been both retweeted and
 favourited about 20
 times\footnote{Based on tweets that could be found by the Twitter search for the keyword ```scope inspector’’’.}.
-
-On the news platforms EchoJS and Reddit (JavaScript section) the package
-got little attention: four and eight upvotes, respectively, although the
-only comment on Reddit claims that it „looks
-promising“\footnote{See \url{http://www.reddit.com/r/javascript/comments/25k30l/javascript_scope_inspector_an_atom_package_to/chi27cm}}.
-
-On Github, users filed two issues (bugs). One user requested the
-possibility to investigate identifiers in the sidebar more deeply (which
-is impossible to do correctly if the program is not executed). The other
-one asked for on-the-fly re-evaluation of the scope, as was already
-asked for in the interviews. At the stage of the prototype, scope is
-only re-evaluated when the file is saved; however, looking at linting
-tools, re-evaluating a short time (100-200ms) after the user stopped
-typing seems to be a promising
-strategy\footnote{See \url{https://github.com/tvooo/scope-inspector/issues/7}}.
-This method would have been tested in terms of performance.
-
-Several
-reactions\footnote{See \url{http://www.echojs.com/comment/9867/1} and \url{https://twitter.com/vilmosioo/status/466934333681717248}}
-on the blog post about the technical side of the Scope Inspector
-\cite{tvo} suggest that there are difficulties for JavaScript developers
-to deal with CoffeeScript code. In other words, the target users of the
-package (JavaScript developers) are not directly able to improve on or
-modify the package itself. This complicates code contribution for this
-open source project.

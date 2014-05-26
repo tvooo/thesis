@@ -2,10 +2,8 @@
 
 Following the research framework, this chapter presents the exploration
 phase of the design process. Through an initial survey and a sequence of
-interviews, a whole range of problems is explored before a single
-problem, scope, is put into focus.
-
-\section{Survey \& Interviews}\label{survey-interviews}
+interviews, a whole range of problems is explored. Finally, the problem
+of scope is put into focus for this thesis.
 
 To form a general understanding of how IDEs and some of their specific
 features are used, an online survey targeted towards professional
@@ -23,7 +21,7 @@ following IDE functionalities:
 \item
   Debugging
 \item
-  API and language documentation
+  \ac{api} and language documentation
 \item
   Autocompletion
 \item
@@ -40,7 +38,7 @@ survey instrumented multiple-choice questions with an additional „Other“
 field for custom answers, as well as open-ended questions with a
 free-form text field.
 
-\subsection{Survey Results}\label{survey-results}
+\section{Survey Results}\label{survey-results}
 
 The survey participants listed 21 different programming languages they
 are using on a regular basis, as well as experience in 19 different
@@ -48,14 +46,14 @@ development environments. The participants’ background is diverse,
 although the major part seems to be working with web technologies (both
 front-end and back-end).
 
-About 76\% of the participants look up documentation mainly on the web,
-only a small percentage uses the integration of documentation into IDEs.
-However, nearly every participant (87\%) makes use of the IDE-provided
-autocompletion feature, although most of them came up with ways to
-improve it. Many comments are directed towards „smarter“, more
-context-aware autocomplete suggestions, up to levels of artificial
-intelligence. Some comments also mention a lack of performance and
-subtlety.
+About 76\% of the participants look up \ac{api} and language
+documentation mainly on the web, only a small percentage uses the
+integration of documentation into IDEs. However, nearly every
+participant (87\%) makes use of the IDE-provided autocompletion feature,
+although most of them came up with ways to improve it. Many comments are
+directed towards „smarter“, more context-aware autocomplete suggestions,
+up to levels of artificial intelligence. Some comments also mention a
+lack of performance and subtlety.
 
 Navigation within large code bases is done in many different ways, such
 as presented before: file browsers, symbol browsers, file search or
@@ -76,7 +74,7 @@ changes of the \emph{this} keyword in JavaScript, highlighting the
 currently focused block of code, or colour-coding the relationship of
 interdependent variables.
 
-\subsection{Interview Results}\label{interview-results}
+\section{Interview Results}\label{interview-results}
 
 In succession to the survey, ten participants agreed to be interviewed,
 seven of which the author conducted interviews with. The interviewees
@@ -92,9 +90,9 @@ summary of interview results that are related to the thesis project.
 Nearly all the interviewees stressed the importance of
 \emph{performance} in any software development tool, especially in IDEs
 and code editors. If a feature is too slow, reacts too slowly or slows
-the overall IDE down, it is considered obtrusive and disturbing to the
-development workflow. Especially the web developers praised lightweight
-code editors, favouring them over the more heavyweight IDEs, but still
+the overall IDE down, it is considered disturbing to the development
+workflow. Especially the web developers praised lightweight code
+editors, favouring them over the more heavyweight IDEs, but still
 recognizing their drawbacks: lightweight editors are not as \emph{smart}
 (see below).
 
@@ -128,8 +126,7 @@ approach of the Unix philosophy. If specialized programming language
 tools can be loosely plugged into lightweight development environments,
 smartness can be achieved in those environments as well. A good example
 for this is given by the numerous \emph{Linter} plug-ins for editors
-like Sublime Text (see section
-\fullref{solutions-to-analogous-problems}) and projects like
+like Sublime Text (see section \fullref{similar}) and projects like
 CTags\footnote{See \url{http://ctags.sourceforge.net/}}.
 
 The last relevant result of the interviews to be mentioned in this
@@ -153,7 +150,7 @@ extracted from the interviews: \emph{performance}, \emph{modularity},
 characteristics is important for the usability and usefulness of
 development environments, and thus for any tools that enhance them.
 
-\subsection{Scope as a valid problem}\label{scope-as-a-valid-problem}
+\section{Scope as a valid problem}\label{scope-as-a-valid-problem}
 
 Through the conducted interviews and the survey, one can argue that
 \emph{scope} is a promising and valid problem area to explore. Although

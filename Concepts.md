@@ -9,7 +9,7 @@ Whereas most of the concepts presented below apply to a wide range of programmin
 The lifecycle of a computer program consists of different phases, the most relevant of which are described briefly in this section. 
 
 Author-time
-  ~ shall be the phase during which a program is written, read, understood, and edited. There is no canonical definition or common name for this class of activities around source code, which is we define *author time* as the time separate from run time in which a program author (e.g. a developer) deals directly with its code. An alternative name for author-time may be *edit-time*, *creation-time* \cite{getify} or *construction* \cite{mcconnell}.
+  ~ shall be the phase during which a program is written, read, understood, and edited. There is no canonical definition or common name for this class of activities around source code, which is why I define *author-time* as the time separate from run-time in which a program author (e.g. a developer) deals directly with its code. An alternative name for author-time may be *edit-time*, *creation-time* \cite{getify} or *construction* \cite{mcconnell}.
 
 Compile-time
   ~ is the phase in which program code is translated (compiled) into native machine code or an intermediate representation (e.g. Java Bytecode in the case of the \ac{jvm}). This process generally consists of lexical analysis, parsing and code generation.
@@ -34,9 +34,9 @@ Identifiers are the symbolic names given to variables, which are used to access 
 
 ## Scope
 
-In computer programming, data is usually addressed through  variables. At some point in the program, a variable is *declared*, i.e. its existence is made known to the program. However, in most programming languages, a variable declaration in some part of the program does not necessarily make the variable accessible from *all other* parts of the program. The area in which the variable is accessible is called its *scope*.
+*Scope* is the part of a program in which a given variable is accessible. In computer programming, variables  are used to address (write and read) data. At some point in the program, a variable is *declared*, i.e. its existence is made known to the program. However, in most programming languages, a variable declaration in some part of the program does not necessarily make the variable accessible from *all other* parts of the program. The area in which the variable is accessible is called its *scope*.
 
-According to \citeasnoun{getify}, *scope* is „the set of rules that determines where and how a variable (identifier) can be looked-up“ and therefore be accessed and used. The specifics of „where and how“ depend on the respective programming language. Most modern languages implement *lexical scope*, which means that the scope of a variable depends on the position of its declaration in the actual source code. In other words, where in the source text a variable is declared defines also where it is usable and accessible.\footnote{The complementing concept, \emph{dynamic scope}, is not relevant to this thesis.} Lexical scope also means that scope is defined during author-time already, and can thus be analyzed early on. In contrast, the *this* keyword in JavaScript is a run-time phenomenon; its value cannot be known during author-time.
+According to \citeasnoun{getify}, scope is „the set of rules that determines where and how a variable (identifier) can be looked-up“ and therefore be accessed and used. The specifics of „where and how“ depend on the respective programming language. Most modern languages implement *lexical scope*, which means that the scope of a variable depends on the position of its declaration in the actual source code. In other words, where in the source text a variable is declared defines also where it is usable and accessible.\footnote{The complementing concept, \emph{dynamic scope}, is not relevant to this thesis.} Lexical scope also means that scope is defined during author-time already, and can thus be analyzed early on. In contrast, the *this* keyword in JavaScript is a run-time phenomenon; its value cannot be known during author-time.
 
 As scope is a concept that is central to a program, it can be used as a perspective to look at a program, too. The most obvious perspective is *source code*. Code is organized in different files, and files are lines that run from top to bottom. Another way to look at a program is by its symbols, for example modules, classes, methods. Java programs are organized in packages; each package has several classes, of which each has attributes and methods. Finally, programs can be looked at by means of scope, which has its own characteristics. Those are described in the following sections.
 
@@ -56,18 +56,28 @@ Parent scope
 Ancestor scope
   ~ If scope `b` is a descendant to scope `a`, `a` is an ancestor of scope `b`.
 
-In JavaScript, scope nesting is an important concept for variable lookup. When the JavaScript engine encounters an identifier, it looks for this identifier in the current chain of scopes. For example, if a variable is used in a scope `a`, the JavaScript engine first looks for its declaration in the immediate scope, `a`. However, if it cannot be found in the immediate scope, the next outer scope (the parent scope of `a`) is consulted, continuing the hierarchy of ancestors up until the outermost (global) scope has been reached. In other words: A variable is valid in the scope it was created, as well as in all nested (descendant) scopes. This circumstance leads to the phenomenon of shadowing, which is described later in this chapter. As this way of looking up variables is executed *each time a variable is encountered*, it can have impacts on the performance as well, especially if the encountered variable is defined in a scope many levels higher in the scope chain.
+Scope chain
+  ~ Given a scope `a`, the scope chain of `a` is the set of nested scopes from `a` up to the global scope.
 
-Nested scope can best be illustrated by the following figure:
+In JavaScript, scope nesting is an important concept for variable lookup. When the JavaScript engine encounters an identifier, it looks for this identifier in the current chain of scopes. For example, if a variable is used in a scope `a`, the JavaScript engine first looks for its declaration in the immediate scope, `a`. However, if it cannot be found in the immediate scope, the next outer scope (the parent scope of `a`) is consulted, continuing the hierarchy of ancestors up until the outermost (global) scope has been reached. In other words: A variable is valid in the scope it was created, as well as in all nested (descendant) scopes. This circumstance leads to the phenomenon of shadowing, which is described later in this chapter. As this way of looking up variables is executed *each time a variable is encountered*, it can have impacts on the performance as well, especially if the encountered variable is defined in a scope many levels higher in the scope chain.
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[keepaspectratio]{img/fig2.png}
-\caption{Nested scope (Simpson 2014)}
+\caption{Nested scope in source code (Simpson 2014)}
 \label{fig:getify}
 \end{figure}
 
-The function `foo` is defined *in* the global scope (1) (see next section), and is therefore accessible from all parts of this program. `foo` itself defines a new scope (2) which includes the identifiers `a`, `b` and `bar`. `bar` defines a new scope (3) within `foo`, defining only the identifier `c`. As can be seen, the innermost scope (3) has access to its own identifiers, as well as to the ones defined in its containing scope (2).
+The manifestation of nested scope in source code is illustrated by figure \ref{fig:getify}. The function `foo` is defined *in* the global scope (1) (see next section), and is therefore accessible from all parts of this program. `foo` itself defines a new scope (2) which includes the identifiers `a`, `b` and `bar`. `bar` defines a new scope (3) within `foo`, defining only the identifier `c`. As can be seen, the innermost scope (3) has access to its own identifiers, as well as to the ones defined in its containing scope (2).
+
+Figure \ref{fig:scopechain} shows the scope hierarchy for the source code of listing \ref{lst:server} (see appendix). Assuming that, in a given context, the anonymous function nested inside `parseMarkdown()` is the active scope (marked in orange colour), the figure shows its scope chain, consisting of the three scopes `GLOBAL`, `parseMarkdown()`,  and `(anonymous function)`.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[keepaspectratio,width=0.7\textwidth]{img/scopechain.pdf}
+\caption{Scope hierarchy as hierarchical data structure; highlighted scope chain}
+\label{fig:scopechain}
+\end{figure}
 
 ### Scoping Models
 
@@ -127,3 +137,5 @@ Implicit variable declaration
 
 Lookup performance
   ~ The variable lookup through scope chains, as described above, can have an impact on the performance of an application. Each time a variable is encountered, the JavaScript engine performs the lookup process, navigating from the bottom of the scope chain upwards until it is found. If a variable, which is defined in an ancestor scope (the global scope, for example), is accessed within a deeply nested scope, the lookup process slows down the execution of the program, as shown by \citeasnoun{castorina}. He furthermore suggests to cache the variable in a „closer“ scope, if possible.
+
+Four of these five identified problems—*hoisting*, *closure*, *shadowing*, and *lookup performance*—need to be addressed by the design concepts created in chapter \fullref{ideation} and prototyped in chapter \fullref{design}. *Implicit variable declaration*, however, is already addressed by linting tools and is therefore not in focus of this design process.

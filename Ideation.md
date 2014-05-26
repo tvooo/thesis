@@ -1,6 +1,6 @@
 # Ideation
 
-This chapter exposes the ideation phase of the design process. By looking at canonical exaples and solutions to conceptually similar problems, lessons are learned to support the ideation. A series of different concepts is sketched out, which ultimately leads to the design chosen for prototyping.
+This chapter exposes the ideation phase of the design process. By looking at canonical examples and solutions to conceptually similar problems, lessons are learned to support the ideation. A series of different concepts is sketched out, which ultimately leads to the design chosen for prototyping.
 
 ## Canonical Examples {#similar}
 
@@ -52,11 +52,11 @@ In terms of navigating and displaying tree structures in relation to the actual 
 
 At the bottom of the window, a status bar shows the nesting of the selected element: on the visual left (and logical top of the tree) is the `html` element, inside it the `body`, then a `div` and finally the selected `a` element. This status bar can be used to navigate around the nested elements by clicking on them. Clicking on the `body` element highlights it in the source code as well, and shows different style information on the right-hand side.
 
-Placed to the right of the source code is a sidebar. Although it contains a tabbed interface to browse different facets of the selected element, the one that is relevant is the one in focus on the screenshot, *Style*. The way style (through \ac{css}) is applied to HTML elements is similar to the way nested scope works: style that is defined on the containing elements may influence the style of the selected elements, which is why the relevant styles are listed in order of precedence. The style rules that apply with the highest precedence are listed on top, while the rules with the least precedence are listed on the bottom. Style rules that are overriden by rules of higher precedence are striked through to indicate that they do not apply anymore. This way of visualizing and organizing information about nested structures is further used in the following concept and design phases (see section \ref{ideation} and chapter \ref{design}).
+Placed to the right of the source code is a sidebar. Although it contains a tabbed interface to browse different facets of the selected element, the one that is relevant—*Style*— is in focus on the screenshot. The way style (through \ac{css}) is applied to HTML elements is similar to the way nested scope works: style that is defined on the containing elements may influence the style of the selected elements, which is why the relevant styles are listed in order of precedence. The style rules that apply with the highest precedence are listed on top, while the rules with the least precedence are listed on the bottom. Style rules that are overriden by rules of higher precedence are striked through to indicate that they do not apply anymore. This way of visualizing and organizing information about nested structures is further used in the following concept and design phases (see section \ref{concept-generation} and chapter \ref{design}).
 
 <!-- In **Learnable Programming**, \citename{victor} argues that programming environments should make meaning transparent \citeyear{victor}. -->
 
-## Ideation
+## Concept Generation
 
 To support the ideation phase, existing \ac{ui} components used within IDEs, as presented in chapter \ref{research}, were collected. Those components were written down on post-it notes and used as seeds for *seeded brainstorming*: for each of the components, a set of solutions should be developed that are similar, related to or based on the respective component. Most of the ideas that resulted from the brainstorming session made use of multiple components, for example the *scope chain* which is described further down: it made use of a status bar as well as the code editor.
 

@@ -22,8 +22,8 @@ Analytics
 
     1. Analytics tracking is disabled by default for ethical reasons: I do not want to track users without them knowing and explicitly giving their consent.
     2. Users do now want to opt-in to analytics tracking, or consider it to be unimportant. In this case, a stronger point for the benefits of tracking for both the user and me should be made.
-    3. The package is only used by a very low number of users. This is probably true, but the difference between the five users who enabled analytics and the 150 who downloaded it seems to be too high.
-    4. The request to opt-in is too subtle and not visible enough. It is quite possible that users do not read the README file thorougly. In this case, the option to opt-in has to be made more prominent. It can be moved up in the README file and emphasized better. Another approach would be to advertise the tracking (along with this research project) in the package-itself, for example by showing an information window on first activation of the package.
+    3. The package is only used by a very low number of users. This is likely, but the difference between the five users who enabled analytics and the 150 who downloaded it seems to be too high—the real number of users is probably in between 5 and 150.
+    4. The request to opt-in is too subtle and not visible enough. It is quite possible that users do not read the README file thorougly\footnote{The README file is commonly used in open source projects to communicate a project’s purpose and even document it. Against many presumptions, it is also usually read.}. In this case, the option to opt-in has to be made more prominent. It can be moved up in the README file and emphasized better. Another approach would be to advertise the tracking (along with this research project) in the package-itself, for example by showing an information window on first activation of the package.
     5. The tracking code is broken. This is not very possible, as in this case, the analytics tool would not have collected any data. However, it collected data throughout the two week testing period.
 
     It is probable that opt-in by default would have raised the number of tracked users significantly. However, as I stated before, this would be strongly against my ethical position and I am convinced that there are other ways to gain relevant testing data. The next most promising approach is to raise the visibility of the opt-in option and market the research better, as stated above in (2) and (4).
@@ -45,20 +45,13 @@ Remote interviews
     Given the unfortunate circumstances, the feedback gathered through remote interviews is detailed and useful. It can be used as a solid grounding to enhance the prototype in future iterations. The only point where the feedback comes short is in long-term testing—the question how well the prototype can be integrated into existing development workflows cannot be answered satisfactorily.
 
 Social Media Channels
-  ~ Social Media have been used a marketing channels as well as a feedback channel.
-
-
-- twitter verbreitung über kahlil war gut, könnte aber besser sein (key figuresin da scene)
-- github 2 bugs gemeldet, sehr gut. definitiv gut als open source zu machen.
-- twitter nettes feedback, auch von leuten die ich nicht kenn
+  ~ Social Media have been used marketing as well as feedback channels. Announcing the Scope Inspector on Twitter, EchoJS and Reddit contributed significantly to its distribution. The feedback yielded on Twitter and Github—exclusively from users who are unknown to me—shows that social media are suitable channels to communicate about and announce open source projects. For future projects it will be a good idea to ask influences on those media—JavaScript experts with a lot of connections—to look at and write about it. This way, even more traction could be gained.
 
 <!-- summary -->
 
-- Atom/APM is new, a growing platform and growing community, not long established.
-- Nächstes mal: mehr Zeit. Eine reifere Plattform wählen (allerdings kann man das Wachsen ja auch als Schrittbrett nehmen). Vergleich mit Theseus, das schon einige Monate da war…
+Atom—along with \ac{apm}—is a new platform with a growing community, which is still in its early phase. The impacts of these circumstances have been described in detail in this chapter. Whereas I expected the social media coverage to be lower than it was, the actual user testing did not go without problems.
 
-- thus, it is hard to define what is a „successful“ package
-- konnte ich das voraussehen?
+For similar projects in the future, it thus seems best to choose a more mature platform—one with more users, available on more operating systems, and with an extensive ecosystem of plug-ins, knowledge, and community. A good example for a project on such a platform is Theseus by \citeasnoun{lieber}. Based on Brackets, which is around way longer than Atom and more widely distributed (comparing the activity on Github), it had a better chance and more time to be adapted. On the other hand, the momentum of growing platforms like Atom—especially if it is backed by one of the biggest open source communities (Github)—should not be underestimated. The Scope Inspector will most likely benefit from this in the future.
 
 # Conclusion & Outlook
 
