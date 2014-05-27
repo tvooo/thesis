@@ -40,7 +40,7 @@ According to \citeasnoun{getify}, scope is „the set of rules that determines w
 
 As scope is a concept that is central to a program, it can be used as a perspective to look at said program, too. The most obvious perspective is *source code*. Code is organized in different files, and files are lines that run from top to bottom. Another way to look at a program is by its symbols, for example modules, classes, methods. Java programs are organized in packages; each package has several classes, of which each has attributes and methods. Finally, programs can be looked at by means of scope, which has its own characteristics. Those are described in the following sections.
 
-### Nested scope & variable lookup
+### Nested Scope & Variable Lookup
 
 Scope is a hierarchical concept: in many programming languages, scope can be nested by creating a scope *within* another scope. Consequently, we will use the following definitions throughout this document:
 
@@ -97,7 +97,7 @@ Expression scope
 
 JavaScript, as of ECMAScript 5, implements only *global* and *function* scope models\footnote{There are exceptions through the keywords `with` and `except` and the function `eval`.}. The run-time environment usually populates the global scope with several objects and methods. The JavaScript engines in web browsers, for instance, provide access to the \ac{dom} through the `document` object.
 
-### Common scoping problems
+### Common Scoping Problems
 
 The following are common phenomena that arise through scoping and may be the cause of problems and misconceptions. Though being typical for JavaScript, many of those problems can arise in other programming languages, in the same or similar form, as well.
 

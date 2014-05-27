@@ -18,7 +18,7 @@ For each of the areas the survey asked if and how the participants were using th
 
 The survey participants listed 21 different programming languages they are using on a regular basis, as well as experience in 19 different development environments. The participants’ backgrounds are diverse, although the major part seems to be working with web technologies (both front-end and back-end).
 
-About 76% of the participants look up \ac{api} and language documentation mainly on the web, only a small percentage uses the integration of documentation into IDEs. Besides that, nearly every participant (87%) makes use of the IDE-provided autocompletion feature, although most of them came up with ways to improve it. Many comments are directed towards „smarter“, more context-aware autocomplete suggestions, up to levels of artificial intelligence. Some comments also mention a lack of performance and subtlety.
+About 76% of the participants look up \ac{api} and language documentation mainly on the web, only a small percentage uses the integration of documentation into IDEs. Besides that, nearly every participant (87%) makes use of the IDE-provided \gls{autocompletion} feature, although most of them came up with ways to improve it. Many comments are directed towards „smarter“, more context-aware autocomplete suggestions, up to levels of artificial intelligence. Some comments also mention a lack of performance and subtlety.
 
 Navigation within large code bases is done in many different ways, such as presented before: file browsers, symbol browsers, file search or content search. However, there does not seem to be a clear general preference. For structuring code, most participants rely on platform-given modularity, for example through packages and classes in Java. In programming languages where project structures are not given, developers use frameworks and software design patterns to achieve a similar structural consistency.
 
@@ -38,7 +38,7 @@ The last relevant interview result to be mentioned in this section is a *focus o
 
 Four important characteristics for programming environments can be extracted from the interviews: *performance*, *modularity*, *smartness* and a *focus on code*. Integrating these characteristics is important for the usability and usefulness of  development environments, and thus for any language tools that enhance them.
 
-## Scope as a valid problem
+## Scope as a Valid Problem
 
 Through the conducted interviews and the survey, one can argue that *scope* is a promising and valid problem area to explore. Although it was not referred to in the survey questions in any way, *scope* was mentioned independently by several of the survey participants and interviewees in suggestions for the improvement of existing patterns and tools. One of the interviewees introduced me to Crockford’s \citeyear{crockford} approach of *context colouring* (see section \ref{similar}). A similar approach was suggested in the survey in the context of editing. Though not necessarily related to scope, the participant suggested to highlight the current code block the cursor is placed in; this is already done by some editors and IDEs, and is adapted in the concept presented in this thesis as well. Another interviewee suggested to indicate changes of the `this`\footnote{In JavaScript, the keyword \texttt{\gls{this}} refers to the current execution context.} context in JavaScript, which is closely related to scope, although being run-time specific.
 

@@ -13,7 +13,7 @@ Later, while working with Alan Kay, Tesler created the first class browser for t
 
 *\glspl{ide}* integrate text editors (due to their specific purpose also referred to here as *code editors*) with other software development tools. Typically, those tools include compilers, build systems, syntax highlighting, autocompletion, debuggers, and symbol browsers. The first \ac{ide} is said to be *Maestro I* by Softlab, a whole terminal dedicated to integrating various development tasks \cite{maestro}.
 
-## IDEs compared to Text Editors
+## IDEs Compared to Text Editors
 
 It is difficult to delimit the term „\acl{ide}“ and contrast it with text editors that are mainly used for programming. \citename{reynolds} gives a basic definition:
 
@@ -55,7 +55,7 @@ Panel (sidebar)
 Status bar
   ~ The status bar is known from many programs, for example web browsers and word processors. It is a small bar (about one text line of height) at the bottom of the program window, usually spanning the whole window width. It is mainly used to display status information and quickly switch between different application modes (for example „insert“ and „overwrite“ in word processors).
 
-### Interactional patterns
+### Interactional Patterns
 
 Navigation
   ~ Usually, code can be both browsed and searched for from different perspectives.
@@ -73,7 +73,7 @@ Input
 Execution, Evaluation and Debugging
   ~ Most IDEs allow the user not only to edit a program, but to compile, run, and debug it from inside the IDE. This has the advantage that any information related to compile-time and run-time can be used and presented directly in the IDE. In its simplest form, compilation errors or the console output of a program is shown in an extra output area on the screen. More advanced implementations show debugging or compilation data *inline*. To give an example: if the Java compiler in Eclipse encounters an error, it lists the error in an extra panel, but also underlines the affected code with a red line. For more information concerning the different lifecycle phases of a program, please refer to chapter \fullref{concepts}.
 
-## Target group
+## Target Group
 
 This thesis project targets professional JavaScript developers. Programming language tools, whether or not integrated in IDEs, target very different user groups. Some language tools are created for \ac{qa} engineers or software testers. Others address inexperienced developers and have a strong educative component. In this thesis, however, I focus on professional developers.
 

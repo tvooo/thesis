@@ -1,5 +1,8 @@
 \glossarysection[\glossarytoctitle]{\glossarytitle}\glossarypreamble
 \begin{theglossary}\glossaryheader
+\glsgroupheading{A}\relax \glsresetentrylist %
+\glossaryentryfield{autocompletion}{\glsnamefont{autocompletion}}{Predicting a word or phrase that the user wants to type in without the user actually typing it in completely.}{\relax }{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{9}}}\glsgroupskip
 \glsgroupheading{B}\relax \glsresetentrylist %
 \glossaryentryfield{breadcrumbs}{\glsnamefont{breadcrumbs}}{A user interface pattern that acts as navigation aid, allowing users to keep track of their location and navigate upwards in the hierarchy.}{\relax }{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{24}}}\glsgroupskip

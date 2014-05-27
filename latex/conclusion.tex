@@ -1,11 +1,11 @@
-\chapter{Discussion \& Reflection}\label{discussion-reflection}
+\chapter{Reflection}\label{reflection}
 
 The following chapter discusses the results of the user testing
 (evaluation) with respect to the goals presented in the introduction. It
 also reflects on the design process and makes suggestions for
 improvements in both the process and the concept.
 
-\section{Quantitative reflection}\label{quantitative-reflection}
+\section{Quantitative Reflection}\label{quantitative-reflection}
 
 From a quantitative standpoint, it is hard to tell if the \emph{Scope
 Inspector} package is useful or successful. The following two metrics
@@ -15,14 +15,14 @@ are taken into consideration.
 \item[Number of downloads]
 The number of downloads, as presented by the package
 website\footnote{See \url{https://atom.io/packages/scope-inspector}}, is
-a metric that has to be compared to others to drive a meaningful
-conclusion. The total number of Atom installations is unknown to the
-author, however, it is possible to make an estimate: The package
+a metric that has to be compared to others in order to drive a
+meaningful conclusion. The total number of Atom installations is unknown
+to me, however, it is possible to make an estimate: The package
 \emph{Find and
 Replace}\footnote{https://atom.io/packages/find-and-replace} is part of
 Atom’s standard distribution and thus should have been downloaded about
 the same amount of
-times\footnote{This estimate does not include custom builds of Atom, for example by compilation of the source on a Windows or Linux platform.}.
+times\footnote{This estimate does not include custom builds of Atom, for example by compilation of the source on Windows or Linux.}.
 By the time of writing, \emph{Find and Replace} has been downloaded
 14.000 times. Compared to this, the number of downloads for \emph{Scope
 Inspector} seems low, although one has to take different circumstances
@@ -45,16 +45,16 @@ into consideration:
 \item
   The \emph{Find and Replace} package comes with each Atom installation.
   However, to even \emph{get to know} about the Scope Inspector package,
-  one has to search for stumble upon it.
+  one has to search for or stumble upon it.
 \end{enumerate}
 
-Based on these arguments, one could find a package with more similar
+Based on these arguments, one should find a package with more similar
 characteristics to do a comparison. The one that comes closest in terms
-of target group and functionality is the JSHint plug-in for Linter
+of target group and functionality is the JSHint plug-in for the Linter
 package, which provides a JavaScript linting
 tool\footnote{See \url{https://github.com/AtomLinter/linter-jshint/tree/v0.0.1}}.
-From its first release on April 18 until the time of writing, the
-package had been installed about 4900 times, which is about 30 times the
+From its first release on April 18, 2014 until the time of writing, the
+package has been installed about 4900 times, which is about 30 times the
 number of downloads of Scope Inspector in twice the time. Given the
 familiarity of linting tools, which are part of most JavaScript
 developers’ workflows, and the novelty of Scope Inspector, one can
@@ -74,14 +74,14 @@ be a couple of reasons for this low number.
   not want to track users without them knowing and explicitly giving
   their consent.
 \item
-  Users do now want to opt-in to analytics tracking, or consider it to
+  Users do not want to opt-in to analytics tracking, or consider it to
   be unimportant. In this case, a stronger point for the benefits of
   tracking for both the user and me should be made.
 \item
   The package is only used by a very low number of users. This is
   likely, but the difference between the five users who enabled
   analytics and the 150 who downloaded it seems to be too high—the real
-  number of users is probably in between 5 and 150.
+  number of users is probably in the middle of 5 and 150.
 \item
   The request to opt-in is too subtle and not visible enough. It is
   quite possible that users do not read the README file
@@ -96,10 +96,10 @@ be a couple of reasons for this low number.
   case, the analytics tool would not have collected any data.
 \end{enumerate}
 
-It is probable that opt-in by default would have raised the number of
+It is likely that opt-in by default would have raised the number of
 tracked users significantly. However, as I stated before, this would be
 strongly against my ethical position and I am convinced that there are
-other ways to gain relevant testing data. The next most promising
+other ways to gain relevant testing data. The second most promising
 approach is to raise the visibility of the opt-in option and market the
 research better, as stated above in (2) and (4).
 
@@ -107,21 +107,20 @@ With the low number of analytics opt-ins, it is hard to draw a
 conclusion on the usefulness of the package and its single components.
 However, as the sidebar was being enabled each day of the testing period
 with the exception of one, it can be claimed that the package was
-actively used by all of the opted-in users, and not just activated but
-unused.
+actively used by all of the opted-in users.
 \end{description}
 
-\section{Qualitative reflection}\label{qualitative-reflection}
+\section{Qualitative Reflection}\label{qualitative-reflection}
 
 More meaningful than the quantitative metrics are qualitative results.
 The original goal was to evaluate the prototype by distributing it to
-the users and let two developers use it for at least one week in a real
-working environment. However, as mentioned in the previous chapter, the
-recruited developers were unable to use the prototype in their daily
-work, because they were mainly developing with \ac{html} and \ac{css}
-during that time period. For that reason, I had to rely on other ways of
-testing: remote interviews and unstructured feedback via social media
-channels.
+the users and let three developers use it for at least one week (or one
+day, respectively) in a real working environment. However, as mentioned
+in the previous chapter, the recruited developers were unable to use the
+prototype in their daily work, because they were mainly developing with
+\ac{html} and \ac{css} during that time period. For that reason, I had
+to rely on other ways of testing: remote interviews and unstructured
+feedback via social media channels.
 
 \begin{description}
 \item[Remote interviews]
@@ -145,11 +144,11 @@ The testing scenario was not optimal due to the following circumstances:
   the prototype during a whole week in a real working environment.
   Instead, only in situ testing with prepared and existing source code
   could be conducted. Given more time, it might have been possible to
-  recruit more full-time developers. Also, the two developers already
+  recruit more full-time developers. Also, the three developers already
   recruited could have participated in testing at a later point in time.
 \end{enumerate}
 
-Given the unfortunate circumstances, the feedback gathered through
+Despite the unfortunate circumstances, the feedback gathered through
 remote interviews is detailed and useful. It can be used as a solid
 grounding to enhance the prototype in future iterations. The only point
 where the feedback comes short is in long-term testing—the question how
@@ -203,7 +202,7 @@ loose grounding to evaluate language tools for professional software
 developers. Other target groups may prioritize different
 characteristics.
 
-They way that the user testing was planned and prepared seemed, at that
+The way that the user testing was planned and prepared seemed, at that
 time, reasonable. Due to my background in web development, I recruited
 professional developers I knew for user testing. However, the fact they
 could not make use of the prototype due to work reasons was
@@ -219,21 +218,13 @@ given in this case. But given enough time and access to more test users,
 this approach of evaluating designs in the field—with analytics,
 long-term tests, and social media—is promising.
 
-The way that the prototype was put into the world, marketed and
-evaluated seemed to be reasonable for an open source project and this
-target group. The lesson learned was that the short amount of time
-available for this project makes long-term testing extremely difficult,
-especially if the target group is so narrow. Given a longer time span
-and access to more test users, this seems to be an efficient way of
-evaluating designs like this.
-
-Picking \emph{scope} as a topic of focus, I was quite surprised that
-there could no integrated language tool be found that addressed scope in
-the way my design does—especially as the survey and interviews
-identified it easily as an ongoing issue in programming. This leads to
-the assumption that user-centered design methods, as were applied in
-this project, do not usually lead innovation in open source projects
-like there. A quick look into several open source
+Picking \emph{scope} as a topic of focus, I was quite surprised not to
+find any integrated language tool that addresses scope in the way my
+design does—especially as the survey and interviews identified it easily
+as an ongoing issue in programming. This leads to the assumption that
+user-centered design methods, as were applied in this project, do not
+usually lead innovation in open source projects like there. A quick look
+into several open source
 projects\footnote{User-driven innovation processes in open source software are subject to a whole other line of research, and are thus not discussed in detail here.}
 of different size shows that user participation exists in such projects,
 but is realized in a much looser way, for example through whole
@@ -246,40 +237,39 @@ Github and Launchpad\footnote{See \url{https://launchpad.net/}}.
 \citeasnoun{raymond2} states that every good work of software starts by
 scratching a developer's personal itch. However, the user-centered
 design process forces the designer to look for \emph{other developers’
-itches}. Thus I think that the result of this thesis differ from what a
+itches}. Thus I think that the results of this thesis differ from what a
 classical open source approach may have resulted in. Applying
-interaction design methodologies prooved to be highly beneficial, and
+interaction design methodologies proved to be highly beneficial, and
 will probably be so for other open source projects. While this knowledge
-contribution was not anticipated, it is very welcome.
+contribution was not expected, it is very welcome.
 
 \section{Applicability}\label{applicability}
 
 Scope is a concept that appears in most programming languages. While
-JavaScript was taken as an example throughout the design process, the
-design is transferable to other languages as well. Closest to JavaScript
-are, of course, other languages that implement functional paradigms and
-similar scoping rules, for example Clojure, Dart, or Python.
-Nevertheless, today even originally non-functional languages are
-starting to implement features like closures, most recently Java and
-PHP. But even without functional features, scope remains a problem for
-developers of many programming languages, beginners and professionals
-alike. The concept created in the course of this thesis can be
-beneficial to them, as well.
+JavaScript was taken as an example throughout the process, the design is
+transferable to other languages as well. Closest to JavaScript are, of
+course, other languages that implement functional paradigms and similar
+scoping rules, for example Clojure, Dart, or Python. Nevertheless, today
+even originally non-functional languages are starting to implement
+features like closures, most recently Java and PHP. But even without
+functional features, scope remains a problem for developers of many
+programming languages, beginners and professionals alike. The concept
+created in the course of this thesis can be beneficial to them, as well.
 
 Additionally, the concept is quite independent from the development
 environment. Though it was using the visual language and interaction
 models of Atom, those can be as easily adapted to IDEs like Eclipse,
-Visual Studio, or IntelliJ as they can be to Sublime Text, Vim, or
+Visual Studio, or IntelliJ, as they can be to Sublime Text, Vim, or
 Emacs.
 
 \section{Outlook}\label{outlook}
 
 The feedback gathered through user testing is most helpful in driving
-the Scope Inspector forward. It will be interesting to see how it will
-be adapted by the community of JavaScript developers as it starts to
+the Scope Inspector forward. I look forward to see how it will be
+adapted by the community of JavaScript developers as it starts to
 implement more relevant features, such as closure detection and sidebar
-navigation. More time will allow the long-term testing that this thesis
-project could not provide, and the prototype’s value will be proven or
-disproven in the long run. In the meantime, it will be interesting to
-see if and how interaction design methodology drives innovation in the
-open source community.
+navigation. More time will provide the long-term testing that this
+thesis project could not, and the prototype’s value will be proven or
+disproven in the long run. In the meantime, I am excited to see if and
+how interaction design methodology further drives innovation in the open
+source community.
