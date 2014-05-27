@@ -2,15 +2,15 @@
 
 The following chapter exposes the design process and reasoning behind
 the design decisions made for the prototypes. It leads through the
-different prototyping stages and user testing, closing with an
+different prototyping iterations and user testing, closing with an
 evaluation of the design.
 
-The prototyping happened in three subsequent stages. The first stage
-comprised a set of pencil sketches on paper; the second prototype was
-created with web technology, but fixed around a certain source code and
-faked interactivity; the third prototype was implemented as a plug-in
-for the Atom editor, called \emph{Scope Inspector}, and is able to work
-with any source code it is provided.
+The prototyping happened in three subsequent iterations. The first
+iteration comprised a set of pencil sketches on paper; the second
+prototype was created with web technology, but fixed around a certain
+source code and faked (scripted) interactivity; the third prototype was
+implemented as a plug-in for the Atom editor, called \emph{Scope
+Inspector}, and is able to work with any source code it is provided.
 
 In chapter \ref{exploration}, we developed four \textbf{characteristics}
 of well-integrated language tools: performance, modularity, smartness,
@@ -23,35 +23,35 @@ prototype, the addressed requirements are referred to in the respective
 section. However, some requirements are not addressed at all. The
 \emph{smartness} characteristic is not explicitly focused on by the
 design, as in the case of scope there is no ambiguity. Neither is
-\emph{Closure} addressed by any of the prototypes, for the reason that
+\emph{closure} addressed by any of the prototypes, for the reason that
 it is—from a technology perspective—hard to \emph{correctly} detect. It
-is certainly possible , but given the short amount of time it was not a
+is certainly possible, but given the short amount of time it was not a
 priority. Finally, linting tools already point out \emph{implicit
 variable declaration}, which is why it is not in the scope of the
 design.
 
 \section{Definitions}\label{definitions}
 
-To be able to discuss the qualitites of the concept and prototypes, we
-must first define a number of terms.
+To be able to discuss the qualitites of the concept and prototypes, some
+terms must first be defined.
 
 \begin{description}
 \item[Scope block]
 In a JavaScript text file, a scope block is the textual block
 representing a logical scope. For a function, which in JavaScript
 creates a new scope, the scope block starts at the \texttt{function}
-keyword and ends at the closing curly brace \texttt{\}} of the function
-body. If, in a text editor, the cursor is placed anywhere inside this
-scope block (but outside of child scopes), the scope block is called
-\emph{active scope}.
+keyword and ends at the closing curly bracket \texttt{\}} of the
+function body. If, in a code editor, the cursor is placed anywhere
+inside this scope block (but outside of its child scopes), the scope
+block is called \emph{active scope}.
 \item[Current scope]
-In a running JavaScript program, it is the currently executed scope.
-This is a term related to the run-time rather then to author-time, and
-should not be confused with \emph{active scope} described below.
+In a running JavaScript program, this is the currently executed scope.
+This is a term related to the run-time rather then to the author-time,
+and should not be confused with \emph{active scope} described below.
 \item[Active scope]
-The scope which is currently in focus of editing. In relation to IDEs,
-code editors and the prototypes presented in this chapter, the active
-scope always describes the scope that the cursor is placed in.
+The scope which is currently in focus of editing. In relation to IDEs
+and the prototypes presented in this chapter, the active scope always
+describes the scope that the cursor is placed in.
 \item[Local scope]
 In the context of nested scopes, the local scope is the one in focus (be
 it in the execution context during run-time, or the editing context
@@ -65,27 +65,26 @@ used to contrast \emph{global scope}.
 
 One could argue that sketching is part of the earlier exploration phase,
 rather than of the prototyping phase. However, next to sketching
-different ideas, the author also sketched different possible
-implementations for one feature that seemed valuable to the design
-solution: \emph{highlighting}. Highlighting of scopes through different
-colours—text or background colours—makes deeply nested scope more
-visible and thus directly addresses the problem of \emph{lookup
-performance}.
-
-The basis for the sketches were printouts of the same source code, each
-leading to a different way of highlighting.
+different ideas, I also sketched different possible implementations for
+one feature that is central to the design solution: \emph{highlighting}.
+Highlighting of scopes through different colours—text or background
+colours—makes deeply nested scope more visible and thus directly
+addresses the problem of \emph{lookup performance}. The basis for the
+sketches were printouts of the same source code, each leading to a
+different way of highlighting.
 
 \subsubsection{Active scope, inclusive}\label{active-scope-inclusive}
 
-This sketch highlights the active scope block by applying a background
-colour to it. The highlighting is \emph{inclusive}, i.e. any descendant
-(inner) scopes are highlightes as well.
+This variation highlights the active scope block by applying a
+background colour to it. The highlighting is \emph{inclusive}, i.e. any
+descendant (inner) scopes are highlighted as well. This was implemented
+in the working prototype (see section \ref{working-prototype}).
 
 \subsubsection{Active scope, exclusive}\label{active-scope-exclusive}
 
 Same as above, but descendant scope blocks are excluded from
 highlighting. This way of highlighting was implemented in the scripted
-prototype (see section \ref{working-prototype}).
+prototype (see section \ref{scripted-prototype}).
 
 \subsubsection{Active scope and ancestor
 scopes}\label{active-scope-and-ancestor-scopes}
@@ -144,7 +143,7 @@ learning overhead.
 \begin{figure}[htbp]
 \centering
 \includegraphics[keepaspectratio,width=0.75\textwidth,height=0.75\textheight]{img/prototype-1.png}
-\caption{Screenshot of the scripted prototype run in a browser}
+\caption{Screenshot of the scripted prototype}
 \label{fig:scriptedprototype}
 \end{figure}
 
@@ -266,6 +265,13 @@ editor as a so-called \emph{package} or \emph{plug-in}, released as
 \gls{oss} and was made publicly available for using and testing. The
 package is called „Scope Inspector“ and will be referred to using this
 name throughout this section.
+
+\begin{figure}[H]
+\centering
+\includegraphics[keepaspectratio,width=1\textwidth]{img/scope-inspector.png}
+\caption{Screenshot of the working prototype}
+\label{fig:scriptedprototype}
+\end{figure}
 
 \subsection{The prototyping platform}\label{the-prototyping-platform}
 
@@ -606,7 +612,7 @@ on several social media channels.
 The prototype was built with the option to collect usage metrics using
 the Google Analytics service. By default, this option was set to
 \emph{off}, as I oppose the unknown tracking of any data for ethical
-reasons. However, users were asked in the \texttt{README} file, which is
+reasons. Users were asked in the \texttt{README} file, which is
 displayed both on the package’s
 page\footnote{See \url{https://atom.io/packages/scope-inspector}} and on
 Github\footnote{See \url{https://github.com/tvooo/scope-inspector}}, to

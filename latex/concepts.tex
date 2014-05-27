@@ -4,7 +4,7 @@ In the following chapter, the design framework is further narrowed down
 towards relevant concepts of programming languages, especially
 \emph{scope}. The research done in chapter \ref{research} regarding
 software development environments still remains valid and relevant; this
-chapter only adds a new, very narrow dimension to it.
+chapter adds a new, specific dimension to it.
 
 Whereas most of the concepts presented below apply to a wide range of
 programming languages, \emph{JavaScript} was chosen as an exemplary
@@ -33,7 +33,7 @@ name for author-time may be \emph{edit-time}, \emph{creation-time}
 is the phase in which program code is translated (compiled) into native
 machine code or an intermediate representation (e.g. Java Bytecode in
 the case of the \ac{jvm}). This process generally consists of lexical
-analysis, parsing and code generation.
+analysis, parsing, and code generation.
 \item[Run-time]
 is the phase during which a program is executed. In some interpreted
 languages, \ac{jit} compilation\footnote{Just-in-Time compilation is the
@@ -41,10 +41,10 @@ languages, \ac{jit} compilation\footnote{Just-in-Time compilation is the
   during a preliminary compilation phase.} leads to a convergence of
 compile-time and run-time, which makes the distinction harder. \emph{Run
 time errors} are errors happening during run-time that could not be
-detected during compilation (for example if they depend on user input).
+detected during compilation (for example, if they depend on user input).
 \item[Debugging]
-is the process of identifying and eliminating software errors, so-called
-\emph{bugs}. This activity is usually supported by a specialized
+is the process of identifying and eliminating software errors
+(\emph{bugs}). This activity is usually supported by a specialized
 software called a \emph{debugger}. The debugger allows to hook into a
 program during run-time through so-called \emph{breakpoints} and step
 through each statement individually. At all times, the debugger can
@@ -52,7 +52,7 @@ expose the values of variables in the respective context.
 \end{description}
 
 This thesis and the according prototype mainly address the author-time
-phase, during which so-called static analysis can be performed.
+phase, during which static analysis can be performed.
 
 \section{Scope}\label{scope}
 
@@ -60,10 +60,10 @@ phase, during which so-called static analysis can be performed.
 accessible. In computer programming, variables are used to address
 (write and read) data. At some point in the program, a variable is
 \emph{declared}, i.e. its existence is made known to the program.
-However, in most programming languages, a variable declaration in some
-part of the program does not necessarily make the variable accessible
-from \emph{all other} parts of the program. The area in which the
-variable is accessible is called its \emph{scope}.
+However, in most programming languages, a variable declaration in
+\emph{one} part of the program does not necessarily make the variable
+accessible from \emph{all other} parts of the program. The area in which
+the variable is accessible is called its \emph{scope}.
 
 According to \citeasnoun{getify}, scope is „the set of rules that
 determines where and how a \gls{variable} (\gls{identifier}) can be
@@ -75,19 +75,19 @@ source code. In other words, where in the source text a variable is
 declared defines also where it is usable and
 accessible.\footnote{The complementing concept, \emph{dynamic scope}, is not relevant to this thesis.}
 Lexical scope also means that scope is defined during author-time
-already, and can thus be analyzed early on. In contrast, the \emph{this}
-keyword in JavaScript is a run-time phenomenon; its value cannot be
-known during author-time.
+already, and can thus be analyzed early on. In contrast, the
+\texttt{this} keyword in JavaScript is a run-time phenomenon; its value
+cannot be known during author-time.
 
 As scope is a concept that is central to a program, it can be used as a
-perspective to look at a program, too. The most obvious perspective is
-\emph{source code}. Code is organized in different files, and files are
-lines that run from top to bottom. Another way to look at a program is
-by its symbols, for example modules, classes, methods. Java programs are
-organized in packages; each package has several classes, of which each
-has attributes and methods. Finally, programs can be looked at by means
-of scope, which has its own characteristics. Those are described in the
-following sections.
+perspective to look at said program, too. The most obvious perspective
+is \emph{source code}. Code is organized in different files, and files
+are lines that run from top to bottom. Another way to look at a program
+is by its symbols, for example modules, classes, methods. Java programs
+are organized in packages; each package has several classes, of which
+each has attributes and methods. Finally, programs can be looked at by
+means of scope, which has its own characteristics. Those are described
+in the following sections.
 
 \subsection{Nested scope \& variable
 lookup}\label{nested-scope-variable-lookup}
@@ -111,8 +111,9 @@ scope.
 If scope \texttt{b} is a descendant to scope \texttt{a}, \texttt{a} is
 an ancestor of scope \texttt{b}.
 \item[Scope chain]
-Given a scope \texttt{a}, the scope chain of \texttt{a} is the set of
-nested scopes from \texttt{a} up to the global scope.
+Given a scope \texttt{a}, the scope chain of \texttt{a} is the list of
+nested scopes from \texttt{a} up its ancestor scopes to the global
+scope.
 \end{description}
 
 In JavaScript, scope nesting is an important concept for variable
@@ -126,10 +127,10 @@ ancestors up until the outermost (global) scope has been reached. In
 other words: A variable is valid in the scope it was created, as well as
 in all nested (descendant) scopes. This circumstance leads to the
 phenomenon of shadowing, which is described later in this chapter. As
-this way of looking up variables is executed \emph{each time a variable
-is encountered}, it can have impacts on the performance as well,
-especially if the encountered variable is defined in a scope many levels
-higher in the scope chain.
+the variable lookup is performed \emph{each time a variable is
+encountered}, it can have impacts on the performance, especially if the
+encountered variable is defined in a scope many levels higher in the
+scope chain.
 
 \begin{figure}[htbp]
 \centering
@@ -138,15 +139,15 @@ higher in the scope chain.
 \label{fig:getify}
 \end{figure}
 
-The manifestation of nested scope in source code is illustrated by
-figure \ref{fig:getify}. The \gls{function} \texttt{foo} is defined
-\emph{in} the global scope (1) (see next section), and is therefore
-accessible from all parts of this program. \texttt{foo} itself defines a
-new scope (2) which includes the identifiers \texttt{a}, \texttt{b} and
+The relation of nested scope to source code is illustrated by figure
+\ref{fig:getify}. The \gls{function} \texttt{foo} is defined \emph{in}
+the global scope (1) (see next section), and is therefore accessible
+from all parts of this program. \texttt{foo} itself defines a new scope
+(2) which includes the identifiers \texttt{a}, \texttt{b} and
 \texttt{bar}. \texttt{bar} defines a new scope (3) within \texttt{foo},
-defining only the identifier \texttt{c}. As can be seen, the innermost
+declaring only the identifier \texttt{c}. As can be seen, the innermost
 scope (3) has access to its own identifiers, as well as to the ones
-defined in its containing scope (2).
+defined in its ancestor scopes (2).
 
 Figure \ref{fig:scopechain} shows the scope hierarchy for the source
 code of listing \ref{lst:server} (see appendix). Assuming that, in a
@@ -159,7 +160,7 @@ the figure shows its scope chain, consisting of the three scopes
 \begin{figure}[htbp]
 \centering
 \includegraphics[keepaspectratio,width=0.7\textwidth]{img/scopechain.pdf}
-\caption{Scope hierarchy as hierarchical data structure; highlighted scope chain}
+\caption{Scope as hierarchical data structure; highlighted scope chain}
 \label{fig:scopechain}
 \end{figure}
 
@@ -175,26 +176,27 @@ Variables that are accessible from \emph{any point} in the program are
 in the global scope. The original BASIC programming language only
 implemented global scope.
 \item[Block scope]
-Any logical block, often denoted by containing curly braces (\texttt{\{}
-and \texttt{\}}), creates a new scope. This is the case in the C
-programming language, amongst others.
+Any logical block, often enclosed by curly brackets (\texttt{\{} and
+\texttt{\}}), creates a new scope. This is the case in the C programming
+language, amongst others.
 \item[Function scope]
 Any function definition defines a new scope. Parameters of the function
-are part of this newly defined scope, as well as variables and function
-defined within that function. JavaScript implements function scope.
+are part of this newly defined scope, as well as variables and functions
+defined \emph{within} that function. JavaScript implements function
+scope.
 \item[Expression scope]
 A variable’s scope is limited to a single expression. This useful for
 very short-living, temporary variables. It is implemented by many
 functional languages, for example Python and \gls{ecmascript} 6.
 \end{description}
 
-JavaScript, as of ECMAScript 5, implements only global and function
-scope\footnote{There are exceptions through the keywords `with` and `except` and the function `eval`.}.
-The run-time environment usually prepopulates the global scope with
-several objects and methods it exposes. The JavaScript engines in web
-browsers, for example, provide access to the \ac{dom} through the
-\texttt{document} object, whereas Node.js provides the \texttt{require}
-function to include CommonJS-style modules.
+JavaScript, as of ECMAScript 5, implements only \emph{global} and
+\emph{function} scope
+models\footnote{There are exceptions through the keywords `with` and `except` and the function `eval`.}.
+The run-time environment usually populates the global scope with several
+objects and methods. The JavaScript engines in web browsers, for
+instance, provide access to the \ac{dom} through the \texttt{document}
+object.
 
 \subsection{Common scoping problems}\label{common-scoping-problems}
 
@@ -206,13 +208,13 @@ languages, in the same or similar form, as well.
 These phenomena can in most cases be either helpful or hindering, and
 thus be desired or undesired. The goal of the concept developed in this
 thesis is to make the developer recognize those phenomena during
-author-time, and thus avoid misconceptions and reduce errors.
+author-time, and thus avoid misconceptions and reduce defects.
 
 \begin{description}
 \item[Hoisting]
 is the implicit process, as done by the JavaScript engine, of moving
 variable and function declarations „from where they appear in the flow
-of the code to the top of the code“ \cite{getify}. By code,
+of the code to the top of the code“ \cite{getify}. By „code“,
 \citename{getify} refers to the scope block. Any variable declaration
 inside a scope block is hoisted to the top of the scope block.
 
@@ -245,28 +247,28 @@ though being generally seen as hard to understand. Citing
 access its lexical scope even when that function is executing outside
 its lexical scope.“ \citeyear{getify} As functions are first-class
 objects in JavaScript, they can be passed around like variables, for
-example as callbacks. A function can also return another function.
-However, JavaScript works with \emph{lexical scope} and, according to
-the nesting rules presented before, a function must always have access
-to its ancestor scopes. Thus, when a function is being returned or
-passed as a callback, an instance of the whole scope chain is returned
-or passed along with the function. In other words, the function „closes“
-or „forms a closure“ over its ancestor scopes. In most cases, this
-behaviour is desired. Anyway it is important to recognize closures, as
-they may impact performance: the closed-over scopes have to stay in
-memory as long as a reference to the closure exists. Closure may also
-lead to unexpected behaviour, for example if a variable defined outside
-of a closure is used inside of it (see \citeasnoun*[Ch. 5]{getify} for
-examples).
+example as asynchronous callback functions. A function can also return
+another function. However, JavaScript works with \emph{lexical scope}
+and, according to the nesting rules presented before, a function must
+always have access to its ancestor scopes. Thus, when a function is
+being returned or passed as a callback, an instance of the whole scope
+chain is returned or passed along with the function. In other words, the
+function „closes“ or „forms a closure“ over its ancestor scopes. In most
+cases, this behaviour is desired. Anyway, it is important to recognize
+closures as they may impact performance: the closed-over scopes have to
+stay in memory as long as a reference to the closure exists. Closure may
+also lead to unexpected behaviour, for example if a variable defined
+outside of a closure is used inside of it (see
+\citeasnoun*[Ch. 5]{getify} for examples).
 \item[Shadowing]
 is a consequence of nested scopes. If a variable (1) is defined in an
 ancestor scope, and a new variable (2) of the same name is defined in a
 descendant scope, the descendant scope has no access to (1). This is due
 to the mechanism of variable lookup explained above. Variable (1) is
-said to be \emph{shadowed} by variable (2). As with most of the
-phenomenons listed here, this can either be desired or unwanted
-behaviour. A good solution to avoid shadowing is choosing different
-variable names throughout nested scopes.
+\emph{shadowed} by variable (2). As with most of the phenomenons listed
+here, this can either be desired or unwanted behaviour. A good solution
+to avoid shadowing is to choose different variable names throughout
+nested scopes.
 \item[Implicit variable declaration]
 JavaScript allows for the creation of variables and object properties in
 an implicit way (\emph{silently}). Instead of declaring a variable using
@@ -282,7 +284,7 @@ Variables used without prior declaration are implicitly declared in the
 scope}\footnote{ECMAScript 5’s \emph{strict mode} considers this an error.}.
 As this is usually unwanted behaviour, it is considered good practice to
 always declare variables explicitly. However, this problem is already
-addressed by linters (see \fullref{similar}).
+addressed by linters (see section \fullref{similar}).
 \item[Lookup performance]
 The variable lookup through scope chains, as described above, can have
 an impact on the performance of an application. Each time a variable is
