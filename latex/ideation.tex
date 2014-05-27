@@ -21,9 +21,9 @@ highlighting in an \ac{html} document; HTML elements are printed in
 blue, whereas attributes are printed in purple, values in red, comments
 in yellow, and content in black.
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 \centering
-\includegraphics[keepaspectratio,width=0.75\textwidth]{img/syntax_highlighting.png}
+\includegraphics[keepaspectratio,width=0.6\textwidth]{img/syntax_highlighting.png}
 \caption{Syntax highlighting in an HTML document}
 \label{fig:syntaxhighlighting}
 \end{figure}
@@ -41,26 +41,26 @@ appearance of \texttt{value} in the innermost scope is yellow, the
 colour of the scope in which \texttt{value} was declared (as a function
 parameter to the function \texttt{unit}).
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 \centering
-\includegraphics[keepaspectratio,width=0.75\textwidth]{img/context.png}
+\includegraphics[keepaspectratio,width=0.6\textwidth]{img/context.png}
 \caption{Context colouring in JavaScript, as proposed by Crockford (2013)}
 \label{fig:contexthighlighting}
 \end{figure}
 
-\textbf{Theseus} is a JavaScript debugger built as a plug-in for the
-Brackets IDE. It integrates with the code editor itself and shows
-information inline, in the gutter and in a panel on the bottom of the
-Brackets window (see Figure \ref{fig:theseus}). Theseus is mostly used
-for asynchronous debugging, so the way those UI elements are used
-corresponds to this purpose. For every function definition, Theseus
-shows (in the gutter) the number of times the function has been called.
-Functions that have never been called are marked with a grey background
-in the source code. Additionally, the panel on the bottom shows
-information about the function the cursor is positioned
-in\footnote{It shows asynchronous call stacks, which are not of relevance to this thesis.}.
+\textbf{Theseus} is a JavaScript debugging plug-in for the Brackets IDE.
+It integrates with the code editor itself and shows information inline,
+in the gutter and in a panel on the bottom of the window (see Figure
+\ref{fig:theseus}). Theseus is mostly used for asynchronous debugging,
+so the way those UI elements are used corresponds to this purpose. For
+every function definition, Theseus shows (in the gutter) the number of
+times the function has been called. Functions that have never been
+called are marked with a grey background in the source code.
+Additionally, the bottom panel shows information about the function
+under the
+cursor\footnote{It shows asynchronous call stacks, which are not of relevance to this thesis.}.
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 \centering
 \includegraphics[keepaspectratio,width=0.5\textwidth]{img/theseus.jpg}
 \caption{Theseus’ asynchronous JavaScript debugging (Lieber et al. 2014)}
@@ -106,7 +106,7 @@ allows the user to select any \acs{html} element within. In the other
 parts of the window, information relevant to the selected element is
 shown.
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 \centering
 \includegraphics[keepaspectratio,width=\textwidth,height=0.75\textheight]{img/devtools.png}
 \caption{Chrome Developer Tools with Element Inspector}
@@ -152,8 +152,8 @@ status bar as well as the code editor.
 Some ideas of the brainstorming phase made it into first sketches.
 Depending on the involved components, the sketching took two different
 approaches. For ideas that used the code editor, it was important to
-work with real, functioning code. Therefore, two JavaScript applications
-were created to serve as examples:
+work with functioning code. Thus, two JavaScript applications were
+created to serve as examples:
 
 \begin{itemize}
 \itemsep1pt\parskip0pt\parsep0pt
@@ -183,10 +183,8 @@ concepts involving the code editor. However, for concept ideas that
 would mainly work with other UI components, such as a sidebar, or such
 concept ideas that would introduce new UI components, a blank notebook
 was used for sketching. The source code of the two JavaScript programs
-can be found in the appendix.
-
-The following is a list of the concepts that have been assumed to be the
-most promising.
+can be found in the appendix. Below is a list of the concepts that have
+been assumed to be the most promising.
 
 \begin{description}
 \item[Scope Chain]
@@ -212,12 +210,11 @@ highlighting by colouring the background (as Theseus does, see section
 \fullref{similar}), rather than the text—for example in different shades
 of grey.
 \item[Inspect Scope]
-Comparable to the Chrome Developer Tools \emph{Inspect Element}
-function, the user can right-click into the source code and choose
-„Inspect Scope“, which opens a panel that shows global variables,
-current local variables as well as the value of \texttt{this} (the
-latter would be possible in a debugging environment, as \texttt{this} is
-only available at run-time).
+Comparable to the Developer Tools \emph{Inspect Element} function, the
+user can right-click into the source code and choose „Inspect Scope“,
+which opens a panel that shows global variables, current local variables
+as well as the value of \texttt{this} (the latter would be possible in a
+debugging environment, as \texttt{this} is only available at run-time).
 \item[Gutter Scope]
 Any new scope created in the source code is indicated in the gutter.
 Comparable to how Sublime Linter indicates errors (by placing a coloured
@@ -237,7 +234,7 @@ context to have access to \texttt{this}.
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[keepaspectratio,width=\textwidth]{img/sketches.png}
+\includegraphics[keepaspectratio,width=0.7\textwidth]{img/sketches.png}
 \caption{Some of the sketches created during ideation}
 \label{fig:sketches1}
 \end{figure}
