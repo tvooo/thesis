@@ -2,7 +2,7 @@
 
 In the following chapter, the design framework is further narrowed down towards relevant concepts of programming languages, especially *scope*. The research done in chapter \ref{research} regarding software development environments still remains valid and relevant; this chapter adds a new, specific dimension to it.
 
-Whereas most of the concepts presented below apply to a wide range of programming languages, *JavaScript* was chosen as an exemplary language both to explain the concepts as well as the target language of prototyping as described in chapter \fullref{design}. The reasons for this choice are my familiarity with the language, as well as the fact that JavaScript is one of the most ubiquituous languages used due to its role in the world wide web and its implementation in web browsers, respectively.
+While most of the concepts presented below apply to a wide range of programming languages,  JavaScript was chosen as an exemplary language both to explain the concepts as well as the target language of prototyping as described in chapter \fullref{design}. The reasons for this choice are my familiarity with the language, as well as the fact that JavaScript is one of the most ubiquituous languages used due to its role in the world wide web and its implementation in web browsers, respectively.
 
 ## Program Lifecycle
 

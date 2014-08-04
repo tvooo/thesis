@@ -100,6 +100,8 @@ One of the users suggested possible improvements or alternative designs for exis
 
 In conclusion, the prototype was well-received and served its purpose well. It became clear that a consistent and clear visual language for the next iteration of the prototype was necessary, and that a direct connection between the code and the scope visualization has to be communicated. Like the sketches, it addressed the *lookup performance*  problem by visualizing nested scope, even more so through the sidebar and bottom bar. It also put a stronger *focus on code* by making it navigatable using the bottom bar, and by dynamically showing changes directly in the editor.
 
+\newpage
+
 ## Working Prototype
 
 The third and final prototype was built as a working prototype capable of handling any JavaScript program, rather than as a proof-of-concept. It was integrated into the Atom\footnote{See \url{https://atom.io/}} text editor as a so-called *package* or *plug-in*, released as \gls{oss} and was made publicly available for using and testing. The package is called „Scope Inspector“ and will be referred to using this name throughout this section.
@@ -108,7 +110,7 @@ The third and final prototype was built as a working prototype capable of handli
 \centering
 \includegraphics[keepaspectratio,width=1\textwidth]{img/scope-inspector.png}
 \caption{Screenshot of the Scope Inspector}
-\label{fig:scriptedprototype}
+\label{fig:scopeinspector}
 \end{figure}
 
 ### The Prototyping Platform

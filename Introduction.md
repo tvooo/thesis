@@ -26,7 +26,7 @@ This thesis explores how language tools for professional developers can be desig
 In addition to the interaction design knowledge, this thesis makes the following contributions to the open source community:
 
 - A working, extendable open source prototype in the form of a plug-in for the Atom IDE.
-- A static analysis library to extract relevant JavaScript scope information. The library is written in CoffeeScript, released with the Atom plug-in\footnote{The library is planned to be released separately in the future.} and can theoretically be re-used in any software to analyze scope in JavaScript.
+- A static analysis library to extract JavaScript scope information. The library is  released with the Atom plug-in\footnote{The library is planned to be released separately in the future.} and can be re-used in any software to analyze scope in JavaScript.
 
 #### Limitations
 
