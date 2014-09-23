@@ -76,3 +76,12 @@ Additionally, the concept is quite independent from the development environment.
 ## Outlook
 
 The feedback gathered through user testing is most helpful in driving the Scope Inspector forward. I look forward to see how it will be adapted by the community of JavaScript developers as it starts to implement more relevant features, such as closure detection and sidebar navigation. More time will provide the long-term testing that this thesis project could not, and the prototype’s value will be proven or disproven in the long run. In the meantime, I am excited to see if and how interaction design methodology further drives innovation in the open source community.
+
+# Afterword
+
+- Clarify the source of the identified problems with scope
+- Address design improvements more clearly in chapter 7
+- update the report to reflect the latest version of the work
+- also include update on the ethics of tracking
+- Change German quotation marks to English ones
+- Consider adding a visual illustration to the UI pattern survey in chapter 2
