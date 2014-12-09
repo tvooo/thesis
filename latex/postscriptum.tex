@@ -1,0 +1,67 @@
+Between the first submission and the final defense of this thesis, some
+significant modifications were made to the prototype. These
+modifications are mostly feature enhancements, but I also reflected on
+my initial position on the ethics of \emph{tracking}. This postscriptum
+pays account to both.
+
+As Atom is still in very active development, some changes to the
+underlying architecture and the APIs are to be expected. The updated
+version of the prototype makes use of a new editor component, which
+offers better performance, and a new API for setting so-called
+\emph{markers}. Markers depict positions in the text file (row and
+column), which are then used by the Scope Inspector to highlight the
+current scope. However, the new marker API does not allow to place
+hoisting indicators as easily as before, which is why they have been
+disabled for the time being.
+
+In response to the feedback gathered during user testing, three more
+features were added.
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  Users can now independently enable and disable all three UI features
+  of the Scope Inspector: scope highlighting, the sidebar, and the
+  bottom bar. This aligns with the \emph{modularity} characteristic, as
+  identified in chapter \ref{exploration}.
+\item
+  The sidebar can be used to navigate around the source code. By
+  clicking on a scope title or a scoped variable, the cursor jumps to
+  beginning of the scope or the variable definition, respectively. This
+  feature is commonly known as “jump to definition” in IDEs.
+\item
+  A most critical feature, the \emph{on-the-fly} re-evaluation of the
+  scope structure was implemented as well. Once the user has stopped
+  typing for \texttt{n} milliseconds (200 by default), the scope
+  structure is evaluated again. Formerly, the Scope Inspector would only
+  re-evaluate when saving the file.
+\end{itemize}
+
+In addition to the modifications described above, some small
+enhancements were made to the usability. The bottom bar was made thinner
+in order to save vertical screen space, and the individual
+“breadcrumbs”, which were formerly buttons, now look closer to how
+breadcrumbs are displayed on many web sites. In the sidebar, a subtle
+hint is added in case a scope is empty; formerly, the Scope Inspector
+would just display the scope’s title.
+
+The prototype’s new version also reflects a change in my position
+towards tracking (in this particular case). The original prototype
+offered metrics tracking via opt-in; the new version, however, enables
+tracking by default (for new installations) and offers opt-out. I
+revised my concerns towards tracking, as all data being tracked are
+completely anonymous and can never lead back to a specific user.
+Collecting data this way is common practice in design research. After
+this change in policy, the analytics show that the Scope Inspector is in
+fact used daily by at least some people (as of December 2014, about 10
+users on the weekend to up to 40 users during a weekday). Enabling the
+tracking proves to be invaluable for evaluating usability from a
+quantitative perspective. The sidebar is enabled and disabled more often
+than any other component in the Scope Inspector; one can conclude that
+it is opened \emph{on demand}, whenever a user wants to have a deeper
+insight into the scope structure of a JavaScript file. Users do not use
+that \emph{jump-to-definition} functionality much; it should probably be
+communicated better. The bottom bar, however, seems to be mostly
+activated. A possible reason is that it gives the user a quick overview
+about her position in the scope chain and allows for quick preview of
+and navigation to outer scopes.
