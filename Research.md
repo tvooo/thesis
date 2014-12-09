@@ -4,7 +4,7 @@ This chapter introduces research that frames the design. It presents a short his
 
 ## History and Purpose of Integrated Development Environments
 
-> „A programming environment is a user interface for understanding a program.“  
+> “A programming environment is a user interface for understanding a program.”
 > — Bret Victor \citeyear{victor}
 
 Software development environments have been predecessed by general text editors, starting with several projects at the Xerox \gls{parc}. Douglas Engelbart created the text editor for the NLS system (oNLine System) which allowed editing with direct manipulation and \gls{wysiwyg}. In the *Gypsy* text editor, Larry Tesler first integrated modeless moving of text, which is known as *Copy & Paste* \cite{moggridge}. Text editors with those functionalities are now the core of any software development environment.
@@ -15,15 +15,15 @@ Later, while working with Alan Kay, Tesler created the first class browser for t
 
 ## IDEs Compared to Text Editors
 
-It is difficult to delimit the term „\acl{ide}“ and contrast it with text editors that are mainly used for programming. \citename{reynolds} gives a basic definition:
+It is difficult to delimit the term “\acl{ide}” and contrast it with text editors that are mainly used for programming. \citename{reynolds} gives a basic definition:
 
-> „What the [difference] is between a text editor and an IDE – to me at least – is that an IDE understands the language, whereas the text editor understands text.“ \citeyear{reynolds}
+> “What the [difference] is between a text editor and an IDE – to me at least – is that an IDE understands the language, whereas the text editor understands text.” \citeyear{reynolds}
 
-In his article, \citename{reynolds} makes a point against the use of text editors for programming by stating that an IDE brings „forward an understanding of the underlying language and the structure of code, and puts it front-and-centre in your working environment.“ \citeyear{reynolds} While certainly being correct with this point, he ignores situations where the „understanding of the underlying language and the structure of code“ is either not wanted\footnote{For example, because it may collide with other features that have a higher priority for the respective developer.} or not possible to achieve.
+In his article, \citename{reynolds} makes a point against the use of text editors for programming by stating that an IDE brings “forward an understanding of the underlying language and the structure of code, and puts it front-and-centre in your working environment.” \citeyear{reynolds} While certainly being correct with this point, he ignores situations where the “understanding of the underlying language and the structure of code” is either not wanted\footnote{For example, because it may collide with other features that have a higher priority for the respective developer.} or not possible to achieve.
 
-According to \citeasnoun{lynch} the latter is often the case in web front-end development. Through working with lots of different file types and programming languages, neither of which dictates a certain structure (in opposition to many static languages like Java), an IDE can only have a limited understanding about the structure of code. \citename{lynch} also states that IDEs „tend to be built with a workflow in mind“, therefore being seen as opinionated and failing to adapt to the developer’s very own workflow.
+According to \citeasnoun{lynch} the latter is often the case in web front-end development. Through working with lots of different file types and programming languages, neither of which dictates a certain structure (in opposition to many static languages like Java), an IDE can only have a limited understanding about the structure of code. \citename{lynch} also states that IDEs “tend to be built with a workflow in mind”, therefore being seen as opinionated and failing to adapt to the developer’s very own workflow.
 
-In other words, IDEs and text editors seem to follow different, contradirectional approaches. While the latter is built around a central paradigm (text editing) and usually comes with a minimal program core that is extendable to personal likes, IDEs tend to offer everything ‚out of the box‘ as a one-stop solution.
+In other words, IDEs and text editors seem to follow different, contradirectional approaches. While the latter is built around a central paradigm (text editing) and usually comes with a minimal program core that is extendable to personal likes, IDEs tend to offer everything ‘out of the box’ as a one-stop solution.
 
 For this thesis, the distinction only plays a subordinate role, as most of the concepts and ideas discussed here can be applied to both kinds of software. However, it is important to clarify that *both* are adressed when using, interchangably, any of the following terms: *Integrated Development Environment (IDE)*, *development environment*, *software development environment*, *programming environment*.
 
@@ -53,7 +53,7 @@ Panel (sidebar)
   ~ A panel is a rectangular \ac{ui} area used to group together interface elements of similar functionality or other commonalities. Often, panels are used on the edges of application windows; if they are on the left or right side, they may be called *sidebar*. Panels that host a great number of program functionalities are often called *toolbar*. Some applications implement *dockable* panels, which can be moved around and snapped to different areas on the screen. Another common characteristic is that panels can be resized and *toggled*, i.e. shown and hidden, on demand.
 
 Status bar
-  ~ The status bar is known from many programs, for example web browsers and word processors. It is a small bar (about one text line of height) at the bottom of the program window, usually spanning the whole window width. It is mainly used to display status information and quickly switch between different application modes (for example „insert“ and „overwrite“ in word processors).
+  ~ The status bar is known from many programs, for example web browsers and word processors. It is a small bar (about one text line of height) at the bottom of the program window, usually spanning the whole window width. It is mainly used to display status information and quickly switch between different application modes (for example “insert” and “overwrite” in word processors).
 
 ### Interactional Patterns
 

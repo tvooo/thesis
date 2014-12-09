@@ -22,21 +22,11 @@ Debugging
 
 This thesis and the according prototype mainly address the author-time phase, during which static analysis can be performed.
 
-<!--
-## Identifiers, Variables and Functions
-
-Most programming languages allow to manage their *state*. This is done using so-called *variables*.
-
-Functions are…
-
-Identifiers are the symbolic names given to variables, which are used to access (read and modify) their contents. In JavaScript, functions can be treated as variables as well.
--->
-
 ## Scope
 
 *Scope* is the part of a program in which a given variable is accessible. In computer programming, variables  are used to address (write and read) data. At some point in the program, a variable is *declared*, i.e. its existence is made known to the program. However, in most programming languages, a variable declaration in *one* part of the program does not necessarily make the variable accessible from *all other* parts of the program. The area in which the variable is accessible is called its *scope*.
 
-According to \citeasnoun{getify}, scope is „the set of rules that determines where and how a \gls{variable} (\gls{identifier}) can be looked-up“ and therefore be accessed and used. The specifics of „where and how“ depend on the respective programming language. Most modern languages implement *lexical scope*, which means that the scope of a variable depends on the position of its declaration in the actual source code. In other words, where in the source text a variable is declared defines also where it is usable and accessible.\footnote{The complementing concept, \emph{dynamic scope}, is not relevant to this thesis.} Lexical scope also means that scope is defined during author-time already, and can thus be analyzed early on. In contrast, the `this` keyword in JavaScript is a run-time phenomenon; its value cannot be known during author-time.
+According to \citeasnoun{getify}, scope is “the set of rules that determines where and how a \gls{variable} (\gls{identifier}) can be looked-up” and therefore be accessed and used. The specifics of “where and how” depend on the respective programming language. Most modern languages implement *lexical scope*, which means that the scope of a variable depends on the position of its declaration in the actual source code. In other words, where in the source text a variable is declared defines also where it is usable and accessible.\footnote{The complementing concept, \emph{dynamic scope}, is not relevant to this thesis.} Lexical scope also means that scope is defined during author-time already, and can thus be analyzed early on. In contrast, the `this` keyword in JavaScript is a run-time phenomenon; its value cannot be known during author-time.
 
 As scope is a concept that is central to a program, it can be used as a perspective to look at said program, too. The most obvious perspective is *source code*. Code is organized in different files, and files are lines that run from top to bottom. Another way to look at a program is by its symbols, for example modules, classes, methods. Java programs are organized in packages; each package has several classes, of which each has attributes and methods. Finally, programs can be looked at by means of scope, which has its own characteristics. Those are described in the following sections.
 
@@ -104,7 +94,7 @@ The following are common phenomena that arise through scoping and may be the cau
 These phenomena can in most cases be either helpful or hindering, and thus be desired or undesired. The goal of the concept developed in this thesis is to make the developer recognize those phenomena during author-time, and thus avoid misconceptions and reduce defects.
 
 Hoisting
-  ~ is the implicit process, as done by the JavaScript engine, of moving variable and function declarations „from where they appear in the flow of the code to the top of the code“ \cite{getify}. By „code“, \citename{getify} refers to the scope block. Any variable declaration inside a scope block is hoisted to the top of the scope block.
+  ~ is the implicit process, as done by the JavaScript engine, of moving variable and function declarations “from where they appear in the flow of the code to the top of the code” \cite{getify}. By “code”, \citename{getify} refers to the scope block. Any variable declaration inside a scope block is hoisted to the top of the scope block.
     
 				function foo() {
 				  a = 2;
@@ -120,10 +110,10 @@ Hoisting
 				  console.log( a );
 				}
 
-    The variable declaration of `a` is moved, or „hoisted“, to the top of the scope block of `foo`. Hoisting can impose unexpected behaviour, especially when declaring variables of the same name in nested scopes.
+    The variable declaration of `a` is moved, or “hoisted”, to the top of the scope block of `foo`. Hoisting can impose unexpected behaviour, especially when declaring variables of the same name in nested scopes.
 
 Closure
-  ~ is a common phenomenon in JavaScript programs, and is widely used, though being generally seen as hard to understand. Citing \citename{getify}, closure is „when a function is able to remember and access its lexical scope even when that function is executing outside its lexical scope.“ \citeyear{getify} As functions are first-class objects in JavaScript, they can be passed around like variables, for example as asynchronous callback functions. A function can also return another function. However, JavaScript works with *lexical scope* and, according to the nesting rules presented before, a function must always have access to its ancestor scopes. Thus, when a function is being returned or passed as a callback, an instance of the whole scope chain is returned or passed along with the function. In other words, the function „closes“ or „forms a closure“ over its ancestor scopes.  In most cases, this behaviour is desired. Anyway, it is important to recognize closures as they may impact performance: the closed-over scopes have to stay in memory as long as a reference to the closure exists. Closure may also lead to unexpected behaviour, for example if a variable defined outside of a closure is used inside of it (see \citeasnoun*[Ch. 5]{getify} for examples).
+  ~ is a common phenomenon in JavaScript programs, and is widely used, though being generally seen as hard to understand. Citing \citename{getify}, closure is “when a function is able to remember and access its lexical scope even when that function is executing outside its lexical scope.” \citeyear{getify} As functions are first-class objects in JavaScript, they can be passed around like variables, for example as asynchronous callback functions. A function can also return another function. However, JavaScript works with *lexical scope* and, according to the nesting rules presented before, a function must always have access to its ancestor scopes. Thus, when a function is being returned or passed as a callback, an instance of the whole scope chain is returned or passed along with the function. In other words, the function “closes” or “forms a closure” over its ancestor scopes.  In most cases, this behaviour is desired. Anyway, it is important to recognize closures as they may impact performance: the closed-over scopes have to stay in memory as long as a reference to the closure exists. Closure may also lead to unexpected behaviour, for example if a variable defined outside of a closure is used inside of it (see \citeasnoun*[Ch. 5]{getify} for examples).
 
 Shadowing
   ~ is a consequence of nested scopes. If a variable (1) is defined in an ancestor scope, and a new variable (2) of the same name is defined in a descendant scope, the descendant scope has no access to (1). This is due to the mechanism of variable lookup explained above. Variable (1) is  *shadowed* by variable (2). As with most of the phenomenons listed here, this can either be desired or unwanted behaviour. A good solution to avoid shadowing is to choose different variable names throughout nested scopes.
@@ -136,6 +126,6 @@ Implicit variable declaration
     Variables used without prior declaration are implicitly declared in the *global scope*\footnote{ECMAScript 5’s \emph{strict mode} considers this an error.}. As this is usually unwanted behaviour, it is considered good practice to always declare variables explicitly. However, this problem is already addressed  by linters (see section \fullref{similar}).
 
 Lookup performance
-  ~ The variable lookup through scope chains, as described above, can have an impact on the performance of an application. Each time a variable is encountered, the JavaScript engine performs the lookup process, navigating from the bottom of the scope chain upwards until it is found. If a variable, which is defined in an ancestor scope (the global scope, for example), is accessed within a deeply nested scope, the lookup process slows down the execution of the program, as shown by \citeasnoun{castorina}. He furthermore suggests to cache the variable in a „closer“ scope, if possible.
+  ~ The variable lookup through scope chains, as described above, can have an impact on the performance of an application. Each time a variable is encountered, the JavaScript engine performs the lookup process, navigating from the bottom of the scope chain upwards until it is found. If a variable, which is defined in an ancestor scope (the global scope, for example), is accessed within a deeply nested scope, the lookup process slows down the execution of the program, as shown by \citeasnoun{castorina}. He furthermore suggests to cache the variable in a “closer” scope, if possible.
 
 Four of these five identified problems—*hoisting*, *closure*, *shadowing*, and *lookup performance*—need to be addressed by the design concepts created in chapter \fullref{ideation} and prototyped in chapter \fullref{design}. *Implicit variable declaration*, however, is already addressed by linting tools and is therefore not in focus of this design process.

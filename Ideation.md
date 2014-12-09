@@ -13,7 +13,7 @@ The most ubiquitous visualization of program structure is probably *syntax highl
 \label{fig:syntaxhighlighting}
 \end{figure}
 
-In his talk „Monads and Gonads“, \citename{crockford} presents an alternative to syntax highlighting which he calls „context colouring“ \citeyear{crockford}. Instead of using font styles and colours in order to highlight different elements of the *syntax*, he instead highlights different *scopes*. Figure \ref{fig:contexthighlighting} illustrates this concept: The global scope is presented in white, whereas nested scopes are marked green, yellow and blue, respectively. In this concrete example, identifiers are always coloured in the colour of the scope of *where they were defined*. For example, the appearance of `value` in the innermost scope is yellow, the colour of the scope in which `value` was declared (as a function parameter to the function `unit`).
+In his talk “Monads and Gonads”, \citename{crockford} presents an alternative to syntax highlighting which he calls “context colouring” \citeyear{crockford}. Instead of using font styles and colours in order to highlight different elements of the *syntax*, he instead highlights different *scopes*. Figure \ref{fig:contexthighlighting} illustrates this concept: The global scope is presented in white, whereas nested scopes are marked green, yellow and blue, respectively. In this concrete example, identifiers are always coloured in the colour of the scope of *where they were defined*. For example, the appearance of `value` in the innermost scope is yellow, the colour of the scope in which `value` was declared (as a function parameter to the function `unit`).
 
 \begin{figure}[H]
 \centering
@@ -54,8 +54,6 @@ At the bottom of the window, a status bar shows the nesting of the selected elem
 
 Placed to the right of the source code is a sidebar. While it contains a tabbed interface to browse different facets of the selected element, the one that is relevant—*Style*— is in focus on the screenshot. The way that \ac{css} are applied to HTML elements is similar to the way nested scope works: style that is defined on the ancestor elements may influence the style of the selected element, which is why the relevant styles are listed in order of precedence. The style rules that apply with the highest precedence are listed on top, while the rules with the lowest precedence are listed on the bottom. Style rules that are overriden by rules of higher precedence are striked through, to indicate that they do not apply anymore. This way of visualizing and organizing information about nested structures is further used in the following concept and design phases (see section \ref{concept-generation} and chapter \ref{design}).
 
-<!-- In **Learnable Programming**, \citename{victor} argues that programming environments should make meaning transparent \citeyear{victor}. -->
-
 ## Concept Generation
 
 To support the ideation phase, existing \ac{ui} components used within IDEs, as presented in chapter \ref{research}, were collected. Those components were written down on post-it notes and used as seeds for *seeded brainstorming*: for each of the components, a set of solutions should be developed that are similar, related to or based on the respective component. Most of the ideas that resulted from the brainstorming session make use of multiple components, for example the *scope chain* which is described further down: it made use of a status bar as well as the code editor.
@@ -79,13 +77,13 @@ Scope Colouring
   ~ Similarly suggested by \citeasnoun{crockford}, the source code can be coloured depending on its scope level. Crockford’s variation is meant to replace syntax highlighting; one could instead complement syntax highlighting by colouring the background (as Theseus does, see section \fullref{similar}), rather than the text—for example in different shades of grey.
 
 Inspect Scope
-  ~ Comparable to the Developer Tools *Inspect Element* function, the user can right-click into the source code and choose „Inspect Scope“, which opens a panel that shows global variables, current local variables as well as the value of `this` (the latter would be possible in a debugging environment, as `this` is only available at run-time).
+  ~ Comparable to the Developer Tools *Inspect Element* function, the user can right-click into the source code and choose “Inspect Scope”, which opens a panel that shows global variables, current local variables as well as the value of `this` (the latter would be possible in a debugging environment, as `this` is only available at run-time).
 
 Gutter Scope
   ~ Any new scope created in the source code is indicated in the gutter. Comparable to how Sublime Linter indicates errors (by placing a coloured dot or square in the gutter), the boundaries of the scope (i.e. its first and last line) are denoted by a coloured dot. For every scope level, the colour of the dot is different, so that the user can easily see how deeply nested the scope is at any given point.
 
 Quick Inspect
-  ~ Similar to the *Quick Edit* feature of Brackets, the value of `this` can be inspected inline. By right-clicking on any point in the source code and choosing the context menu point „Quick Inspect“, an area slides out inline (between two lines of source code), showing the value of `this` and available scope variables. As with the **Inspect Scope** concept, this would require to run in a debugging context to have access to `this`.
+  ~ Similar to the *Quick Edit* feature of Brackets, the value of `this` can be inspected inline. By right-clicking on any point in the source code and choosing the context menu point “Quick Inspect”, an area slides out inline (between two lines of source code), showing the value of `this` and available scope variables. As with the **Inspect Scope** concept, this would require to run in a debugging context to have access to `this`.
 
 \begin{figure}[htbp]
 \centering

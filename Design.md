@@ -6,13 +6,6 @@ The prototyping happened in three subsequent iterations. The first iteration com
 
 In chapter \ref{exploration}, we developed four **characteristics** of well-integrated language tools: performance, modularity, smartness, and a focus on code. Additionally, we listed five common scoping **problems** in chapter \ref{concepts}: hoisting, closure, shadowing, implicit variable declaration, and lookup performance. The design needs to address both the characteristics (non-functional requirements) and the problems (functional requirements). For every prototype, the addressed requirements are referred to in the respective section. However, some requirements are not addressed at all. The *smartness* characteristic is not explicitly focused on by the design, as in the case of scope there is no ambiguity.  Neither is *closure* addressed by any of the prototypes, for the reason that it is—from a technology perspective—hard to *correctly* detect. It is certainly possible, but given the short amount of time it was not a priority. Finally, linting tools already point out *implicit variable declaration*, which is why it is not in the scope of the design.
 
-<!--
-
-The first prototype only addresses nesting. While nesting is not generally seen as a problem, deeply nested scope is more complex than „flat“ scope, and may even have performance impacts, as stated in chapter \ref{concepts}. Thus, making the nesting visible may result in users being more conscious of their coding style and its impacts. The prototype therefore addresses the *lookup performance* problem. The second, scripted prototype addresses nesting as well as *shadowing* by indicating shadowing and shadowed identifiers in the sidebar.
-
-The third prototype additionally indicates *hoisting*. Hoisted indicators are shown both inline and in the sidebar. As the working prototype, it also addresses the non-functional characteristics
--->
-
 ## Definitions
 
 To be able to discuss the qualitites of the concept and prototypes, some terms must first be defined.
@@ -47,7 +40,7 @@ Next to highlighting the active scope, its ancestor scopes can also be highlight
 
 #### Scope colouring
 
-Described by Crockford \citeyear{crockford} as „context colouring“, this way of highlighting would not apply a background colour, but instead replace the existing forms of syntax highlighting. Thus, the highlighting would not depend on the cursor position (which defines the *active scope*), but would be static instead.
+Described by Crockford \citeyear{crockford} as “context colouring”, this way of highlighting would not apply a background colour, but instead replace the existing forms of syntax highlighting. Thus, the highlighting would not depend on the cursor position (which defines the *active scope*), but would be static instead.
 
 #### Identifier origin
 
@@ -94,9 +87,9 @@ The fact that there are no text editing facilities comes with another drawback, 
 
 The prototype was tested with two JavaScript developers in individual in-person walkthrough sessions. The users were introduced to the concept, if they were not familiar with it already, and explained the basic constraints of the prototype (as mentioned above). They were thereafter able to explore and test the prototype to their likings. One of the two sessions has been recorded as a screencast.
 
-The users liked both the „preview“ feature (hovering over a breadcrumb) and the sidebar. The preview gave them an opportunity to quickly get a visual overview of their position in the code and the active scope chain. The sidebar showed them which variables and functions are available in a given context. Overall, they liked the dynamicity of the prototype, as they could ‚play around‘ with it and understand the design concept just by trying. They quickly made a connection between the cursor position and the active scope along with its content.
+The users liked both the “preview” feature (hovering over a breadcrumb) and the sidebar. The preview gave them an opportunity to quickly get a visual overview of their position in the code and the active scope chain. The sidebar showed them which variables and functions are available in a given context. Overall, they liked the dynamicity of the prototype, as they could ‚play around‘ with it and understand the design concept just by trying. They quickly made a connection between the cursor position and the active scope along with its content.
 
-One of the users suggested possible improvements or alternative designs for existing features. He recommended a wider use of colour coding to create a link between the scope in the editor window and the sidebar, for example by colouring all the ancestor scopes in different shades of grey. He also suggested an alternative visual structure for the sidebar instead of the list, for example nested clusters or a graph. For hoisting, the user came up with an idea to integrate indicators into the text editor: a „phantom“ variable declaration—which would be grey and not editable—could be inserted on top of a scope to show that a certain variable declaration would be hoisted up there. This indicator should be collapsible so that it does not interfere with the editing process. Because of technical constraints, this idea was not implemented in the next prototype iteration; however, it seems a sensible solution to the hoisting indication problem, as it communicates this implicit phenomenon very clearly.
+One of the users suggested possible improvements or alternative designs for existing features. He recommended a wider use of colour coding to create a link between the scope in the editor window and the sidebar, for example by colouring all the ancestor scopes in different shades of grey. He also suggested an alternative visual structure for the sidebar instead of the list, for example nested clusters or a graph. For hoisting, the user came up with an idea to integrate indicators into the text editor: a “phantom” variable declaration—which would be grey and not editable—could be inserted on top of a scope to show that a certain variable declaration would be hoisted up there. This indicator should be collapsible so that it does not interfere with the editing process. Because of technical constraints, this idea was not implemented in the next prototype iteration; however, it seems a sensible solution to the hoisting indication problem, as it communicates this implicit phenomenon very clearly.
 
 In conclusion, the prototype was well-received and served its purpose well. It became clear that a consistent and clear visual language for the next iteration of the prototype was necessary, and that a direct connection between the code and the scope visualization has to be communicated. Like the sketches, it addressed the *lookup performance*  problem by visualizing nested scope, even more so through the sidebar and bottom bar. It also put a stronger *focus on code* by making it navigatable using the bottom bar, and by dynamically showing changes directly in the editor.
 
@@ -104,7 +97,7 @@ In conclusion, the prototype was well-received and served its purpose well. It b
 
 ## Working Prototype
 
-The third and final prototype was built as a working prototype capable of handling any JavaScript program, rather than as a proof-of-concept. It was integrated into the Atom\footnote{See \url{https://atom.io/}} text editor as a so-called *package* or *plug-in*, released as \gls{oss} and was made publicly available for using and testing. The package is called „Scope Inspector“ and will be referred to using this name throughout this section.
+The third and final prototype was built as a working prototype capable of handling any JavaScript program, rather than as a proof-of-concept. It was integrated into the Atom\footnote{See \url{https://atom.io/}} text editor as a so-called *package* or *plug-in*, released as \gls{oss} and was made publicly available for using and testing. The package is called “Scope Inspector” and will be referred to using this name throughout this section.
 
 \begin{figure}[H]
 \centering
@@ -123,7 +116,7 @@ Atom is built on web technologies, namely \gls{webkit}\footnote{See \url{http://
 
 For extending Atom, it offers an \ac{api} which can be used by plug-ins. Atom’s internal architecture is built in a modular way, so that plug-ins can hook into nearly everything that happens and react to it. The prototype makes use of this fact in many ways, for example by showing and hiding its \ac{ui} elements depending on the type of file that is being edited.
 
-Atom is marketed by Github as a „hackable text editor for the 21st Century“\footnote{See \url{https://atom.io/}, accessed 18.05.2014}. It is also intended to be a „deeply extensible system that blurs the distinction between ‚user‘ and ‚developer‘.“ Those claims lead to the conclusion that Atom is a text editor built for developers, especially—but not exclusively—web developers. While not every web developer is a proficient JavaScript developer, the target groups of Atom and this prototype seem to overlap to a large extent.
+Atom is marketed by Github as a “hackable text editor for the 21st Century”\footnote{See \url{https://atom.io/}, accessed 18.05.2014}. It is also intended to be a “deeply extensible system that blurs the distinction between ‘user’ and ‘developer’.” Those claims lead to the conclusion that Atom is a text editor built for developers, especially—but not exclusively—web developers. While not every web developer is a proficient JavaScript developer, the target groups of Atom and this prototype seem to overlap to a large extent.
 
 ### Parsing and Gathering Relevant Information
 
@@ -187,7 +180,7 @@ The bottom bar serves two purposes: it provides a quick glance of where in the s
 \label{fig:bottombar}
 \end{figure}
 
-On the right side of the bottom bar, two toggle buttons allow for enabling and disabling of two features. The right button, showing a list icon, shows or hides the sidebar. The left button with the label „Highlight Global“ toggles the highlighting of the global scope (as described above).
+On the right side of the bottom bar, two toggle buttons allow for enabling and disabling of two features. The right button, showing a list icon, shows or hides the sidebar. The left button with the label “Highlight Global” toggles the highlighting of the global scope (as described above).
 
 The left side of the bottom bar shows the breadcrumbs known from the scripted prototype. The breadcrumbs, implemented here as simple buttons, are labeled with the corresponding scope name. The global scope is always on the left, whereas the currently local, active scope is on the right. By hovering over any of the breadcrumb buttons, the user can preview the respective scope highlighting in the editor. The preview is applied in addition to the currently active highlight, in a different colour.
 
@@ -204,11 +197,11 @@ The sidebar shows content depending on the currently active scope. Similar to th
 \label{fig:protosidebar}
 \end{figure}
 
-Each pane is entitled by the name of the scope. In case of function scope, the name of the function becomes the scope name (‚(anonymous function)‘ in the case of an unnamed function expression). In case of the global scope, the name is ‚GLOBAL‘. Underneath the title, the names of all identifiers defined within the scope are listed, along with certain attribute annotations.
+Each pane is entitled by the name of the scope. In case of function scope, the name of the function becomes the scope name (‘(anonymous function)’ in the case of an unnamed function expression). In case of the global scope, the name is ‘GLOBAL’. Underneath the title, the names of all identifiers defined within the scope are listed, along with certain attribute annotations.
 
-* Function parameters are listed first. They appear with the annotation „param“, set in smaller text size to the right.
+* Function parameters are listed first. They appear with the annotation “param”, set in smaller text size to the right.
 * General variables follow the parameters. If they are not shadowed, they have no annotations.
-* Functions are the last entities in the list. They are connotated with a pair of parantheses ‚()‘.
+* Functions are the last entities in the list. They are connotated with a pair of parantheses ‘()’.
 
 The listed identifiers show also if they are hoisted, shadowed, or if they shadow other identifiers. This is indicated by different stylistic changes.
 
@@ -230,7 +223,7 @@ I originally recruited two full-time developers and one part-time developer for 
 
 Instead, I relied on local and remote contextual interviews. Four potential users agreed to test the prototype in short sessions (30-60 minutes). The sessions were not directed, except from a short introduction to make sure the user knows about the research background and the *scope* concept. The users were asked to speak out loud during the session, and I was helping them if they got stuck or did not discover a feature. Two of the four sessions were recorded using screencasts; the others were not recorded due to technical reasons. Two of the four test users had previously been interviewed during the research phase.
 
-In addition to this planned user test, publishing the prototype via \ac{apm} made it available to the general public. It was announced on several social networks, especially targeting existing Atom users, with the goal of getting users to download and use it. Two weeks after publishing the prototype, the number of downloads counted ~150. This way of testing „in the wild“ makes it harder to gather feedback, compared to the method of addressing potential users directly. However, it also yielded unstructured but valuable feedback on several social media channels.
+In addition to this planned user test, publishing the prototype via \ac{apm} made it available to the general public. It was announced on several social networks, especially targeting existing Atom users, with the goal of getting users to download and use it. Two weeks after publishing the prototype, the number of downloads counted ~150. This way of testing “in the wild” makes it harder to gather feedback, compared to the method of addressing potential users directly. However, it also yielded unstructured but valuable feedback on several social media channels.
 
 ### Usage Metrics
 
@@ -288,9 +281,9 @@ Several reactions\footnote{See \url{http://www.echojs.com/comment/9867/1} and\\\
 
 On Github, users filed two issues (bugs). One user requested the possibility to investigate identifiers in the sidebar more deeply (which is impossible to do correctly if the program is not executed). The other one asked for on-the-fly re-evaluation of the scope, as was already asked for in the interviews. At the stage of the prototype, scope is only re-evaluated when the file is saved; looking at linting tools, re-evaluating a short time (100-200ms) after the user stopped typing is a proven strategy\footnote{See \url{https://github.com/tvooo/scope-inspector/issues/7}}. However, this method needs to be tested in terms of performance.
 
-On the news platforms EchoJS and Reddit (JavaScript section) the package got little attention: four and eight upvotes, respectively, although the only comment on Reddit claims that it „looks promising“\footnote{See \url{http://www.reddit.com/r/javascript/comments/25k30l/javascript_scope_inspector_an_atom_package_to/chi27cm}}.
+On the news platforms EchoJS and Reddit (JavaScript section) the package got little attention: four and eight upvotes, respectively, although the only comment on Reddit claims that it “looks promising”\footnote{See \url{http://www.reddit.com/r/javascript/comments/25k30l/javascript_scope_inspector_an_atom_package_to/chi27cm}}.
 
-On Twitter, which was used as a marketing instrument as well, the feedback was exclusively positive. One user called it „another reason to consider switching from [Sublime Text to Atom]“\footnote{See \url{https://twitter.com/adardesign/status/466589449561055232}}, while others seemed to be positively surprised\footnote{See \url{https://twitter.com/raganwald/status/466930480517246976}}. Five tweets mentioning the package have been both retweeted and favourited about 20 times\footnote{Based on tweets that could be found by the Twitter search for the keyword `scope inspector'.}.
+On Twitter, which was used as a marketing instrument as well, the feedback was exclusively positive. One user called it “another reason to consider switching from [Sublime Text to Atom]”\footnote{See \url{https://twitter.com/adardesign/status/466589449561055232}}, while others seemed to be positively surprised\footnote{See \url{https://twitter.com/raganwald/status/466930480517246976}}. Five tweets mentioning the package have been both retweeted and favourited about 20 times\footnote{Based on tweets that could be found by the Twitter search for the keyword `scope inspector'.}.
 
 
 

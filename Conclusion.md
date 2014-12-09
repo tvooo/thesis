@@ -2,8 +2,6 @@
 
 The following chapter discusses the results of the user testing (evaluation) with respect to the goals presented in the introduction. It also reflects on the design process and makes suggestions for improvements in both the process and the concept.
 
-<!-- quantitatives -->
-
 ## Quantitative Reflection
 
 From a quantitative standpoint, it is hard to tell if the *Scope Inspector* package is useful or successful. The following two metrics are taken into consideration.
@@ -29,7 +27,6 @@ Analytics
     It is likely that opt-in by default would have raised the number of tracked users significantly. However, as I stated before, this would be strongly against my ethical position and I am convinced that there are other ways to gain relevant testing data. The second most promising approach is to raise the visibility of the opt-in option and market the research better, as stated above in (2) and (4).
 
     With the low number of analytics opt-ins, it is hard to draw a conclusion on the usefulness of the package and its single components. However, as the sidebar was being enabled each day of the testing period with the exception of one, it can be claimed that the package was actively used by all of the opted-in users.
-<!-- qualitatives -->
 
 ## Qualitative Reflection
 
@@ -46,8 +43,6 @@ Remote interviews
 Social Media Channels
   ~ Social Media have been used marketing as well as feedback channels. Announcing the Scope Inspector on Twitter, EchoJS and Reddit contributed significantly to its distribution. The feedback yielded on Twitter and Github—exclusively from users who are unknown to me—shows that social media are suitable channels to communicate about and announce open source projects. For future projects it will be a good idea to ask influencers on those media—JavaScript experts with a lot of connections—to look at and write about it. This way, even more traction could be gained.
 
-<!-- summary -->
-
 Atom—along with \ac{apm}—is a new platform with a growing community, which is still in its early phase. The impacts of these circumstances have been described in detail in this chapter. Whereas I expected the social media coverage to be lower than it was, the actual user testing did not go without problems.
 
 For similar projects in the future, it thus seems best to choose a more mature platform—one with more users, available on more operating systems, and with an extensive ecosystem of plug-ins, knowledge, and community. A good example for a project on such a platform is Theseus by \citeasnoun{lieber}. Based on Brackets, which is around way longer than Atom and more widely distributed (comparing the activity on Github), it had a better chance and more time to be adapted. On the other hand, the momentum of growing platforms like Atom—especially if it is backed by one of the biggest open source communities (Github)—should not be underestimated. The Scope Inspector will most likely benefit from this in the future.
@@ -62,8 +57,6 @@ Through the design process, this thesis contributes knowledge to the interaction
 
 The way that the user testing was planned and prepared seemed, at that time, reasonable. Due to my background in web development, I recruited professional developers I knew for user testing. However, the fact they could not make use of the prototype due to work reasons was unforeseeable for me. The subsequent attempt to recruit users through the survey failed as well—most users knew JavaScript to some extent, but for none was it the primary professional language. Given the fact that users would need to work with Atom, which only runs on the OS X platform by the time of writing, problems with user testing could have been expected. Apparently, testing prototypes with a very limited user group in the open source community implies that great efforts have to be taken to recruit users, and longer time periods are necessary than have been given in this case. But given enough time and access to more test users, this approach of evaluating designs in the field—with analytics, long-term tests, and social media—is promising.
 
-<!-- The way that the prototype was put into the world, marketed and evaluated seemed to be reasonable for an open source project and this target group. The lesson learned was that the short amount of time available for this project makes long-term testing extremely difficult, especially if the target group is so narrow. Given a longer time span and access to more test users, this seems to be an efficient way of evaluating designs like this. -->
-
 Picking *scope* as a topic of focus, I was quite surprised not to find any integrated language tool that addresses scope in the way my design does—especially as the survey and interviews identified it easily as an ongoing issue in programming. This leads to the assumption that user-centered design methods, as were applied in this project, do not usually lead innovation in open source projects like there. A quick look into several open source projects\footnote{User-driven innovation processes in open source software are subject to a whole other line of research, and are thus not discussed in detail here.} of different size shows that user participation exists in such projects, but is realized in a much looser way, for example through whole ecosystems of institutions and communities, as in the case of Linux \cite{raymond2}; through suggestion platforms, as in the case of Mozilla\footnote{See for example: \url{https://hacks.mozilla.org/2014/05/developer-tools-feedback-channels-one-week-in/
 }}; or through open contribution, as in the case of the masses of smaller open source projects and made possible through platforms like Github and Launchpad\footnote{See \url{https://launchpad.net/}}. \citeasnoun{raymond2} states that every good work of software starts by scratching a developer's personal itch. However, the user-centered design process forces the designer to look for *other developers’ itches*. Thus I think that the results of this thesis differ from what a classical open source approach may have resulted in. Applying interaction design methodologies proved to be highly beneficial, and will probably be so for other open source projects. While this knowledge contribution was not expected, it is very welcome.
 
@@ -76,12 +69,3 @@ Additionally, the concept is quite independent from the development environment.
 ## Outlook
 
 The feedback gathered through user testing is most helpful in driving the Scope Inspector forward. I look forward to see how it will be adapted by the community of JavaScript developers as it starts to implement more relevant features, such as closure detection and sidebar navigation. More time will provide the long-term testing that this thesis project could not, and the prototype’s value will be proven or disproven in the long run. In the meantime, I am excited to see if and how interaction design methodology further drives innovation in the open source community.
-
-# Afterword
-
-- Clarify the source of the identified problems with scope
-- Address design improvements more clearly in chapter 7
-- update the report to reflect the latest version of the work
-- also include update on the ethics of tracking
-- Change German quotation marks to English ones
-- Consider adding a visual illustration to the UI pattern survey in chapter 2
