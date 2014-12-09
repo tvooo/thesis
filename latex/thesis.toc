@@ -3,7 +3,7 @@
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Process}{1}{section.1.1}
 \contentsline {section}{\numberline {1.2}Knowledge Contribution and Limitations}{2}{section.1.2}
-\contentsline {subsubsection}{Limitations}{2}{section*.4}
+\contentsline {subsubsection}{\nonumberline Limitations}{2}{section*.4}
 \contentsline {chapter}{\numberline {2}Research Framework}{3}{chapter.2}
 \contentsline {section}{\numberline {2.1}History and Purpose of Integrated Development Environments}{3}{section.2.1}
 \contentsline {section}{\numberline {2.2}IDEs Compared to Text Editors}{3}{section.2.2}
@@ -28,11 +28,11 @@
 \contentsline {chapter}{\numberline {6}Design Iterations}{24}{chapter.6}
 \contentsline {section}{\numberline {6.1}Definitions}{24}{section.6.1}
 \contentsline {section}{\numberline {6.2}Sketching}{25}{section.6.2}
-\contentsline {subsubsection}{Active scope, inclusive}{25}{section*.13}
-\contentsline {subsubsection}{Active scope, exclusive}{25}{section*.14}
-\contentsline {subsubsection}{Active scope and ancestor scopes}{25}{section*.15}
-\contentsline {subsubsection}{Scope colouring}{26}{section*.16}
-\contentsline {subsubsection}{Identifier origin}{26}{section*.17}
+\contentsline {subsubsection}{\nonumberline Active scope, inclusive}{25}{section*.13}
+\contentsline {subsubsection}{\nonumberline Active scope, exclusive}{25}{section*.14}
+\contentsline {subsubsection}{\nonumberline Active scope and ancestor scopes}{25}{section*.15}
+\contentsline {subsubsection}{\nonumberline Scope colouring}{26}{section*.16}
+\contentsline {subsubsection}{\nonumberline Identifier origin}{26}{section*.17}
 \contentsline {section}{\numberline {6.3}Scripted Prototype}{26}{section.6.3}
 \contentsline {subsection}{\numberline {6.3.1}Constraints}{28}{subsection.6.3.1}
 \contentsline {subsection}{\numberline {6.3.2}Evaluation of the Scripted Prototype}{28}{subsection.6.3.2}
@@ -40,17 +40,17 @@
 \contentsline {subsection}{\numberline {6.4.1}The Prototyping Platform}{30}{subsection.6.4.1}
 \contentsline {subsection}{\numberline {6.4.2}Parsing and Gathering Relevant Information}{31}{subsection.6.4.2}
 \contentsline {subsection}{\numberline {6.4.3}Interface and Interactions}{32}{subsection.6.4.3}
-\contentsline {subsubsection}{Inline scope highlighting}{33}{section*.22}
-\contentsline {subsubsection}{Inline hosting indication}{34}{section*.24}
-\contentsline {subsubsection}{Bottom bar}{34}{section*.26}
-\contentsline {subsubsection}{Sidebar}{35}{section*.28}
+\contentsline {subsubsection}{\nonumberline Inline scope highlighting}{33}{section*.22}
+\contentsline {subsubsection}{\nonumberline Inline hosting indication}{34}{section*.24}
+\contentsline {subsubsection}{\nonumberline Bottom bar}{34}{section*.26}
+\contentsline {subsubsection}{\nonumberline Sidebar}{35}{section*.28}
 \contentsline {section}{\numberline {6.5}User Testing \& Evaluation}{36}{section.6.5}
 \contentsline {subsection}{\numberline {6.5.1}Test Installment}{36}{subsection.6.5.1}
 \contentsline {subsection}{\numberline {6.5.2}Usage Metrics}{37}{subsection.6.5.2}
 \contentsline {subsection}{\numberline {6.5.3}Testing Results}{38}{subsection.6.5.3}
-\contentsline {subsubsection}{Analytics}{38}{section*.30}
-\contentsline {subsubsection}{Interviews with developers}{38}{section*.31}
-\contentsline {subsubsection}{Social Media Feedback}{40}{section*.32}
+\contentsline {subsubsection}{\nonumberline Analytics}{38}{section*.30}
+\contentsline {subsubsection}{\nonumberline Interviews with developers}{38}{section*.31}
+\contentsline {subsubsection}{\nonumberline Social Media Feedback}{40}{section*.32}
 \contentsline {chapter}{\numberline {7}Reflection}{41}{chapter.7}
 \contentsline {section}{\numberline {7.1}Quantitative Reflection}{41}{section.7.1}
 \contentsline {section}{\numberline {7.2}Qualitative Reflection}{43}{section.7.2}
@@ -58,7 +58,8 @@
 \contentsline {section}{\numberline {8.1}Knowledge Contribution}{45}{section.8.1}
 \contentsline {section}{\numberline {8.2}Applicability}{46}{section.8.2}
 \contentsline {section}{\numberline {8.3}Outlook}{46}{section.8.3}
-\contentsline {chapter}{Bibliography}{I}{section*.33}
-\contentsline {chapter}{List of Figures}{III}{section*.35}
-\contentsline {chapter}{Glossary}{IV}{section*.36}
-\contentsline {chapter}{Appendix}{V}{chapter*.38}
+\contentsline {chapter}{Postscriptum}{I}{chapter*.33}
+\contentsline {chapter}{Bibliography}{III}{chapter*.33}
+\contentsline {chapter}{List of Figures}{V}{section*.35}
+\contentsline {chapter}{Glossary}{VI}{section*.36}
+\contentsline {chapter}{Appendix}{VIII}{chapter*.38}

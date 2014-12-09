@@ -8,6 +8,7 @@ pandoc --chapters --no-tex-ligatures --normalize --biblatex --filter pandoc-cite
 pandoc --chapters --no-tex-ligatures --normalize --biblatex --filter pandoc-citeproc ../Ideation.md -o ideation.tex
 pandoc --chapters --no-tex-ligatures --normalize --biblatex --filter pandoc-citeproc ../Design.md -o design.tex
 pandoc --chapters --no-tex-ligatures --normalize ../Conclusion.md -o conclusion.tex
+pandoc --chapters --no-tex-ligatures --normalize ../Postscriptum.md -o postscriptum.tex
 
 xelatex -shell-escape -interaction nonstopmode thesis.tex
 bibtex thesis

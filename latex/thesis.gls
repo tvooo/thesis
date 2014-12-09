@@ -1,43 +1,43 @@
 \glossarysection[\glossarytoctitle]{\glossarytitle}\glossarypreamble
 \begin{theglossary}\glossaryheader
 \glsgroupheading{A}\relax \glsresetentrylist %
-\glossaryentryfield{autocompletion}{\glsnamefont{autocompletion}}{Predicting a word or phrase that the user wants to type in without the user actually typing it in completely.}{\relax }{\glossaryentrynumbers{\relax 
+\glossentry{autocompletion}{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{8}}}\glsgroupskip
 \glsgroupheading{B}\relax \glsresetentrylist %
-\glossaryentryfield{breadcrumbs}{\glsnamefont{breadcrumbs}}{A user interface pattern that acts as navigation aid, allowing users to keep track of their location and navigate upwards in the hierarchy.}{\relax }{\glossaryentrynumbers{\relax 
+\glossentry{breadcrumbs}{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{22}}}\glsgroupskip
 \glsgroupheading{C}\relax \glsresetentrylist %
-\glossaryentryfield{codesmell}{\glsnamefont{code smell}}{A symptom in the source code of a program that possibly indicates a deeper problem, although not being technically incorrect (in opposition to a bug).}{\relax }{\glossaryentrynumbers{\relax 
+\glossentry{codesmell}{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{39}}}%
-\glossaryentryfield{coffeescript}{\glsnamefont{CoffeeScript}}{A programming language that transcompiles to JavaScript.}{\relax }{\glossaryentrynumbers{\relax 
+\glossentry{coffeescript}{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{31}}}\glsgroupskip
 \glsgroupheading{E}\relax \glsresetentrylist %
-\glossaryentryfield{ecmascript}{\glsnamefont{ECMAScript}}{The language standard (ISO/IEC 16262) implemented by JavaScript.}{\relax }{\glossaryentrynumbers{\relax 
+\glossentry{ecmascript}{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{15}}}\glsgroupskip
 \glsgroupheading{F}\relax \glsresetentrylist %
-\glossaryentryfield{function}{\glsnamefont{function}}{A sequence of program instructions that perform a specific task, packaged as a unit.}{\relax }{\glossaryentrynumbers{\relax 
+\glossentry{function}{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{14}}}\glsgroupskip
 \glsgroupheading{I}\relax \glsresetentrylist %
-\glossaryentryfield{identifier}{\glsnamefont{identifier}}{A lexical token that names a programming language entity, such as a variable or class.}{\relax }{\glossaryentrynumbers{\relax 
+\glossentry{identifier}{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{13}}}\glsgroupskip
 \glsgroupheading{J}\relax \glsresetentrylist %
-\glossaryentryfield{javascript}{\glsnamefont{JavaScript}}{A dynamic computer programming language, most commonly used as part of web browsers.}{\relax }{\glossaryentrynumbers{\relax 
+\glossentry{javascript}{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{1}}}\glsgroupskip
 \glsgroupheading{N}\relax \glsresetentrylist %
-\glossaryentryfield{node}{\glsnamefont{Node.js}}{A server-side platform to write JavaScript applications.}{\relax }{\glossaryentrynumbers{\relax 
+\glossentry{node}{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{31}}}\glsgroupskip
 \glsgroupheading{S}\relax \glsresetentrylist %
-\glossaryentryfield{staticanalysis}{\glsnamefont{static analysis}}{The analysis of computer software that is performed without actually executing programs.}{\relax }{\glossaryentrynumbers{\relax 
+\glossentry{staticanalysis}{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{1}}}%
-\glossaryentryfield{syntaxhighlighting}{\glsnamefont{syntax highlighting}}{Highlighting of programming language elements (such as reserved words, identifiers, or certain data types) using text formatting and colour, for the purpose of better readability and understanding.}{\relax }{\glossaryentrynumbers{\relax 
+\glossentry{syntaxhighlighting}{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{5}}}\glsgroupskip
 \glsgroupheading{T}\relax \glsresetentrylist %
-\glossaryentryfield{this}{\glsnamefont{this}}{The JavaScript keyword \texttt {this} refers to the current execution context of a program during run-time.}{\relax }{\glossaryentrynumbers{\relax 
+\glossentry{this}{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{11}}}\glsgroupskip
 \glsgroupheading{V}\relax \glsresetentrylist %
-\glossaryentryfield{variable}{\glsnamefont{variable}}{A storage location and an associated symbolic name (identifier) which contains a value (data).}{\relax }{\glossaryentrynumbers{\relax 
+\glossentry{variable}{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{13}}}\glsgroupskip
 \glsgroupheading{W}\relax \glsresetentrylist %
-\glossaryentryfield{webkit}{\glsnamefont{WebKit}}{The layout engine used in browsers such as Chrome and Safari.}{\relax }{\glossaryentrynumbers{\relax 
+\glossentry{webkit}{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{31}}}%
 \end{theglossary}\glossarypostamble

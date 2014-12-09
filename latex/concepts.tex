@@ -65,10 +65,10 @@ However, in most programming languages, a variable declaration in
 accessible from \emph{all other} parts of the program. The area in which
 the variable is accessible is called its \emph{scope}.
 
-According to \citeasnoun{getify}, scope is „the set of rules that
+According to \citeasnoun{getify}, scope is “the set of rules that
 determines where and how a \gls{variable} (\gls{identifier}) can be
-looked-up“ and therefore be accessed and used. The specifics of „where
-and how“ depend on the respective programming language. Most modern
+looked-up” and therefore be accessed and used. The specifics of “where
+and how” depend on the respective programming language. Most modern
 languages implement \emph{lexical scope}, which means that the scope of
 a variable depends on the position of its declaration in the actual
 source code. In other words, where in the source text a variable is
@@ -213,8 +213,8 @@ author-time, and thus avoid misconceptions and reduce defects.
 \begin{description}
 \item[Hoisting]
 is the implicit process, as done by the JavaScript engine, of moving
-variable and function declarations „from where they appear in the flow
-of the code to the top of the code“ \cite{getify}. By „code“,
+variable and function declarations “from where they appear in the flow
+of the code to the top of the code” \cite{getify}. By “code”,
 \citename{getify} refers to the scope block. Any variable declaration
 inside a scope block is hoisted to the top of the scope block.
 
@@ -236,16 +236,16 @@ The above code is actually processed as:
         }
 \end{verbatim}
 
-The variable declaration of \texttt{a} is moved, or „hoisted“, to the
+The variable declaration of \texttt{a} is moved, or “hoisted”, to the
 top of the scope block of \texttt{foo}. Hoisting can impose unexpected
 behaviour, especially when declaring variables of the same name in
 nested scopes.
 \item[Closure]
 is a common phenomenon in JavaScript programs, and is widely used,
 though being generally seen as hard to understand. Citing
-\citename{getify}, closure is „when a function is able to remember and
+\citename{getify}, closure is “when a function is able to remember and
 access its lexical scope even when that function is executing outside
-its lexical scope.“ \citeyear{getify} As functions are first-class
+its lexical scope.” \citeyear{getify} As functions are first-class
 objects in JavaScript, they can be passed around like variables, for
 example as asynchronous callback functions. A function can also return
 another function. However, JavaScript works with \emph{lexical scope}
@@ -253,7 +253,7 @@ and, according to the nesting rules presented before, a function must
 always have access to its ancestor scopes. Thus, when a function is
 being returned or passed as a callback, an instance of the whole scope
 chain is returned or passed along with the function. In other words, the
-function „closes“ or „forms a closure“ over its ancestor scopes. In most
+function “closes” or “forms a closure” over its ancestor scopes. In most
 cases, this behaviour is desired. Anyway, it is important to recognize
 closures as they may impact performance: the closed-over scopes have to
 stay in memory as long as a reference to the closure exists. Closure may
@@ -294,7 +294,7 @@ If a variable, which is defined in an ancestor scope (the global scope,
 for example), is accessed within a deeply nested scope, the lookup
 process slows down the execution of the program, as shown by
 \citeasnoun{castorina}. He furthermore suggests to cache the variable in
-a „closer“ scope, if possible.
+a “closer” scope, if possible.
 \end{description}
 
 Four of these five identified problems—\emph{hoisting}, \emph{closure},

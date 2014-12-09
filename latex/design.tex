@@ -97,7 +97,7 @@ combined with both the inclusive and exclusive approach.
 
 \subsubsection{Scope colouring}\label{scope-colouring}
 
-Described by Crockford \citeyear{crockford} as „context colouring“, this
+Described by Crockford \citeyear{crockford} as “context colouring”, this
 way of highlighting would not apply a background colour, but instead
 replace the existing forms of syntax highlighting. Thus, the
 highlighting would not depend on the cursor position (which defines the
@@ -214,7 +214,7 @@ basic constraints of the prototype (as mentioned above). They were
 thereafter able to explore and test the prototype to their likings. One
 of the two sessions has been recorded as a screencast.
 
-The users liked both the „preview“ feature (hovering over a breadcrumb)
+The users liked both the “preview” feature (hovering over a breadcrumb)
 and the sidebar. The preview gave them an opportunity to quickly get a
 visual overview of their position in the code and the active scope
 chain. The sidebar showed them which variables and functions are
@@ -230,7 +230,7 @@ for example by colouring all the ancestor scopes in different shades of
 grey. He also suggested an alternative visual structure for the sidebar
 instead of the list, for example nested clusters or a graph. For
 hoisting, the user came up with an idea to integrate indicators into the
-text editor: a „phantom“ variable declaration—which would be grey and
+text editor: a “phantom” variable declaration—which would be grey and
 not editable—could be inserted on top of a scope to show that a certain
 variable declaration would be hoisted up there. This indicator should be
 collapsible so that it does not interfere with the editing process.
@@ -258,7 +258,7 @@ of handling any JavaScript program, rather than as a proof-of-concept.
 It was integrated into the Atom\footnote{See \url{https://atom.io/}}
 text editor as a so-called \emph{package} or \emph{plug-in}, released as
 \gls{oss} and was made publicly available for using and testing. The
-package is called „Scope Inspector“ and will be referred to using this
+package is called “Scope Inspector” and will be referred to using this
 name throughout this section.
 
 \begin{figure}[H]
@@ -315,10 +315,10 @@ prototype makes use of this fact in many ways, for example by showing
 and hiding its \ac{ui} elements depending on the type of file that is
 being edited.
 
-Atom is marketed by Github as a „hackable text editor for the 21st
-Century“\footnote{See \url{https://atom.io/}, accessed 18.05.2014}. It
-is also intended to be a „deeply extensible system that blurs the
-distinction between ‚user‘ and ‚developer‘.“ Those claims lead to the
+Atom is marketed by Github as a “hackable text editor for the 21st
+Century”\footnote{See \url{https://atom.io/}, accessed 18.05.2014}. It
+is also intended to be a “deeply extensible system that blurs the
+distinction between ‘user’ and ‘developer’.” Those claims lead to the
 conclusion that Atom is a text editor built for developers,
 especially—but not exclusively—web developers. While not every web
 developer is a proficient JavaScript developer, the target groups of
@@ -479,7 +479,7 @@ in the scope hierarchy the cursor is and provides quick to two settings.
 On the right side of the bottom bar, two toggle buttons allow for
 enabling and disabling of two features. The right button, showing a list
 icon, shows or hides the sidebar. The left button with the label
-„Highlight Global“ toggles the highlighting of the global scope (as
+“Highlight Global” toggles the highlighting of the global scope (as
 described above).
 
 The left side of the bottom bar shows the breadcrumbs known from the
@@ -514,9 +514,9 @@ bottom.
 \end{figure}
 
 Each pane is entitled by the name of the scope. In case of function
-scope, the name of the function becomes the scope name (‚(anonymous
-function)‘ in the case of an unnamed function expression). In case of
-the global scope, the name is ‚GLOBAL‘. Underneath the title, the names
+scope, the name of the function becomes the scope name (‘(anonymous
+function)’ in the case of an unnamed function expression). In case of
+the global scope, the name is ‘GLOBAL’. Underneath the title, the names
 of all identifiers defined within the scope are listed, along with
 certain attribute annotations.
 
@@ -524,13 +524,13 @@ certain attribute annotations.
 \itemsep1pt\parskip0pt\parsep0pt
 \item
   Function parameters are listed first. They appear with the annotation
-  „param“, set in smaller text size to the right.
+  “param”, set in smaller text size to the right.
 \item
   General variables follow the parameters. If they are not shadowed,
   they have no annotations.
 \item
   Functions are the last entities in the list. They are connotated with
-  a pair of parantheses ‚()‘.
+  a pair of parantheses ‘()’.
 \end{itemize}
 
 The listed identifiers show also if they are hoisted, shadowed, or if
@@ -598,7 +598,7 @@ In addition to this planned user test, publishing the prototype via
 several social networks, especially targeting existing Atom users, with
 the goal of getting users to download and use it. Two weeks after
 publishing the prototype, the number of downloads counted
-\textasciitilde{}150. This way of testing „in the wild“ makes it harder
+\textasciitilde{}150. This way of testing “in the wild” makes it harder
 to gather feedback, compared to the method of addressing potential users
 directly. However, it also yielded unstructured but valuable feedback on
 several social media channels.
@@ -772,13 +772,13 @@ However, this method needs to be tested in terms of performance.
 
 On the news platforms EchoJS and Reddit (JavaScript section) the package
 got little attention: four and eight upvotes, respectively, although the
-only comment on Reddit claims that it „looks
-promising“\footnote{See \url{http://www.reddit.com/r/javascript/comments/25k30l/javascript_scope_inspector_an_atom_package_to/chi27cm}}.
+only comment on Reddit claims that it “looks
+promising”\footnote{See \url{http://www.reddit.com/r/javascript/comments/25k30l/javascript_scope_inspector_an_atom_package_to/chi27cm}}.
 
 On Twitter, which was used as a marketing instrument as well, the
-feedback was exclusively positive. One user called it „another reason to
+feedback was exclusively positive. One user called it “another reason to
 consider switching from {[}Sublime Text to
-Atom{]}“\footnote{See \url{https://twitter.com/adardesign/status/466589449561055232}},
+Atom{]}”\footnote{See \url{https://twitter.com/adardesign/status/466589449561055232}},
 while others seemed to be positively
 surprised\footnote{See \url{https://twitter.com/raganwald/status/466930480517246976}}.
 Five tweets mentioning the package have been both retweeted and

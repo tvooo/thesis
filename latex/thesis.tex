@@ -62,7 +62,7 @@ keepaspectratio]{img/pattern.png}%
 %\usepackage{makeidx}
 \usepackage[scale=0.75]{geometry} % Um die Titelseite zu zentrieren
 \usepackage[english]{babel}
-\usepackage[babel,english=british]{csquotes}
+\usepackage[babel,english]{csquotes}
 % Spezielle Tabellenform fuer Deckblatt
 \usepackage{longtable}
 \usepackage{harvardold}
@@ -194,12 +194,20 @@ keepaspectratio]{img/pattern.png}%
 %\phantomsection %notwendig, damit Link nicht unterhalb der Überschrift zeigt
 %\addcontentsline{toc}{chapter}{Bibliography} %Eintrag im Inhaltsverzeichnis
 
-
-
-\bibliographystyle{agsm}
-\phantomsection
 \setcounter{page}{1}
 \pagenumbering{Roman}
+
+\chapter*{Postscriptum}
+%\renewcommand*{\chaptermarkformat}{}
+%\renewcommand*{\sectionmarkformat}{}
+%\chaptermark{Appendix}
+%\sectionmark{Appendix}
+\addcontentsline{toc}{chapter}{Postscriptum}
+\input{postscriptum.tex}
+\newpage
+
+\bibliographystyle{agsm}
+%\phantomsection
 \addcontentsline{toc}{chapter}{Bibliography}
 \bibliography{thesis}
 
