@@ -1,6 +1,6 @@
 # Reflection
 
-The following chapter discusses the results of the user testing (evaluation) with respect to the goals presented in the introduction. It also reflects on the design process and makes suggestions for improvements in both the process and the concept.
+The following chapter discusses the results of the user testing (evaluation) with respect to the goals presented in the introduction. It also reflects on and makes suggestions for improvements of the design process.
 
 ## Quantitative Reflection
 
